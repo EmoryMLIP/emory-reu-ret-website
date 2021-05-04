@@ -103,7 +103,7 @@ directions = "Reception located on the 4th floor of the Math and Science Center"
 office_hours = ["Monday to Friday, 9:00AM - 5:00PM"]
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "https://calendly.com"
+# appointment_url = "https://calendly.com"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
