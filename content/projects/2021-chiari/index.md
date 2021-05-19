@@ -1,6 +1,8 @@
 ---
-title: Richard Hendricks Wins First Place in the Wowchemy Prize
-date: 2020-12-01
+title: Chiari
+date: 2021-05-01
+featured: true
+tag: "2021"
 ---
 
 Congratulations to Richard Hendricks for winning first place in the Wowchemy Prize.

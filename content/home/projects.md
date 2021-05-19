@@ -1,11 +1,11 @@
 ---
 # Documentation: https://wowchemy.com/docs/page-builder/
-widget: pages
+widget: featured
 headless: true
 weight: 20
 
-title: Latest News
-subtitle:
+title: Projects
+subtitle: Summer 2021
 
 content:
   count: 5
@@ -17,7 +17,7 @@ content:
     tag: ""
   offset: 0
   order: desc
-  page_type: post
+  page_type: projects
 design:
   view: 3
   columns: "1"
