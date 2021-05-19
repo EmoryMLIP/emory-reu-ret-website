@@ -1,23 +1,32 @@
 ---
-# A Demo section created with the Blank widget.
-# Any elements can be added in the body: https://wowchemy.com/docs/writing-markdown-latex/
-# Add more sections by duplicating this file and customizing to your requirements.
+# An instance of the Blank widget.
+# Documentation: https://wowchemy.com/docs/page-builder/
+widget: blank
 
-widget: blank  # See https://wowchemy.com/docs/page-builder/
-headless: false  # This file represents a page section.
-weight: 30  # Order that this section will appear.
-title: "Background"
-subtitle: ""
+# This file represents a page section.
+headless: true
+
+# Order that this section appears on the page.
+weight: 30
+
+# Section title
+title: Background
+
+# Section subtitle
+subtitle:
+
+# Section design
 design:
-  # Choose how many columns the section has. Valid values: 1 or 2.
-  columns: '1'
-advanced:
-  css_style:
-  css_class:
+  # Use a 1-column layout
+  columns: "1"
+  # Use a dark navy background with light text.
+  background:
+    color: 'white'
+    text_color_light: false
 ---
 
 A tensor is a multidimensional array of data. We denote tensors with a capital script letter $\mathcal{A} \in \mathbb{R}^{n_1\times \dots \times n_d}$.
-There are many products associatedd with tensors including the mode
+There are many products associated with tensors including the mode-$k$ product
 \begin{equation}
 \mathcal{A} \times_k \mathbf{M} = \mathbf{M} \mathcal{A}_{(k)}
 \end{equation}

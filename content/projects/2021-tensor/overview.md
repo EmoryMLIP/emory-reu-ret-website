@@ -8,7 +8,7 @@ headless: false  # This file represents a page section.
 weight: 10  # Order that this section will appear.
 title: "Tensors for fMRI"
 subtitle: ""
-hero_media: img/brain1.jpg
+hero_media: img/tensor_neuroimaging_draft1.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns: '2'
@@ -17,4 +17,4 @@ advanced:
   css_class:
 ---
 
-Understanding the human brain by extracting information using multidimensional structures.
+Understanding the human brain by extracting multidimensional information.
