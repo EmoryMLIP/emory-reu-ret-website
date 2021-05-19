@@ -1,8 +1,8 @@
 ---
 title: Image-Based Diagnosis of Chiari Disease
 date: 2021-05-01
-featured: true
-tag: "2021"
+featured: false
+tags: ["Summer 2021"]
 ---
 The project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 

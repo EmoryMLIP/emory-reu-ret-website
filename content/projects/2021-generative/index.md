@@ -1,8 +1,8 @@
 ---
 title: Generative
 date: 2021-05-01
-featured: true
-tag: "2021"
+featured: false
+tags: ["Summer 2021"]
 ---
 
 Congratulations to Richard Hendricks for winning first place in the Wowchemy Prize.

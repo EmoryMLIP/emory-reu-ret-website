@@ -4,5 +4,5 @@ summary: "Multdimensional Approaches to Medical Imaging"
 date: 2021-05-01
 type: widget_page
 feature: true
-tags: ["2021"]
+tags: ["Summer 2021"]
 ---
