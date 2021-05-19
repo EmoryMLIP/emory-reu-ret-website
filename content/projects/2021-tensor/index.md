@@ -1,8 +1,8 @@
 ---
-title: "Tensors for fMRI"  # Add a page title.
-summary: "Multdimensional Approaches to Medical Imaging"  # Add a page description.
-date: "2021-05-01"  # Add today's date.
-type: "widget_page"  # Page type is a Widget Page
-featured: true
-tag: "2021"
+title: "Tensors for fMRI"
+summary: "Multdimensional Approaches to Medical Imaging"  
+date: 2021-05-01
+type: widget_page
+feature: true
+tags: ["2021"]
 ---

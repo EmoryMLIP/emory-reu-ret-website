@@ -33,9 +33,7 @@ There are many products associated with tensors including the mode-$k$ product
 
 Functional Magnetic Resonance Imaging (fMRI) gives us pictures of the brain like the following:
 
-<p align="center">
-  <img src="img/brain1.jpg" alt="brainROI" title="Regions of Interest in the Brain">
-</p>
 
-This image depicts the Regions of Interest (ROI) of the [StarPlus fMRI data](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/) from Carnegie Mellon University.
-(There is a way to caption an image, but it does not seem to be working right now.  You can scroll over the image to get a description.)
+{{< figure src="img/brain1.jpg" caption="Regions of Interest (ROIs) for the [StarPlus fMRI data](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/) from Carnegie Mellon University." alt="brainROI">}}
+
+Then we can give some more details!
