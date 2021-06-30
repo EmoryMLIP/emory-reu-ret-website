@@ -4,13 +4,13 @@ title: James Nagy
 
 # Username (this should match the folder name)
 authors:
-- enewman
+- jnagy
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Senior Lecturer
+role: Mentor
 
 # Organizations/Affiliations
 organizations:
