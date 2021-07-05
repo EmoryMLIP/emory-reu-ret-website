@@ -17,6 +17,7 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 ![mainImage](img/Chiari-Synergy.png "Chiari Synergy")
 
+(https://www.mathcs.emory.edu/~lruthot/)[Lars' Homepage]
 
 
 
