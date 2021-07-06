@@ -4,7 +4,7 @@ title: Bree Ettinger
 
 # Username (this should match the folder name)
 authors:
-- enewman
+- bettinger
 
 # Is this the primary user of the site?
 superuser: false
@@ -18,25 +18,28 @@ organizations:
   url: "https://www.math.emory.edu/home/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include efficient training of deep neural networks and optimal representations of high-dimensional data.
+bio: My research interests include regression models for spatial functional data and integrating sustainability into the mathematics curriculum.
 
 interests:
-- Deep Learning
-- Multidimensional Linear Algebra
-- Optimization
+- Integrating Sustainability into the Mathematics Curriculum
+- Educating Teachers
+- Functional Data Analysis
 - Scientific Computing
 
 education:
   courses:
   - course: PhD in Mathematics
-    institution: Tufts University
-    year: 2019
+    institution: The University of Georgia
+    year: 2009
+  - course: Masters in Statistics
+    institution: The University of Georgia
+    year: 2009
   - course: Masters in Mathematics
-    institution: Tufts University
-    year: 2015
-  - course: Bachelor of Science in Mathematics and Statistics
-    institution: Haverford College
-    year: 2014
+    institution: The University of Georgia
+    year: 2004
+  - course: Bachelor of Science in Mathematics
+    institution: The University of Georgia
+    year: 2012
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -45,24 +48,24 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:elizabeth.newman@emory.edu'
+  link: 'mailto:betting@emory.edu'
 # - icon: twitter
 #   icon_pack: fab
 #   link: 
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=atqIoZAAAAAJ&hl=en&inst=15365353816232672843
+#- icon: google-scholar
+#  icon_pack: ai
+#  link: https://scholar.google.com/citations?user=atqIoZAAAAAJ&hl=en&inst=15365353816232672843
 - icon: github
   icon_pack: fab
-  link: https://github.com/elizabethnewman
+  link: https://github.com/astrobree
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/enewman_cv.pdf
+  link: files/betting_cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "elizabeth.newman@emory.edu"
+email: "betting@emory.edu"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -70,4 +73,4 @@ user_groups:
 - Mentors
 ---
 
-Elizabeth Newman is a Postdoctoral Fellow in the Department of Mathematics at Emory University.  With her advisor, Dr. Lars Ruthotto, her research focuses on developing efficient deep learning algorithms for scientific applications.
+Bree Ettinger is a Senior Lecturer in the Department of Mathematics at Emory University. Before joining Emory in 2013, I was a Postdoctoral Researcher in the MOX Laboratory for Modeling and Scientific Computing at the Politecnico di Milano. I worked on Statistical and Numerical methods for the Analysis of Problems in Life sciences and Engineering with my advisors Laura Sangalli and Simona Perotto. In 2009, I completed both a PhD in Mathematics and a Masters of Science in Statistics from the University of Georgia. My advisor was Min-Jun Lai and my dissertation developed a functional data analysis approach to predicting low-level ozone concentrations.  With her advisor, Dr. Lars Ruthotto, her research focuses on developing efficient deep learning algorithms for scientific applications.
