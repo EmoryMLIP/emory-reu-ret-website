@@ -44,6 +44,64 @@ Functional Magnetic Resonance Imaging (fMRI) gives us pictures of the brain like
 
 {{< figure src="img/brain1.jpg" caption="Regions of Interest (ROIs) for the [StarPlus fMRI data](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/) from Carnegie Mellon University." alt="brainROI">}}
 
-Then we can give some more details!
+\begin{itemize}
+        \item \textbf{Higher-Order Tensors:} The original algorithm was written for and applied to gray-scale images (two-dimensional data).  
+        We apply the algorithm to fMRI data (four-dimensional data).  
+        
+        \item \textbf{Family of Tensor-Tensor Products:} The original algorithm only considered a specific tensor-tensor product, the $t$-product.  
+        Our work considers a general class of tensor-tensor products called the $\starM$-product~\cite{KernfeldKilmerAeron2015}.  
+        
+        \item \textbf{Data-Dependent Products:} We not only consider the general family of tensor-tensor products, we seek to develop the products based on the data itself.  
+        This consists of two considerations: (1) different transformations along the spatial dimensions and time dimensions and (2) developing the product via, e.g., a matrix SVD of an unfolded tensor. 
+        Additionally, we can define a different product per class; consistent normalization will need to be considered. 
+        
+        \item \textbf{New Distance Metrics:} The original paper only consider the Frobenius norm as a distance metric.  
+        However, there are many other choices such as different norms and the cosine distance that we explore. 
+
+    \end{itemize}
+    
+    \begin{definition}[lateral slices, frontal slices, and tubes]\label{def:slices}
+
+A \emph{slice} of a third-order tensor $\Acal$ is a two-dimensional array defined by fixing one index. For a third-order tensor, the terms \emph{lateral and frontal slices} are used to specify which two indices are fixed. Using MATLAB notation, $\Acal$(;,k,:) corresponds to the kth lateral slice, and $\Acal$(;,:,k,) corresponds to the kth frontal slice.  A \emph{tube} of a tensor is a one-dimensional section defined by fixing all indices but one.  The fibers $\Xcal$(:,i,j), $\Xcal$(i,:,j), $\Xcal$(i,j,:) denote mode-1, mode-2, and mode-3 tubes respectively.  
+
+\end{definition}
+
+\begin{definition}[vectorize/reshape]\label{def:vectorize}
+
+Vectorization is the process of converting an algorithm from operating on a single value at a time to operating on a set of values at one time. 
+Vectorization describes the absence of any explicit looping, indexing, etc., in the code.
+Vectorized programs can run multiple operations from a single instruction, whereas scalar can only operate on pairs of operands at once.
+
+\end{definition}
+
+\begin{definition}[twist/squeeze]\label{def:twist}
+
+\end{definition}
+
+
+\begin{definition}[mode-$k$ unfolding/folding]\label{def:modekUnfold}
+
+Unfolding a tensor consists of reading its elements in such a way as to obtain a matrix instead of a tensor. mode-k unfolding is obtained by considering the kth mode as the first dimension of a matrix and collapsing the other into the other dimension of that matrix. 
+
+Unfolding is the process of reordering the elements of an N-way array into a matrix. For instance, a 2×3×4 tensor can be arranged as a 6×4 matrix or a 3 × 8 matrix, and so on. 
+
+\end{definition}
+
+
+\begin{definition}[mode-$k$ product]\label{def:modekProduct}
+
+The k-mode product of a tensor $\Acal$ with a matrix M results in a tensor whose k-mode unfolding is M times the k-mode unfolding of $\Acal$. 
+
+\end{definition}
+
+\begin{definition}[Kronecker product]\label{def:kronecker}
+ The Kronecker product, sometimes denoted by $\otimes$,is an operation on two matrices of arbitrary size resulting in a block matrix. 
+\end{definition}
+
+\begin{definition}[Frobenius norm]\label{def:frobenius}
+
+The \emph{Frobenius norm}, sometimes also called the Euclidean norm, is matrix norm of an m×n matrix A defined as the square root of the sum of the absolute squares of its elements. $\lVert \mathbf{A}  \rvert \rvert _{F}=\sqrt{\sum_{i=1}^{m} \sum_{j=1}^{n} |a_{ij}|^2}$
+
+\end{definition}
 
 
