@@ -16,6 +16,16 @@ Understanding the human brain by extracting multidimensional information.
 <!--more-->
 
 ### Overview
+Can we look at a brain scan and know what the brain's owner is thinking?
+
+We use brain scans called functional MRIs (fMRIs) that show us which parts of the brain are using more oxygen and are therefore most active. We have fMRIs for hundreds of patients who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
+
+Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. Insert fMIR image
+
+We store each fMRI image digitally as individual voxels which are 3 dimensional pixels. If we have fMRI voxel data for hundreds of patients, multiple scans, 3-dimensional brain data, over time, that's an unwieldy amount of data even for modern computers. Storing that data in traditional matrices is useful because we can use techniques like singular value decomposition to streamline the data without losing important information.
+
+
+
 We wish to demonstrate that tensors are superior to matrices in classifying fMRI data of study subjects who are shown either an image or a sentence.  We do so by extending the t-product into a class of tensor-tensor products called the star-M product.  
 
 The t product tells us to divide each 3rd order tensor into frontal faces, multiply the corresponding faces, then reform the tensor with those face products.  
