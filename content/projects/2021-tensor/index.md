@@ -30,6 +30,9 @@ But when we store fMRI data as matrices we lose important relationships which ar
 
 ***how large?***
 
+We are looking for a way to decompose our tensor data in a way analogous to the way matrices can be decomposed, so we can use far less data and still extract an accurate prediction of what the subject is thinking.
+
+
 We wish to demonstrate that tensors are superior to matrices in classifying fMRI data of study subjects who are shown either an image or a sentence.  We do so by extending the t-product into a class of tensor-tensor products called the star-M product.  
 
 The t product tells us to divide each 3rd order tensor into frontal faces, multiply the corresponding faces, then reform the tensor with those face products.  
