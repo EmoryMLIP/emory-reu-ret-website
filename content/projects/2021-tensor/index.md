@@ -20,11 +20,15 @@ Can we look at a brain scan and know what the brain's owner is thinking?
 
 We use brain scans called functional MRIs (fMRIs) that show us which parts of the brain are using more oxygen and are therefore most active. We have fMRIs for hundreds of patients who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
 
-Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. Insert fMIR image
+Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
 
-We store each fMRI image digitally as individual voxels which are 3 dimensional pixels. If we have fMRI voxel data for hundreds of patients, multiple scans, 3-dimensional brain data, over time, that's an unwieldy amount of data even for modern computers. Storing that data in traditional matrices is useful because we can use techniques like singular value decomposition to streamline the data without losing important information.
+***Insert fMIR image***
 
+We store each fMRI image digitally as individual voxels which are 3 dimensional pixels. If we have fMRI voxel data for hundreds of patients, multiple scans, 3-dimensional brain data, over time, then we need to analyze an unwieldy amount of data even for modern computers. Storing that data in traditional matrices is useful because we can use techniques like singular value decomposition to streamline the data without losing important information.
 
+But when we store fMRI data as matrices we lose important relationships which are maintained in a tensor.  A tensor is like matrix but with more than 2 dimensions.  The tensors we study have a total of 5 dimensions.  Three dimensions correspond to the physical 3 dimensions of the brain itself.  The fourth dimension represents the sequence of brain images taken over time.  The fifth dimension represents the many trials of test subjects that are studied.  You can see how the number of data points is very large.  
+
+***how large?***
 
 We wish to demonstrate that tensors are superior to matrices in classifying fMRI data of study subjects who are shown either an image or a sentence.  We do so by extending the t-product into a class of tensor-tensor products called the star-M product.  
 
