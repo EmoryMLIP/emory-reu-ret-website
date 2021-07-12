@@ -51,11 +51,7 @@ Advances in the neuroimaging technology of functional Magnetic Resonance Imaging
 ---
 ### Background
 
-A tensor is a multidimensional array of data. We denote tensors with a capital script letter $\mathcal{A} \in \mathbb{R}^{n_1\times \dots \times n_d}$.
-There are many products associated with tensors including the mode-$k$ product
-\begin{equation}
-\mathcal{A} \times_k \mathbf{M} = \mathbf{M} \mathcal{A}_{(k)}
-\end{equation}
+
 
 Functional Magnetic Resonance Imaging (fMRI) gives us pictures of the brain like the following:
 
