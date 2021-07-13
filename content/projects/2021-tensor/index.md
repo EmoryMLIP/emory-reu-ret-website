@@ -27,7 +27,9 @@ Here is an example of an fMRI.
 ![mainImage](img/brain1.jpg "brain1")
 
 
-We store the fMRI images digitally as individual voxels.  A voxel is a 3 dimensional pixel.  If we have fMRI voxel data for hundreds of patients, multiple scans, 3-dimensional brain data, over time, then we need to analyze an unwieldy amount of data even for modern computers.  And it turns out that we may not need every single data point, but only a representative sample.  
+We store the fMRI images digitally as individual 3-dimensional pixels called voxels.  [_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6812415/_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf)
+[_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6812443/_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf)
+If we have fMRI voxel data for hundreds of patients, multiple scans, 3-dimensional brain data, over time, then we need to analyze an unwieldy amount of data even for modern computers.  And it turns out that we may not need every single data point, but only a representative sample.  
 Storing that data in traditional matrices is useful because we can use techniques like singular value decomposition to streamline the data without losing important information.
 
 If you aren't sure how matrices can help computers to learn, [watch this video](https://youtu.be/LlKAna21fLE).
