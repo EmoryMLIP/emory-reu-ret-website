@@ -23,7 +23,7 @@ We use brain scans called functional MRIs (fMRIs) that show us which parts of th
 Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
 
 
-Here is an example of an fMRI.  
+Here is an example of an fMRI.  The abbreviations on the right refer to different regions of the brain.  
 ![mainImage](img/brain1.jpg "brain1")
 
 
@@ -35,7 +35,7 @@ And when we store fMRI data as matrices we lose important relationships between 
 
 Fortunately we can also store our data in something called a tensor.  A tensor is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions.  Three dimensions correspond to the physical 3 dimensions of the brain itself.  The fourth dimension represents the sequence of brain images taken over time.  The fifth dimension represents the many trials of test subjects that are studied.  
 
-In the figure below, the green slices consist of voxels of the brain in 3 dimensions (x,y,z).  For each trial multiple images are taken 
+In the figure below, the green slices consist of voxels of the brain in 3 dimensions: x,y,z in yellow.  For each trial multiple images are taken over several seconds (blue arrow), and there were multiple trials (red arrow).  
 
 <img width="968" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
 
