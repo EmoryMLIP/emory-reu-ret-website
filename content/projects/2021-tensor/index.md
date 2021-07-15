@@ -23,17 +23,17 @@ We use brain scans called functional MRIs (fMRIs) that show us which parts of th
 Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
 
 
-Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to regions of the brain, for example, "SMA" stands for "Supplementary Motor Area" located at the top center of the organ.  
+Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the organ.  
 ![mainImage](img/brain1.jpg "brain1")
 
 
-Images like these consist of 3-dimensional pixels called voxels.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  This makes i easy for   [computers to learn from data stored in matrices.](https://youtu.be/LlKAna21fLE).  
+Images like these consist of 3-dimensional pixels called voxels.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  This makes it easy for   [computers to learn from data stored in matrices.](https://youtu.be/LlKAna21fLE)
 
-If we have fMRI voxel data for many patients, multiple scans in sequence, 3-dimensional brain data, then we need to analyze a quantity of data unwieldy even for modern computers.  
+If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
-When we store fMRI data as matrices we also lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain is that same part of the brain a few minutes later.    
+When we store fMRI data in a matrix we also lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain is that same part of the brain a few seconds later.    
 
-Fortunately we can also store our data in something called a tensor.  A tensor is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 dimensions: x,y,z in yellow.  For each trial multiple images are taken over several seconds (blue arrow), and there were multiple trials (red arrow).  
+Fortunately we can also store our data in a mathematical structure called a tensor.  A tensor is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 dimensions: x,y,z in yellow.  For each trial multiple images are taken over several seconds (blue arrow), and there were multiple trials (red arrow).  
 
 <img width="968" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
 
