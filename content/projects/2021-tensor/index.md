@@ -1,4 +1,3 @@
-[truncated_matrix_svd.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6833688/truncated_matrix_svd.pdf)
 ---
 title: Tensors for fMRI
 date: 2021-05-01
@@ -44,12 +43,12 @@ You'll notice that we use matrix multiplication in working with matrix SVDs.  Wh
 
 <img width="279" alt="facewise_prod" src="https://user-images.githubusercontent.com/50922545/126016127-531a724f-3ff5-496e-862a-a9617b607d0e.png">
 
+![truncated_matrix_svd (1)](https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg)
+
 
 Our research is not only useful for fMRIs; many datasets have multiple dimensions.  Streaming entertaining companies have data on thousands of viewers and what movies they've watched.  Hospitals track thousands of patients, each of whom has had multiple lab tests and other studies.  If our research enables us to classify our fMRI subjects, then we may also be able to predict whether someone will want to watch Terminator, or whether a patient is likely to have cancer.  
 
 
-[truncated_matrix_svd.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6833692/truncated_matrix_svd.pdf)
-![truncated_matrix_svd (1)](https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg)
 
 
 
