@@ -40,6 +40,7 @@ Fortunately we can also store our data in a mathematical structure called a tens
 When we store our voxel data in tensors instead of matrices, we retain all the information about the 3 dimensional location in the brain, the sequence of the image in time, and the trial.  Now we want to decompose our tensor data using a method analogous to the way [matrices can be decomposed](https://www.youtube.com/watch?v=DG7YTlGnCEo), so we can use far less data and still extract an accurate prediction of what the subject is thinking.  In matrices this is called Singular Value Decomposition; we call our approach tensor-SVD or tSVD.  
 
 Here is a diagram of matrix decomposition using SVD:
+
 ![truncated_matrix_svd (1)](https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg)
 
 This what we imagine a tensor SVD would be:
