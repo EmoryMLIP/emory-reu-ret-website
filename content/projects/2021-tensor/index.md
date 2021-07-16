@@ -1,3 +1,4 @@
+[truncated_matrix_svd.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6833688/truncated_matrix_svd.pdf)
 ---
 title: Tensors for fMRI
 date: 2021-05-01
