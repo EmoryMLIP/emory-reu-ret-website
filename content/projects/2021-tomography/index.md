@@ -18,5 +18,3 @@ Computed tomography (CT) is well known for its ability to produce high-quality i
 
 
 # Point-of-Care Tomographic Imaging
-
-1. Can mathematics really save your life? 
