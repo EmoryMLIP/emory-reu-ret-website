@@ -5,12 +5,6 @@ featured: false
 tags: ["Summer 2021"]
 ---
 
-<p align="center">
-Understanding the human brain by extracting multidimensional information.
-
- 
-<img width="200" height="100" src="img/tensor_neuroimaging_draft1.jpg">
-</p>
 
 
 <!--more-->
@@ -19,6 +13,8 @@ Understanding the human brain by extracting multidimensional information.
 Can we look at a brain scan and know what the brain's owner is thinking?
 
 We use brain scans called functional MRIs (fMRIs) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
+
+What is image classification?  It is using a computer to figure what what an image represents.  For example, we can train a computer to figure out what 
 
 Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
 
@@ -47,10 +43,7 @@ This what we imagine a tensor SVD would be:
 ![tsvdm_full-1](https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png)
 
 
-You'll notice that we use matrix multiplication in working with matrix SVDs.  What would tensor multiplication look like?  We could take lower dimensional "slices" of our tensor and multiply the corresponding slices of 2 tensors in the same way one would multiply matrices.  Then we could put those matrix products back into a tensor again.  This is called a "facewise product" and is diagrammed here:
-
-<img width="279" alt="facewise_prod" src="https://user-images.githubusercontent.com/50922545/126016127-531a724f-3ff5-496e-862a-a9617b607d0e.png">
-
+You'll notice that we use matrix multiplication in working with matrix SVDs.  What would tensor multiplication look like?  This is what we are trying to figure out.  
 
 
 
