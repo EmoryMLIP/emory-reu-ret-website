@@ -1,4 +1,3 @@
-![class0](https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg)
 ---
 title: Tensors for fMRI
 date: 2021-05-01
@@ -18,6 +17,9 @@ We use brain scans called functional MRIs (fMRIs) that show us which parts of th
 What is image classification?  It is using a computer to figure what what an image represents.  For example, we can train a computer to figure out what 
 
 Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
+
+![class0](https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg)
+![class1](https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg)
 
 
 Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the organ.  
