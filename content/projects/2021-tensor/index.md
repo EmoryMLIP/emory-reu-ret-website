@@ -21,9 +21,7 @@ Image classification is using a computer to figure what what an image represents
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which class of digits it most resembles.  
 
-Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
-
-
+We are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
 
 Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the organ.  
 ![mainImage](img/brain1.jpg "brain1")
