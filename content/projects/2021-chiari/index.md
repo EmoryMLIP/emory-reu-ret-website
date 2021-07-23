@@ -26,9 +26,13 @@ severe headaches
 vision and speech problems 
 
 ### Segmentation Approaches
-Atlas-Based Segementation
+### Atlas-Based Segementation
+   The development of the atlas based image registration method involved primarily working with magnitudinal images. The final tool uses 51 of the magnitudinal images in a bank of templates to which a new reference can be compared to generate a mask for the template. In development of the method, references with known masks were used and similarity measures between known and predicted masks were calculated to inform the methods and parameters chosen.
 
-Machine Learning 
+### Dice/Jaccard
+To evaluate the success of both the machine learning and atlas-based image registration as segmentation methods, this study uses dice similarity index given in \textbf{Equation \ref{eq:dice}}. This is calculated by comparing overlap with the size of each set, and ranges from 0, in the case of two disparate sets, to 1, in the case of identical sets \cite{Monteux2019}
+
+### Machine Learning 
 
 ---
 ### Background
