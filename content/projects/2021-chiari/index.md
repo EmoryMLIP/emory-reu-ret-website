@@ -1,4 +1,5 @@
-![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
+
+
 ---
 title: Image-Based Diagnosis of Chiari Disease
 date: 2021-05-01
@@ -38,6 +39,7 @@ To evaluate the success of both the machine learning and atlas-based image regis
 ![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
 
 ### Machine Learning 
+[UNet Arch Diagram.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6870722/UNet.Arch.Diagram.pdf)
 
 ---
 ### Background
