@@ -36,12 +36,14 @@ Some of the symptoms include:
 ![atlas-based-example](https://user-images.githubusercontent.com/85231953/126829418-afd0c524-cf3f-41bc-9518-dcd75480847b.png)
 
 ### Dice/Jaccard
-To evaluate the success of both the machine learning and atlas-based image registration as segmentation methods, this study uses dice similarity index given in \textbf{Equation \ref{eq:dice}}. This is calculated by comparing overlap with the size of each set, and ranges from 0, in the case of two disparate sets, to 1, in the case of identical sets \cite{Monteux2019}
-
 ![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
 
 ### What is Machine Learning?
  The study of computer algorithms that improve automatically through experience and by the use of data.
+  - U-Net: A Convolutional Neutral Network
+  - Cross-Entrophy Loss
+  - IBFGS Optimiztion
+  - Experimental Setups 
  ![MachLearningDiagram](https://user-images.githubusercontent.com/85231953/126830267-2d826131-7b14-4a08-8c96-e7ca6912d5d9.jpg)
 
 [UNet Arch Diagram.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6870722/UNet.Arch.Diagram.pdf)
