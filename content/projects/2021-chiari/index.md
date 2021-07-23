@@ -1,3 +1,4 @@
+![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
 ---
 title: Image-Based Diagnosis of Chiari Disease
 date: 2021-05-01
@@ -34,7 +35,7 @@ Some of the symptoms include:
 ### Dice/Jaccard
 To evaluate the success of both the machine learning and atlas-based image registration as segmentation methods, this study uses dice similarity index given in \textbf{Equation \ref{eq:dice}}. This is calculated by comparing overlap with the size of each set, and ranges from 0, in the case of two disparate sets, to 1, in the case of identical sets \cite{Monteux2019}
 
-![mainImage](img/ssd-dice-scatter.png "SSD Dice Scatter") 
+![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
 
 ### Machine Learning 
 
