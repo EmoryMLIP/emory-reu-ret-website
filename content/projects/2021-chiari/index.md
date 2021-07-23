@@ -29,6 +29,7 @@ Some of the symptoms include:
 - vision and speech problems 
 
 ### Segmentation Approaches
+
 ### Atlas-Based Segementation
    The development of the atlas based image registration method involved primarily working with magnitudinal images. The final tool uses 51 of the magnitudinal images in a bank of templates to which a new reference can be compared to generate a mask for the template. In development of the method, references with known masks were used and similarity measures between known and predicted masks were calculated to inform the methods and parameters chosen.
    
