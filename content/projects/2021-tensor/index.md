@@ -26,6 +26,8 @@ We are training our computer to learn how to use the data in an fMRI to classify
 Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
 ![mainImage](img/brain1.jpg "brain1")
 
+<img src="img/brain1.jpg" alt="brain1" width="200"/>
+
 
 Images like these consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
 
