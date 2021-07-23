@@ -42,8 +42,10 @@ The image registration was run with one reference against all template images to
    
  
  ### IBFGS Optimiztion
-  
+  - The lBFGS algorithm uses the gradient calculated from the loss function and the learning rate found in the line search to update the model weights. The images were then, once again, ran through the U-Net in hopes of a better segmentation. 
+  - 
   ### Experimental Setups 
+  - 
  ![MachLearningDiagram](https://user-images.githubusercontent.com/85231953/126830267-2d826131-7b14-4a08-8c96-e7ca6912d5d9.jpg)
 
 
