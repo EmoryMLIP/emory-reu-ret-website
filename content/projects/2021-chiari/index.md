@@ -40,12 +40,11 @@ The image registration was run with one reference against all template images to
   ### Cross-Entrophy Loss
   - In order to find the error between predicted masks and the corresponding known masks, a loss function is defined to show how far the model is from the expected output.
    
- 
  ### IBFGS Optimiztion
   - The lBFGS algorithm uses the gradient calculated from the loss function and the learning rate found in the line search to update the model weights. The images were then, once again, ran through the U-Net in hopes of a better segmentation. 
   - 
   ### Experimental Setups 
-  - 
+  
  ![MachLearningDiagram](https://user-images.githubusercontent.com/85231953/126830267-2d826131-7b14-4a08-8c96-e7ca6912d5d9.jpg)
 
 
