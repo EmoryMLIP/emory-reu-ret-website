@@ -6,8 +6,6 @@ featured: false
 tags: ["Summer 2021"]
 ---
 
-Machine Learning for Chiari
-
 <!--more-->
 
 ### Overview
