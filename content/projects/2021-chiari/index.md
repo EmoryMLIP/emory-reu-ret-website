@@ -36,12 +36,13 @@ The image registration was run with one reference against all template images to
  
   ### U-Net: A Convolutional Neutral Network 
    - CNNs are a type of neural network which process data that have a ``grid like topology," such as image data (a 2D grid of pixels), and typically are used for classification problems. This kind of network utilizes a convolution operator.
-   - 
+   
   ### Cross-Entrophy Loss
-    - In order to find the error between predicted masks and the corresponding known masks, a loss function is defined to show how far the model is from the expected output.
+  - In order to find the error between predicted masks and the corresponding known masks, a loss function is defined to show how far the model is from the expected output.
+   
  
  ### IBFGS Optimiztion
-  - 
+  
   ### Experimental Setups 
  ![MachLearningDiagram](https://user-images.githubusercontent.com/85231953/126830267-2d826131-7b14-4a08-8c96-e7ca6912d5d9.jpg)
 
