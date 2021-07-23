@@ -33,7 +33,7 @@ The image registration was run with one reference against all template images to
 
 ### What is Machine Learning?
  The study of computer algorithms that improve automatically through experience and by the use of data.
-  - U-Net: A Convolutional Neutral Network
+  - U-Net: A Convolutional Neutral Network: CNNs are a type of neural network which process data that have a ``grid like topology," such as image data (a 2D grid of pixels), and typically are used for classification problems. This kind of network utilizes a convolution operator.
   - Cross-Entrophy Loss
   - IBFGS Optimiztion
   - Experimental Setups 
