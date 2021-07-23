@@ -34,6 +34,8 @@ Some of the symptoms include:
 ![atlas-based-example](https://user-images.githubusercontent.com/85231953/126829418-afd0c524-cf3f-41bc-9518-dcd75480847b.png)
 
 ### Dice/Jaccard
+The image registration was run with one reference against all template images to see how well the SSD works as an initial prediction. Note that a lower SSD is desirable since that means that the two images are more similar. Drawing a least squares line shows a rough correlation between the SSD and how well the image registration performed. It is far from a linear correlation, but at least the top SSD correctly indicated the best similarity in this case. One option to help with this inaccuracy is to take the top 20 patients and average the result together. This way it is less dependent on the outliers.
+
 ![ssd-dice-scatter](https://user-images.githubusercontent.com/85231953/126829009-f49ec77b-439e-4986-bf61-3c4016f0df77.png)
 
 ### What is Machine Learning?
