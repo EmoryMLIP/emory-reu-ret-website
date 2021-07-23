@@ -1,5 +1,4 @@
 
-
 ---
 title: Image-Based Diagnosis of Chiari Disease
 date: 2021-05-01
@@ -32,6 +31,8 @@ Some of the symptoms include:
 ### Segmentation Approaches
 ### Atlas-Based Segementation
    The development of the atlas based image registration method involved primarily working with magnitudinal images. The final tool uses 51 of the magnitudinal images in a bank of templates to which a new reference can be compared to generate a mask for the template. In development of the method, references with known masks were used and similarity measures between known and predicted masks were calculated to inform the methods and parameters chosen.
+   
+![atlas-based-example](https://user-images.githubusercontent.com/85231953/126829418-afd0c524-cf3f-41bc-9518-dcd75480847b.png)
 
 ### Dice/Jaccard
 To evaluate the success of both the machine learning and atlas-based image registration as segmentation methods, this study uses dice similarity index given in \textbf{Equation \ref{eq:dice}}. This is calculated by comparing overlap with the size of each set, and ranges from 0, in the case of two disparate sets, to 1, in the case of identical sets \cite{Monteux2019}
