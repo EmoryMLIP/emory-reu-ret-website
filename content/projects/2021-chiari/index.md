@@ -1,4 +1,4 @@
-Title: Image-Based Diagnosis of Chiari Disease
+Image-Based Diagnosis of Chiari Disease
 ---
 
 ### Overview
