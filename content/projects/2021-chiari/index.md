@@ -17,15 +17,15 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 ### Symptoms of Chiari Malformation 
 Some of the symptoms include: 
 
-dizziness
+- dizziness
 
-neck pain                 
+- neck pain                 
 
-poor hand coordinatins                  
+- poor hand coordinatins                  
 
-severe headaches
+- severe headaches
 
-vision and speech problems 
+- vision and speech problems 
 
 ### Segmentation Approaches
 ### Atlas-Based Segementation
