@@ -39,7 +39,7 @@ The image registration was run with one reference against all template images to
   - Experimental Setups 
  ![MachLearningDiagram](https://user-images.githubusercontent.com/85231953/126830267-2d826131-7b14-4a08-8c96-e7ca6912d5d9.jpg)
 
-[UNet Arch Diagram.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6870722/UNet.Arch.Diagram.pdf)
+
 
 ---
 ### Background
