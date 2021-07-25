@@ -54,7 +54,7 @@ Two parameters that relate to the geometry of portable CT scanning devices are: 
 
 During the CT acquisition process, the x-ray source rotates around the patient. Each time the x-ray source moves to a new position, these parameters change. In point-of-care imaging, these parameters are essential during the data imaging process. Imprecise data (unknown parameters) yield to the reconstruction of poor quality images, while precise data (known parameters) yield a well reconstructed image.
 
-*How were these geometry parameters estimated to obtain better reconstructed images? 
+*How were these geometry parameters estimated to obtain better reconstructed images?* 
 
 <p align="center">
   <img width="700" height="300" src="https://user-images.githubusercontent.com/84742324/126884434-a47ee15e-2df5-45f1-8b5f-f1af63e894ad.png">
@@ -129,3 +129,11 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 <p align="center">
   <img width="1000" height="300" src="https://user-images.githubusercontent.com/84742324/126915702-f55dcd15-4a71-4f4c-bbbd-480734a73394.png">
 </p>
+
+# Project Activities
+
+*Point-of-Care Tomographic Imaging Group*
+*Presentation Slides*
+*Virtual Poster*
+*Poster Blitz Video*
+*Math Lesson*
