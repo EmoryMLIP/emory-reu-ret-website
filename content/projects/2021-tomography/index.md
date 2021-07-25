@@ -59,8 +59,19 @@ An ill-posed problem is often referred to as one that is not well-posed. In the 
 # The Linear & NonLinear Least Squares Problem 
 Throughout the 1800s, mathematicians such as Legendre, Gauss, and Laplace contributed ideas to the method of least squares. The method of least squares finds the line that minimizes the distance to the line and the data points. 
 
+In computed tomography, a problem arises that involves the least squares, a regularized linear least squares problem. This regularized linear least squares problem is composed of x, the image, A(p), a matrix that is constructed by the geometry parameters, R and θ, b, the measured data, and a parameter α, called the regularization parameter. The nonlinear least squares problem does not include the regularization parameter.   
 
 
+The solution to this problem is found by the block coordinate descent (BCD). The BCD is an optimization algorithm that solves this problem iteratively. The BCD algorithm works by minimizing the parameters R and θ and x one at a time, just like finding the distance from the line and data points.  The linear least squares problem is considered first. It takes the initial parameters R and θ, generate matrix A, to get x, the image. Here the parameters, R and θ are known and x is approximated. Then, the nonlinear least squares problem is considered next. Once x is known, then x is used to approximate the parameters, R and θ. Here x is known and the parameters R and θ are approximated. The pattern continues until a good image is produced.  
+
+# Filter - Based Regularization 
+Since it is impossible to get data exactly from the detector due to numerous reasons, regularization is needed to lower the noise levels. Tikhonov regularization is one of the most common ways to handle these noise levels. The method was named after mathematician Andrew Tikhonov. Tikhonov worked in numerous topics and different fields of mathematics. His best contributions are in topology. 
+
+Singular value decomposition (SVD) plays an important role in understanding the basic idea behind Tikhonov Regularization. The singular values of the matrix A are significant. To achieve good reconstructed images with small noise large singular values need to be considered to minimize the error produced. 
+
+# Acceleration Techniques & Tests
+
+Estimating the geometry parameters in this project can be viewed as a fixed point iteration technique. Acceleration techniques speed up the convergence of these iterations, in this case, until a good quality image is produced. The research imaging group used three fixed point acceleration schemes in their numerical experiments: 1) Irons-Tuck method, 2) Crossed - second method, 3) Anderson Acceleration. Acceleration tests were performed and seemed to improve image resolution. MATLAB was used including the optimization, signal processing, and image processing toolboxes. IR Tools, AIR Tools II, and Imfil packages were also used. 
 
 
 
