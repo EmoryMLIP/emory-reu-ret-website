@@ -2,12 +2,8 @@
 # New algorithm helps make portable CT machine images clearer.
 *Mathematics: College students and math teachers have developed a new, better way of improving image resolution with mathematical methods.* 
 
-
-  ![Portable Device](https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg)
-
-
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
+  <img width="750" height="876" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
 </p>
 
 Research work done at the 2021 REU/RET summer program at Emory University has proven a way to make medical diagnoses more effectively. The work behind this new way relies heavily upon mathematical techniques that connect linear algebra with numerical and optimization methods. 
