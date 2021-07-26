@@ -14,7 +14,7 @@ tags: ["Summer 2021"]
   <img width="750" height="876" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
 </p>
 
-Research work done at the 2021 REU/RET summer program at Emory University has proven a way to make medical diagnoses more effectively. The work behind this new way relies heavily upon mathematical techniques that connect linear algebra with numerical and optimization methods. 
+Research work done at the 2021 REU/RET summer program at Emory University has devised a way to make medical diagnoses more effectively. The work behind this new way relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods. 
 
 The 2021 REU/RET Emory program focuses this year on computational mathematics and its applications in data science.The research work done is a collaborative effort between a group of undergraduate students, math teachers, led by mathematics faculty from Emory University. Four different research groups worked together on different projects following this year’s program theme, “Learning from Images.” This truly has provided undergraduate students and math teachers from around the nation with numerous learning opportunities and to conduct research in this area.  Teachers are involved in research and able to create teaching materials that they can use in their classroom. 
 The REU/RET Emory Program’s research groups include: 1) Image-Based Diagnosis of Chiari Disease, 2) Images to Patient Specific Models in Cardiology, 3) Tensors and Data Modeling in Neuroimaging, and 4) Point-of-Care Tomographic Imaging.  The project on Point-of-Care Tomographic Imaging research focused on exploring new mathematical approaches for  image reconstruction.   
@@ -28,11 +28,11 @@ The results obtained from their work have offered other students mathematicians 
 </p>
 
 # COVID-19 Imaging 
-The mathematical ideas involved in the Point-of-Care Tomographic Imaging project are of great importance. With these mathematical methods, imaging becomes a possibility to patients in all parts of the world allowing them to live a healthy and happy life. To get better reconstructed images, the group considers a regularized linear least squares problem, to which the solution is approximated  by  using  an alternating descent scheme known as block coordinate descent or (BCD). One iteration of the BCD solves a linear least square problem, while another iteration solves the nonlinear problem.  
+The mathematical ideas involved in the Point-of-Care Tomographic Imaging project are of great importance. With these mathematical methods, imaging becomes a possibility to patients in all parts of the world allowing them to live a healthy and happy life. To get better reconstructed images, the group considers a regularized linear least squares problem, to which the solution is approximated  by  using  an alternating descent scheme known as block coordinate descent or (BCD). Each iteration of BCD has two steps. One step of the BCD solves a linear least square problem, and the next step solves the nonlinear problem.  
 
 By the 1900’s mathematicians had already found ways to use these iterative reconstruction techniques to reconstruct an image. In 1917, Johann Radon introduced the Radon Transform, followed by Stefan Kaczmarz in 1937. Scientists Allan McLeod Cormack and Godfrey Newbold Hounsfield developed the first scanning device.  
 
-The medical field has greatly depended on these iterative reconstruction methods. In  medical  imaging,  computed  tomography  (CT)  techniques  are  becoming  more  and  more  popular  for  their ability to produce high quality images of the human body. CT methods use a combination of computer processes and mathematics to reconstruct images.   The COVID-19 pandemic brought many challenges and setbacks to many doctors around the world  and imaging played a vital role in helping diagnose the virus. Doctors have been able to use CT scans to diagnose COVID-19, examine the lungs in patients, who were at high risk of infection, and those recovered from the virus.     
+The medical field has greatly depended on these iterative reconstruction methods. In  medical  imaging,  computed  tomography  (CT)  techniques  are  becoming  more  and  more  popular  for  their ability to produce high quality images of the human body. CT methods use a combination of computer processes and mathematics to reconstruct images.   The COVID-19 pandemic brought many challenges and setbacks to many doctors around the world  and imaging played a vital role in helping diagnose the virus. Doctors have been able to use CT scans to diagnose and treat COVID-19 by examining the lungs in patients who are potentially infectious, or in recovery.
 
 <p align="center">
   <img width="600" height="400" src="https://user-images.githubusercontent.com/84742324/126884217-ccaf8e58-305f-4824-9fb8-5ada4f58da30.jpg">
@@ -51,14 +51,15 @@ A CT scanner is a device that is composed of a scanning gantry, x-ray generator,
 Limitations arise when using these portable CT scanners for medical procedures since these devices require extensive care, such as regular calibration for effective performance. This is where the point-of-care tomographic imaging problem begins. 
 
 # The Beginning of the Problem
-Two parameters that relate to the geometry of portable CT scanning devices are: 1)R - distance between source and detector and 2) θ - orientation of source to detector. 
 
 <p align="center">
   <img width="300" height="300" src="https://user-images.githubusercontent.com/84742324/126915305-c8b40ba1-d37f-4317-9bf6-66e5155a8cd5.png">
 </p>
 
 Limitations arise when using CT scanners for these medical procedures since these devices require extensive care, such as regular maintenance (calibration) for effective performance. Plus, transporting these to remote locations is not an easy task. Point-of-care imaging addresses these challenges by allowing radiologists to add portable CT scanners to their departments to increase patient satisfaction and improve medical outcomes. 
-Two parameters that relate to the geometry of portable CT scanning devices are: 1)R - distance between source and detector and 2) θ - orientation of source to detector. 
+Two parameters that relate to the geometry of portable CT scanning devices are: 
+1. R - distance between source and detector and 
+2. θ - orientation of source to detector. 
 
 During the CT acquisition process, the x-ray source rotates around the patient. Each time the x-ray source moves to a new position, these parameters change. In point-of-care imaging, these parameters are essential during the data imaging process. Imprecise data (unknown parameters) yield to the reconstruction of poor quality images, while precise data (known parameters) yield a well reconstructed image.
 
@@ -109,7 +110,7 @@ Singular value decomposition (SVD) plays an important role in understanding the 
 
 MATLAB is used including the optimization, signal processing, and image processing toolboxes. IR Tools, AIR Tools II, and Imfil packages were also used. 
 
-To simulate a problem, the IR tools package is used. IR tools also provide regularized linear square solvers. Three of these linear least squares solvers are: 1) hybrid-lsqr algorithm, 2) irn, 3) fista. To approximate the solution of the non-linear least squares problem two methods are used: 1)lsqnonlin, 2) imfil.  
+To simulate a problem, the IR tools package is used. IR tools also provide regularized linear square solvers. Three of these linear least squares solvers are: 1) hybrid-LSQR algorithm, 2) IRN, 3) FISTA. To approximate the solution of the non-linear least squares problem two methods are used: 1)lsqnonlin, 2) imfil.  
 
 The implementation of the BCD was using the IR Tools package and naming conventions. In the base IRtools package the function PRsetis used to set up options for computed
 tomography problems, where PRset is updated to accept values related to the BCD (inital guess for parameters). To simulate a CT problem with unknown geometry parameters PRtomo_var is used with the image size being n×n. PRtomo_var generates all the data necessary to simulate the inverse problem. IRset updates to include parameters for BCD, such as which acceleration technique to use, and IRbcd computes the BCD. 
