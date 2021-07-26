@@ -2,6 +2,7 @@
 title: From Images to Patient-Specific Models in Cardiology
 date: 2021-05-01
 featured: true
+summary: 'Short summary of project to be shown on the front page.'
 tags: ["Summer 2021"]
 ---
 

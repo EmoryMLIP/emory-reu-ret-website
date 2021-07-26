@@ -2,6 +2,7 @@
 title: Tensors for fMRI
 date: 2021-05-01
 featured: false
+summary: 'Short summary of project to be shown on the front page.'
 tags: ["Summer 2021"]
 ---
 

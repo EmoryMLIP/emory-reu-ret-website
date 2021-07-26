@@ -1,8 +1,16 @@
-Image-Based Diagnosis of Chiari Disease
+---
+title: Image-Based Diagnosis of Chiari Disease
+date: 2021-05-01
+featured: true
+summary: 'Short summary of project to be shown on the front page.'
+tags: ["Summer 2021"]
+---
+
+
 ---
 
 ### Overview
-Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  direction  is  a  novel  functional  Magnetic Resonance Imaging (MRI) technique developed by Dr.  Oshinsky’s group (Dept.  of Radiology).  However,the large number of manual processing steps prohibit its use as a wide-spread screening tool.This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline,  most critically the segmentation of the image into different brain regions.  The teams will work with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computervision and the image data is two-dimensional and of limited resolution, which enablesfast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
+Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  direction  is  a  novel  functional  Magnetic Resonance Imaging (MRI) technique developed by Dr.  Oshinsky’s group (Dept.  of Radiology).  However, the large number of manual processing steps prohibit its use as a wide-spread screening tool. This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline,  most critically the segmentation of the image into different brain regions.  The teams will work with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 
 ![mainImage](img/Chiari-Synergy.png "Chiari Synergy")
 
@@ -13,7 +21,7 @@ Some of the symptoms include:
 
 - neck pain                 
 
-- poor hand coordinatins                  
+- poor hand coordination                  
 
 - severe headaches
 
@@ -37,10 +45,10 @@ The image registration was run with one reference against all template images to
   ### U-Net: A Convolutional Neutral Network 
    - CNNs are a type of neural network which process data that have a ``grid like topology," such as image data (a 2D grid of pixels), and typically are used for classification problems. This kind of network utilizes a convolution operator.
    
-  ### Cross-Entrophy Loss
+  ### Cross-Entropy Loss
   - In order to find the error between predicted masks and the corresponding known masks, a loss function is defined to show how far the model is from the expected output.
    
- ### IBFGS Optimiztion
+ ### IBFGS Optimization
   - The lBFGS algorithm uses the gradient calculated from the loss function and the learning rate found in the line search to update the model weights. The images were then, once again, ran through the U-Net in hopes of a better segmentation. 
   - 
   ### Experimental Setups 

@@ -1,7 +1,8 @@
 ---
 title: Generative
 date: 2021-05-01
-featured: false
+featured: true
+summary: 'Short summary of project to be shown on the front page.'
 tags: ["Summer 2021"]
 ---
 

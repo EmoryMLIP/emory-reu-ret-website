@@ -1,3 +1,11 @@
+---
+title: Tomography
+date: 2021-05-01
+featured: true
+summary: 'Short summary of project to be shown on the front page.'
+tags: ["Summer 2021"]
+---
+
 **REU/RET Emory University**
 # New algorithm helps make portable CT machine images clearer.
 *Mathematics: College students and math teachers develop a new, better way of improving image resolution with mathematical methods.* 
