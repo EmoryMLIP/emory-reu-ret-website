@@ -8,7 +8,7 @@ tags: ["Summer 2021"]
 
 **REU/RET Emory University**
 # New algorithm helps make portable CT machine images clearer.
-*Mathematics: Undergraduate college students study a new, better way of improving image resolution with mathematical methods.* 
+*Mathematics: Undergraduate college students studied at the Emory REU a new, better way of improving image resolution with mathematical methods.* 
 
 <p align="center">
   <img width="750" height="876" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
