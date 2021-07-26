@@ -141,7 +141,7 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 # Project Activities
 - Point-of-Care Tomographic Imaging Group
 - [Presentation Slides](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf)
-- Poster Blitz Video
+- [Poster Blitz Video](https://youtu.be/qdcGe9MKCoI)
 - Virtual Poster
 - Manuscript
 - Math Lesson
