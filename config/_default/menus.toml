@@ -27,7 +27,7 @@
 
 [[main]]
   name = "Join"
-  url = "students"
+  url = "join"
   weight = 90
 
 [[main]]
