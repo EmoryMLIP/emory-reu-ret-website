@@ -131,9 +131,8 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 </p>
 
 # Project Activities
-
-*Point-of-Care Tomographic Imaging Group*
-*Presentation Slides*
-*Virtual Poster*
-*Poster Blitz Video*
-*Math Lesson*
+- Point-of-Care Tomographic Imaging Group
+- Presentation Slides
+- Poster Blitz Video
+- Virtual Poster
+- Math Lesson
