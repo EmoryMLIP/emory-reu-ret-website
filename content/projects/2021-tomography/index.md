@@ -145,3 +145,4 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 - Virtual Poster
 - Manuscript
 - Math Lesson
+- [Bios](./Bios.md)
