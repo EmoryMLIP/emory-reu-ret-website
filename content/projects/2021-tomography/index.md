@@ -135,4 +135,5 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 - [Presentation Slides](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf)
 - Poster Blitz Video
 - Virtual Poster
+- Manuscript
 - Math Lesson
