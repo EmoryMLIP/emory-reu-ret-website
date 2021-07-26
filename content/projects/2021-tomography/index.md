@@ -90,7 +90,9 @@ An ill-posed problem is often referred to as one that is not well-posed. In the 
 
 # The Linear & NonLinear Least Squares Problem 
 Throughout the 1800s, mathematicians such as Legendre, Gauss, and Laplace contributed ideas to the method of least squares. The method of least squares finds the line that minimizes the distance to the line and the data points. 
-In computed tomography, a problem arises that involves least squares, a regularized linear least squares problem. This regularized linear least squares problem is composed of x, the image, A(p), a matrix that is constructed by the geometry parameters, R and θ, b, the measured data, and a parameter α, called the regularization parameter. The nonlinear least squares problem does not include the regularization parameter.   
+In computed tomography, a problem arises that involves least squares, a regularized linear least squares problem. This regularized linear least squares problem is composed of x, the image, A(p), a matrix that is constructed by the geometry parameters, R and θ, b, the measured data, and a parameter α, called the regularization parameter. The nonlinear least squares problem does not include the regularization parameter. 
+
+![./BCDgif.gif]
 
 The solution to this problem is found by the block coordinate descent (BCD). The BCD is an optimization algorithm that solves this problem iteratively. The BCD algorithm works by minimizing the parameters R and θ and x one at a time.  The linear least squares problem is considered first. It takes the initial parameters R and θ, generate matrix A, to get x, the image. Here the parameters, R and θ are known and x is approximated. Then, the nonlinear least squares problem is considered next. Once x is known, then x is used to approximate the parameters, R and θ. Here x is known and the parameters R and θ are approximated. The pattern continues until a good image is produced.  
 
