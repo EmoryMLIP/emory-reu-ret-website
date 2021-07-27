@@ -3,8 +3,8 @@
 ### Mai Phuong Pham Huynh
 Mai is a rising junior at Emory University, majoring in Applied Mathematics and Statistics. Her research focus is on numerical analysis and scientific computing. In her free time, she enjoys listening to violin concertos, doing giant Jigsaw puzzles, and searching for vintage vinyl records from the 50s-90s.
 
-<p align="center">
-  <img src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tomography/img/IMG_6452.jpeg">
+<p align='center'>
+  <img width=500px, height=auto src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tomography/img/IMG_6452.jpeg" class='center'>
 </p>
 
 ### Manuel Santana
