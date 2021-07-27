@@ -62,8 +62,7 @@ We added 15 new images to our OCT data set in PyTorch. With more training data, 
 
 ### Research Week 4:
 We  explored different metrics for comparing the results visually and numerically. One option is the Jaccard Index, which quantifies the percent overlap between the segmented images. Another option was to extract the VMTK and PyTorch contour lines and boundary points in ParaView and then use Python or Matlab code to plot the x and y coordinates of the results as overlapping figures. Then, we could use integration to calculate the difference between the two curves (L^2 metrics) .
-<!--Image-->
-![mainImage](img/Figure8.png "Figure8")
+
 
 
 
