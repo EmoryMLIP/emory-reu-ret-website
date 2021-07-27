@@ -81,6 +81,9 @@ For more technical background information
 
 [Tensor decompositions and applications](http://www.kolda.net/publication/koba09/)
 
+[Image classification using local tensor singular value decompositions](https://arxiv.org/pdf/1706.09693.pdf)
+
+
 ---
 ### Classification
 
