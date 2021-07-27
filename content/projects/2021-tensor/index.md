@@ -18,8 +18,7 @@ We use brain scans called functional MRIs (fMRIs) that show us which parts of th
 Image classification is using a computer to figure what what an image represents.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
 
 <img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg" width="400"/>
-
-![class1](https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg)
+<img src="https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg" width="400"/>
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  
 
@@ -38,7 +37,7 @@ When we store fMRI data in a matrix we lose important relationships between the 
 
 Fortunately we can also store our data in a different mathematical structure called a tensor.  A tensor is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
 
-<img width="968" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
+<img width="600" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
 
 When we store our voxel data in tensors instead of matrices, we retain all the information about the 3 dimensional location in the brain, the sequence of the image in time, and the trial.  Now we want to decompose our tensor data using a method analogous to the way [matrices can be decomposed](https://www.youtube.com/watch?v=DG7YTlGnCEo), so we can use far less data and still extract an accurate prediction of what the subject is thinking.  In matrices this is called Singular Value Decomposition; we call our approach tensor-SVD or tSVD.  
 
