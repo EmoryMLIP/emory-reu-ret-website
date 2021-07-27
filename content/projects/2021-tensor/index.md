@@ -11,11 +11,19 @@ tags: ["Summer 2021"]
 <!--more-->
 
 ### Overview
+---
 Can we look at a brain scan and know what the brain's owner is thinking?
 
-We use brain scans called functional MRIs (fMRIs) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
+Our research attempts to use computers to correctly classify brian scans into 2 groups, guessing what they are doing during the scan.
 
-Image classification is using a computer to figure what what an image represents.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
+### Functional MRI
+---
+We use [brain scans called functional MRIs](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
+
+
+### Classification
+---
+Image classification is using a computer to figure what what an image represents.  Computers can't "see" images, so they use features of the images that it can understand.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
 
 <img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg" width="400" class="aligncenter"/>
 <img src="https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg" width="400"/>
@@ -23,7 +31,14 @@ Image classification is using a computer to figure what what an image represents
 
 We call this first group Class 0 and the second Class 1. Using a tensor version of the singular value decomposition that we will elaborate upon later, we can construct something called a "basis", which can be thought of as a collection of the most important features shared by all of the images belonging to that class. Here are the bases for each of our classes: 
 
-PUT IMAGES HERE
+<img src="https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg" width="400"/>
+<img src="https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg" width="400"/>
+<img src="https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg" width="400"/>
+
+![testimage](https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg)
+![projection1](https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg)
+![projection0](https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg)
+
 
 We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. When we have a test image of a handwritten digit and want to see if this mathematical method can figure out if it is a 0 or a 1, we compute something called a "projection", which mathematically projects our test image into that basis. Below is an example:
 
@@ -87,9 +102,7 @@ For more technical background information
 
 
 ---
-### Classification
 
-### fMRI
 
 ### Singular Value Decomposition
 
