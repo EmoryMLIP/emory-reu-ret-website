@@ -58,6 +58,9 @@ The image registration was run with one reference against all template images to
 
 
 ---
+### Meet the Team
+-[Bios](.Bios.md)
+
 ### Team Chiari's Creations
 -[Research Paper](.ResearchPaper.md)
 
@@ -66,8 +69,7 @@ The image registration was run with one reference against all template images to
 -[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
 
-### Meet the Team
--[Bios](.Bios.md)
+### Dr. Lars Ruthotto Homepage
 
 [Lars' Homepage](https://www.mathcs.emory.edu/~lruthot/)
 
