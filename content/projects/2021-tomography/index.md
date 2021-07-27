@@ -121,4 +121,4 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
 - [Poster Blitz Video](https://youtu.be/qdcGe9MKCoI)
 - Virtual Poster
 - Manuscript
-- Math Lesson
+- [Math Lesson.pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6888967/Tomography.Lesson.pdf)
