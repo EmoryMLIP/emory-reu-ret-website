@@ -47,6 +47,7 @@ Here is a diagram of matrix decomposition using SVD:
 
 This what we imagine a tensor SVD would be:
 ![tsvdm_full-1](https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png)
+<img width="600"  src="https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png">
 
 
 You'll notice that we use matrix multiplication in working with matrix SVDs.  What would tensor multiplication look like?  This is what we are trying to figure out.  
