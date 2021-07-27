@@ -18,6 +18,8 @@ We use brain scans called functional MRIs (fMRIs) that show us which parts of th
 Image classification is using a computer to figure what what an image represents.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
 
 ![class0](https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg)
+<img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg width="200"/>
+
 ![class1](https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg)
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  
