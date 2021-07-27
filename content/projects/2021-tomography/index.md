@@ -54,7 +54,7 @@ Limitations arise when using these portable CT scanners for medical procedures s
   <img width="300" height="300" src="https://user-images.githubusercontent.com/84742324/126915305-c8b40ba1-d37f-4317-9bf6-66e5155a8cd5.png">
 </p>
 
-Limitations arise when using CT scanners for these medical procedures since these devices require extensive care, such as regular maintenance (calibration) for effective performance. Two parameters that relate to the geometry of portable CT scanning devices are: 
+Two parameters that relate to the geometry of portable CT scanning devices are: 
 
 1. R - distance between source and detector and 
 2. θ - orientation of source to detector. 
