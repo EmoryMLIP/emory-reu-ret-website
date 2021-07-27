@@ -20,6 +20,17 @@ Image classification is using a computer to figure what what an image represents
 <img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg" width="400"/>
 <img src="https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg" width="400"/>
 
+
+We call this first group Class 0 and the second Class 1. Using a tensor version of the singular value decomposition that we will elaborate upon later, we can construct something called a "basis", which can be thought of as a collection of the most important features shared by all of the images belonging to that class. Here are the bases for each of our classes: 
+
+PUT IMAGES HERE
+
+We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. When we have a test image of a handwritten digit and want to see if this mathematical method can figure out if it is a 0 or a 1, we compute something called a "projection", which mathematically projects our test image into that basis. Below is an example:
+
+PUT IMAGES HERE
+
+As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we extend this method to fMRI, but instead of having classes for zeros and ones, we classify whether or not a test fMRI corresponds to the human subject reading a sentence or viewing a picture. 
+
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  
 
 We are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
