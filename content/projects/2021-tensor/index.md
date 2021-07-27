@@ -24,12 +24,8 @@ Here is an example of an fMRI of one brain during one trial.  The different imag
 
 <img src="img/brain1.jpg" alt="brain1" width="400"/>
 
-[Here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) stored in the github repository.  
 
 
-Images like these consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
-
-If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
 
 ### Classification
@@ -40,7 +36,6 @@ Image classification is using a computer to figure what what an image represents
 <img src="https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg" width="400"/>
 
 
-Using a tensor version of the singular value decomposition that we will elaborate upon later, 
 
 We can construct a "basis", which can be thought of as a collection of the most relevant features shared by all of the images belonging to that class.  
 
@@ -57,7 +52,7 @@ But if it tries to compare it to a zero, we don't see a good match:
 
 We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. When we have a test image of a handwritten digit and want to see if this mathematical method can figure out if it is a 0 or a 1, we compute something called a "projection", which mathematically projects our test image into that basis. Below is an example:
 
-[projectionIllustrationV2 (1).pdf](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6889061/projectionIllustrationV2.1.pdf)
+![0001](https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg)
 
 
 As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we extend this method to fMRI, but instead of having classes for zeros and ones, we classify whether or not a test fMRI corresponds to the human subject reading a sentence or viewing a picture. 
@@ -68,6 +63,11 @@ We are training our computer to learn how to use the data in an fMRI to classify
 
 ### Tensors and Singular Value Decomposition
 ---
+
+Images like these consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
+
+If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
+
 
 When we store fMRI data in a matrix we lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain at one moment is that same part of the brain a few seconds later.    
 
@@ -99,6 +99,8 @@ If you already know python [here is a link to our code](https://github.com/eliza
 
 ### Further Reading
 ---
+[Here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) stored in the github repository.  
+
 For more technical background information 
 
 [Tensor tensor products with invertible linear transforms](https://www.sciencedirect.com/science/article/pii/S0024379515004358)
