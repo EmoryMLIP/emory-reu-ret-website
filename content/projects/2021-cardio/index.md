@@ -79,7 +79,8 @@ VMTK segmentation required far more human intervention than the DL method.  With
 
 ### Other advantages and limitations?
 PyTorch is better at handling noise suppression than VMTK. On the other hand, VMTK handles the data normalization, contrast enhancement, and conversion of color images to grayscale better.
-<!--Insert Comparison Visualizatoin/Implementation Image Here-->
+<!--Image-->
+![mainImage](img/illustration.png "Illustration")
 
 
 
