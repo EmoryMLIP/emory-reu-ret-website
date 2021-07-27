@@ -20,7 +20,7 @@ Our research attempts to use computers to correctly classify brian scans into 2 
 ---
 We use [brain scans called functional MRIs](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
 
-Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
+Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial.  Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
 
 <img src="img/brain1.jpg" alt="brain1" width="400"/>
 
@@ -56,21 +56,19 @@ We see that the basis for Class 0 shows more curved features, while the basis fo
 
 The larger the projection, the better the match to a particular basis.  As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we apply this method to fMRI.  Instead of classifying numbers, we classify fMRIs of subjects reading a sentence or viewing a picture. 
 
-By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  
-
-We are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial. 
+By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  Similarly, we are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  
 
 ### Tensors and Singular Value Decomposition
 ---
 
-Images like these consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
+fMRIs consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
 
 If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
 
 When we store fMRI data in a matrix we lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain at one moment is that same part of the brain a few seconds later.    
 
-Fortunately we can also store our data in a different mathematical structure called a tensor.  A tensor is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
+Fortunately we can store our data in a tensor which is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
 
 <img width="600" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
 
@@ -91,8 +89,6 @@ You'll notice that we use matrix multiplication in working with matrix SVDs.  We
 
 Our research is not only useful for fMRIs; many datasets have multiple dimensions.  Streaming entertaining companies have data on thousands of viewers and what movies they've watched.  Hospitals track thousands of patients, each of whom has had multiple lab tests and other studies.  If our research enables us to classify our fMRI subjects, then we may also be able to predict whether someone will want to watch Terminator, or whether a patient is likely to have cancer.  
 
-
-If you already know python [here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) that we run to test
 
 ### Further Reading
 ---
