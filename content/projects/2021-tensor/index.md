@@ -39,6 +39,8 @@ Here is an example of an fMRI of one brain during one trial.  The different imag
 
 <img src="img/brain1.jpg" alt="brain1" width="400"/>
 
+[Here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) stored in the github repository.  
+
 
 Images like these consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
 
