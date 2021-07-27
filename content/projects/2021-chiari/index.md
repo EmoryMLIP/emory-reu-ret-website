@@ -59,11 +59,11 @@ The image registration was run with one reference against all template images to
 
 ---
 ### Team Chiari's Creations
--[ResearchPaper](.ResearchPaper.md)
+-[Research Paper](.ResearchPaper.md)
 
 -[Presentation](content/projects/2021-chiari/Chiari_Disease_Presentation (2).pdf)
 
--[PosterBlitz](https://youtu.be/tdjXj3JdpQU)
+-[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
 
 ### Meet the Team
