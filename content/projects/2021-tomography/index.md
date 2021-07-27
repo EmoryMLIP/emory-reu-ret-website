@@ -10,29 +10,12 @@ tags: ["Summer 2021"]
 # New algorithm helps make portable CT machine images clearer.
 *Mathematics: Undergraduate college students studied at the Emory REU a new, better way of improving image resolution with mathematical methods.* 
 
-<p align="center">
-  <img width="750" height="876" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
-  </p>
-
-<p align="center">
-  Source: https://healthcare-in-europe.com/en/radbook/ct/2452-siemens-healthineers-somatom-on-site.html
-</p>
-
-
 Research work done at the 2021 REU/RET summer program at Emory University has devised a way to make medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods. 
 
 The 2021 REU/RET Emory program focuses this year on computational mathematics and its applications in data science. The research work is a collaborative effort between a group of undergraduate students and math teachers, led by mathematics faculty from Emory University. Four different research groups worked together on different projects following this year’s program theme, “Learning from Images.” This provided undergraduate students and math teachers from around the nation numerous learning opportunities and a chance to conduct research in this area.  Teachers were involved in research and able to create teaching materials that they can use in their classroom. 
 The REU/RET Emory Program’s research groups include: 1) Image-Based Diagnosis of Chiari Disease, 2) Images to Patient Specific Models in Cardiology, 3) Tensors and Data Modeling in Neuroimaging, and 4) Point-of-Care Tomographic Imaging.  The project on Point-of-Care Tomographic Imaging research focused on exploring new mathematical approaches for image reconstruction.   
 
 Some of the most important aspects of this work link branches of mathematics like calculus, statistics, algebra and geometry. The different contributions by mathematicians to these branches of mathematics were complementary and accelerated research in the area of image reconstruction. The results obtained from their work have offered other student mathematicians a different way to study these problems and shown that this is an effective way for radiology doctors to accurately diagnose illnesses and keep saving patients' lives. The goal of the Point-of-Care Tomographic Imaging research group is to develop numerical methods that would estimate the geometry parameters of a portable CT scanning device and to reconstruct the image.  CT images in portable devices are a lot clearer. This work has been one of the most interesting pieces of work ever accomplished. 
-
-<p align="center">
-  <img width="600" height="400" src="https://user-images.githubusercontent.com/84742324/126884324-8cfa15ae-0fe2-4945-8530-4f1d2918785e.jpg">
-</p>
-
-<p align="center">
-  Source: https://www.lifewire.com/zoom-in-and-out-on-ipad-4103821
-</p>
 
 # COVID-19 Imaging 
 The mathematical ideas involved in the Point-of-Care Tomographic Imaging project are of great importance. With these mathematical methods, imaging becomes a possibility with patients in all parts of the world, allowing them to live a healthy and happy life. To get better reconstructed images, the group considers a regularized linear least squares problem, to which the solution is approximated  by using  an alternating descent scheme known as block coordinate descent or (BCD). Each iteration of BCD has two steps. One step of the BCD steps solves a linear least square problem, and the next step solves the nonlinear problem.  
@@ -41,29 +24,11 @@ By the 1900’s mathematicians had already found ways to use these iterative rec
 
 The medical field has greatly depended on these iterative reconstruction methods. In  medical  imaging,  computed  tomography  (CT)  techniques  are  becoming  more and  more  popular  for  their ability to produce high quality images of the human body. CT methods use a combination of computer processes and mathematics to reconstruct images. The COVID-19 pandemic brought many challenges and setbacks to many doctors around the world  and imaging played a vital role in helping diagnose the virus. Doctors have been able to use CT scans to diagnose and treat COVID-19 by examining the lungs of patients who are potentially infectious, or in recovery.
 
-<p align="center">
-  <img width="600" height="400" src="https://user-images.githubusercontent.com/84742324/126884217-ccaf8e58-305f-4824-9fb8-5ada4f58da30.jpg">
-</p>
-
-<p align="center">
-  Source: https://oxford.emory.edu/news/2020/03/covid-19-news.html
-</p>
-
 # Point-of-Care Tomographic Imaging
 
 Since the first CT scanner was developed, CT scanning technology has evolved significantly. Now, there are portable CT scanners that can be transported anywhere without trouble. The idea of transporting huge heavy CT scanners to remote locations was always a difficult task for many doctors.  Point-of-care tomographic imaging has allowed radiologists to add portable CT scanners to their departments to increase patient satisfaction and improve medical outcomes. Portable CT scanners can be used to do scans of a patient without moving the patient out of bed.
 
 A CT scanner is a device that is composed of a scanning gantry, x-ray generator, computer system, console panel and a physician’s viewing console. The scanning gantry is the part that will produce and detect x-rays. In a typical CT scan, a patient lays on a bed that moves through the gantry. An X-ray source rotates around the patient and shoots X-ray beams through the human body at different angles. These X-ray measurements are then processed on a computer using mathematical algorithms to create tomographic (cross-sectional) images of the tissues inside the body.[How Does a CT Scan Work?](https://youtu.be/l9swbAtRRbg)
-
-<p align="center">
-  <img width="500" height="300" src="https://user-images.githubusercontent.com/84742324/126884377-8af7b40d-2d9b-41f9-9c62-3c1762e9c760.jpg">
-</p>
-
-<p align="center">
-  Garnett, Richard. (2020). A comprehensive review of dual-energy and multi-spectral computed tomography. Clinical Imaging. 67. 10.1016/j.clinimag.2020.07.030. 
-  
-  Source: https://www.researchgate.net/figure/Figure-demonstrating-the-main-components-of-a-CT-machine-including-gantry-x-ray-tube_fig1_343519170
-</p>
 
 Limitations arise when using these portable CT scanners for medical procedures since these devices require extensive care, such as regular calibration for effective performance. This is where the point-of-care tomographic imaging problem begins. 
 
@@ -97,14 +62,6 @@ The Beer-Lambert Law or Beer’s Law was first developed in 1729 by Pierre Bougu
 
 From Algebra, it is known that a system of equations has three types of solutions, infinitely many, exactly one, or no solution. When there is no solution, the system is called inconsistent, as opposed to consistent when there exists a solution. When there are more equations (x-rays)  than unknowns (pixels), then the system is overdetermined. This is what happens in computed tomography. When there are more unknowns (pixels) than equations (x-rays), then the system is underdetermined. 
 In each equation, every unknown represents a physical property, called attenuation, for each  pixel value. Pixels that have the same amount of material have the same attenuation. An image is then created from the pixels. The images obtained based on the attenuation values allow doctors to make more accurate diagnoses. For example, bones have a different attenuation than lungs. 
-
-<p align="center">
-  <img width="700" height="400" src="https://user-images.githubusercontent.com/84742324/126884468-eb8b75df-ba4d-4c33-89ca-77455e598e24.jpg">
-</p>
-
-<p align="center">
-  Michael A. Campos, Alejandro A. Diaz,The Role of Computed Tomography for the Evaluation of Lung Disease in Alpha-1 Antitrypsin Deficiency,Chest, Volume 153, Issue 5, 2018, Pages 1240-1248,ISSN 0012-3692,https://doi.org/10.1016/j.chest.2017.11.017.
-</p>
 
 A system of linear equations can be solved in Precalculus by the Gauss-Jordan elimination method. In linear algebra, a matrix equation of the form Ax=b is solved to find x. Ideally, this can easily be done. Unfortunately, for this project, this might not be possible for several reasons: 1) b has noise in it,  and 2) the exact matrix A may not be known because the parameters R and θ may be perturbed (for example, the CT machine may not be calibrated correctly). Matrix A may also be a huge matrix containing millions of rows and columns. Typical approaches learned in Pre-Calculus or a linear algebra class cannot be used to solve this problem. The tomographic imaging research group uses other methods to solve these large problems, referred to as ill-posed. 
 
