@@ -72,6 +72,10 @@ Our research is not only useful for fMRIs; many datasets have multiple dimension
 
 If you already know python, blah blah blah, [here is a link to our code](https://github.com/elizabethnewman/tensor-fmri).
 
+### Further Reading
+For more technical background information 
+
+
 
 ---
 ### Classification
