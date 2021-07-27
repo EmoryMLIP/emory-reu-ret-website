@@ -74,7 +74,7 @@ If you already know python, blah blah blah, [here is a link to our code](https:/
 
 ### Further Reading
 For more technical background information 
-
+[Tensor tensor products with invertible linear transforms](https://www.sciencedirect.com/science/article/pii/S0024379515004358)
 
 
 ---
