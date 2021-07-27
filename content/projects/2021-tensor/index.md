@@ -43,13 +43,13 @@ When we store our voxel data in tensors instead of matrices, we retain all the i
 
 Here is a diagram of matrix decomposition using SVD:
 
-<img width="600"  src="https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg">
+<img width="500"  src="https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg">
 
 
 This what we imagine a tensor SVD would be:
 
 
-<img width="600"  src="https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png">
+<img width="500"  src="https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png">
 
 
 You'll notice that we use matrix multiplication in working with matrix SVDs.  What would tensor multiplication look like?  This is what we are trying to figure out.  
