@@ -45,8 +45,8 @@ The FEniCS Project is a research and software project aimed at creating mathemat
 
 ### Convolutional Neural Networks (CNNs):
 Convolutional Neural Networks are a deep learning algorithm for image classification. The CNN's convolutional layer parameters comprise of filters, where the values of the filters are learned during the training phase. The layers are for feature learning and classification, specifically for classifying the pixels in an image with respect to a background or vessel. We used the image processing software, PyTorch. The deep learning (DL) based method involves using training data to train the algorithm in PyTorch. This segmentation method is data-driven, meaning that the technique is established on the training of the neural network on databases of images.
-<!--Insert Image Here-->
-
+<!--Image-->
+![mainImage](img/Figure7.png "Figure7")
 
 
 
