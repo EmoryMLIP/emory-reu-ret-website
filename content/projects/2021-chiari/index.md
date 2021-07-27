@@ -58,8 +58,16 @@ The image registration was run with one reference against all template images to
 
 
 ---
-### Background
+### Meet the Chiari Team
 
+### Elle Buser
+
+### Emma Hart
+
+### Ben Huenemann
+
+### Justin Smith
+Justin Smith is an Early Childhood educator in Atlanta, Georgia, where he is in his 10th year of teaching. He is certified in Early Childhood Education and holds a Gifted Endorsement in the state of Georgia. He currently holds the Teacher of the Year award at his school. He is very active in his community and started an organization called Obama Gentlemen with the primary duty to improve academics and address behavioral concerns of young men by instilling morals and values that will help transition young adolescent males into young adulthood. During his leisure time, he enjoys traveling, shopping, listening to music, and spending time with his family. 
 
 [Lars' Homepage](https://www.mathcs.emory.edu/~lruthot/)
 
