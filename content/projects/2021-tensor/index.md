@@ -43,7 +43,6 @@ When we store our voxel data in tensors instead of matrices, we retain all the i
 
 Here is a diagram of matrix decomposition using SVD:
 
-![truncated_matrix_svd (1)](https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg)
 <img width="600"  src="https://user-images.githubusercontent.com/50922545/126017121-bd017e2c-7fa1-4d23-8989-c0b69dbbbdf3.jpg">
 
 
