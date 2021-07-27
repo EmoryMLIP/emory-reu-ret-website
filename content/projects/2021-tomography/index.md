@@ -12,7 +12,12 @@ tags: ["Summer 2021"]
 
 <p align="center">
   <img width="750" height="876" src="https://user-images.githubusercontent.com/84742324/126884202-538cc1b4-04f1-4acf-a83b-5f618de46056.jpg">
+  </p>
+
+<p align="center">
+  Source: https://healthcare-in-europe.com/en/radbook/ct/2452-siemens-healthineers-somatom-on-site.html
 </p>
+
 
 Research work done at the 2021 REU/RET summer program at Emory University has devised a way to make medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods. 
 
@@ -23,6 +28,10 @@ Some of the most important aspects of this work link branches of mathematics lik
 
 <p align="center">
   <img width="600" height="400" src="https://user-images.githubusercontent.com/84742324/126884324-8cfa15ae-0fe2-4945-8530-4f1d2918785e.jpg">
+</p>
+
+<p align="center">
+  Source: https://www.lifewire.com/zoom-in-and-out-on-ipad-4103821
 </p>
 
 # COVID-19 Imaging 
@@ -36,6 +45,10 @@ The medical field has greatly depended on these iterative reconstruction methods
   <img width="600" height="400" src="https://user-images.githubusercontent.com/84742324/126884217-ccaf8e58-305f-4824-9fb8-5ada4f58da30.jpg">
 </p>
 
+<p align="center">
+  Source: https://oxford.emory.edu/news/2020/03/covid-19-news.html
+</p>
+
 # Point-of-Care Tomographic Imaging
 
 Since the first CT scanner was developed, CT scanning technology has evolved significantly. Now, there are portable CT scanners that can be transported anywhere without trouble. The idea of transporting huge heavy CT scanners to remote locations was always a difficult task for many doctors.  Point-of-care tomographic imaging has allowed radiologists to add portable CT scanners to their departments to increase patient satisfaction and improve medical outcomes. Portable CT scanners can be used to do scans of a patient without moving the patient out of bed.
@@ -44,6 +57,12 @@ A CT scanner is a device that is composed of a scanning gantry, x-ray generator,
 
 <p align="center">
   <img width="500" height="300" src="https://user-images.githubusercontent.com/84742324/126884377-8af7b40d-2d9b-41f9-9c62-3c1762e9c760.jpg">
+</p>
+
+<p align="center">
+  Garnett, Richard. (2020). A comprehensive review of dual-energy and multi-spectral computed tomography. Clinical Imaging. 67. 10.1016/j.clinimag.2020.07.030. 
+  
+  Source: https://www.researchgate.net/figure/Figure-demonstrating-the-main-components-of-a-CT-machine-including-gantry-x-ray-tube_fig1_343519170
 </p>
 
 Limitations arise when using these portable CT scanners for medical procedures since these devices require extensive care, such as regular calibration for effective performance. This is where the point-of-care tomographic imaging problem begins. 
@@ -83,6 +102,10 @@ In each equation, every unknown represents a physical property, called attenuati
   <img width="700" height="400" src="https://user-images.githubusercontent.com/84742324/126884468-eb8b75df-ba4d-4c33-89ca-77455e598e24.jpg">
 </p>
 
+<p align="center">
+  Michael A. Campos, Alejandro A. Diaz,The Role of Computed Tomography for the Evaluation of Lung Disease in Alpha-1 Antitrypsin Deficiency,Chest, Volume 153, Issue 5, 2018, Pages 1240-1248,ISSN 0012-3692,https://doi.org/10.1016/j.chest.2017.11.017.
+</p>
+
 A system of linear equations can be solved in Precalculus by the Gauss-Jordan elimination method. In linear algebra, a matrix equation of the form Ax=b is solved to find x. Ideally, this can easily be done. Unfortunately, for this project, this might not be possible for several reasons: 1) b has noise in it,  and 2) the exact matrix A may not be known because the parameters R and θ may be perturbed (for example, the CT machine may not be calibrated correctly). Matrix A may also be a huge matrix containing millions of rows and columns. Typical approaches learned in Pre-Calculus or a linear algebra class cannot be used to solve this problem. The tomographic imaging research group uses other methods to solve these large problems, referred to as ill-posed. 
 
 An ill-posed problem is often referred to as one that is not well-posed. In the 20th Century, French mathematician Jacques Hadamard defined a well-posed problem as one having three properties: 1) a solution exists, 2) the solution is unique, 3) the solution depends on initial values. An ill-posed problem needs to be approached differently, e.g. -regularization. Tikhonov regularization is a common form of regularization for ill-posed problems. 
@@ -97,10 +120,6 @@ The solution to this problem is found by the block coordinate descent (BCD). The
 
 # Filter - Based Regularization 
 Since it is impossible to get data exactly from the detector due to numerous reasons, regularization is needed to lower the noise levels. Tikhonov regularization is one of the most common ways to handle these noise levels. The method is named after mathematician Andrey Tikhonov. Tikhonov worked in numerous topics and different fields of mathematics. His best contributions are in topology. 
-
-<p align="center">
-  <img width="300" height="450" src="https://user-images.githubusercontent.com/84742324/126915487-b3d4c454-824f-42d1-8c25-748db8ac181a.jpg">
-</p>
 
 Singular value decomposition (SVD) plays an important role in understanding the basic idea behind Tikhonov Regularization. The singular values of the matrix A are significant. To achieve good reconstructed images with small noise large singular values need to be considered to minimize the error produced. 
 
