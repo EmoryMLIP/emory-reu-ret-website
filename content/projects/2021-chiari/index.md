@@ -60,6 +60,9 @@ The image registration was run with one reference against all template images to
 ---
 ### Team Chiari's Creations
 
+### Meet the Team
+-[Bios](.Bios.md)
+
 [Lars' Homepage](https://www.mathcs.emory.edu/~lruthot/)
 
 
