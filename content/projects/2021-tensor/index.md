@@ -31,9 +31,9 @@ Image classification is using a computer to figure what what an image represents
 
 We call this first group Class 0 and the second Class 1. Using a tensor version of the singular value decomposition that we will elaborate upon later, we can construct something called a "basis", which can be thought of as a collection of the most important features shared by all of the images belonging to that class. Here are the bases for each of our classes: 
 
-<img src="https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg" width="200"/>
-<img src="https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg" width="200"/>
-<img src="https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg" width="200"/>
+<img src="https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg" width="100"/>
+<img src="https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg" width="100"/>
+<img src="https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg" width="100"/>
 
 
 
