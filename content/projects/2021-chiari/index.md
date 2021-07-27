@@ -7,7 +7,7 @@ tags: ["Summer 2021"]
 ---
 
 **Emory University Summer 2021 REU/RET**
-# Students and Teacher collaborates on segmentation methods to determine patients with Chiari Malformation.
+# Undergraduate students and teacher collaborates on effective segmentation methods to determine patients with Chiari Malformation.
 *Find out more about Chiari Malformation Type I*
 
 ---
