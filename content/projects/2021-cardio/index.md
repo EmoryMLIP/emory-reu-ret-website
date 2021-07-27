@@ -49,3 +49,14 @@ Could insert text here about this or show images.
 <!--Starting new section-->
 # Our Activities & Experiences <!--Header-->
 
+## Research Week 1 and 2:
+Using CNNs we generated OCT segmentation maps in PyTorch on the original data provided by Dr. Molony.  
+The same data were used in VMTK slice by slice. 
+
+## Research Week 3:
+We added 15 new images to our OCT data set in PyTorch. With more training data, the loss value went down, and the accuracy increased. We worked to find the most accurate segmentation process in VMTK to  extract the level set for the boundary of the coronary. We cleaned a sample image using GIMP. To create a 3D stack of images, each slice was replicated 30 times. After extracting the surface in VMTK, ParaView extracted the outline of the region. We were then in a good position to start comparing the contours from the two methods.
+
+## Research Week 4:
+We  explored different metrics for comparing the results visually and numerically. One option is the Jaccard Index, which quantifies the percent overlap between the segmented images. Another option was to extract the VMTK and PyTorch contour lines and boundary points in ParaView and then use Python or Matlab code to plot the x and y coordinates of the results as overlapping figures. Then, we could use integration to calculate the difference between the two curves (L^2 metrics) .
+
+
