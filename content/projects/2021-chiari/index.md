@@ -61,7 +61,7 @@ The image registration was run with one reference against all template images to
 ### Team Chiari's Creations
 -[Research Paper](.ResearchPaper.md)
 
--[Presentation](content/projects/2021-chiari/Chiari_Disease_Presentation (2).pdf)
+-[Presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/f5a9de7a766a012b8202acd87ac4c427d2ec2016/content/projects/2021-chiari/Chiari_Disease_Presentation%20(2).pdf)
 
 -[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
