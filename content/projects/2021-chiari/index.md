@@ -31,9 +31,6 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 
 ---
-### Meet the Team
--[Bios](.Bios.md)
-
 ### Team Chiari's Creations
 -[Research Paper](.ResearchPaper.md)
 
@@ -41,6 +38,8 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 -[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
+### Meet the Team
+-[Bios](.Bios.md)
 
 ### Dr. Lars Ruthotto Homepage
 
