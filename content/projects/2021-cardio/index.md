@@ -98,7 +98,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 # Additional Information & Materials <!--Header-->
 <!--Image-->
 ![mainImage](img/heart.gif "gif")
-1. Cardiology Presentation Slides (attach link)
+1. [Cardiology Presentation Slides](https://docs.google.com/presentation/d/1__H40Xr_KoQaG3Mfhv9aAjzZYjVIvITDuNCAVpsq1v0/edit?usp=sharing)
 2. Poster Blitz (attach link)
 3. Poster (attach link)
 4. Codes 
