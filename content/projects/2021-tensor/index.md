@@ -20,17 +20,16 @@ Our research attempts to use computers to correctly classify brian scans into 2 
 ---
 We use [brain scans called functional MRIs](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
 
-Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial.  Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
+fMRIs consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial.    Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
 
 <img src="img/brain1.jpg" alt="brain1" width="400"/>
 
-
-
+If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
 
 ### Classification
 ---
-Image classification is using a computer to figure what what an image represents.  Computers can't "see" images, so they use features of the images that it can understand.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
+Image classification is using a computer to figure what what an image represents.  Computers can't see images, so they use features of the images that it can understand.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
 
 <img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg" width="400" class="aligncenter"/>
 <img src="https://user-images.githubusercontent.com/50922545/126396380-f4d0bedb-8a49-455c-bc15-1b73b01a77e5.jpg" width="400"/>
@@ -45,25 +44,23 @@ The computer tries to classify if this image is a zero or a one:
 Comparing it to other ones seems to match nicely:
 <img src="https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg" width="100"/>
 
-But if it tries to compare it to a zero, we don't see a good match:
+But if it tries to compare it to a zero, we find differences and inconsistencies:
 <img src="https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg" width="100"/>
 
 
 
-We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. When we have a test image of a handwritten digit and want to see if this mathematical method can figure out if it is a 0 or a 1, we compute something called a "projection", which mathematically projects our test image into that basis. Below is an example:
+We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. To choose teh basis the image more closely matches, we compute a "projection", not unlike what you may have calculated with vectors. 
 
 <img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
 
-The larger the projection, the better the match to a particular basis.  As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we apply this method to fMRI.  Instead of classifying numbers, we classify fMRIs of subjects reading a sentence or viewing a picture. 
+The larger the projection, the better the match to a particular basis.  The projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. 
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  Similarly, we are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  
-
 ### Tensors and Singular Value Decomposition
 ---
 
-fMRIs consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Typically, large data sets like this are stored in matrices, which have some powerful tools for extracting the most relevant components.  Matrices make it easy for   [computers to learn from data.](https://youtu.be/LlKAna21fLE)
+Typically, large data sets like the fMRI voxels are stored in matrices, which have some [powerful tools for extracting the most relevant components.](https://youtu.be/LlKAna21fLE)
 
-If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
 
 When we store fMRI data in a matrix we lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain at one moment is that same part of the brain a few seconds later.    
@@ -92,9 +89,9 @@ Our research is not only useful for fMRIs; many datasets have multiple dimension
 
 ### Further Reading
 ---
-[Here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) stored in the github repository.  
+[Our code stored in the github repository](https://github.com/elizabethnewman/tensor-fmri)  
 
-For more technical background information 
+
 
 [Tensor tensor products with invertible linear transforms](https://www.sciencedirect.com/science/article/pii/S0024379515004358)
 
