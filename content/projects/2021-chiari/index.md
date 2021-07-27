@@ -58,7 +58,7 @@ The image registration was run with one reference against all template images to
 
 
 ---
-
+### Team Chiari's Creations
 
 [Lars' Homepage](https://www.mathcs.emory.edu/~lruthot/)
 
