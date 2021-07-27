@@ -1,4 +1,4 @@
-# Introduction of the team
+# Who are we?
 
 ### Mai Phuong Pham Huynh
 Mai is a rising junior at Emory University, majoring in Applied Mathematics and Statistics. Her research focus is on numerical analysis and scientific computing. In her free time, she enjoys listening to violin concertos, doing giant Jigsaw puzzles, and searching for vintage vinyl records from the 50s-90s.
