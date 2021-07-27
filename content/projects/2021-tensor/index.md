@@ -74,7 +74,11 @@ If you already know python, blah blah blah, [here is a link to our code](https:/
 
 
 ---
-### Background
+### Classification
+
+### fMRI
+
+### Singular Value Decomposition
 
 
 
