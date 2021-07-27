@@ -21,7 +21,7 @@ The role of mathematical modeling in clinics is particularly evident in cardiolo
 ![mainImage](img/cardio1.jpeg "Heart")
 
 ### Project Overview:
-Imaging has been revolutionizing medical research and clinical practices for decades. One of the components of medical image processing is “segmentation” which has a wide range of applications. Segmentation is the image processing step to identify a region of interest (an artery, a bone, etc.) in an image. There is not a typical segmentation method that works equally and automatically for all segmentation tasks. We focus on medical images, specifically coronaries based on Optical coherence tomography (OCT). OCT image segmentation is initiated on retinal OCT to localize the intra-retinal boundaries. The broader impact of OCT segmentation in clinical applications offers a tool for greater evaluations of layers and boundaries to allow for better diagnosis and treatment (Lucid, Heartlfow companies that reconstruct the coronaries arteries-this is the effect of segmentation). Using OCT images provided by the Emory School of Medicine, we analyzed two segmentation approaches: the Level-Set Method and Machine Learning based on CNN (Convolutional Neural Networks). Our project aimed at segmenting coronaries based on the OCT images using these two methods. We were able to compare the results of deterministic image-segmentation methods vs deep learning ones. 
+Imaging has been revolutionizing medical research and clinical practices for decades. One of the components of medical image processing is “segmentation” which has a wide range of applications. Segmentation is the image processing step to identify a region of interest (an artery, a bone, etc.) in an image. We focused on medical images, specifically coronaries based on Optical coherence tomography (OCT). The broader impact of OCT segmentation in clinical applications offers a tool for greater evaluations of layers and boundaries to allow for better diagnosis and treatment. Using OCT images provided by the Emory School of Medicine, we analyzed two segmentation approaches: the Level-Set Method and Machine Learning based on CNN (Convolutional Neural Networks). 
 <!--Image-->
 ![mainImage](img/Picture1.png "Picture1")
 
@@ -38,13 +38,13 @@ The Level Set Method utilizes implicit functions to identify the region of inter
 
 
 ### FEniCS and MATLAB:
-The FEniCS Project is a research and software project aimed at creating mathematical methods and software for automated computational mathematical modeling. As the implicit function, the numerical solution of a PDE that is defined on the image that is being segmented, is involved in our project, FEniCS means creating easy, intuitive, efficient, and flexible software for solving PDEs using finite element methods. For MATLAB, Image Processing Toolbox provides a comprehensive set of reference-standard algorithms and workflow apps for image segmentation. Particularly, Volume Segmentor is applied to segment 3-D grayscale or RGB volumetric images. By means of automated, semi-automated, and manual techniques, Volume Segmentor is applied to create and refine a binary or semantic segmentation mask for a 3-D grayscale or an RGB image.
+The FEniCS Project is a research and software project aimed at creating mathematical methods and software for automated computational mathematical modeling. As the implicit function, the numerical solution of a PDE, is involved in our project, we tried to use FEniCS in Python for solving PDEs using finite element methods. For MATLAB, our group used Image Segmenter App under Image Processing Toolbox and applied Thresholding, Active Contours, Graph Cut, Auto Cluster, etc. to segment 2-D images. For 3-D volumetric images, we used Volume Segmenter to create and refine binary or semantic segmentation masks to segment the images by means of automated, semi-automated, and manual techniques.
 <!--Image-->
 ![mainImage](img/Figure2.png "Figure2")
 
 
 ### Convolutional Neural Networks (CNNs):
-Convolutional Neural Networks are a deep learning algorithm for image classification. The CNN's convolutional layer parameters comprise of filters, where the values of the filters are learned during the training phase. The layers are for feature learning and classification, specifically for classifying the pixels in an image with respect to a background or vessel. We used the image processing software, PyTorch. The deep learning (DL) based method involves using training data to train the algorithm in PyTorch. This segmentation method is data-driven, meaning that the technique is established on the training of the neural network on databases of images.
+Convolutional Neural Networks are a deep learning algorithm for image classification. The CNN's convolutional layer parameters comprise of filters, where the values of the filters are learned during the training phase. The layers are for feature learning and classification, specifically for classifying the pixels in an image with respect to a background or vessel. We used the image processing software, PyTorch. The deep learning (DL) based method involves using training data from a database of images to train the algorithm in PyTorch. 
 <!--Image-->
 ![mainImage](img/Figure7.png "Figure7")
 
@@ -99,7 +99,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 <!--Image-->
 ![mainImage](img/heart.gif "gif")
 1. [Cardiology Presentation Slides](https://docs.google.com/presentation/d/1__H40Xr_KoQaG3Mfhv9aAjzZYjVIvITDuNCAVpsq1v0/edit?usp=sharing)
-2. Poster Blitz (attach link)
+2. [Poster Blitz](https://southalabama.zoom.us/rec/play/nMsrAregiBDRSP8QCj2mDVV7halNAvL0_PvuBcyyf20OraB0BAEtdz7schZwF_Afkmc-ODwH8bNWZ2Q.X_Ym7fzfDZKyswHj?startTime=1627247559000)
 3. Poster (attach link)
 4. Codes 
    1. PyTorch (attack link)
@@ -111,7 +111,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 <!--Starting new section-->
 ---
 # Get to know our team! <!--Header-->
-* Minxing (Matt) Zhang, 
+* Minxing (Matt) Zhang, insert
 * Shannon Lee, Southern Methodist University
 * Kai Chang, Emory  
 * Allison Dennis, Texas A&M University
