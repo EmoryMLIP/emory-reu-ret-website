@@ -52,10 +52,9 @@ But if it tries to compare it to a zero, we don't see a good match:
 
 We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. When we have a test image of a handwritten digit and want to see if this mathematical method can figure out if it is a 0 or a 1, we compute something called a "projection", which mathematically projects our test image into that basis. Below is an example:
 
-![0001](https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg)
+<img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
 
-
-As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we extend this method to fMRI, but instead of having classes for zeros and ones, we classify whether or not a test fMRI corresponds to the human subject reading a sentence or viewing a picture. 
+The larger the projection, the better the match to a particular basis.  As humans, we clearly know that our test image is a 1. In the projection onto the basis for Class 0, we see some differences and inconsistencies in the image, but we get a nice match in the projection onto the basis for Class 1. Computing this projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. In our project, we apply this method to fMRI.  Instead of classifying numbers, we classify fMRIs of subjects reading a sentence or viewing a picture. 
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  
 
@@ -88,9 +87,7 @@ This what we imagine a tensor SVD would be:
 <img width="500"  src="https://user-images.githubusercontent.com/50922545/126017399-7151b4e8-c292-4d34-a1a6-20a7181d6824.png">
 
 
-You'll notice that we use matrix multiplication in working with matrix SVDs.  What would tensor multiplication look like?  This is what we are trying to figure out.  
-
-
+You'll notice that we use matrix multiplication in working with matrix SVDs.  We are searching for the equivalent tensor multiplication.
 
 Our research is not only useful for fMRIs; many datasets have multiple dimensions.  Streaming entertaining companies have data on thousands of viewers and what movies they've watched.  Hospitals track thousands of patients, each of whom has had multiple lab tests and other studies.  If our research enables us to classify our fMRI subjects, then we may also be able to predict whether someone will want to watch Terminator, or whether a patient is likely to have cancer.  
 
