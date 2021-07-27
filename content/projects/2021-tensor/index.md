@@ -70,7 +70,7 @@ You'll notice that we use matrix multiplication in working with matrix SVDs.  Wh
 Our research is not only useful for fMRIs; many datasets have multiple dimensions.  Streaming entertaining companies have data on thousands of viewers and what movies they've watched.  Hospitals track thousands of patients, each of whom has had multiple lab tests and other studies.  If our research enables us to classify our fMRI subjects, then we may also be able to predict whether someone will want to watch Terminator, or whether a patient is likely to have cancer.  
 
 
-If you already know python, blah blah blah, [here is a link to our code](https://github.com/elizabethnewman/tensor-fmri).
+If you already know python [here is a link to our code](https://github.com/elizabethnewman/tensor-fmri) that we run to test
 
 ### Further Reading
 For more technical background information 
