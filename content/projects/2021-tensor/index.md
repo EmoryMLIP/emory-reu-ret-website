@@ -79,6 +79,8 @@ For more technical background information
 
 [Tensor-tensor algebra for optimal representation and compression of multiway data](https://www.pnas.org/content/118/28/e2015851118.short)
 
+[Tensor decompositions and applications](http://www.kolda.net/publication/koba09/)
+
 ---
 ### Classification
 
