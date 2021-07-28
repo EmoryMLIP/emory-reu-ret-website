@@ -19,6 +19,32 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 ![mainImage](img/Chiari-Synergy.png "Chiari Synergy")
 
 ---
+### Time Management is Everything!  
+ Week 1: 
+ - Create a working atlas based image registration example, using FAIR tool set
+ - Learn more about the methods involved in machine learning    
+ 
+ Week 2 
+ - Finish first atlas based example and begin applying to others
+ - Tentatively begin working with ML examples or continue learning more
+ 
+ Week 3 
+- Begin working on midterm presentation
+- Finish applying atlas method to remaining examples
+- Continue with Machine Learning 
+       
+ Week 4 
+- Work on classification based on our found segmentation
+- Continue with Machine Learning and decide its viability
+        
+ Week 5 
+- Finish up with preferred method(s) (Atlas/Machine Learning)
+- Begin working on poster and outlining research paper
+    
+Week 6 
+- Construct website and work on manuscript           
+---
+
 ### Leave the SEGMENTATION to US!
 
 
