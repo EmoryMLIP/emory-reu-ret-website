@@ -20,6 +20,7 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 ---
 ### Time Management is Everything!  
+
  Week 1: 
  - Create a working atlas based image registration example, using FAIR tool set
  - Learn more about the methods involved in machine learning    
