@@ -10,7 +10,7 @@ tags: ["Summer 2021"]
 # Undergraduate students and teacher collaborates on effective segmentation methods to determine patients with Chiari Malformation.
 
 ---
-### Collaboration Never Sleep. 
+### Collaboration Never Sleeps. 
  During our summer research at Emory University 2021 REU/RET program, our project focused on the algorithmic diagnosis of Chiari malformation from DENSE MRIs. Our project focused on the algorithmic diagnosis of Chiari malformation from DENSE MRIs. We create an algorithm that can accurately and efficiently segment the cerebellum and brain stem from a magnitudinal image and use displacement data to classify whether or not a patient has the Chiari malformation.  As a result, we investigated two approaches; one that segments the given image by aligning and comparing the image to a known atlas and another that segments through deep learning.
  
 ### Did Somebody Say Chiari Malformation?
