@@ -28,9 +28,9 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 ### Bridge the Gap with Machine Learning. 
 
-
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
+---
 ### The Deliverables of Confidence 
 
 
