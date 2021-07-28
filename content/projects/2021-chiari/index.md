@@ -24,17 +24,18 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 ### Atlas-Based Segementation and Dice/Jaccard
 
+[What is Atlas-Based Learning?] (Information sheet or video)
 
-### Dice/Jaccard
-
-
-### Machine Learning 
+### Bridge the Gap with Machine Learning. 
 
 
+[What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
+
+### The Deliverables of Cofidence 
 
 
 ---
-### Team Chiari's Creations
+### Chiari Creations
 -[Research Paper](.ResearchPaper.md)
 
 -[Presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/f5a9de7a766a012b8202acd87ac4c427d2ec2016/content/projects/2021-chiari/Chiari_Disease_Presentation%20(2).pdf)
