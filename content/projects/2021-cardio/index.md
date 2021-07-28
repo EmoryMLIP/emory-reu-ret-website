@@ -122,7 +122,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 
 <!--Starting new section-->
 ---
-References
+# References
 1. NSF REU Research Contract
 2. Dr. Marina Piccinelli, Piccinelli\_July29.pdf Powerpoint (Summer class) 
 3. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3785070/
