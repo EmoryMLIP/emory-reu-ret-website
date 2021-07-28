@@ -19,15 +19,14 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 ![mainImage](img/Chiari-Synergy.png "Chiari Synergy")
 
 ---
-### Time Management is Everything!  
-
+### Time Management is Everything! 
  Week 1: 
- - Create a working atlas based image registration example, using FAIR tool set
- - Learn more about the methods involved in machine learning    
+ - During our first week, we created a working atlas-based image registration example, using FAIR toolset. One of the main programs used to create this image was MATLAB. We also begin to look at the Machine Learning method, where we used PyTorch. We noticed the Machine Learning process would require adding more time to focus on our research topic and wanted to ensure we utilize our time wisely. 
+   
  
  Week 2 
- - Finish first atlas based example and begin applying to others
- - Tentatively begin working with ML examples or continue learning more
+ -  We set a goal to finish the first atlas-based example and begin applying others examples to our project. After working on our atlas-based examples, we begin to look at the machine learning process and create multiple examples for our research. As we explored the machine learning process, we used four different methods: convolutional neural network, cross-entropy loss, lBFGS optimization, and experimental setup. 
+
  
  Week 3 
 - Begin working on midterm presentation
@@ -49,12 +48,11 @@ Week 6
 ### Leave the SEGMENTATION to US!
 
 
-### Atlas-Based Segementation and Dice/Jaccard
+### Atlas Based Image Registration vs Machine Learning. 
 
-What is Atlas-Based Learning? - (Information sheet or video)
 
-### Bridge the Gap with Machine Learning. 
-
+### Additional information to learn about Atlas-Based Image Registration and Machine Learning
+What is Atlas-Based Learning? - (Information sheet or video) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
 ---
