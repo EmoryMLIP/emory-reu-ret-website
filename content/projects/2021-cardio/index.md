@@ -101,7 +101,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 ![mainImage](img/heart.gif "gif")
 1. [Cardiology Presentation Slides](https://docs.google.com/presentation/d/1__H40Xr_KoQaG3Mfhv9aAjzZYjVIvITDuNCAVpsq1v0/edit?usp=sharing)
 2. [Poster Blitz](https://southalabama.zoom.us/rec/play/nMsrAregiBDRSP8QCj2mDVV7halNAvL0_PvuBcyyf20OraB0BAEtdz7schZwF_Afkmc-ODwH8bNWZ2Q.X_Ym7fzfDZKyswHj?startTime=1627247559000)
-3. Poster (attach link)
+3. [Poster](Emory_Poster.pdf)
 4. Codes 
    1. PyTorch (attack link)
    1. Python and MATLAB codes used for comparison (attack link)
