@@ -31,7 +31,7 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
-### The Deliverables of Cofidence 
+### The Deliverables of Confidence 
 
 
 ---
