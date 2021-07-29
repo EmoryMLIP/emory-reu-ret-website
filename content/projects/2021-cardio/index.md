@@ -112,12 +112,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 <!--Starting new section-->
 ---
 # Get to know our team! <!--Header-->
-* Minxing (Matt) Zhang, insert
-* Shannon Lee, Southern Methodist University
-* Kai Chang, Emory  
-* Allison Dennis, Texas A&M University
-* Mohamad Hindawi, Tucker High School 
-* Michele Perry, University of South Alabama 
+- Bios.md
 
 
 <!--Starting new section-->
