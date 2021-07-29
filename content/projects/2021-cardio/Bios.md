@@ -8,7 +8,7 @@
 
 ### Shannon Lee
 Shannon Lee is a rising junior at Southern Methodist University majoring in accounting, applied mathematics, and statistics. 
-Her interests are in learning new computational math and statistical modeling techniques in all areas.
+Her interests are learning new computational math and statistical modeling techniques in all areas.
 Outside of school, she enjoys playing tennis, traveling, and spending time with friends and family.
 
 ### Michele Perry
