@@ -49,13 +49,14 @@ But if it tries to compare it to a zero, we find differences and inconsistencies
 
 
 
-We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. To choose teh basis the image more closely matches, we compute a "projection", not unlike what you may have calculated with vectors. 
+We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. To choose the basis the image more closely matches, we compute a "projection", not unlike what you may have calculated with vectors. 
 
 <img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
 
 The larger the projection, the better the match to a particular basis.  The projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. 
 
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  Similarly, we are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  
+
 ### Tensors and Singular Value Decomposition
 ---
 
@@ -63,9 +64,9 @@ Typically, large data sets like the fMRI voxels are stored in matrices, which ha
 
 
 
-When we store fMRI data in a matrix we lose important relationships between the data points.  For example a computer may not know that a particular voxel representing a part of the brain at one moment is that same part of the brain a few seconds later.    
+When we store fMRI data in a matrix we lose important relationships between the data points.  For example a computer does not know that a particular voxel representing a part of the brain at one moment is that same part of the brain a few seconds later.    
 
-Fortunately we can store our data in a tensor which is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
+In our work, we study how to store our data in a tensor which is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
 
 <img width="600" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
 
