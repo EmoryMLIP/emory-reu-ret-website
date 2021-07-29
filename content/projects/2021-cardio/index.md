@@ -112,7 +112,7 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 <!--Starting new section-->
 ---
 # Get to know our team! <!--Header-->
-- Bios.md
+- [Bios](Bios.md)
 
 
 <!--Starting new section-->
