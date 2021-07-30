@@ -94,6 +94,7 @@ Our research is not only useful for fMRIs; many datasets have multiple dimension
 ---
 [Our code stored in the github repository](https://github.com/elizabethnewman/tensor-fmri)  
 
+[Our poster](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/Tensor_fMRI_Poster.pdf)  
 
 
 [Tensor tensor products with invertible linear transforms](https://www.sciencedirect.com/science/article/pii/S0024379515004358)
