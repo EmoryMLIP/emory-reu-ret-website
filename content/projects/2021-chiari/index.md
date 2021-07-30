@@ -55,6 +55,8 @@ The goal with this method was to use machine learning to find a relationship bet
 
 <img src="img/MachLearningDiagram.jpg" alt="MachLearningDiagram" width="500"/>
 
+Our project implemented a CNN called U-Net, you can find more about this network and the code we used here:[U-Net: A PyTorch Implementation in 60 lines of Code](https://amaarora.github.io/2020/09/13/unet.html)
+
 ### Additional information to learn about Atlas-Based Image Registration and Machine Learning
 What is Atlas-Based Learning? - (Information sheet or video) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
