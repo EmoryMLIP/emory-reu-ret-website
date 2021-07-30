@@ -21,7 +21,7 @@ The role of mathematical modeling in clinics is particularly evident in cardiolo
 ![mainImage](img/cardio1.jpeg "Heart")
 
 ### Project Overview:
-Imaging has been revolutionizing medical research and clinical practices for decades. One of the components of medical image processing is “segmentation” which has a wide range of applications. Segmentation is the image processing step to identify a region of interest (an artery, a bone, etc.) in an image. We focused on medical images, specifically coronaries based on Optical coherence tomography (OCT). The broader impact of OCT segmentation in clinical applications offers a tool for greater evaluations of layers and boundaries to allow for better diagnosis and treatment. Using OCT images provided by the Emory School of Medicine, we analyzed two segmentation approaches: the Level-Set Method and Machine Learning based on CNN (Convolutional Neural Networks). 
+Imaging has been revolutionizing medical research and clinical practices for decades. One of the components of medical image processing is “segmentation” which has a wide range of applications. Segmentation is the image processing step to identify a region of interest (an artery, a bone, etc.) in an image. We focused on medical images, specifically coronaries based on Optical coherence tomography (OCT). Using OCT images provided by the Emory School of Medicine, we analyzed two segmentation approaches: the Level-Set Method and Machine Learning based on CNN (Convolutional Neural Networks). 
 <!--Image-->
 ![mainImage](img/Picture1.png "Picture1")
 
