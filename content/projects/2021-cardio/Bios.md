@@ -3,6 +3,9 @@
 ### Kai Chang
 
 ### Allison Dennis
+Allison Dennis is a rising junior at Texas A&M University majoring in Applied Mathematics with a minor in Cybersecurity. 
+Her interests are scientific computing and linear algebra, and her dream career would be to be a Calculus 1 and 2 professor. 
+Besides doing math, she loves to read, watch Gilmore Girls, and spend time with her family and friends. 
 
 ### Mohamad Hindawi
 Dr. Hindawi teaches AP Calc in Tucker High school. He is certified to teach AP Physics, AP Chem, AP Stat,and AP Comp Sc. His interset is in Mathmatical Modeling and Differential Eq specially Navier-Stokes Equation. Outside academia, He enjoys swimming long distances, deep sea water fishing in Alaska for Halibut and King Salmon.
