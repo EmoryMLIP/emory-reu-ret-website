@@ -51,7 +51,7 @@ Week 6
 ### Atlas Based Image Registration vs Machine Learning. 
 Atlas...
 
-The goal in machine learning in our project was to find a relationship between the DENSE images and their corresponding manual segmentations by training a model using convolutional neural networks (CNN). If successful, DENSE images can be used as inputs and the model will automatically segment the brain stem and cerebellum.
+The goal with this method was to use machine learning to find a relationship between the DENSE images and their corresponding manual segmentations by training a model using convolutional neural networks (CNN). If successful, DENSE images can be used as inputs and the model will automatically segment the brain stem and cerebellum. A generalized overview of this process can be seen in the figure below.
 
 <img src="img/MachLearningDiagram.jpg" alt="MachLearningDiagram" width="500"/>
 
