@@ -1,4 +1,4 @@
-Learn About Our Team
+### Learn About Our Team
 
 ## Jonathan Valyou
 ![HeadShot](https://user-images.githubusercontent.com/72425355/127594063-5cf25a7c-3856-4dae-8040-959461793814.jpg)
