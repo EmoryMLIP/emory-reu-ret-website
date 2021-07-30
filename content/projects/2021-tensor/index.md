@@ -38,6 +38,11 @@ Image classification is using a computer to figure what what an image represents
 
 We can construct a "basis", which can be thought of as a collection of the most relevant features shared by all of the images belonging to that class.  
 
+We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. To choose the basis the image more closely matches, we compute a "projection", not unlike what you may have calculated with vectors. 
+
+<img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
+
+
 The computer tries to classify if this image is a zero or a one:
 <img src="https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg" width="100"/>
 
@@ -49,9 +54,6 @@ But if it tries to compare it to a zero, we find differences and inconsistencies
 
 
 
-We see that the basis for Class 0 shows more curved features, while the basis for Class 1 contains traces of more straight and vertical features. To choose the basis the image more closely matches, we compute a "projection", not unlike what you may have calculated with vectors. 
-
-<img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
 
 The larger the projection, the better the match to a particular basis.  The projection shows that the "distance" between our test image and our two classes is smaller for Class 1 than for Class 0, and so our method classifies our test image as a 1. 
 
