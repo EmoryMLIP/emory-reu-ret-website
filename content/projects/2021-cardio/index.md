@@ -87,10 +87,11 @@ PyTorch is better at handling noise suppression than VMTK. On the other hand, VM
 <!--Starting new section-->
 ---
 # Our Results & Conclusions <!--Header-->
-After evaluating the benefits and limitations of both methods, we have come to the conclusion that instead of preferring one over the other, we can combine the two for better results. We could train a neural network with an optimal parameter selection to use in VMTK segmentation for setting the parameters. We can have a CNN trained on the OCT data to tell us what the correct parameter set is. This could prove to be useful, especially since we encountered a set-back in determining the initialization type, thresholds, and parameters to set for the best segmentation result in VMTK. We should not have a competition over the two techniques, rather, we should combine the strengths and benefits of both \textbf{models} and \textbf{data}. 
+After evaluating the benefits and limitations of both methods, we have come to the conclusion that instead of preferring one over the other, we can combine the two for better results. We could train a neural network with an optimal parameter selection to use in VMTK segmentation for setting the parameters. We can have a CNN trained on the OCT data to tell us what the correct parameter set is. This could prove to be useful, especially since we encountered a set-back in determining the initialization type, thresholds, and parameters to set for the best segmentation result in VMTK. We should not have a competition over the two techniques, rather, we should combine the strengths and benefits of both model-driven and data-driven approaches. 
 
 Future works should focus on improved segmentation using unsupervised Deep Learning where the machine uses image-derived features, or supervised learning that requires Gold Standard (GS) segmentation to train it. The deep learning-based algorithm demonstrated high accuracy based on Jaccard Index. We should look into Edge-based deformable models, and approaches using blood vessel tracking algorithms and seeding points to find the minimum path according to image-derived metrics. 
 <!--Insert Image Here-->
+
 
 
 
@@ -103,9 +104,9 @@ Future works should focus on improved segmentation using unsupervised Deep Learn
 2. [Poster Blitz](https://southalabama.zoom.us/rec/play/nMsrAregiBDRSP8QCj2mDVV7halNAvL0_PvuBcyyf20OraB0BAEtdz7schZwF_Afkmc-ODwH8bNWZ2Q.X_Ym7fzfDZKyswHj?startTime=1627247559000)
 3. [Poster](Emory_Poster.pdf)
 4. Codes 
-   1. PyTorch (attack link)
-   1. Python and MATLAB codes used for comparison (attack link)
-   2. FEniCS (attach link)
+   1. [PyTorch](https://colab.research.google.com/drive/10phSbPmWV9yaJOGrygYh6tJ4TqyflQRn?usp=sharing)
+   1. Python and MATLAB codes used for comparison 
+   2. FEniCS 
 
 
 
