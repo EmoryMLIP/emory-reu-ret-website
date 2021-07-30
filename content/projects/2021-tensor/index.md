@@ -16,6 +16,9 @@ Can we look at a brain scan and know what the brain's owner is thinking?
 
 Our research attempts to use computers to correctly classify brian scans into 2 groups, depending on what they are doing during the scan.
 
+<img src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/tensor_funny.jpg" width="400"/>
+
+
 ### Functional MRI
 ---
 We use [brain scans called functional MRIs](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
