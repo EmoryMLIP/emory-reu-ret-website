@@ -5,6 +5,7 @@
 ### Allison Dennis
 
 ### Mohamad Hindawi
+Dr. Hindawi teaches AP Calc in Tucker High school. He is certified to teach AP Physics, AP Chem, AP Stat,and AP Comp Sc. His interset is in Mathmatical Modeling and Differential Eq specially Navier-Stokes Equation. Outside academia, He enjoys swimming long distances, deep sea water fishing in Alaska for Halibut and King Salmon.
 
 ### Shannon Lee
 Shannon Lee is a rising junior at Southern Methodist University majoring in accounting, applied mathematics, and statistics. 
