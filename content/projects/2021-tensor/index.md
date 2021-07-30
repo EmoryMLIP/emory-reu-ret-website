@@ -43,13 +43,13 @@ We see that the basis for Class 0 shows more curved features, while the basis fo
 <img src="https://user-images.githubusercontent.com/50922545/127238156-e5b94e20-2853-405b-8483-13dc115565e9.jpg" width="400"/>
 
 
-The computer tries to classify if this image is a zero or a one:
+The computer tries to classify this test image as either a zero or a one:
 <img src="https://user-images.githubusercontent.com/50922545/127212660-d7520639-a8e6-4800-b78f-80901f6b7142.jpg" width="100"/>
 
-Comparing it to other ones seems to match nicely:
+This image represents the projection of the test image onto the basis for numeral one:
 <img src="https://user-images.githubusercontent.com/50922545/127212640-afe7cd85-5495-4f43-bc67-3a9a1fe4f9aa.jpg" width="100"/>
 
-But if it tries to compare it to a zero, we find differences and inconsistencies:
+The image projection onto the basis for zero, shows differences and inconsistencies:
 <img src="https://user-images.githubusercontent.com/50922545/127212651-8047b39b-5aa1-45f7-b0d6-c5fa1f0b986c.jpg" width="100"/>
 
 
