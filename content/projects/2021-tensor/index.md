@@ -2,7 +2,7 @@
 title: Tensors for fMRI
 date: 2021-05-01
 featured: false
-summary: 'Short summary of project to be shown on the front page.'
+summary: 'We use study tensors because they are a superior structure for storing multidimensional data.  Traditional matrices extract the most relevant features of vectorized data using Singular Value Decomposition, but matrices ignore crucial high-dimensional relationships.  We propose a projection-based classification algorithm using the tensor SVD, and apply our algorithm to the StarPlus fMRI dataset.'
 tags: ["Summer 2021"]
 ---
 
