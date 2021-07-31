@@ -78,13 +78,13 @@ In the last week of the program, we had a lot left to do, finishing up our poste
 ### Project Chiari Creations
 -[Research Paper](ResearchPaperDraft1.pdf)
 
--[Midterm Presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/f5a9de7a766a012b8202acd87ac4c427d2ec2016/content/projects/2021-chiari/Chiari_Disease_Presentation%20(2).pdf)
+-[Midterm Presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/f5a9de7a766a012b8202acd87ac4c427d2ec2016/content/projects/2021-chiari/Chiari_Disease_Presentation.pdf)
 
 -[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
 ---
 ### Meet the Team
--[Bios](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/72789f2938cc9b40d8a2c55fa3e46f7d455ace46/content/projects/2021-chiari/Bios)
+-[Bios](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-chiari/Bios)
 
 ### Mentor Dr. Lars Ruthotto Homepage
 
