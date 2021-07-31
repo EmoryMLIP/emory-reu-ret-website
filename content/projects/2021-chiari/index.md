@@ -20,10 +20,9 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 This method may be more accurate in diagnosing Chiari, however, the large number of manual processing steps may limit its use as a wide-spread screening tool.  This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline, most critically the segmentation of the image into different brain regions.  The teams worked with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 
-<img src="img/Chiari-Synergy.png" alt="img/Chiari-Synergy" width="500"/>
 
 ### Leave the SEGMENTATION to US!
-<img src="img/five-masks.png" alt="img/Chiari-Synergy" width="500"/>
+<img src="img/five-masks.png" alt="img/Chiari-Synergy" width="800"/>
 We develop this project to solve the problem of identifying where the brain stem and cerebellum are in a given MRI.  By finding or, in the language of the field, by segmenting the brain stem and cerebellum, we find the most relevant regions to look at brain movement.  Using the DENSE MRI data, we can then average the movement over those regions to produce a biomarker that can help predict whether or not a patient has the Chiari Malformation.  By producing these segmentations automatically with the machine learning or atlas-based approaches, the diagnosis process could become much cheaper and more efficient.
 
 ### Atlas Based Image Registration vs Machine Learning. 
@@ -72,7 +71,7 @@ In the last week of the program, we had a lot left to do, finishing up our poste
 
 ---
 
-<img src="img/too-cute-pic.png" alt="brain-heart" width="500"/>
+<img src="img/too-cute-pic.png" alt="brain-heart" width="100"/>
 
 ### Project Chiari Creations
 -[Research Paper](.ResearchPaper.md)
