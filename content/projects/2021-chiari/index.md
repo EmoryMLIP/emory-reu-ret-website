@@ -23,7 +23,7 @@ This method may be more accurate in diagnosing Chiari, however, the large number
 
 ### Leave the SEGMENTATION to US!
 <img src="img/five-masks.png" alt="img/Chiari-Synergy" width="800"/>
-We develop this project to solve the problem of identifying where the brain stem and cerebellum are in a given MRI.  By finding or, in the language of the field, by segmenting the brain stem and cerebellum, we find the most relevant regions to look at brain movement.  Using the DENSE MRI data, we can then average the movement over those regions to produce a biomarker that can help predict whether or not a patient has the Chiari Malformation.  By producing these segmentations automatically with the machine learning or atlas-based approaches, the diagnosis process could become much cheaper and more efficient.
+We develop this project to solve the problem of identifying where the brain stem and cerebellum are in a given MRI.  By finding or, in the language of the field, by segmenting the brain stem and cerebellum, we find the most relevant regions to look at brain movement.  Using the DENSE MRI data, we can then average the movement over those regions to produce a biomarker that can help predict whether or not a patient has the Chiari Malformation.  By producing these segmentations (examples above) automatically with the machine learning or atlas-based approaches, the diagnosis process could become much cheaper and more efficient.
 
 ### Atlas Based Image Registration vs Machine Learning. 
 
