@@ -76,7 +76,7 @@ In the last week of the program, we had a lot left to do, finishing up our poste
 <img src="img/too-cute-pic.png" alt="brain-heart" width="100"/>
 
 ### Project Chiari Creations
--[Research Paper](.ResearchPaper.md)
+-[Research Paper](file:///C:/Users/muhhe/Downloads/2021_REURET_Chiari_Paper%20(1).pdf)
 
 -[Midterm Presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/f5a9de7a766a012b8202acd87ac4c427d2ec2016/content/projects/2021-chiari/Chiari_Disease_Presentation%20(2).pdf)
 
