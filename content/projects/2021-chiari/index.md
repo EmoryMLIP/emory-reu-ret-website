@@ -13,6 +13,7 @@ tags: ["Summer 2021","Machine Learning","Image Registration","Convolutional Neur
 ### Collaboration Never Sleeps. 
  During our summer research at Emory University 2021 REU/RET program, our group focused on the algorithmic diagnosis of Chiari malformation from DENSE MRIs.  We created an algorithm that can accurately and efficiently segment the cerebellum and brain stem from a magnitudinal image and use displacement data to classify whether or not a patient has the Chiari malformation.  In doing so, we investigated two approaches; one that segments the given image by aligning and comparing the image to a known atlas and another that segments through deep learning.
  
+---
 ### Did Somebody Say Chiari Malformation?
 Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  new direction for diagnosis is by looking at brain movement .  Using an MRI technique called DENSE (shown below) that records how the brain moves, [Dr.  Oshinsky’s group (at Emory's Dept.  of Radiology)](https://link.springer.com/article/10.1007/s10439-020-02695-7) collected data about how Chiari patients have more brain movement in the cerebellum and brainstem than controls.
 
@@ -20,13 +21,13 @@ Chiari malformation is a condition in which brain tissue extends into the spinal
 
 This method may be more accurate in diagnosing Chiari, however, the large number of manual processing steps may limit its use as a wide-spread screening tool.  This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline, most critically the segmentation of the image into different brain regions.  The teams worked with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 
-
+---
 ### Leave the SEGMENTATION to US!
 <img src="img/five-masks.png" alt="img/Chiari-Synergy" width="800"/>
 We develop this project to solve the problem of identifying where the brain stem and cerebellum are in a given MRI.  By finding or, in the language of the field, by segmenting the brain stem and cerebellum, we find the most relevant regions to look at brain movement.  Using the DENSE MRI data, we can then average the movement over those regions to produce a biomarker that can help predict whether or not a patient has the Chiari Malformation.  By producing these segmentations (examples above) automatically with the machine learning or atlas-based approaches, the diagnosis process could become much cheaper and more efficient.
 
+---
 ### Atlas Based Image Registration vs Machine Learning. 
-
 We first looked into  atlas-based image registration as a way to produce automatic segmentations of the brain stem and cerebellum. Using the FAIR toolbox in MATLAB, the idea behind this method was to have a bank of MRI images with manually drawn segmentations that we could compare a new MR image to. Once we find a transformation (example below) between the known and new images, we can use the same transformation to produce a new segmentation from the know one.
 
 <img src="img/AtlasGIF.gif" alt="registration" width="500"/>
@@ -43,7 +44,7 @@ Overall, we found that the machine learning method produces better results, both
 [What is Image Registration?](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
-
+---
 ### Time Management is Everything!
 Here's an outline of our process, as it evolved with time.
 
