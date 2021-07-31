@@ -14,7 +14,7 @@ tags: ["Summer 2021","Machine Learning","Image Registration","Convolutional Neur
  During our summer research at Emory University 2021 REU/RET program, our project focused on the algorithmic diagnosis of Chiari malformation from DENSE MRIs.  We created an algorithm that can accurately and efficiently segment the cerebellum and brain stem from a magnitudinal image and use displacement data to classify whether or not a patient has the Chiari malformation.  In doing so, we investigated two approaches; one that segments the given image by aligning and comparing the image to a known atlas and another that segments through deep learning.
  
 ### Did Somebody Say Chiari Malformation?
-Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  new direction for diagnosis is by looking at brain movement .  Using an MRI technique called DENSE that records how the brain moves, [Dr.  Oshinsky’s group (at Emory's Dept.  of Radiology)](https://link.springer.com/article/10.1007/s10439-020-02695-7#citeas) collected data about how Chiari patients have more brain movement in the cerebellum and brainstem than controls.  This method may be more accurate in diagnosing Chiari, however, the large number of manual processing steps may limit its use as a wide-spread screening tool.  This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline, most critically the segmentation of the image into different brain regions.  The teams worked with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
+Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  new direction for diagnosis is by looking at brain movement .  Using an MRI technique called DENSE that records how the brain moves, [Dr.  Oshinsky’s group (at Emory's Dept.  of Radiology)](https://link.springer.com/article/10.1007/s10439-020-02695-7) collected data about how Chiari patients have more brain movement in the cerebellum and brainstem than controls.  This method may be more accurate in diagnosing Chiari, however, the large number of manual processing steps may limit its use as a wide-spread screening tool.  This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline, most critically the segmentation of the image into different brain regions.  The teams worked with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 
 <img src="img/Chiari-Synergy.png" alt="img/Chiari-Synergy" width="500"/>
 
@@ -37,7 +37,7 @@ Overall, we found that the machine learning method produces better results, both
 ### Additional information to learn about Atlas-Based Image Registration and Machine Learning
 [What is Image Registration?](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
----
+
 
 ### Time Management is Everything!
 Here's an outline of our process, as it evolved with time.
@@ -59,11 +59,12 @@ During our first week, we created a working atlas-based image registration examp
  Week 4:
  In the fourth week, we began working on our paper manuscript.  Although there was still much of the research left to be done, coding in MATLAB and PyTorch, starting on this process of outlining our problem and explaining our methods helped us clarify next steps.  At the end of the week, we turned back to our codes.  On the atlas-based side, we explored ways to choose the images to compare to each other, because it can make a big difference in how good the outputted segmantation is.  We also began devising a way to compare a new image we want to segment to more than one images we already have segmentations before, hoping that by averaging those results together, we could produce even better segmentations.  On the machine learning side, we looked at ways to figure out the ideal number of iterations to use, so that we were neither overfitting nor underfitting our model to training data.
         
- Week 5:
+Week 5:
 Week five progressed very similarly to week four, as we continued working on our paper and developing better methods.  We also began working on a poster to present our final results more broadly - and on this website!
     
 Week 6:
 In the last week of the program, we had a lot left to do, finishing up our poster, website, and paper manuscript.  We finalized every parameter in each method before finally looking at the testing set for the first time and analyzing our final results.
+
 ---
 
 ### Project Chiari Creations
