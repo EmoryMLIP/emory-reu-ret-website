@@ -60,7 +60,7 @@ We also looked into a machine learning approach. The goal here was to find a rel
 Our project implemented a CNN called U-Net, you can find out more about this network and the code we used here: [U-Net: A PyTorch Implementation in 60 lines of Code](https://amaarora.github.io/2020/09/13/unet.html)
 
 ### Additional information to learn about Atlas-Based Image Registration and Machine Learning
-What is Atlas-Based Learning? - (Information sheet or video) 
+[What is Image Registration?](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
 ---
