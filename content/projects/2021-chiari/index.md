@@ -53,7 +53,7 @@ During our first week, we created a working atlas-based image registration examp
  
  Week 3:
  We spent most of the third week preparing for our midterm presentation.  It was helpful to practice presentation skills and get familiar using [Beamer](https://www.overleaf.com/learn/latex/Beamer) - a math presentation tool we weren't yet familar with that is the gold standard for mathmatic presentations - and also to reflect on the progress we made, and talk through next steps with others after we presented.  After our presentation, we started refining the machine learning method to use a new optimizer that automatically chooses the algorithm's [learning rate](https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-on-deep-learning-neural-networks/) using a [line search](https://machinelearningmastery.com/line-search-optimization-with-python/#:~:text=The%20line%20search%20is%20an,with%20one%20or%20more%20variables.&text=Linear%20search%20is%20an%20optimization%20algorithm%20for%20univariate%20and%20multivariate%20optimization%20problems).  This produced much better results!
- INCLUDE THAT PICTURE IF WE HAVE IT
+ <img src="valid_examples.png" alt="valid_examples" width="500"/>
 
        
  Week 4:
