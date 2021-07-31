@@ -23,12 +23,13 @@ This method may be more accurate in diagnosing Chiari, however, the large number
 <img src="img/Chiari-Synergy.png" alt="img/Chiari-Synergy" width="500"/>
 
 ### Leave the SEGMENTATION to US!
-MASK IMAGE(S) HERE?
+<img src="img/five-masks.png" alt="img/Chiari-Synergy" width="500"/>
 We develop this project to solve the problem of identifying where the brain stem and cerebellum are in a given MRI.  By finding or, in the language of the field, by segmenting the brain stem and cerebellum, we find the most relevant regions to look at brain movement.  Using the DENSE MRI data, we can then average the movement over those regions to produce a biomarker that can help predict whether or not a patient has the Chiari Malformation.  By producing these segmentations automatically with the machine learning or atlas-based approaches, the diagnosis process could become much cheaper and more efficient.
 
 ### Atlas Based Image Registration vs Machine Learning. 
 
-One in producing automatic segmentations of the brain stem and cerebellum was an atlas-based image registration. Using the FAIR toolbox in MATLAB, the idea behind this method was to have a bank of MRI images with manually drawn segmentations that we could compare a new MR image to. Once we find a transformation between the known and new images, we can use the same transformation to produce a new segmentatoin from the know one.
+We first looked into  atlas-based image registration as a way to produce automatic segmentations of the brain stem and cerebellum. Using the FAIR toolbox in MATLAB, the idea behind this method was to have a bank of MRI images with manually drawn segmentations that we could compare a new MR image to. Once we find a transformation (example below) between the known and new images, we can use the same transformation to produce a new segmentation from the know one.
+
 <img src="img/AtlasGIF.gif" alt="registration" width="500"/>
 
 We also looked into a machine learning approach. The goal here was to find a relationship between the DENSE images and their corresponding manual segmentations by training a model using convolutional neural networks (CNN). The network \"learns\" to identify images features, and, if successful, DENSE images can be used as inputs and the model will automatically segment the brain stem and cerebellum.
