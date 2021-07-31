@@ -16,7 +16,8 @@ tags: ["Summer 2021","Machine Learning","Image Registration","Convolutional Neur
 ### Did Somebody Say Chiari Malformation?
 Chiari malformation is a condition in which brain tissue extends into the spinal canal.  While it can be difficult to diagnose Chari  from  anatomical  images,  a  promising  new direction for diagnosis is a novel functional Magnetic Resonance Imaging (MRI) technique developed by Dr.  Oshinsky’s group (Emory's Dept.  of Radiology).  However, the large number of manual processing steps prohibit its use as a wide-spread screening tool.  This  project  aims  at  exploring  the  use  of  machine  learning  algorithms  to  automize  parts  of the image processing pipeline, most critically the segmentation of the image into different brain regions.  The teams worked with image data that has been collected and labeled by Dr.  Oshinski’s group in a previous research study.  The project is accessible to the team members since we can build  upon  recent  progress  and  software  made  in  image  processing  and  computer vision and the image data is two-dimensional and of limited resolution, which enables fast experimentation.  Despite this simplicity, the project allows us to investigate ML in a realistic setting and investigate the generalization properties and robustness of the approach.
 
-![mainImage](img/Chiari-Synergy.png "Chiari Synergy")
+<img src="img/Chiari-Synergy.png" alt="img/Chiari-Synergy" width="500"/>
+
 
 ---
 ### Time Management is Everything! 
@@ -49,9 +50,10 @@ Week 6
 
 
 ### Atlas Based Image Registration vs Machine Learning. 
-Atlas...
 
-The goal with machine learning was to find a relationship between the DENSE images and their corresponding manual segmentations by training a model using convolutional neural networks (CNN). If successful, DENSE images can be used as inputs and the model will automatically segment the brain stem and cerebellum. A generalized overview of this process can be seen in the figure below.
+Our first approach in producing automatic segmentations of the brain stem and cerebellum was atlas based registration. Using the FAIR toolbox in MATLAB, the idea behind this method was to have a bank of template MRI images with corresponding manually drawn segmentations. A new reference MRI would be transformed into one of the template images and this transformation would then be applied to the known mask producing a segmentation for the reference image. 
+
+We also looked into a machine learning approach. The goal here was to find a relationship between the DENSE images and their corresponding manual segmentations by training a model using convolutional neural networks (CNN). If successful, DENSE images can be used as inputs and the model will automatically segment the brain stem and cerebellum. A generalized overview of this process can be seen in the figure below.
 
 <img src="img/MachLearningDiagram.jpg" alt="MachLearningDiagram" width="500"/>
 
