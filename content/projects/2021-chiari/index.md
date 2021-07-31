@@ -83,6 +83,8 @@ In the last week of the program, we had a lot left to do, finishing up our poste
 
 -[Poster Blitz](https://youtu.be/tdjXj3JdpQU)
 
+-[Code](https://github.com/lruthotto/ChiariProject)
+
 ---
 ### Meet the Team
 -[Bios](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-chiari/Bios)
