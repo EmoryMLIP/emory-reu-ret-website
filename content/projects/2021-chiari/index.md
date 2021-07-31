@@ -53,7 +53,7 @@ During our first week, we created a working atlas-based image registration examp
  Week 2:
  One of the first things we noticed when we began working with our data set the first week was the variability in the brightness and contrast of our images.  In week two, we explored some different methods to help enhance the images.  We decided to use a tool in MATLAB's Image Processing Toolbox to normalize the images in a process called [histogram normalization](http://www.sci.utah.edu/~acoste/uou/Image/project1/Arthur_COSTE_Project_1_report.html), which made our images much more consistent. 
  
- <img src="img/compare.png" alt="normalization" width="800"/>
+ <img src="img/compare.png" alt="normalization" width="500"/>
  
  With this process complete, we began working on other atlas-based examples, and setting up the neural network with default parameters.
  
