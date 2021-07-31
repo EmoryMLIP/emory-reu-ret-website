@@ -40,7 +40,7 @@ Our project implemented a CNN called U-Net, you can find out more about this net
 
 Overall, we found that the machine learning method produces better results, both in terms of segmentations of the brain stem and cerebellum, and in terms of how accurate the biomarkers calculated from those segmentations are.  Results were very close to the manually produced target results, and we have ideas for further work that could make them even closer!
 
-### Additional information to learn about Atlas-Based Image Registration and Machine Learning
+Additional information: to learn about atlas-based image registration and machine learning, check out these links!
 [What is Image Registration?](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning) 
 [What is Machine Learning?](https://youtu.be/QghjaS0WQQU)
 
