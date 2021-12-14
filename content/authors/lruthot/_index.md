@@ -10,12 +10,16 @@ authors:
 superuser: false
 
 # Role/position
-role: Site Manager and Mentor
+role: Associate Professor, Principal Investigator
 
 # Organizations/Affiliations
 organizations:
-- name: Emory University
+- name: Department of Mathematics
   url: "https://www.math.emory.edu/home/"
+- name: Department of Computer Science
+  url: "https://www.cs.emory.edu/home/"
+- name: Emory University
+  url: "https://www.emory.edu"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include efficient training of deep neural networks and optimal representations of high-dimensional data.

@@ -6,7 +6,7 @@
 widget: hero  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
 weight: 10  # Order that this section will appear.
-title: "Computational Mathematics for Data Science"
+title: ""
 subtitle: ""
 hero_media: emory_mathcs_img1.jpg
 design:
@@ -17,4 +17,6 @@ advanced:
   css_class:
 ---
 
-The Emory Research Experience for Undergraduates and Teachers Site focuses on computational mathematics and its applications in data science, which impacts nearly every field of science and more and more of our daily lives.
+The Research Experience for Undergraduates and Teachers Site on Computational Mathematics and Data Science provides exciting opportunities for summer research at Emory University in Atlanta, GA, USA. 
+Under a common theme that changes every summer, the site hosts several teams who develop innovative mathematical solutions that help process, analyze, and generate data sets. 
+The participants are mentored by leading experts within the [Department of Mathematics](http://math.emory.edu/home/).

@@ -4,7 +4,7 @@ widget: pages
 headless: true
 weight: 20
 
-title: Projects
+title: Past Projects
 subtitle: Summer 2021
 
 content:

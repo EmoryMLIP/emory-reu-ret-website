@@ -1,37 +1,30 @@
 ---
-title: Tensors for fMRI
+title: A Tensor SVD-based Classification Algorithm Applied to fMRI Data
 date: 2021-05-01
-featured: false
-summary: 'We use study tensors because they are a superior structure for storing multidimensional data.  Traditional matrices extract the most relevant features of vectorized data using Singular Value Decomposition, but matrices ignore crucial high-dimensional relationships.  We propose a projection-based classification algorithm using the tensor SVD, and apply our algorithm to the StarPlus fMRI dataset.'
+featured: true
+summary: 'Tensors are a a much better way to store and analyze multidimensional data than  traditional, matrix-based representation. However, generalizations of effective numerical techniques for extracting features from matrices such as the Singular Value Decomposition to tensors are neither straightforward nor uniquely defined. Those techniques are crucial to identify relationships in high-dimensional data. In this project, we study tensor SVDs, propose a projection-based classification algorithm, and experiment with the four-dimensional StarPlus fMRI dataset.'
 tags: ["Summer 2021"]
 ---
 
+This post was written by Katy Keegan, Yihua Xu, Tanvi Vishwanath, and Vida Jon and published with minor edits. The team was advised by Dr. Elizabeth Newman.
+In addition to this post, the team has also given a [midterm presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf) , created a [poster](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/Tensor_fMRI_Poster.pdf) ,  published, [code](https://github.com/elizabethnewman/tensor-fmri), and written a [paper](https://arxiv.org/abs/2111.00587).
 
 
-<!--more-->
+## Overview: Can we look at a brain scan and know what the brain's owner is thinking?
 
-### Overview
----
-Can we look at a brain scan and know what the brain's owner is thinking?
+Our research attempts to use computers to correctly classify brain scans into 2 groups, depending on what they are doing during the scan.
 
-Our research attempts to use computers to correctly classify brian scans into 2 groups, depending on what they are doing during the scan.
-
-<img src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/tensor_funny.jpg" width="400"/>
-
-
-### Functional MRI
----
+## Functional MRI
 We use [brain scans called functional MRIs](https://en.wikipedia.org/wiki/Functional_magnetic_resonance_imaging) that show us which parts of the brain are using more oxygen and are therefore most active. [We have fMRIs of test subjects](http://www.cs.cmu.edu/afs/cs.cmu.edu/project/theo-81/www/)  who, as they are being scanned, are also shown either a picture or a sentence. If computers can classify these study subjects into one of these two categories by only studying their scans, then in a sense we can read their minds.
 
-fMRIs consist of 3-dimensional pixels called voxels, and the data are numbers representing colors.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial.    Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
+fMRIs consist of three-dimensional pixels called voxels, and the data are numbers representing colors.  Unlike static MRIs which take a scan at one point in time, fMRIs are repeated every few seconds creating a series of images for each trial.    Here is an example of an fMRI of one brain during one trial.  The different images are of different slices of the brain.  The abbreviations on the right refer to brain regions, for example "SMA" stands for "Supplementary Motor Area" located at the top center of the head.  
 
 <img src="img/brain1.jpg" alt="brain1" width="400"/>
 
-If we have 3-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
+If we have three-dimensional fMRI brain voxel data for many patients, multiple scans in sequence, then we need to analyze a quantity of data unwieldy even for modern computers.  
 
 
-### Classification
----
+## Image Classification
 Image classification is using a computer to figure what what an image represents.  Computers can't see images, so they use features of the images that it can understand.  For example, we can train a computer to match an image to a numerical digit.  Computers learn  by training on many images, for example [using the MNIST database of handwritten images](http://yann.lecun.com/exdb/mnist/).  MNIST contains a wide variety of images that can represent a 0 or a 1:
 
 <img src="https://user-images.githubusercontent.com/50922545/126396168-5835463f-db60-417b-b4ab-5cc4d6e3b2ef.jpg" width="400" class="aligncenter"/>
@@ -63,7 +56,6 @@ The projection shows that the "distance" between our test image and our two clas
 By learning from a training set of images a computer can examine the data in a new image and figure out which digit it most resembles.  Similarly, we are training our computer to learn how to use the data in an fMRI to classify our study subjects into those who are shown an image and those who are shown a sentence.  
 
 ### Tensors and Singular Value Decomposition
----
 
 Typically, large data sets like the fMRI voxels are stored in matrices, which have some [powerful tools for extracting the most relevant components.](https://youtu.be/LlKAna21fLE)
 
@@ -73,7 +65,7 @@ When we store fMRI data in a matrix we lose important relationships between the 
 
 In our work, we study how to store our data in a tensor which is like matrix but with more than 2 dimensions.  Our tensor of fMRIs have a total of 5 dimensions, shown in the figure below.  The green slices consist of voxels of the brain in 3 spatial dimensions: x,y,z (yellow).  For each trial multiple images are taken over several seconds (blue), and there are multiple trials (red).  
 
-<img width="600" alt="fmri_tensors" src="https://user-images.githubusercontent.com/50922545/125823220-5141e5bd-206c-4cd2-8dc7-5f082c475702.png">
+<img width="600" alt="fmri_tensors" 
 
 When we store our voxel data in tensors instead of matrices, we retain all the information about the 3 dimensional location in the brain, the sequence of the image in time, and the trial.  Now we want to decompose our tensor data using a method analogous to the way [matrices can be decomposed](https://www.youtube.com/watch?v=DG7YTlGnCEo), so we can use far less data and still extract an accurate prediction of what the subject is thinking.  In matrices this is called Singular Value Decomposition; we call our approach tensor-SVD or tSVD.  
 
@@ -90,16 +82,13 @@ This what we imagine a tensor SVD would be:
 
 You'll notice that we use matrix multiplication in working with matrix SVDs.  We are searching for the equivalent tensor multiplication.
 
+## Other Applications
+
 Our research is not only useful for fMRIs; many datasets have multiple dimensions.  Streaming entertaining companies have data on thousands of viewers and what movies they've watched.  Hospitals track thousands of patients, each of whom has had multiple lab tests and other studies.  If our research enables us to classify our fMRI subjects, then we may also be able to predict whether someone will want to watch Terminator, or whether a patient is likely to have cancer.  
 
 
-### Further Reading
----
-[Our code stored in the github repository](https://github.com/elizabethnewman/tensor-fmri)  
+## References
 
-[Our poster](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/Tensor_fMRI_Poster.pdf)  
-
-[Our presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tensor/img/_Emory_REU_RET__Summer_2021__Tensor_fMRI_Presentation.pdf)  
 
 
 [Tensor tensor products with invertible linear transforms](https://www.sciencedirect.com/science/article/pii/S0024379515004358)
@@ -111,7 +100,6 @@ Our research is not only useful for fMRIs; many datasets have multiple dimension
 [Image classification using local tensor singular value decompositions](https://arxiv.org/pdf/1706.09693.pdf)
 
 
----
 
 
 

@@ -10,21 +10,24 @@ authors:
 superuser: false
 
 # Role/position
-role: Mentor 
+role: Professor 
 
 # Organizations/Affiliations
 organizations:
-- name: Emory University
+- name: Department of Mathematics
   url: "https://www.math.emory.edu/home/"
-
+- name: Department of Computer Science
+  url: "https://www.cs.emory.edu/home/"
+- name: Emory University
+  url: "https://www.emory.edu"
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include efficient numerical methods for large-scale scientific computing and machine learning applications.
 
 interests:
+- Applied Mathematics
+- Partial Differential Equations
 - Scientific Computing
-- Deep Learning
-- Numerical linear algebra
-- Optimization
+- Cardiovascular Diseases
 
 education:
   courses:
@@ -53,10 +56,7 @@ social:
   icon_pack: fab
   link: https://github.com/aleveneziani
 # Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: files/VenezianiCVApr2021.pdf
+
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "avenez2@emory.edu"
@@ -66,3 +66,5 @@ email: "avenez2@emory.edu"
 user_groups:
 - Mentors
 ---
+
+Alessandro Veneziani is a Professor in the [Department of Mathematics](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.mathcs.emory.edu/Research/Area/ScientificComputing/).

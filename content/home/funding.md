@@ -16,5 +16,5 @@ advanced:
   css_class:
 ---
 
-This site is supported by the US National Science foundation award DMS-2051019. 
+This site is mainly supported  by the US National Science foundation award DMS-2051019. 
 Any opinions, findings, and conclusions or recommendations expressed on this website are those of the author(s) and do not necessarily reflect the views of the funding agency.

@@ -10,12 +10,14 @@ authors:
 superuser: false
 
 # Role/position
-role: Senior Lecturer
+role:  Senior Lecturer, Co-Principal Investigator
 
 # Organizations/Affiliations
 organizations:
-- name: Emory University
+- name: Department of Mathematics
   url: "https://www.math.emory.edu/home/"
+- name: Emory University
+  url: "https://www.emory.edu"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include regression models for spatial functional data and integrating sustainability into the mathematics curriculum.
@@ -62,7 +64,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/betting_cv.pdf
+  link: files/BreeEttingerCV.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "betting@emory.edu"

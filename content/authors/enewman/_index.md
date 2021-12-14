@@ -10,13 +10,14 @@ authors:
 superuser: false
 
 # Role/position
-role: Postdoctoral Fellow
+role: Distinguished Visiting Assistant Professor
 
 # Organizations/Affiliations
 organizations:
-- name: Emory University
+- name: Department of Mathematics
   url: "https://www.math.emory.edu/home/"
-
+- name: Emory University
+  url: "https://www.emory.edu"
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include efficient training of deep neural networks and optimal representations of high-dimensional data.
 

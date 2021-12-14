@@ -10,12 +10,14 @@ authors:
 superuser: false
 
 # Role/position
-role: Mentor 
+role: Assistant Professor 
 
 # Organizations/Affiliations
 organizations:
-- name: Emory University
+- name: Department of Mathematics
   url: "https://www.math.emory.edu/home/"
+- name: Emory University
+  url: "https://www.emory.edu"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include efficient numerical methods for large-scale scientific computing and machine learning applications.
@@ -54,9 +56,6 @@ social:
   link: https://github.com/xyz8713
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: files/yxi_cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "yxi26@emory.edu"

@@ -8,9 +8,9 @@ Our site emphasizes developing research and professional skills that enable part
 Each summer, our site  trains  at least twelve undergraduates and four teachers for six weeks.
 The participants are mentored by faculty members from the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://cs.emory.edu/home/).
 
-Student recruitment will be nationwide, with a strong focus on underrepresented groups and students enrolled in colleges with limited research opportunities in this area.  
+We recruit students nationwide, with a strong focus on underrepresented groups and students enrolled in colleges with limited research opportunities in this area.  
 By involving in-service K-12 teachers in the research experience, our site will extend its impact to high-school students and help innovate curricula design and improve career counseling. 
-The teachers will be recruited from the diverse Atlanta metro area and other districts nationwide.
+We recruit teachers from the diverse Atlanta metro area and other districts nationwide.
 
 ## How does it work?
 
@@ -44,4 +44,4 @@ The weekly seminar will feature group activities and faculty-led presentations o
 
 ## Information for Applicants
 
-Interested in joining? Learn more about about requirements, deadlines, and application materials on the [information for applicants](../join/)) page.
+Interested in joining? Learn more about about requirements, deadlines, and application materials on the [information for applicants](../join/) page.

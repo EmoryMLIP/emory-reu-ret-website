@@ -1,31 +1,24 @@
 ---
-title: Tomography
+title: New algorithm helps make portable CT machine images clearer
+subtitle: 'Mathematics: Undergraduate college students studied at the Emory REU a new, better way of improving image resolution with mathematical methods.'
 date: 2021-05-01
 featured: true
-summary: 'Short summary of project to be shown on the front page.'
+summary: 'Our team has devised a way to improve point-of-care tomographic imaging and thereby making medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods.'
 tags: ["Summer 2021"]
 ---
 
-**REU/RET Emory University**
-# New algorithm helps make portable CT machine images clearer.
-*Mathematics: Undergraduate college students studied at the Emory REU a new, better way of improving image resolution with mathematical methods.* 
+This blog post was written by Mai Phuong Pham Huynh, Manuel Santana, and Ana Castillo and published with minor edits. The team was advised by Dr. James Nagy.
+In addition to this post, the team has also given a [midterm presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf) , created a [poster](./img/REU_RETPoster.pptx.png), made a [poster blitz video](https://youtu.be/qdcGe9MKCoI),  published [code](https://github.com/manuelarturosantana/TomoREU2021), written a [paper](https://arxiv.org/abs/2109.01481), and developed a [lesson plan](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6889032/Tomography.Lesson.pdf).
 
-Research work done at the 2021 REU/RET summer program at Emory University has devised a way to make medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods. 
 
-The 2021 REU/RET Emory program focuses this year on computational mathematics and its applications in data science. The research work is a collaborative effort between a group of undergraduate students and math teachers, led by mathematics faculty from Emory University. Four different research groups worked together on different projects following this year’s program theme, “Learning from Images.” This provided undergraduate students and math teachers from around the nation numerous learning opportunities and a chance to conduct research in this area.  Teachers were involved in research and able to create teaching materials that they can use in their classroom. 
-The REU/RET Emory Program’s research groups include: 1) Image-Based Diagnosis of Chiari Disease, 2) Images to Patient Specific Models in Cardiology, 3) Tensors and Data Modeling in Neuroimaging, and 4) Point-of-Care Tomographic Imaging.  The project on Point-of-Care Tomographic Imaging research focused on exploring new mathematical approaches for image reconstruction.   
 
-<p align='center'>
-  <img width=500px, height=auto src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tomography/img/CTmachine.png" class='center'>
-</p>
+Research done at the 2021 REU/RET summer program at Emory University has devised a way to make medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods. 
 
 Some of the most important aspects of this work link branches of mathematics like calculus, statistics, algebra and geometry. The different contributions by mathematicians to these branches of mathematics were complementary and accelerated research in the area of image reconstruction. The results obtained from their work have offered other student mathematicians a different way to study these problems and shown that this is an effective way for radiology doctors to accurately diagnose illnesses and keep saving patients' lives. The goal of the Point-of-Care Tomographic Imaging research group is to develop numerical methods that would estimate the geometry parameters of a portable CT scanning device and to reconstruct the image.  CT images in portable devices are a lot clearer. This work has been one of the most interesting pieces of work ever accomplished. 
 
-<p align='center'>
-  <img width=400px, height=auto src="https://github.com/EmoryMLIP/emory-reu-ret-website/blob/main/content/projects/2021-tomography/img/magnifying.png" class='center'>
-</p>
 
-# COVID-19 Imaging 
+# COVID-19 and Imaging 
+
 The mathematical ideas involved in the Point-of-Care Tomographic Imaging project are of great importance. With these mathematical methods, imaging becomes a possibility with patients in all parts of the world, allowing them to live a healthy and happy life. To get better reconstructed images, the group considers a regularized linear least squares problem, to which the solution is approximated  by using  an alternating descent scheme known as block coordinate descent or (BCD). Each iteration of BCD has two steps. One BCD step solves a linear least square problem, and the next step solves the nonlinear problem. 
 
 <p style="font-size: 0.9rem;font-style: italic;"> <img style="display: block;" src="https://live.staticflickr.com/65535/49679288857_200a679135_b.jpg" alt="Coronavirus"><a href="https://www.flickr.com/photos/110751683@N02/49679288857">"Coronavirus"</a><span> by <a href="https://www.flickr.com/photos/110751683@N02">Yu. Samoilov</a></span> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=6f5e7d78-bf4e-4b46-8ba9-c469af85860f" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /></a></p>
@@ -124,12 +117,35 @@ From  tests performed, the  acceleration  techniques  provided  slightly  better
   <img width="1000" height="300" src="https://user-images.githubusercontent.com/84742324/126915702-f55dcd15-4a71-4f4c-bbbd-480734a73394.png">
 </p>
 
-# Project Activities
-- [Bios](./Bios.md)
-- [Presentation Slides](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf)
-- [Poster Blitz Video](https://youtu.be/qdcGe9MKCoI)
-- [Virtual Poster](./img/REU_RETPoster.pptx.png)
-- Manuscript
-- [Github Code Reposity](https://github.com/manuelarturosantana/TomoREU2021)
-- [Math Lesson](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6889032/Tomography.Lesson.pdf)
+
+## Poster Blitz Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qdcGe9MKCoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## More About the Team
+
+### Mai Phuong Pham Huynh
+Mai is a rising junior at Emory University, majoring in Applied Mathematics and Statistics. Her research focus is on numerical analysis and scientific computing. In her free time, she enjoys listening to violin concertos, doing giant Jigsaw puzzles, and searching for vintage vinyl records from the 50s-90s.
+
+<p align='center'>
+  <img width=500px, height=auto src="img/IMG_6452.jpeg" class='center'>
+</p>
+
+### Manuel Santana
+Manuel is a rising senior at Utah State University. His research interests are in all areas of computational and applied math. When not doing math he enjoys European handball, pickleball, raquetball, and cooking with his wife Emily.
+
+<p align='center'>
+  <img width=500px, height=auto src="img/linkedInProfile.jpg" class='center'>
+</p>
+
+
+### Ana Castillo 
+
+Ana Castillo is in her 10th year teaching. She is certified to teach Spanish and Mathematics grades 6-12 in the states of Texas, Tennessee and Illinois. She is working for Proximity Learning, a company that has allowed her to teach virtually in different school districts in the United States.  She has been a participant of the Park City Mathematics Institute Teacher Leadership Program (PCMI TLP) and part of a team that runs a Math Teachers’ Circle in the Rio Grande Valley Area. In her spare time, she enjoys taking long walks, listening to classical music (Vivaldi), spending time with her pets (dogs & donkeys), cooking, reading, writing and traveling. 
+
+
+<p align="center">
+  <img width="300" height="400" src="https://user-images.githubusercontent.com/84742324/127031174-4f5717a8-00ee-40df-b342-73f16f2f30c1.jpg">
+</p>
+
 
