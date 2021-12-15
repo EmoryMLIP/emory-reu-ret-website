@@ -11,28 +11,28 @@
 
 [[main]]
   name = "Overview"
-  url = "overview"
+  url = "overview/"
   weight = 20
 
 
 [[main]]
   name = "People"
-  url = "people"
+  url = "people/"
   weight = 40
 
 [[main]]
   name = "Projects"
-  url = "projects"
+  url = "projects/"
   weight = 50
 
 [[main]]
   name = "Publications"
-  url = "publications"
+  url = "publications/"
   weight = 60
 
 [[main]]
   name = "Apply"
-  url = "apply"
+  url = "apply/"
   weight = 90
 
 # [[main]]
