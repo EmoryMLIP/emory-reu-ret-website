@@ -46,7 +46,7 @@ local_business_type = ""
 
 # Organization name (optional)
 # Enter an organization or project name. Defaults to the site title from `config.toml`.
-org_name = ""
+org_name = "Emory University"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
 description = "The Emory Research Experience for Undergraduates and Teachers Site focuses on computational mathematics and its applications in data science, which impacts nearly every field of science and more and more of our daily lives."
@@ -146,7 +146,7 @@ address_format = "en-us"
 main_menu = {enable = true, align = "r", show_logo = true, highlight_active_link = false, show_language = false, show_day_night = true, show_search = true}
 
 # Enable in-built social sharing buttons? (true/false)
-sharing = true
+sharing = false
 
 # Show a copyright license from creativecommons.org in the site footer?
 # Page specific copyright licenses are also possible by adding this option to a page's front matter.

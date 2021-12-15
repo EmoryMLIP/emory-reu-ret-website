@@ -21,7 +21,7 @@ copyright = "&copy; Emory REU/RET Computational Mathematics for Data Science"
 ############################
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"

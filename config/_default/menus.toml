@@ -26,6 +26,11 @@
   weight = 50
 
 [[main]]
+  name = "Publications"
+  url = "publications"
+  weight = 60
+
+[[main]]
   name = "Apply"
   url = "apply"
   weight = 90

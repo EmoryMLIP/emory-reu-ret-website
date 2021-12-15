@@ -44,4 +44,4 @@ The weekly seminar will feature group activities and faculty-led presentations o
 
 ## Information for Applicants
 
-Interested in joining? Learn more about about requirements, deadlines, and application materials on the [information for applicants](../join/) page.
+Interested in joining? Learn more about about requirements, deadlines, and application materials on the [information for applicants](../apply/) page.
