@@ -1,7 +1,8 @@
 ---
 title: From Images to Patient-Specific Models in Cardiology
-date: 2021-05-01
+date: 2021-12-14
 featured: true
+weight : 100
 summary: 'The role of mathematical modeling in clinics is particularly evident in cardiology, as computational mechanics for many historical reasons is a mature field of applied mathematics; on the other hand, many important cardiovascular pathologies have a significant mechanical component, in terms of fluid, structure and their interactions. The clinical impact of mathematical models strongly relies on reconstructing patient geometries to customize and personalize numerical simulations. Advances in medical image processing made over the last two decades have enabled virtual patient-specific models. A key step of the processing pipeline in Cardiology is the extraction of complex vascular geometries like an aortic dissection from medical images (typically, Computed Tomographies, Magnetic Resonance, and Optical Coherence Tomography). Our team evaluated the relation between PDEs and image segmentation/reconstruction through the level set method, and compared this segmentation approach with deep learning ones based on Convolutional Neural Networks.'
 tags: ["Summer 2021"]
 ---

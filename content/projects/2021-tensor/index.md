@@ -1,7 +1,8 @@
 ---
 title: A Tensor SVD-based Classification Algorithm Applied to fMRI Data
-date: 2021-05-01
+date: 2021-12-14
 featured: true
+weight : 1
 summary: 'Tensors are a a much better way to store and analyze multidimensional data than  traditional, matrix-based representation. However, generalizations of effective numerical techniques for extracting features from matrices such as the Singular Value Decomposition to tensors are neither straightforward nor uniquely defined. Those techniques are crucial to identify relationships in high-dimensional data. In this project, we study tensor SVDs, propose a projection-based classification algorithm, and experiment with the four-dimensional StarPlus fMRI dataset.'
 tags: ["Summer 2021"]
 ---

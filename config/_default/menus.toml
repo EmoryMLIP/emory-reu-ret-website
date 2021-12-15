@@ -26,11 +26,11 @@
   weight = 50
 
 [[main]]
-  name = "Join"
-  url = "join"
+  name = "Apply"
+  url = "apply"
   weight = 90
 
-[[main]]
-  name = "Contact"
-  url = "contact"
-  weight = 100
+# [[main]]
+#   name = "Contact"
+#   url = "contact"
+#   weight = 100

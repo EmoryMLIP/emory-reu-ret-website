@@ -1,8 +1,9 @@
 ---
 title: New algorithm helps make portable CT machine images clearer
 subtitle: 'Mathematics: Undergraduate college students studied at the Emory REU a new, better way of improving image resolution with mathematical methods.'
-date: 2021-05-01
+date: 2021-12-14
 featured: true
+weight : 50
 summary: 'Our team has devised a way to improve point-of-care tomographic imaging and thereby making medical diagnoses more effectively. The work behind this new algorithm relies heavily upon mathematical techniques that connect numerical linear algebra with optimization methods.'
 tags: ["Summer 2021"]
 ---

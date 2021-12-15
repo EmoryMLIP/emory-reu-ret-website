@@ -2,10 +2,10 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 headless: true
-weight: 20
+weight: 25
 
-title: Past Projects
-subtitle: Summer 2021
+title: 2021 Projects
+subtitle: Learning from Images
 
 content:
   count: 0

@@ -33,6 +33,7 @@ Our activities include professional development, a weekly lunch seminar, and soc
 ## Stipend Information
 
 
-Supported participants will receive a stipend of $3,600, travel support of up to $800 to and from Emory, and free on-campus accommodations.
+Supported students will receive a stipend of 3,600 USD, travel support of up to 800 USD to and from Emory, and free on-campus accommodations.
+Supported teachers will receive a stipend of 6,000 USD.
 
 

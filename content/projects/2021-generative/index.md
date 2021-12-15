@@ -1,7 +1,8 @@
 ---
 title: Efficient Determinant Estimators for Potential Flow Generators
-date: 2021-07-28
+date: 2021-12-14
 featured: true
+weight : 90
 summary: 'Our team developed efficient numerical linear algebra techniques to improve generative models based on potential flows.
 We derive a preconditioner from the stochastic Lanzcos quadratures and found that it reduced the number of conjugate gradient (CG) iterations that CG requires to converge. '
 tags: ["Summer 2021"]

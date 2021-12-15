@@ -85,8 +85,7 @@ show_related = {post = true, project = true, publication = true, talk = true}
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "MATHCS-INFO@listserv.cc.emory.edu"
-phone = "(404) 727-7580"
+email = "lruthotto@emory.edu"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
@@ -101,7 +100,7 @@ directions = "Reception located on the 4th floor of the Math and Science Center"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
-office_hours = ["Monday to Friday, 9:00AM - 5:00PM"]
+# office_hours = ["Monday to Friday, 9:00AM - 5:00PM"]
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
 # appointment_url = "https://calendly.com"
