@@ -4,8 +4,8 @@ widget: pages
 headless: true
 weight: 25
 
-title: Featured Projects
-<!-- subtitle: Learing from Images -->
+title: Projects
+subtitle: Learning from Images
 
 content:
   count: 0
@@ -20,6 +20,6 @@ content:
   order: desc
   page_type: projects
 design:
-  view: 3
+  view: 2
   columns: "2"
 ---

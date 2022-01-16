@@ -2,10 +2,9 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 headless: true
-weight: 25
+weight: 18
 
-title: Featured Projects
-<!-- subtitle: Learing from Images -->
+title: News
 
 content:
   count: 0
@@ -15,10 +14,10 @@ content:
     exclude_featured: false
     exclude_future: false
     publication_type: ""
-    tag: "Summer 2021"
+    tag: ""
   offset: 0
   order: desc
-  page_type: projects
+  page_type: news
 design:
   view: 3
   columns: "2"
