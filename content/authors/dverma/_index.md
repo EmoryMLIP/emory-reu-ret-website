@@ -54,28 +54,16 @@ social:
 social:
 - icon: envelope
   icon_pack: fas
-  link: "mailto:lruthotto@emory.edu"
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/lruthotto
+  link: "mailto:deepanshu.verma@emory.edu"
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.de/citations?user=EaBF6r0AAAAJ
-- icon: github
-  icon_pack: fab
-  link: https://github.com/lruthotto
-- icon: orcid
-  icon_pack: fab
-  link: https://orcid.org/0000-0003-0803-3299
-- icon: researchgate
-  icon_pack: fab
-  link: https://www.researchgate.net/profile/Lars_Ruthotto
+  link: https://scholar.google.com.au/citations?hl=en&user=JfG-UJYAAAAJ
 - icon: cv
   icon_pack: ai
-  link: https://www.mathcs.emory.edu/~lruthot/files/LarsRuthotto-CV.pdf
+  link: https://dpnshvrm.github.io/verma_deepanshu_cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "dverma@emory.edu"
+email: "dverma4@emory.edu"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
