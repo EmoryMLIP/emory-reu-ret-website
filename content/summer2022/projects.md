@@ -6,6 +6,12 @@ columns : 2
 title : Projects
 ---
 
+## Uncertainty Quantification for Ozone Forecasting  
+
+Mentor: [Bree Ettinger](../author/bree-ettinger/)
+
+Ground level ozone is a harmful air pollutant. Predicting low-level ozone can inform air quality forecasts and help people determine which outside activities are safe. Functional linear regression models have recently shown their ability to predict low levels of ozone. In this project, we will study functional models based on bivariate splines over triangulation to approximate the spatially distributed ozone measurements on a surface.  We will focus not just on computing a forecast but also on quantifying the uncertainty associated with our predictions. 
+
 ## Data assimilation for Hurricane Storm Surge Modeling 
 
 Mentor: [Talea Mayo](../author/talea-mayo/)
