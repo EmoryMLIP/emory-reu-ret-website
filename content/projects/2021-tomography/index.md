@@ -9,7 +9,7 @@ tags: ["Summer 2021"]
 ---
 
 This blog post was written by Mai Phuong Pham Huynh, Manuel Santana, and Ana Castillo and published with minor edits. The team was advised by Dr. James Nagy.
-In addition to this post, the team has also given a [midterm presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf) , created a [poster](./img/REU_RETPoster.pptx.png), made a [poster blitz video](https://youtu.be/qdcGe9MKCoI),  published [code](https://github.com/manuelarturosantana/TomoREU2021), written a [paper](https://arxiv.org/abs/2109.01481), and developed a [lesson plan](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6889032/Tomography.Lesson.pdf).
+In addition to this post, the team has also given a [midterm presentation](https://github.com/EmoryMLIP/emory-reu-ret-website/files/6874766/_REU2021__Tomo_Presentation.pdf) , created a [poster](./img/REU_RETPoster.pptx.png), made a [poster blitz video](https://youtu.be/qdcGe9MKCoI),  published [code](https://github.com/manuelarturosantana/TomoREU2021), written a [paper](https://arxiv.org/abs/2109.01481), and developed a [lesson plan](Tomography.Lesson.pdf).
 
 
 
