@@ -17,15 +17,15 @@ subtitle:
 ---
 ## Undergraduate Students
 
-- Riley Chen (Emory)
+- Riley Chen (Emory University)
 - Erica Yousol Choi (Columbia University)
 - Dewan Chowdhury (Rutgers University)
 - Emily F Corcoran (New Jersey Institute of Technology)
-- Kristina Gong (Emory)
+- Kristina Gong (Emory University)
 - Caroline Grace Ferrell (Mississippi State University)
 - Emma Hayes (Carnegie Mellon University)
 - Mathias Heider (University of Delaware)
-- Zoe Ji (Emory)
+- Zoe Ji (Emory University)
 - Qile Jiang (Brown University)
 - Logan Knudsen (Texas A&M)
 - Margaret Olivia Leu (Pomona College)
