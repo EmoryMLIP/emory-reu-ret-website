@@ -3,6 +3,7 @@
 title: Emory Welcomes 2022 REU/RET Participants on Campus
 date: 2022-06-13
 summary: "Today marks the first day of our core REU/RET phase 2022, and we are delighted to welcome our participants from across the country to our beautiful campus. Over the next six weeks, the groups will have several milestones which give opportunities to practice most modes of scientific communication. In addition to working on their research, they will also have many opportunities to learn and network"
+authors: [lruthot]
 
 ---
 
