@@ -36,10 +36,18 @@ Rather than relying on individual neuron models, an alternative approach is to u
 
 In our analysis, we will expand the model developed by Caiola and Holmes<sup>7</sup> from three dimensions (three nuclei model) to five dimensions. The Caiola and Holmes model builds on the findings of Wilson and Cowan,<sup>16</sup> which were further explored by Dayan and Abbot, who hoped to develop an alternative to the preexisting accurate yet computationally complex models.<sup>17</sup> These firing rate models output average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.
 
-The model proposed in this paper closely resembles the firing rate model developed by Caiola and Holmes. We expand their model by incorporating five total neuron populations, compared to their three nuclei model.
-
 In a firing rate model, each unit of the model will produce an average firing rate, thus eliminating the need to rely on individual neurons for our model.<sup>7</sup> This average firing rate <em>y</em> can be found by solving: 
 
 <em>&tau;y'</em> = &minus;<em>y</em> &plus; <em>F</em>(<em>Wy</em> &plus; <em>h</em>)
 
 where <em>&tau;</em> is the vector of membrane time constants, <em>W</em> is the matrix of weights associated with the interactions between populations, <em>h</em> is the input coming from outside of the network, and <em>F</em> is the activation function.<sup>7</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
+
+A simplified circuit diagram of the thalamocortical motor circuit network is shown below, and provides the neuroscience basis for our model. The rounded squares each represent a population of neurons, which are connected by either excitatory (arrow-tipped lines) or inhibitory (circle-tipped lines) synaptic weights. The green circle represents the interneuron population of the thalamus and can be treated as a relay neuron or as a series of FitzHugh-Nagumo neurons.
+
+![Thalamocortical Loop Model](Thalamocortical.png)
+
+Treating the interneuron population as a "relay," <em>&gamma;</em>, we can establish the following system of equations:
+
+<em>&tau;<sub>1</sub>y'<sub>1</sub></em> = &minus;<em>y<sub>1</sub></em> &plus; <em>F<sub>1</sub></em>(<em>&beta;<sub>1</sub></em> &plus; <em>h</em>)
+
+<em>&tau;<sub>2</sub>y'<sub>2</sub></em> = &minus;<em>y<sub>2</sub></em> &plus; <em>F<sub>2</sub></em>(<em>w<sub>12</sub>y<sub>1</sub></em> &plus; <em>w<sub>32</sub>y<sub>3</sub></em> &plus; <em>w<sub>42</sub>y<sub>4</sub></em> &minus; <em>w<sub>52</sub>y<sub>5</sub></em> &plus; <em>&gamma;</em> &plus; <em>b<sub>2</sub></em>)
