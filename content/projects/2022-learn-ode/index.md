@@ -7,5 +7,18 @@ weight : 100
 summary: 'Assume you are given observations of a dynamical system at a few time points and want to learn its underlying ODE. Problems like this are abundant in scientific applications and there are several machine learning approaches to this problem. One approach with soaring popularity is called Neural ODEs, that is, ODEs whose dynamics are trainable neural networks, which makes them very flexible. Another approach that does not rely on neural networks and thus can yield a more interpretable result is called sparse identification of nonlinear dynamics (SINDy). The goal of this project is to compare the advantages and disadvantages of both of these (and perhaps other) approaches experimentally and mathematically. One particular aspect we will investigate is how ODE properties like stability and stiffness impact the effectiveness of the learning process.'
 tags: ["Summer 2022"]
 ---
+<!--more-->
+<!-- --- -->
+<!-- # Emory REU Learn ODE:   -->
+
+<!--Starting new section-->
+<!-- --- -->
+
+This post was written by Mathias Heider, Emma Hayes, and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
+
+In addition to this post, the team has also created slides for a [midterm presentation]
 
 
+## Backgroud: 
+## Project Overview: 
+## Materials and Methods
