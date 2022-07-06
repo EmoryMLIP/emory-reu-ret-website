@@ -61,5 +61,22 @@ Treating the interneuron population as a "relay," <em>&gamma;</em>, we can estab
 &gamma; = &minus;<em>w<sub>62</sub></em>(&minus;<em>w<sub>16</sub>y<sub>1</sub></em> &minus; <em>w<sub>56</sub>y<sub>5</sub></em> &plus; <em>w<sub>46</sub>y<sub>4</sub></em> &plus; <em>b<sub>6</sub></em>)
 
 where <em>y<sub>1</sub></em>, <em>y<sub>2</sub></em>, <em>y<sub>3</sub></em>, <em>y<sub>4</sub></em>, <em>y<sub>5</sub></em> are the firing rates for the GPi, thalamocortical loop (TC), corticothalamic layer 5 (CT5), corticothalamic layer 6 (CT6), and reticular nucleus (RTN), respectively. <em>w<sub>jk</sub></em> represents the weight of the firing rate flow from population <em>j</em> to population <em>k</em>. Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0, &tau;<sub><em>i</em></sub> > 0, and <em>F<sub>i</sub></em> represents the activation function for the <em>i</em>-th population.
-# Sigmoidal Activation Function
+# Sigmoidal Activation Function and Its Approximations
 The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>19-21</sup> We closely modeled our sigmoidal activation function off of the model developed by Holgado <em>et al.</em>:<sup>22</sup>
+
+![Sigmoidal Activation Function](sig_act_func.png)
+
+In this model, <em>M<sub>i</sub></em> is the maximum firing rate, and <em>S<sub>i</sub></em> is the maximum slope. Following the example of Holgado <em>et al.</em>, we will assume <em>S<sub>i</sub></em> = 1. The baseline firing rate is <em>b<sub>i</sub></em>, meaning:
+
+<em>F<sub>i</sub></em>(0) = <em>b<sub>i</sub></em>
+
+Although this sigmoidal function closely approximates typical neuron discharge behavior, it creates a nonlinear system of equations for which we are unable to find steady states. In order to attain eigenvalues and be able to comment on the behavior of the model as a whole, we must establish a simpler activation function that still manages to approximate experimental neuron discharge behavior.<sup>7</sup>
+
+Caiola and Holmes established three alternative activation functions to the sigmoidal:
+1. a linear function<sup>22</sup>
+2. a rectification function<sup>22,23</sup>
+3. a semi-linear piecewise function
+Caiola and Holmes identify problems with the first two proposed alternative activation functions. In an experimental setting, a population of neurons will never fire at a rate below zero or above its maximum firing rate. The linear function allows the neuron population to fire at negative rates and surpass its maximum rate; the rectification function prevents the neuron population from firing at negative rates, but it still permits the neuron to fire at rates that increase to infinity. Therefore, the choice of either of these activation functions would prevent us from drawing any meaningful conclusions from our study that could be applied to the field of neuroscience, as they both allow the modeled neuron population to fire at rates that are biologically impossible. We instead consider a semi-linear piecewise activation function.
+# Piecewise Linear Activation Function
+In order to approximate the sigmoidal function and satisfy the realistic constraints on the firing rate ranges of each neuron population, we can use a semi-linear piecewise function as our activation function:
+
