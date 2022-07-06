@@ -23,5 +23,15 @@ Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
 ## Inverse Problems and Iterative Methods
 
 ### CGLS
+The conjugate gradient algorithm aims to solve the linear system Ax = b where A is SPD (symmetric and positive definite). 
+
+How this algorithm works is that in each iteration, x is allowed to explore one more subspace in addition to the previous subspaces it has already explored (the subspaces here are the Krylov Spaces!). During that iteration, x is updated to the point where the residual norm ||Ax-b|| is minimized. Mathematically (meaning no noise or round-off errors), CG is guaranteed to converge within a limited number of steps. Specifically if A is a nxn matrix, it will find the solution in no greater than n steps.
+
 
 ### CS
+
+## Experiment!!
+
+### Image Deblurring
+
+### Tomography Reconstruction
