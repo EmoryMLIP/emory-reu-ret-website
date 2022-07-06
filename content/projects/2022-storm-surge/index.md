@@ -9,7 +9,7 @@ tags: ["Summer 2022"]
 ---
 
  #Blog Post Outline
-*Note, these sections are of varrying length. Approximate length represented by number of stars.
+*Note, these sections are of varying length. Approximate length represented by number of stars.
 
 ##Intro: 
 This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  <Links to our midterm presentation, blitz video, poster, code, and paper>
