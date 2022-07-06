@@ -80,3 +80,7 @@ Caiola and Holmes identify problems with the first two proposed alternative acti
 # Piecewise Linear Activation Function
 In order to approximate the sigmoidal function and satisfy the realistic constraints on the firing rate ranges of each neuron population, we can use a semi-linear piecewise function as our activation function:
 
+![Piecewise Linear Activation Function](pwl_act_func.png)
+
+Our model's system will therefore be composed of five piecewise linear equations. We can break down this system into 243 distinct linear regions in space. This allows us to solve for eigenvalues analytically, permitting us to investigate the system further and find a continuous solution. A piecewise linear activation function is ideal in our case, as it allows us to break down a complex system into linear pieces which can be solved and manipulated.
+
