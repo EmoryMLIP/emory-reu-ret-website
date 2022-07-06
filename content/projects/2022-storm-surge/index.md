@@ -31,6 +31,9 @@ This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudse
 (How data assimilation applies to our problem> *****
 
 (Tools and implementation> *****
+<p align="center">
+  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
+</p>
 
 (Results> ***
 
