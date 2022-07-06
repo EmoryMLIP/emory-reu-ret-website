@@ -38,6 +38,13 @@ This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudse
 (Results> ***
 
 
-## Appendix:
+## About the Team
 (Team member blurbs> **
+ 
+## Emily Corcoran
+Emily Corcoran is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
+ 
+## Logan Knudsen
+ 
+## Hannah Park-Kaufmann
 
