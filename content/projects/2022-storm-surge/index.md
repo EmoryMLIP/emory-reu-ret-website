@@ -8,10 +8,10 @@ summary: 'Numerical models of coastal hydrodynamics play a vital role in underst
 tags: ["Summer 2022"]
 ---
 
- #Blog Post Outline
+ # Blog Post Outline
 *Note, these sections are of varying length. Approximate length represented by number of stars.
 
-##Intro: 
+## Intro: 
 This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  <Links to our midterm presentation, blitz video, poster, code, and paper>
 
 (What we've achieved> *
@@ -19,7 +19,7 @@ This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudse
 (What the importance of it is> *
 
 
-##Main:
+## Main:
 (Broad background on Methods in modeling> **
 
 (More detailed background on our ice sheet modeling Methods> ***
@@ -35,6 +35,6 @@ This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudse
 (Results> ***
 
 
-##Appendix:
+## Appendix:
 (Team member blurbs> **
 
