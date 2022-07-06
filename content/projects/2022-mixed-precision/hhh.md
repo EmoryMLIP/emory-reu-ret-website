@@ -1,4 +1,5 @@
-This post was written by Xiaoyun Gong, Yizhou Chen, and Xiang Ji and published with minor edits. The team was advised by Dr. James Nagy. In addition to this post, the team has also created slides for a [midterm presentation](), a [poster blitz]() video, [code](), and a [paper]().
+This post was written by Xiaoyun Gong, Yizhou Chen, and Xiang Ji and published with minor edits. The team was advised by Dr. James Nagy. In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
+), a [poster blitz]() video, [code](), and a [paper]().
 
 ## In One Sentence:
 Our group works on experimenting with iterative methods for solving inverse problems at different precision levels. 
