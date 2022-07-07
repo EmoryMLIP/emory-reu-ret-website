@@ -20,6 +20,22 @@ Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
 ### Matlab function chop
 
 ### Blocking
+When the number is being chopped from double precision to half precision, a lot of bits are dropped (from 64 bits to 16 bits). This would certainly cause a level of inaccuracy, so in order to reduce the errors a method called blocking is used. Blocking is the same as breaking a large operation into smaller chunks, where each is computed independently and the result is summed. 
+
+For example, there are two vectors of 6 elements:
+
+x = [x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>], y = [y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, y<sub>4</sub>, y<sub>5</sub>, y<sub>6</sub>].
+
+If we want to calculate the inner product between these two, instead of calculating them directly, we could break them into different groups, 2 in this case. Then, we have: 
+
+x1 = [x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>], y1 = [y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>];
+x2 = [x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>], y2 = [y<sub>4</sub>, y<sub>5</sub>, y<sub>6</sub>].
+
+We calculate the inner product between x1 y1, and x2 y2, and at last we sum them up. The result we get is more accurate. We plot the error diagram of inner product of tow random vectors. We operate for 20 times and calculate the average. The diagrams are the following, and the error are computed as the difference between the result of using chopped version of inner product function and using the function in matlab. 
+<p align="center">
+<img src="img/zelda.jpeg" alt="drawing" width="500"/> 
+</p>
+
 
 ## Inverse Problems and Iterative Methods
 
