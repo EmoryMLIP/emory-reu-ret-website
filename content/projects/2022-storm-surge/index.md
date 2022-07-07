@@ -10,7 +10,7 @@ tags: ["Summer 2022"]
 
  # Data Assimilation for Hurricane Storm Surge Modeling
 
-This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  <Links to our midterm presentation, blitz video, poster, code, and paper>
+This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
 
 <!---What we've achieved -->
 
