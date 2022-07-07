@@ -90,7 +90,12 @@ If we go back to the algorithm, we can see that it is because overflow occurs wh
 
 Our solution to this is that we recaled Both A and b by dividing both of them by 100. And we get the result below:
 
+<p align="center">
+<img src="img/tomo_rescale.png" alt="draw" width="300"/> 
+</p>
+which is still blurry but at least the shape is visible :)
 
+And then we add noise to the right hand side b, and plotted the error norms below:
 
 <p align="center">
 <img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
