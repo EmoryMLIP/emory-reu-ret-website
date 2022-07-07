@@ -58,64 +58,61 @@ Logan Knudsen is a senior at Texas A &amp;  M University majoring in Mathematics
 Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in Mathematics and Piano Performance. Before this REU, she conducted research on Numerical Semigroups and Polyhedra, and on Identifying Universal Traits in Healthy Pianistic Posture using Depth Data. She tutors math in the Bard Prison Initiative (BPI). When not doing math, she can be found playing piano, reading scores, reading literature and/or eating.
 
 
-//: ------Images: --------
+<!--- ------Images: -------- -->
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/KiyaRivermanGlacier.png">
 </p>
-[//]: Above is the glacier image from the government website taken by Kiya Riverman
+<!--- Above is the glacier image from the government website taken by Kiya Riverman -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacier.jpeg">
 </p>
-//: Above is another glacier image
+<!--- Above is another glacier image -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
 </p>
-//: Above is the diagram of a box model
+<!--- Above is the diagram of a box model -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
 </p>
-//: Above is Dr. Robel's glacier model schematic
+<!--- Above is Dr. Robel's glacier model schematic -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram.jpeg">
 </p>
-//: Above is again Dr. Robel's glacier model schematic, this time with figure description text
+<!--- Above is again Dr. Robel's glacier model schematic, this time with figure description text -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png">
 </p>
-//: Above is a simple schematic figure of a grounding line
-
-
+<!--- Above is a simple schematic figure of a grounding line -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
 </p>
-//: Above is one big photo of a single sensitivity analysis diagram: "t vs. H(t) with the initial conditions varied"
+<!--- Above is one big photo of a single sensitivity analysis diagram: "t vs. H(t) with the initial conditions varied" -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
 </p>
-//: Above are 3 sensitivity analysis graphs side by side for t vs H(t)
+<!--- Above are 3 sensitivity analysis graphs side by side for t vs H(t) -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_L(t).png">
 </p>
-//: Above are 3 sensitivity analysis graphs side by side for t vs L(t)
-
+<!--- Above are 3 sensitivity analysis graphs side by side for t vs L(t) -->
 
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.pdf">
 </p>
-//: Above is the Data assimilation schematic from Dr. Mayo's slides
+<!--- Above is the Data assimilation schematic from Dr. Mayo's slides -->
 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ensembleKalman_diagram.png">
 </p>
-//: Above is the Kalman Filter Diagram
+<!--- Above is the Kalman Filter Diagram -->
 
 
