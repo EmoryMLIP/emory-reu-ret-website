@@ -32,6 +32,7 @@ Our group is collaborating with Dr. Robel, a glaciologist, climate scientist, an
 <!--- Above is Dr. Robel's glacier model schematic -->
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
 </p>
+A glacier can be represented with a simplified box model that has a length L, precipitation P, and height and flux at the grounding line h_g and Q_g. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
 <!--- Above is the diagram of a box model -->
 
 
