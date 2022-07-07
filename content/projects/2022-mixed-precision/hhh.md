@@ -2,11 +2,9 @@ This post was written by Xiaoyun Gong, Yizhou Chen, and Xiang Ji and published w
 ), a [poster blitz]() video, [code](), and a [paper]().
 
 ## In One Sentence:
-Our group works on experimenting with iterative methods for solving inverse problems at different precision levels. 
+Our group works on experimenting with iterative methods for solving inverse problems at different precision levels.
 
 ## Background: Why Low Precision?
-
-
 
 <p align="center">
 <img src="img/zelda.jpeg" alt="drawing" width="500"/> 
@@ -42,11 +40,19 @@ We calculate the inner product between x1 y1, and x2 y2, and at last we sum them
 ### Conjugate Gradient Method
 The conjugate gradient algorithm aims to solve the linear system Ax = b where A is SPD (symmetric and positive definite). 
 
+In a very clever way, conjugate gradient method transforms the problem of finding solution to an optimization problem where we want to minimize 
+$\phi(x)=\frac{1}{2}x^{T}Ax-x^{T}b$. This can be easily seen from $\nabla \phi (x) = 0$ -> $Ax-b=0$.
+
+
 How this algorithm works is that in each iteration, x is allowed to explore one more subspace in addition to the previous subspaces it has already explored (the subspaces here are the Krylov Spaces!). During that iteration, x is updated to the point where the residual norm ||Ax-b|| is minimized. Mathematically (meaning no noise or round-off errors), CG is guaranteed to converge within a limited number of steps. Specifically if A is a nxn matrix, it will find the solution in no greater than n steps.
 
 The CGLS algorithm is the least squares version of the CG method. To add the taste of least squares to the original problem, A -> A<sup>T</sup>A and b -> A<sup>T</sup>b.
 
+One potential problem with this method is that it requires the calculation of inner products, which easily gets overflowed when we are at low precision. Therefore we tried another method below that avoids the use of inner products.
+
 ### Chebyshev Semi-Iterative Method
+
+
 
 ## Experiment!!
 
