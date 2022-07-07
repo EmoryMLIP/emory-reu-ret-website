@@ -65,4 +65,6 @@ The CS method requires no inner product computation, which is great. But there i
 ### Image Deblurring
 
 ### Tomography Reconstruction
-
+<p align="center">
+<img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
+</p>
