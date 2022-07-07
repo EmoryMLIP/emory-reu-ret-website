@@ -79,9 +79,9 @@ Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in M
 </p>
 <!--- Above is Dr. Robel's glacier model schematic -->
 
-<p align="center">
+ <!---<p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram.jpeg">
-</p>
+</p> -->
 <!--- Above is again Dr. Robel's glacier model schematic, this time with figure description text -->
 
 <p align="center">
