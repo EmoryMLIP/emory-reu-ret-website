@@ -17,7 +17,7 @@ This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudse
 <!---What the importance of it is -->
 
 ## Glaciers
-Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as [ice sheet instability leads to significant sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
+Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as ice sheet instability leads to significant [sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png">
 </p> <!--- Above is a simple schematic figure of a grounding line -->
@@ -75,9 +75,9 @@ Data assimilation is a method to move models closer to reality using real world 
 Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
 
 ## References
-[The long future of Antarctic melting](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c)
-[Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise](https://doi.org/10.1073/pnas.1904822116)
-[Projected climate change impacts on hurricane storm surge inundation in the coastal United States](https://doi.org/10.3389/fbuil.2020.588049)
+[The long future of Antarctic melting](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) <br>
+[Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise](https://doi.org/10.1073/pnas.1904822116) <br>
+[Projected climate change impacts on hurricane storm surge inundation in the coastal United States](https://doi.org/10.3389/fbuil.2020.588049) <br>
 [Response of marine-terminating glaciers to forcing: time scales, sensitivities, instabilities, and stochastic dynamics](https://doi.org/10.1029/2018JF004709)
 
 ## About the Team
@@ -86,7 +86,7 @@ Data assimilation can be used for many geophysical modeling tasks, such as weath
 Emily Corcoran is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
  
 ### Logan Knudsen 
-Logan Knudsen is a senior at Texas A &amp;  M University majoring in Mathematics with minors in Oceanography and Meteorology. Before the REU, he has worked doing research on Data Analysis using Benford's Law and as a Teaching Assistant. Logan is currently the President of Texas A &amp; M's Math Club and a member of student radio, KANM. When not in class, he can be found reading, playing the guitar or playing video games with his friends.
+Logan Knudsen is a senior at Texas A &amp; M University majoring in Mathematics with minors in Oceanography and Meteorology. Before the REU, he has worked doing research on Data Analysis using Benford's Law and as a Teaching Assistant. Logan is currently the President of Texas A &amp; M's Math Club and a member of student radio, KANM. When not in class, he can be found reading, playing the guitar or playing video games with his friends.
  
 ### Hannah Park-Kaufmann
 Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in Mathematics and Piano Performance. Before this REU, she conducted research on Numerical Semigroups and Polyhedra, and on Identifying Universal Traits in Healthy Pianistic Posture using Depth Data. She tutors math in the Bard Prison Initiative (BPI). When not doing math, she can be found playing piano, reading scores, reading literature and/or eating.
