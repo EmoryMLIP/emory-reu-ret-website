@@ -77,7 +77,7 @@ In these examples we have used the ensemble Kalman filter method (ENKF) in order
 
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ensembleKalman_diagram.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ScreenShot2022-07-07at17.21.17.png">
 </p>
 <!--- Above is the Kalman Filter Diagram -->
 
