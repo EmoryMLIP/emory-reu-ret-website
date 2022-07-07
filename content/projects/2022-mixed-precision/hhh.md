@@ -78,6 +78,21 @@ From the graph, all three lines overlap from the beginning until around 20 itera
 
 
 ### Tomography Reconstruction
+Below is the result when we run CGLS on the test problem at different precision levels. We can see for double and single precision, the reconstruction is doing well, yet for the fp16 problem we started to get this completely blue picture from the first iteration.
+
+<p align="center">
+<img src="img/Screen Shot 2022-07-07 at 11.33.06 AM.png" alt="draw" width="800"/> 
+</p>
+
+After we took a closer look at the results the algorithm outputs, we noticed that they are all NaNs!
+
+If we go back to the algorithm, we can see that it is because overflow occurs when calculating inner products. Inner products gets overflowed easily! And once we get the first Inf/-Inf, NaNs would start to appear as we have Inf devided by Inf.
+
+Our solution to this is that we recaled Both A and b by dividing both of them by 100. And we get the result below:
+
+
+
 <p align="center">
 <img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
 </p>
+
