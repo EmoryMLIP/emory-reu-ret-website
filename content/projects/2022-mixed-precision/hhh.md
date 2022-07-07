@@ -70,6 +70,9 @@ First, we use our modified version of cgls without regularization to run the ima
 
 For the double precision, we used the original cgls method because it’s faster and we could have a reference. We used cgls_chop for the single and half precision, and the graph in single precision is similar to the graph in double precision. However, for the half precision, the background is not the same as that in double-precision or half-precision graph. The background looks redder and there are red and black squiggly lines.
 
+We also plotted the error norms of the x value we get in compared to the true value of x in different precision. 
+
+
 ### Tomography Reconstruction
 <p align="center">
 <img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
