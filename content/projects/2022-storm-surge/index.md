@@ -38,7 +38,7 @@ Data assimilation is a method to move models closer to reality using real world 
 
 (Tools and implementation> *****
 <p align="center">
-  <img src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
+  <img width="500" height="300"src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
 </p>
 
 (Results> ***
