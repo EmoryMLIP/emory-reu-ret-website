@@ -64,18 +64,18 @@ How this algorithm works is that in each iteration, x is allowed to explore subs
 
 The CGLS algorithm is the least squares version of the CG method,applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
 
-One potential problem with this method for low precision is that it requires the calculation of inner products, which easily gets overflowed when we are at low precision. Therefore we tried another method below that avoids the use of inner products.
+One potential problem with this method for low precision is that the calculation of inner products can easily result in overflow (i.e. the number becomes too large to represent on computer with a limited number of bits). Therefore we tried another method below that avoids the use of inner products.
 
 ### Chebyshev Semi-Iterative Method
 
-The CS method requires no inner product computation, which is great. But there is always the trade-off! CS method needs the user to have an idea of the range of eigenvalues of the matrix A. The result given by CS is a linear combination of all solutions in each iteration, and the weights are obtained from the Chebyshev polynomial, which has the favorable property of having an absolute value no greater than 1 on the interval [-1,1] and grow rapidly outside this interval. This ensures that the result obtained in each iteration of CS is smaller than a upper bound.
+The Chebyshev Semi-Iterative (CS) Method requires no inner product computation, which is great. But there is always the trade-off! The CS method needs the user to have an idea of the range of eigenvalues of the matrix A. The result given by CS is a linear combination of all solutions in each iteration, and the weights are obtained from the Chebyshev polynomial, which has the favorable property of having an absolute value no greater than 1 on the interval [-1,1] and grows rapidly outside this interval. This ensures that the result obtained in each iteration of CS is smaller than an upper bound.
 
 ## Experiment!!
 
 ### IR Tools
 
 ### Image Deblurring
-First, we use our modified version of cgls without regularization to run the image deblurring problem, and we use the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
+First, we used our modified version of cgls without regularization to run the image deblurring problem, and we used the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
 <p align="center">
 <img src="img/blur no noise.png" alt="draw" width="600"/> 
 </p>
