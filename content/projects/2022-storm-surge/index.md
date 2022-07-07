@@ -38,7 +38,7 @@ Research has shown that climate change will likely impact storm surge inundation
 <!---Data Assimilation-->
 Data assimilation is a method to move models closer to reality using real world observations by readjusting the model state at specified times.
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.pdf">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.png">
 </p>
 
 <!---How data assimilation applies to our problem-->
