@@ -26,7 +26,7 @@ Research has shown that climate change will likely impact storm surge inundation
 
 (More detailed background on our ice sheet modeling Methods> *** <br>
 [Ice sheet models](https://doi.org/10.1029/2018JF004709) aim to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change.
-<p align="center"> <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
+<p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
 </p>
 
 (The problem> ***
@@ -60,61 +60,61 @@ Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in M
 
 //: ------Images: --------
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/KiyaRivermanGlacier.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/KiyaRivermanGlacier.png">
 </p>
 //: Above is the glacier image from the government website taken by Kiya Riverman
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacier.jpeg">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacier.jpeg">
 </p>
 //: Above is another glacier image
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
 </p>
 //: Above is the diagram of a box model
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
 </p>
 //: Above is Dr. Robel's glacier model schematic
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram.jpeg">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram.jpeg">
 </p>
 //: Above is again Dr. Robel's glacier model schematic, this time with figure description text
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png">
 </p>
 //: Above is a simple schematic figure of a grounding line
 
 
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
 </p>
 //: Above is one big photo of a single sensitivity analysis diagram: "t vs. H(t) with the initial conditions varied"
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
 </p>
 //: Above are 3 sensitivity analysis graphs side by side for t vs H(t)
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_L(t).png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_L(t).png">
 </p>
 //: Above are 3 sensitivity analysis graphs side by side for t vs L(t)
 
 
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.pdf">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.pdf">
 </p>
 //: Above is the Data assimilation schematic from Dr. Mayo's slides
 
 <p align="center">
-  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ensembleKalman_diagram.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ensembleKalman_diagram.png">
 </p>
 //: Above is the Kalman Filter Diagram
 
