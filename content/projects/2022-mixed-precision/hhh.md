@@ -63,6 +63,9 @@ The CS method requires no inner product computation, which is great. But there i
 ### IR Tools
 
 ### Image Deblurring
+First, we use our modified version of cgls without regularization to run the image deblurring problem, and we use the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
+
+
 
 ### Tomography Reconstruction
 <p align="center">
