@@ -19,10 +19,7 @@ Nowadays, most computer systems operate on double precision (64-bit) arithmetic.
 
 
 <p align="center">
-<img src="IEEE.png" alt="drawing" width="500"/> 
-</p>
-<p align = "center">
-Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
+<img src="img/IEEE.png" alt="drawing" width="500"/> 
 </p>
 
 ## Simulating Low Precision
@@ -31,7 +28,7 @@ Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
 To simulate low precision arithmetic on our 64-bit computers, we have imported a MATLAB package called chop. The toolbox allows us to explore single precision, half precision, and other customized formats. Each input needs to be transformed, but the real work comes from chopping each operation. The code below is a toy example of how to calculate $x + y \times z$ in half precision with chop.
 
 <p align="center">
-<img src="img/zelda.jpeg" alt="drawing" width="500"/> 
+<img src="img/chop_overview.png" alt="drawing" width="300"/> 
 </p>
 
 ### Blocking
@@ -89,15 +86,27 @@ We also plotted the error norms of the x value we get in compared to the true va
 <p align="center">
 <img src="img/enrm blur no noise.png" alt="draw" width="600"/> 
 </p>
-From the graph, all three lines overlap from the beginning until around 20 iterations, where the half precision line differs, starting to go up. It’s due to the round up errors of the half precision, which adds up and takes over. Also, the line of half precision stops at around 30 iterations, because at 28th iteration, we get infinities, so the next few iterations generate nothing but NaNs. 
+From the graph, all three lines overlap from the beginning until around 20 iterations, where the half precision line differs, starting to go up. It’s due to the round up errors of the half precision, which adds up and takes over. Also, the line of half precision stops at around 30 iterations, because at 28th iteration, we get infinities, so the next few iterations generate nothing but NaNs.
 
 After investigating the idealized situations where there is no noise in the output image, we then apply our code to graphs that are mixed with random noise to see how it is likely to perform in real life.
 
 For single precision arithmetic, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background turns into random red ripples while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.
 
+<p align="center">
+<img src="img/1.png" alt="draw" width="700"/> 
+</p>
+
 It is the same case with half precision arithmetic as well. 0.1% noise has almost no influence on the image, while 1% random data confuses the background, and 10% noise kills the graph.
 
+<p align="center">
+<img src="img/2.png" alt="draw" width="700"/> 
+</p>
+
 Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats, which is what is expected from CGLS. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, along each iteration, the blended noise also gets inverted. Eventually, the random data accumulates and dominates the solution at some point. Please also notice that we are showing the images constructed from the last iteration rather than the best one, since we do not have information on the true image in real life situations, and thus the error norm and the best iteration are unknown.
+
+<p align="center">
+<img src="img/3.png" alt="draw" width="700"/> 
+</p>
 
 ### Tomography Reconstruction
 Below is the result when we run CGLS on the test problem at different precision levels. We can see for double and single precision, the reconstruction is doing well, yet for the fp16 problem we started to get this completely blue picture from the first iteration.
