@@ -48,13 +48,13 @@ Data assimilation can be used for many geophysical modeling tasks, such as weath
 
 ## About the Team
 
-## Emily Corcoran
+### Emily Corcoran
 Emily Corcoran is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
  
-## Logan Knudsen 
+### Logan Knudsen 
 Logan Knudsen is a senior at Texas A &amp;  M University majoring in Mathematics with minors in Oceanography and Meteorology. Before the REU, he has worked doing research on Data Analysis using Benford's Law and as a Teaching Assistant. Logan is currently the President of Texas A &amp; M's Math Club and a member of student radio, KANM. When not in class, he can be found reading, playing the guitar or playing video games with his friends.
  
-## Hannah Park-Kaufmann
+### Hannah Park-Kaufmann
 Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in Mathematics and Piano Performance. Before this REU, she conducted research on Numerical Semigroups and Polyhedra, and on Identifying Universal Traits in Healthy Pianistic Posture using Depth Data. She tutors math in the Bard Prison Initiative (BPI). When not doing math, she can be found playing piano, reading scores, reading literature and/or eating.
 
 
