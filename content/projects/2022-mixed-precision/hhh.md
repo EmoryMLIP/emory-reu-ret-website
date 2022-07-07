@@ -19,7 +19,7 @@ Nowadays, most computer systems operate on double precision (64-bit) arithmetic.
 
 
 <p align="center">
-<img src="img/zelda.jpeg" alt="drawing" width="500"/> 
+<img src="IEEE.png" alt="drawing" width="500"/> 
 </p>
 <p align = "center">
 Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
