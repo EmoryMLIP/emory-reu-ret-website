@@ -31,7 +31,7 @@ Research has shown that climate change will likely impact storm surge inundation
 
 (The problem> ***
 
-(Data Assimilation> **
+(Data Assimilation> ** <br>
 Data assimilation is a method to move models closer to reality using real world observations by readjusting the model state at specified times.
 
 (How data assimilation applies to our problem> *****
