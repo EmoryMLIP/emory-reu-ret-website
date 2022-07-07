@@ -33,7 +33,7 @@ x2 = [x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>], y2 = [y<sub>4</sub>, y<sub>5
 
 We calculate the inner product between x1 y1, and x2 y2, and at last we sum them up. The result we get is more accurate, and we plot the error diagram of inner product of tow random vectors. We do the inner product for each precision and block size for 20 times and calculate the average. The diagrams are the following, and the error are computed as the difference between the result of using chopped version of inner product function and using the function in matlab. 
 <p align="center">
-<img src="blocksize.png" alt="drawing" width="500"/> 
+<img src="img/blocksize.png" alt="draw" width="600"/> 
 </p>
 In the graph on the left hand side, the errors of half precision is the lagrgest, which makes sense because it has the least bits. If we take a closer look at only half precision, we get the right-hand-side graph. The errors decrease sharply when blocking method is introduced. However, the larger block size doesn't necessarily mean lower errors, as the graph suggested: the errors increase as the block size keeps growing. That's because when the block size is large, it's the same as doing no blocking at all. For example, for the size-500 vector, as long as the block size reaches 500, it means just putting the whole vector into the first block, the same as when block size is 0. Therefore, the line becomes flat staring from block size is 500. It is reasonable to say that which block size is better depends on the problem size, so we use 258 as our default block size in our codes, because the matrix dimension is rather large in our problem.
 
