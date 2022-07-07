@@ -33,7 +33,7 @@ graph kernels
 
 ### Graph Neural Networks (GNN's)
 
-<img src="img/BrainGB.png" alt="BrainGB" width="600"/>
+<img src="img/BrainGB.png" alt="BrainGB" width="1000"/>
 <figcaption align = "left"><b>Fig.1 - Message Passing Graph Neural Networks</b></figcaption>
 <br/>
 
