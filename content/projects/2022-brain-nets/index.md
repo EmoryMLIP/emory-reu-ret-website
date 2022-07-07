@@ -9,17 +9,19 @@ tags: ["Summer 2022"]
 ---
 ## Overview
 
-We are comparing and benchmarking the performance of graph kernels and graph neural networks on the classification of diseases from neuroimaging data. 
+We are comparing and benchmarking the performance of graph kernels and graph neural networks applied to disease classification based on neuroimaging data.
+For definitions go to [definitions](#definitions) section
+
 
 ## Datasets
 
-We are working with 2 datasets, each classifying HIV (human immunodeficiency virus) and BP (bipolar disorder). Each dataset consists of FMRI scans, DTI scans, and classification labels (diseased (-1)/ non-diseased (1)). Both datasets have been cleaned for us and consist of less than 100 patients. The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of
-the connection between ROI’s. For our data, we implemented a rounding scheme to remove edge weights and sparsify the adjacency matrices. We have: ...
+We are working with 2 datasets, one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been cleaned for us and consist of less than 100 patients each. The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions. We implemented a rounding scheme to remove edge weights in order to sparsify the adjacency matrices. While this results in a small amount of data loss, it preserves the overall structure of the adjacency matrix and is less computationally expensive than using the original unrounded matrices. We have: ...
+
 We further manipulate the data to obtain a list of graph objects that can be used with the Python packages [GraKel](https://ysig.github.io/GraKeL/0.1a8/) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
 
 ## Classification Task
 
-The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$.
+The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$. In our specific case, we aim to accurately classify patients into categories of either diseased or healthy based on graphs constructed from their brain scan data.
 
 ## Methods
 
@@ -30,6 +32,10 @@ methods
 graph kernels
 
 ### Graph Neural Networks (GNN's)
+
+<img src="img/BrainGB.png" alt="BrainGB" width="600"/>
+<figcaption align = "left"><b>Fig.1 - Message Passing Graph Neural Networks</b></figcaption>
+<br/>
 
 gnns
 
@@ -43,6 +49,7 @@ gnns
 | BP - GCN  | $61.74_{\pm 11.15}$ | $65.72_{\pm 7.84}$  | $61.06_{\pm 11.24}$ |
 | HIV - GAT | $57.14_{\pm 12.78}$ | $59.18_{\pm 21.87}$ | $51.43_{\pm 18.00}$ |
 | BP - GAT  | $55.63_{\pm 9.52}$  | $59.03_{\pm 9.54}$  | $55.49_{\pm 9.51}$  |
+<br/>
 
 ### SVC Benchmark (Weisfeiler-Lehman)
 
@@ -52,6 +59,7 @@ gnns
 | BP-dti (0.5*)   | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
 | HIV-fmri (0.2*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
 | BP-fmri (0.2*)  | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
+<br/>
 
 ### SVC Benchmark (Graphlet Sampling, $k=3$)
 
@@ -61,6 +69,32 @@ gnns
 | BP-dti (0.5*)   | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
 | HIV-fmri (0.2*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
 | BP-fmri (0.2*)  | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
+<br/>
+
+
+### Kernel Performance
+
+<img src="img/propagation-kernel-performance.png" alt="propagation-kernel" width="400"/>
+<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
+<br/>
+
+<img src="img/WL-kernel-performance.png" alt="WL-kernel" width="400"/>
+<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
+<br/>
+
+<img src="img/WLOA-kernel-performance.png" alt="WLOA-kernel" width="400"/>
+<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
+<br/>
+
+## Limitations and Discussion
+
+Limitations: data set size, lack of specific understanding of intermediate steps in machine learning processes such as neural networks, extremely limited patient data (size and characteristics) prevents certain controls being implemented and also prevents examining cross-correlations between potential confounding variables, so we have no way of knowing that our model is actually measuring what it is supposed to be measuring other than classification accuracy percentage, which is only locally relevant and may not be generalizable.
+
+Discussion: future research and improvements to study design
+
+## Definitions
+
+defdef
 
 ## References
 
