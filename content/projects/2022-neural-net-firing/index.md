@@ -87,7 +87,28 @@ This semi-linear firing rate model has a number of constant values that we must 
 
 55 Hz is a generally accepted baseline firing rate value for GPi neurons.<sup>7,27,28,29,30</sup> These neurons have a maximum firing rate of about 200 Hz.<sup>31</sup> Due to difficulty finding recorded data on the GPi membrane time constant, we followed the example of Caiola and Holmes, who proposed using SNr's recorded time constant of 8 ms<sup>32</sup> given that SNr and GPi behave similarly.<sup>28,33</sup> 
 # Condition Search
-In order to conduct a search for each of our weights <em>w<sub>jk</sub></em>, we narrowed down the search by defining conditions based on steady states and stability. Steady states
+In order to conduct a search for each of our weights <em>w<sub>jk</sub></em>, we narrowed down the search by defining conditions for the healthy and parkinsonian solutions.
+
+If the system satisfies the following properties:
+1. The middle region is <strong>stable</strong> and contains its own steady state
+2. All the other regions are <strong>stable</strong>, ideally with their respective steady states all inside the middle region
+
+then the system is <strong>globally asymptotically stable</strong> toward the middle.
+
+If the system satisfies the following properties:
+1. The middle region is <strong>unstable</strong> and contains its own steady state
+2. All the other regions are <strong>stable</strong>, ideally with their respective steady states all inside the middle region
+
+then the system will generate a <strong>stable limit cycle</strong> around the middle.
+
+<h3>Steady State Conditions</h3>
+
+A steady state is a fixed point for which the solution will not change as time progresses. There are two types of steady states:
+1. <strong>Stable:</strong> as t &xrarr; &infin;, the system tends toward that point
+    \item \textbf{Unstable:} as t &xrarr; &infin;, the system is repelled from that point
+
+<h3>Stability Conditions and Determinant Conditions</h3>
+
 # More About the Team
 1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University. *fill in more info here, potentially pic. ditto for others too*
 2. <strong> Qile Jiang</strong> is a rising junior at Brown University.
