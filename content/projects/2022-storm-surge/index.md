@@ -40,6 +40,7 @@ Research has shown that climate change will likely impact storm surge inundation
 <!---The problem-->
 
 ## Sensitivity Analysis
+Sensitivity analyses study how various sources of uncertainty in a mathematical model contribute to the model's overall uncertainty. This allows us to learn 
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
 </p>
