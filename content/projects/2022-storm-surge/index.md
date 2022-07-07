@@ -112,4 +112,9 @@ Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in M
 </p>
 //: Above is the Data assimilation schematic from Dr. Mayo's slides
 
+<p align="center">
+  <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ensembleKalman_diagram.png">
+</p>
+//: Above is the Kalman Filter Diagram
+
 
