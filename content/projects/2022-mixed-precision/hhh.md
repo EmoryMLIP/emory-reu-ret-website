@@ -106,5 +106,7 @@ As in the image deblurring problem, the error norm first decreases then increase
 We show an intersting case we came across when experimenting with the test problems here, which is also the tomography reconstruction problem, and the result we get below looks nothing like what it should be at all 😹
 
 <p align="center">
-<img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
+<img src="img/interesting_case.png" alt="draw" width="300"/> 
 </p>
+
+We go back to the algorithm again and print out calculation at each step. We notice that it is also getting overflow in a matrix-vector multiplication from the first iteration. However, interestingly, this overflow does not result in NaNs. Instead, it make the x in the first iteration underflows to zero! 
