@@ -114,7 +114,7 @@ Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in M
 
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.pdf">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.png">
 </p>
 <!--- Above is the Data assimilation schematic from Dr. Mayo's slides -->
 
