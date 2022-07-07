@@ -131,4 +131,4 @@ We show an intersting case we came across when experimenting with the test probl
 <img src="img/interesting_case.png" alt="draw" width="300"/> 
 </p>
 
-We go back to the algorithm again and print out calculation at each step. We notice that it is also getting overflow in a matrix-vector multiplication from the first iteration. However, interestingly, this overflow does not result in NaNs. Instead, it make the x in the first iteration underflows to zero! 
+We go back to the algorithm again and print out calculation at each step. We notice that it is also getting overflow in a matrix-vector multiplication from the first iteration. However, interestingly, this overflow does not result in NaNs. Instead, it make the x in the first iteration underflows to zero! And later in the iteration, no overflow or underflow occurs and the algorithm runs until it reaches the maximum number allowed. We think this might be the reason for this wierd output picture. The algorithm does not capture any information about x in the first iteration.
