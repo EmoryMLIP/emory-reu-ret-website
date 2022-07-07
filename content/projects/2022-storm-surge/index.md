@@ -43,10 +43,11 @@ Data assimilation is a method to move models closer to reality using real world 
 
 (Results> ***
 
+## Next Steps and Other Applications
+Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use.
 
 ## About the Team
-(Team member blurbs> **
- 
+
 ## Emily Corcoran
 Emily Corcoran is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
  
