@@ -64,8 +64,11 @@ The CS method requires no inner product computation, which is great. But there i
 
 ### Image Deblurring
 First, we use our modified version of cgls without regularization to run the image deblurring problem, and we use the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
+<p align="center">
+<src="img/blur no noise.png" alt="draw" width="600"/> 
+</p>
 
-
+For the double precision, we used the original cgls method because it’s faster and we could have a reference. We used cgls_chop for the single and half precision, and the graph in single precision is similar to the graph in double precision. However, for the half precision, the background is not the same as that in double-precision or half-precision graph. The background looks redder and there are red and black squiggly lines.
 
 ### Tomography Reconstruction
 <p align="center">
