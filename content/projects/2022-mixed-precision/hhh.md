@@ -64,7 +64,7 @@ How this algorithm works is that in each iteration, x is allowed to explore subs
 
 The CGLS algorithm is the least squares version of the CG method,applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
 
-One potential problem with this method is that it requires the calculation of inner products, which easily gets overflowed when we are at low precision. Therefore we tried another method below that avoids the use of inner products.
+One potential problem with this method for low precision is that it requires the calculation of inner products, which easily gets overflowed when we are at low precision. Therefore we tried another method below that avoids the use of inner products.
 
 ### Chebyshev Semi-Iterative Method
 
