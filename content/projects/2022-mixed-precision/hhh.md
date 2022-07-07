@@ -86,6 +86,7 @@ We also plotted the error norms of the x value we get in compared to the true va
 <p align="center">
 <img src="img/enrm blur no noise.png" alt="draw" width="600"/> 
 </p>
+
 From the graph, all three lines overlap from the beginning until around 20 iterations, where the half precision line differs, starting to go up. It’s due to the round up errors of the half precision, which adds up and takes over. Also, the line of half precision stops at around 30 iterations, because at 28th iteration, we get infinities, so the next few iterations generate nothing but NaNs.
 
 After investigating the idealized situations where there is no noise in the output image, we then apply our code to graphs that are mixed with random noise to see how it is likely to perform in real life.
