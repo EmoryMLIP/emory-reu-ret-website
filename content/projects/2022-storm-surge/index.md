@@ -24,7 +24,7 @@ Research has shown that climate change will likely impact storm surge inundation
 ## Main:
 (Broad background on Methods in modeling> **
 
-(More detailed background on our ice sheet modeling Methods> ***
+(More detailed background on our ice sheet modeling Methods> *** <br>
 [Ice sheet models](https://doi.org/10.1029/2018JF004709) aim to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change.
 <p align="center"> <img width="300" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png">
 </p>
