@@ -36,10 +36,17 @@ A glacier can be represented with a simplified box model that has a length L, pr
 <!--- Above is the diagram of a box model -->
 
 
-<!---The problem-->
 
 ## Sensitivity Analysis
-Sensitivity analyses study how various sources of uncertainty in a mathematical model contribute to the model's overall uncertainty. This allows us to learn 
+Sensitivity analyses study how various sources of uncertainty in a mathematical model contribute to the model's overall uncertainty. This allows us to understand the model better. 
+
+###Why do we do this?  Why do we care about the uncertainty of a model? And where do the uncertainties even come from?
+In this ice sheet model, just like in any model, there are always going to be simplifications, and these lead to uncertainties. We need to have a good idea of which uncertainties matter the most, so that we better know the limits of where our model does a good job of simulating the real world. <br>
+
+The basic idea is this: We check sensitivity by using different distributions for the input parameters. If the outputs vary significantly, then the output is sensitive to the specification of the input distributions. Hence these should be defined with particular care. We can also look at the sensitivity of the model parameters to inform which parameter we're going to work with in the data assimilation. We want to be working with the most sensitive parameter, because it has the most promise for things we vary later on to matter, in questions like: "if your data is from billions of years ago does that matter? Is it important to have your data from the last 60 years?" or "how much will noise impact the predictions?" <br>
+
+The uncertain model parameters we considered are: initial conditions, sill parameters, and SMB values. For consistency's sake, we vary each parameter by +-10 percent of the nominal values originally given in our model code. Below you can see three graphs, one for each group of parameters varied, for each "time vs H(t)" (Height of the glacier at time) and "time vs L(t)" (Length of the glacier at time).
+
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
 </p>
@@ -50,12 +57,21 @@ Sensitivity analyses study how various sources of uncertainty in a mathematical 
 </p>
 <!--- Above are 3 sensitivity analysis graphs side by side for t vs L(t) -->
 
+Looking at the distributions, we see that varying initial conditions (Leftmost) seems to produce the greatest spread, but the slopes of the lines there are all very similar. Varying the sill parameters (Middle) produces a lesser spread than varying initial conditions, however there is a greater variation in the slope of the lines. Finally, when varying the smb data (Rightmost) the result actually doesn't change that much and is quite stable. Thus, according to our analysis, the model is the least sensitive to SMB parameters, and between initial and sill parameters judgement varies depending on what you care about more - spread or slope.
+
+
+
+
 ## Data Assimilation
 <!---Data Assimilation-->
 Data assimilation is a method to move models closer to reality using real world observations by readjusting the model state at specified times.
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.png">
 </p>
+<p align="center">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/kalmanExample.png">
+</p>
+<!--- Above is the Kalman Filter Example -->
 In these examples we have used the ensemble Kalman filter method (ENKF) in order to perform our data assimilation. In basic terms, we initialize an ensemble( or a series of model runs with perturbed initial conditions) and performed data assimilation on each of the ensemble members, then to get our final analysis we took the mean of the ensemble.
 <!---How data assimilation applies to our problem-->
 <p align="center">
