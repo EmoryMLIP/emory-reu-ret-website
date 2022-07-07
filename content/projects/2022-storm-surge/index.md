@@ -10,14 +10,14 @@ tags: ["Summer 2022"]
 
  # Data Assimilation for Hurricane Storm Surge Modeling
 
-This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
+This post was written by Emily Corcoran, Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
 
 <!---What we've achieved -->
 
 <!---What the importance of it is -->
 
 ## Glaciers
-Research has shown that climate change will likely impact storm surge inundation and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as ice sheet instability leads to significant sea-level rise uncertainty.
+Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as [ice sheet instability leads to significant sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png">
 </p> <!--- Above is a simple schematic figure of a grounding line -->
@@ -73,6 +73,12 @@ Data assimilation is a method to move models closer to reality using real world 
 
 ## Next Steps and Other Applications
 Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
+
+## References
+[The long future of Antarctic melting](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c)
+[Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise](https://doi.org/10.1073/pnas.1904822116)
+[Projected climate change impacts on hurricane storm surge inundation in the coastal United States](https://doi.org/10.3389/fbuil.2020.588049)
+[Response of marine-terminating glaciers to forcing: time scales, sensitivities, instabilities, and stochastic dynamics](https://doi.org/10.1029/2018JF004709)
 
 ## About the Team
 
