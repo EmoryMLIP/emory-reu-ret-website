@@ -38,7 +38,7 @@ Neural Nets create an adaptive system that computers use to learn from their mis
 <!--Image-->
 ![mainImage](images/Residual-Block.png "Residual Block")
 
-A lot of times in computer science, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we first wanted to look at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$}. 
+A lot of times in computer science, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we first wanted to look at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$. 
 $$Y_{j+1} = Y_j + \mathbf{h}\sigma(Y_j  K_j + b_j)$$
 In the context of our residual neural network, the ODE as forward propagation means that for each layer of the network, we will move one time step forward in the discretization of our network ODE. The weights and biases, $K$ and $b$, may be changed in between the layers depending on the given values in the network ODE. The final outputs are additional coordinates that match new time data that would fit the overarching dynamics of the original system. An ODE for forward propagation has many benefits for continuous transformations and was used to develop the concept of Hamiltonian Inspired Neural Networks.
 
@@ -52,7 +52,7 @@ When estimating coordinates of a Hamiltonian system or the value of the Hamilton
 
 We constructed two Residual Neural Networks and three Hamiltonian Neural Networks using three different discretization methods as forward propagation methods and utilizing the PyTorch package. Our initial ResNet was built using forward Euler as the forward propagation method, with our activation function $\sigma$ being the antiderivative of $tanh$. This method uses the current steps position to find the future step's. We used $$Y_{j+1} = Y_j + \mathbf{h}\sigma(Y_j  K_j + b_j)$$ in our ResNet for this method.
 
-We then implemented the fourth order Runge-Kutta method (Rk4) in a ResNet. This method
+We then implemented the fourth order Runge-Kutta method (RK4) in a ResNet. This method
 finds four different slopes based on the current and next positions and times, then calculates
 the weighted average of those slopes and uses Euler's method to find the future position. It
 is three orders of magnitude more accurate than Euler's method. We used the following as our 
@@ -70,18 +70,18 @@ $$y_{j+1} = y_j + h\sigma(K_j z_{j + \frac{1}{2}} + b_j)$$
 In our ResNets and HINNs with their respective discretization methods, we had our network learn the y and z values for our Hamiltonian ODEs from time data. To train our Neural Networks to output y and z data for our times, we input $t$, $y$, and $z$ and used one of our discretization methods for our forward propagation. When testing, we need only to input $t$ and initial values for $y$ and $z$ to be able to learn the ODE and give a prediction on some future time steps.
 
 
-Since all of us love math, we wanted to do more than just calculate the coordinates at any given time step, but also calculate the value of the Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two coordinates, $y,z$, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both \frac{\partial H}{\partial z}, $\frac{\partial H}{\partial z}$ $$\frac{\partial H}{\partial z}$$ and ${\partial H \over \partial y}$. The property of a Hamiltonian in \eqref{eq:13} was then written as a system of first order ODEs with the value calculated for the partials on the right side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given $y$ and $z$ values with the loss equation, where $$\theta$$ is the value approximated by our network and $t$ is the true value \eqref{eq:14}. This system will now be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value at the given time point.
+Since all of us love math, we wanted to do more than just calculate the coordinates at any given time step, but also calculate the value of the Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two coordinates, $y$ and $z$, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both $\frac{\partial H}{\partial z}$ and $\frac{\partial H}{\partial y}$. The property of a Hamiltonian in \eqref{eq:13} was then written as a system of first order ODEs with the value calculated for the partials on the right side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given $y$ and $z$ values with the loss equation, where $\theta$ is the value approximated by our network and $t$ is the true value \eqref{eq:14}. This system will now be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value at the given time point.
 
 
 Talk about SINDy and using the PySINDy package.
 
-	PySINDy package
-		Description of what you input, what it does, how it is more interpretable 
-		Discuss what types of equations we used most? (whenever we get there)
+PySINDy package
+->Description of what you input, what it does, how it is more interpretable 
+->Discuss what types of equations we used most? (whenever we get there)
 
 
 ## Comparison
-	Compare different methods to ode stuff
+Compare different methods to ode stuff
 
 ## Information about Us
 Mathias Heider is a rising senior at the University of Delaware, majoring in 
