@@ -108,6 +108,8 @@ PySINDy package
 
 <p align="center">
 <img src="images/RK4 Graph Lines.png" width="400" height="300">
+
+
 Here we have results from our Hamiltonian Inspired Neural Net. This model attempts to predict the Hamiltonian value from an input of time and two initial coordinates, $y_0$ and $z_0$. Looking at the first graph in our results we see that the loss is consistency going down as the model continues to run. Our second graph show the attempted hamiltonian when compared to the true answer. The goal for this is to get a straight line as the hamiltonian values should be conserved over time. You can see that there is fluctuations as it is downward slopping. Are last graph is our predicted y and z graphed over the true y and z value. Here, you can see that our values overlap which shows our model is predicting the y and z very accurately. 
 
 ## Comparison
