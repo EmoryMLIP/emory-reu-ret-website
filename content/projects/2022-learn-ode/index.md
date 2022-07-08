@@ -22,10 +22,9 @@ In addition to this post, the team has also created slides for a [midterm presen
 
 ## Project Overview: 
 Imagine a spring mass system (Figure 1). We want to be able to find the location of the mass at any given time point. In order to find the coordinates, we must understand the dynamics of the system. In a spring mass system, energy is conserved, so we chose to use a Hamiltonian Ordinary Differential Equation, which has the quality of energy conservation. To solve our problem, we use machine learning that uses Hamiltonians in the forward propagation to predict our coordinates.
-<p align="center">
+
 ![mainImage](images/Simple_harmonic_oscillator.gif "Figure 1")
 <figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
-</p>
 
 Our project aims to compute both a value for the Hamiltonian and coordinates for any given time using Hamiltonian Inspired neural networks. We will then compare our results to Sparse Identification of Nonlinear Dynamics ([4], [5]) to assess efficiency and accuracy. In order to build our neural network, we will begin by talking about the background of machine learning. Then, we will discuss the mathematics behind our network, including differential equations and discretization choice. Results will then be presented and analyzed.
 
@@ -95,6 +94,14 @@ PySINDy package
 
 ->Discuss what types of equations we used most? (whenever we get there)
 
+
+## Results
+
+![mainImage](images/HINN Verlet Loss.png)
+
+![mainImage](images/RK4 SHO Image.png)
+
+![mainImage](images/RK4 Graph Lines.png)
 
 ## Comparison
 Compare different methods to ode stuff
