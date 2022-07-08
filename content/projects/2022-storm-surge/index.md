@@ -40,7 +40,7 @@ A glacier can be represented with a simplified box model that has a length L, pr
 ## Sensitivity Analysis
 Sensitivity analyses study how various sources of uncertainty in a mathematical model contribute to the model's overall uncertainty. This allows us to understand the model better. 
 
-###Why do we do this?  Why do we care about the uncertainty of a model? And where do the uncertainties even come from?
+Why do we do this?  Why do we care about the uncertainty of a model? And where do the uncertainties even come from?
 In this ice sheet model, just like in any model, there are always going to be simplifications, and these lead to uncertainties. We need to have a good idea of which uncertainties matter the most, so that we better know the limits of where our model does a good job of simulating the real world. <br>
 
 The basic idea is this: We check sensitivity by using different distributions for the input parameters. If the outputs vary significantly, then the output is sensitive to the specification of the input distributions. Hence these should be defined with particular care. We can also look at the sensitivity of the model parameters to inform which parameter we're going to work with in the data assimilation. We want to be working with the most sensitive parameter, because it has the most promise for things we vary later on to matter, in questions like: "if your data is from billions of years ago does that matter? Is it important to have your data from the last 60 years?" or "how much will noise impact the predictions?" <br>
