@@ -61,6 +61,10 @@ Treating the interneuron population as a "relay," <em>&gamma;</em>, we can estab
 &gamma; = &minus;<em>w<sub>62</sub></em>(&minus;<em>w<sub>16</sub>y<sub>1</sub></em> &minus; <em>w<sub>56</sub>y<sub>5</sub></em> &plus; <em>w<sub>46</sub>y<sub>4</sub></em> &plus; <em>b<sub>6</sub></em>)
 
 where <em>y<sub>1</sub></em>, <em>y<sub>2</sub></em>, <em>y<sub>3</sub></em>, <em>y<sub>4</sub></em>, <em>y<sub>5</sub></em> are the firing rates for the GPi, thalamocortical loop (TC), corticothalamic layer 5 (CT5), corticothalamic layer 6 (CT6), and reticular nucleus (RTN), respectively. <em>w<sub>jk</sub></em> represents the weight of the firing rate flow from population <em>j</em> to population <em>k</em>. Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0, &tau;<sub><em>i</em></sub> > 0, and <em>F<sub>i</sub></em> represents the activation function for the <em>i</em>-th population.
+
+This can be represented with vectors and matrices as:
+
+<em>T<strong>y'</strong></em> = &minus;<em><strong>y</strong></em> &plus; <em><strong>F</strong></em>(<em><strong>x</strong></em>) &xrArr; <em>T<strong>y'</strong></em> = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em>
 # Sigmoidal Activation Function and Its Approximations
 The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>19-21</sup> We closely modeled our sigmoidal activation function off of the model developed by Holgado <em>et al.</em>:<sup>22</sup>
 
@@ -104,10 +108,27 @@ then the system will generate a <strong>stable limit cycle</strong> around the m
 <h3>Steady State Conditions</h3>
 
 A steady state is a fixed point for which the solution will not change as time progresses. There are two types of steady states:
-1. <strong>Stable:</strong> as t &xrarr; &infin;, the system tends toward that point
-    \item \textbf{Unstable:} as t &xrarr; &infin;, the system is repelled from that point
+1. <strong>Stable:</strong> as t &xrarr; &infin;, the system tends toward that point.
+2. <strong>Unstable:</strong> as t &xrarr; &infin;, the system is repelled from that point.
+
+To solve for the steady states, we set the vector <em><strong>y'</strong></em> from our system equal to zero:
+
+<em>T<strong>y'</strong></em> = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em> &xrArr; 0 = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em> &xrArr; <em>A<strong>y</strong></em> = &minus;<em><strong>B</strong></em>
+
+where <em><strong>y</strong></em> = {<em>y</em><sub>1</sub>, <em>y</em><sub>2</sub>, <em>y</em><sub>3</sub>, <em>y</em><sub>4</sub>, <em>y</em><sub>5</sub>}
+
+We found conditions for each steady state to be in the middle by checking the inputs to the activation functions are above 0 and below max.
 
 <h3>Stability Conditions and Determinant Conditions</h3>
+
+We identified 3<sup>5</sup> = 243 regions, each corresponding to a matrix A. However, there were only 16 unique matrices. We found the eigenvalues for each matrix, and based on these solutions, we identifed three types of matrices:
+1. 10 matrices have all negative eigenvalues regardless of weights, so they are guaranteed to be stable. 
+2. 4 matrices have eigenvalues that are stable conditional on some weights.
+3. 2 matrices (including the middle region matrix) have complicated characteristic polynomials whose roots cannot be solved explicitly.
+
+For the two complex matrices, the Routh-Hurwitz Stability Criterion must be used to determine the stability conditions. In addition, since the eigenvalues of these two complex matrices are not all negative, we must also include a condition for the determinants to be less than zero, since this is not guaranteed. 
+# Weight Search: Healthy Solution
+# Weight Search: Parkinsonian Solution
 
 # More About the Team
 1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University. *fill in more info here, potentially pic. ditto for others too*
