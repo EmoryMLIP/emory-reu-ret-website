@@ -97,11 +97,11 @@ PySINDy package
 
 ## Results
 
-![mainImage](images/HINN Verlet Loss.png)
+<img src="images/HINN Verlet Loss.png"> 
 
-![mainImage](images/RK4 SHO Image.png)
+<img src="images/RK4 SHO Image.png">
 
-![mainImage](images/RK4 Graph Lines.png)
+<img src="images/RK4 Graph Lines.png">
 
 ## Comparison
 Compare different methods to ode stuff
