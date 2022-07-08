@@ -128,7 +128,105 @@ We identified 3<sup>5</sup> = 243 regions, each corresponding to a matrix A. How
 
 For the two complex matrices, the Routh-Hurwitz Stability Criterion must be used to determine the stability conditions. In addition, since the eigenvalues of these two complex matrices are not all negative, we must also include a condition for the determinants to be less than zero, since this is not guaranteed. 
 # Weight Search: Healthy Solution
+The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we tooka high estimate and a low estimate: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
+
+Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a healthy solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
+
+Low <em>b<sub>6</sub></em>: 
+
+<table>
+  <tr>
+    <td><em>w<sub>12</sub></em> = 26.277712910064</td>
+    <td><em>w<sub>16</sub></em> = 23.6946990764468</td>
+    <td><em>w<sub>23</sub></em> = 0.187338224676904</td>
+    <td><em>w<sub>32</sub></em> = 0.01</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>34</sub></em> = 0.296953472955362</td>
+    <td><em>w<sub>42</sub></em> = 9.08347957795368</td>
+    <td><em>w<sub>43</sub></em> = 0.73628505248342</td>
+    <td><em>w<sub>45</sub></em> = 1.14231725172093</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>46</sub></em> = 27.9786220729639</td>
+    <td><em>w<sub>52</sub></em> = 48.2811002945517</td>
+    <td><em>w<sub>56</sub></em> = 9.87669703285501</td>
+    <td><em>w<sub>62</sub></em> = 0.283269372105734</td>
+  </tr>
+</table>
+
+High <em>b<sub>6</sub></em>: 
+
+<table>
+  <tr>
+    <td><em>w<sub>12</sub></em> = 21.5333436192489</td>
+    <td><em>w<sub>16</sub></em> = 24.0926949820229</td>
+    <td><em>w<sub>23</sub></em> = 0.134715648975372</td>
+    <td><em>w<sub>32</sub></em> = 2.42612155214961</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>34</sub></em> = 0.463360624976851</td>
+    <td><em>w<sub>42</sub></em> = 5.4900658617949</td>
+    <td><em>w<sub>43</sub></em> = 0.635370540369298</td>
+    <td><em>w<sub>45</sub></em> = 0.941692768930225</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>46</sub></em> = 29.1041170955961</td>
+    <td><em>w<sub>52</sub></em> = 46.8925757833886</td>
+    <td><em>w<sub>56</sub></em> = 12.0028485256047</td>
+    <td><em>w<sub>62</sub></em> = 0.420934112622328</td>
+  </tr>
+</table>
+
+The solution for the high <em>b<sub>6</sub></em> is plotted below:
+
 # Weight Search: Parkinsonian Solution
+Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a parkinsonian solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
+Low <em>b<sub>6</sub></em>: 
+
+<table>
+  <tr>
+    <td><em>w<sub>12</sub></em> = 4.4531</td>
+    <td><em>w<sub>16</sub></em> = 24.0877</td>
+    <td><em>w<sub>23</sub></em> = 0.0518</td>
+    <td><em>w<sub>32</sub></em> = 0.01</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>34</sub></em> = 0.7617</td>
+    <td><em>w<sub>42</sub></em> = 11.4534</td>
+    <td><em>w<sub>43</sub></em> = 0.0251</td>
+    <td><em>w<sub>45</sub></em> = 1.1806</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>46</sub></em> = 34.7727</td>
+    <td><em>w<sub>52</sub></em> = 69.9986</td>
+    <td><em>w<sub>56</sub></em> = 0.01</td>
+    <td><em>w<sub>62</sub></em> = 2.8635</td>
+  </tr>
+</table>
+
+High <em>b<sub>6</sub></em>: 
+
+<table>
+  <tr>
+    <td><em>w<sub>12</sub></em> = 6.1004</td>
+    <td><em>w<sub>16</sub></em> = 23.99538328</td>
+    <td><em>w<sub>23</sub></em> = 0.05432368612</td>
+    <td><em>w<sub>32</sub></em> = 0.03834437045</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>34</sub></em> = 0.7085133543</td>
+    <td><em>w<sub>42</sub></em> = 11.28990562</td>
+    <td><em>w<sub>43</sub></em> = 0.001</td>
+    <td><em>w<sub>45</sub></em> = 1.210166726</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>46</sub></em> = 35.23780162</td>
+    <td><em>w<sub>52</sub></em> = 71.28434051</td>
+    <td><em>w<sub>56</sub></em> = 0.01051622632</td>
+    <td><em>w<sub>62</sub></em> = 2.816053182</td>
+  </tr>
+</table>
 
 # More About the Team
 1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University. *fill in more info here, potentially pic. ditto for others too*
