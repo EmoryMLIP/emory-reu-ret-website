@@ -64,19 +64,21 @@ $$ k_2 = h * \sigma(y + h * \frac{k_2}{2}), k_3 = h * \sigma(y + h * k_3)$$
 
 After implementing those methods in our ResNets, we decided to move to our first Hamiltonian Inspired Neural Network, beginning with RK4 as our forward propagation method. Once we had our HINN working, we decided to implement the Verlet method. We believed the Verlet method would work the best for our second order Hamiltonians because the Verlet method is symplectic and also second order.
 We used the following as our implementation of the Verlet method in our HINNs:
-$$z_{j + \frac{1}{2}} = z_{j - \frac{1}{2}} - h\sigma(K_j^T y_j + b_j)$$ 
-$$y_{j+1} = y_j + h\sigma(K_j z_{j + \frac{1}{2}} + b_j)$$
+$$z_{j + 1} = z_j - h\sigma(K_j^T y_j + b_j)$$ 
+$$y_{j+1} = y_j + h\sigma(K_j z_j + b_j)$$
 
 In our ResNets and HINNs with their respective discretization methods, we had our network learn the y and z values for our Hamiltonian ODEs from time data. To train our Neural Networks to output y and z data for our times, we input $t$, $y$, and $z$ and used one of our discretization methods for our forward propagation. When testing, we need only to input $t$ and initial values for $y$ and $z$ to be able to learn the ODE and give a prediction on some future time steps.
 
 
-Since all of us love math, we wanted to do more than just calculate the coordinates at any given time step, but also calculate the value of the Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two coordinates, $y$ and $z$, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both $\frac{\partial H}{\partial z}$ and $\frac{\partial H}{\partial y}$. The property of a Hamiltonian in \eqref{eq:13} was then written as a system of first order ODEs with the value calculated for the partials on the right side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given $y$ and $z$ values with the loss equation, where $\theta$ is the value approximated by our network and $t$ is the true value \eqref{eq:14}. This system will now be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value at the given time point.
+Since all of us love math, we wanted to do more than just calculate the coordinates at any given time step, but also calculate the value of the Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two coordinates, y and z, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both $\frac{\partial H}{\partial z} \text{ and } \frac{\partial H}{\partial y}$. The property of a Hamiltonian in eqref{eq:13} was then written as a system of first order ODEs with the value calculated for the partials on the right side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given $y$ and $z$ values with the loss equation, where $\theta$ is the value approximated by our network and $t$ is the true value eqref{eq:14}. This system will now be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value at the given time point.
 
 
 Talk about SINDy and using the PySINDy package.
 
 PySINDy package
+
 ->Description of what you input, what it does, how it is more interpretable 
+
 ->Discuss what types of equations we used most? (whenever we get there)
 
 
