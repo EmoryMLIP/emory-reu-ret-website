@@ -32,12 +32,13 @@ Our project aims to compute both a value for the Hamiltonian and coordinates for
 
 ## Background: 
 In this project we heavily rely on machine learning, specifically deep learning. Machine Learning is the use of statistical learning and optimization methods that let computers analyze datasets and identify patterns. Deep learning is a type of machine learning and artificial intelligence (AI) that imitates the way humans gain certain types of knowledge. Neural Networks are an example of deep learning and are inspired by how the human brain works as they mimic the way neurons signal. 
- <img src="https://en.wikipedia.org/wiki/Effective_mass_(spring%E2%80%93mass_system)#/media/File:Simple_harmonic_oscillator.gif"  class="aligncenter"/>
- <figcaption align = "center"><b>Figure 2 - Neural Net by Carrie Vanty </b></figcaption>
+
+<img src=images/resnet.png width="400" height="300"  class="aligncenter"/>
+<figcaption align = "center"><b>Figure 2 - Neural Net by Carrie Vanty </b></figcaption>
 
 Neural Nets create an adaptive system that computers use to learn from their mistakes and improve continuously.In a neural network you have an input layer, output layer, and a varying number of hidden layers. Through these layers a function applies weights to solve a problem.  An issue that arises in traditional Neural Networks is the vanishing or exploding gradient problem, the training and test errors increasing the deeper you go in your network. Residual Neural Networks (RNNs) use skip connections to create residual blocks which can help with this issue. This changes how the network is mapped and allowing the model to skip a layer if it hurts the performance.
 
-![mainImage](images/Residual-Block.png "Residual Block")
+<img src=images/Residual-Block.png class="align center">
 <figcaption align = "center"><b>Figure 3 - Residual Block [2] </b></figcaption>
 
 A lot of times in computer science, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we first wanted to look at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$. 
@@ -96,11 +97,11 @@ PySINDy package
 
 ## Results
 
-<img src="images/HINN Verlet Loss.png"> 
+<img src="images/HINN Verlet Loss.png" width="400" height="300"> 
 
-<img src="images/RK4 SHO Image.png">
+<img src="images/RK4 SHO Image.png" width="400" height="300">
 
-<img src="images/RK4 Graph Lines.png">
+<img src="images/RK4 Graph Lines.png" width="400" height="300">
 
 ## Comparison
 Compare different methods to ode stuff
