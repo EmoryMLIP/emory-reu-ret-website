@@ -23,6 +23,7 @@ In addition to this post, the team has also created slides for a [midterm presen
 ## Project Overview: 
 Imagine a spring mass system (Figure 1). We want to be able to find the location of the mass at any given time point. In order to find the coordinates, we must understand the dynamics of the system. In a spring mass system, energy is conserved, so we chose to use a Hamiltonian Ordinary Differential Equation, which has the quality of energy conservation. To solve our problem, we use machine learning that uses Hamiltonians in the forward propagation to predict our coordinates.
 
+
 ![mainImage](images/Simple_harmonic_oscillator.gif "Figure 1")
 <figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
 
@@ -33,11 +34,13 @@ Our project aims to compute both a value for the Hamiltonian and coordinates for
 ## Background: 
 In this project we heavily rely on machine learning, specifically deep learning. Machine Learning is the use of statistical learning and optimization methods that let computers analyze datasets and identify patterns. Deep learning is a type of machine learning and artificial intelligence (AI) that imitates the way humans gain certain types of knowledge. Neural Networks are an example of deep learning and are inspired by how the human brain works as they mimic the way neurons signal. 
 
+<p align="center">
 <img src=images/resnet.png width="400" height="300"  class="aligncenter"/>
 <figcaption align = "center"><b>Figure 2 - Neural Net by Carrie Vanty </b></figcaption>
 
 Neural Nets create an adaptive system that computers use to learn from their mistakes and improve continuously.In a neural network you have an input layer, output layer, and a varying number of hidden layers. Through these layers a function applies weights to solve a problem.  An issue that arises in traditional Neural Networks is the vanishing or exploding gradient problem, the training and test errors increasing the deeper you go in your network. Residual Neural Networks (RNNs) use skip connections to create residual blocks which can help with this issue. This changes how the network is mapped and allowing the model to skip a layer if it hurts the performance.
 
+<p align="center">
 <img src=images/Residual-Block.png class="align center">
 <figcaption align = "center"><b>Figure 3 - Residual Block [2] </b></figcaption>
 
@@ -97,10 +100,13 @@ PySINDy package
 
 ## Results
 
+<p align="center">
 <img src="images/HINN Verlet Loss.png" width="400" height="300"> 
 
+<p align="center">
 <img src="images/RK4 SHO Image.png" width="400" height="300">
 
+<p align="center">
 <img src="images/RK4 Graph Lines.png" width="400" height="300">
 
 ## Comparison
