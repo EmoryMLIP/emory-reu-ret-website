@@ -180,6 +180,15 @@ High <em>b<sub>6</sub></em>:
 
 The solution for the high <em>b<sub>6</sub></em> is plotted below:
 
+![Rates of Healthy w/ High B](Rates_healthy_high.jpg)
+
+Each of the solutions tends toward a specific firing rate, showing that the solution is stable.
+
+Although it is impossible to graph a 5-D system, we can choose three dimensions out of the five and graph this in 3-D:
+
+![3-D of Healthy w/ High B](3D_healthy_high.jpg)
+
+It is clear that the line spirals inward to a point, showing that it is stable.
 # Weight Search: Parkinsonian Solution
 Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a parkinsonian solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
 Low <em>b<sub>6</sub></em>: 
@@ -228,10 +237,21 @@ High <em>b<sub>6</sub></em>:
   </tr>
 </table>
 
+The solution for the high <em>b<sub>6</sub></em> is plotted below:
+
+![Rates of PD w/ High B](Rates_PD_high.jpg)
+
+The TC solution oscillates around a firing rate, showing that it will produce a limit cycle solution.
+
+Although it is impossible to graph a 5-D system, we can choose three dimensions out of the five and graph this in 3-D:
+
+![3-D of PD w/ High B](3D_PD_high.jpg)
+
+Here, it is clear that the solution produces a limit cycle.
 # More About the Team
-1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University. *fill in more info here, potentially pic. ditto for others too*
-2. <strong> Qile Jiang</strong> is a rising junior at Brown University.
-3. <strong>Olivia Leu</strong> is a junior at Pomona College. 
+1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University majoring in mathematics and minoring in statistics and music with a concentration in voice. She is interested in utilizing her skills in applied mathematics and statistcs to research music, specifically music theory and sight singing. Outside class, she enjoys reading, dancing, singing, and composing music. 
+2. <strong> Qile Jiang</strong> is a rising junior at Brown University majoring in Applied Mathematics. His primary research area is in applied dynamical systems, but he also has a keen interest in pure math topics such as algebra. Outside of school, he spends his time training boxing, painting, and going to operas and classical concerts.
+3. <strong>Margaret Olivia Leu</strong> is a junior at Pomona College double majoring in mathematics and politics. She is interested in working on ways to use mathematics as a tool in the fields of politics and social justice work, and hopes to pursue a career that combines these two interests. Outside academics, she enjoys crocheting, cooking, and listening to music.
 # References
 1. Sveinbjornsdottir, S. (2016).The clinical symptoms of Parkinson's disease. <em>Journal of Neurochemistry, 139</em>(1), 318-324. https://doi.org/10.1111/jnc.13691.
 2. DeLong, M. R., & Wichmann, T. (2007). Circuits and circuit disorders of the basal ganglia. <em>Archives of Neurology, 64</em>(1), 20–24. https://doi.org/10.1001/archneur.64.1.20.
