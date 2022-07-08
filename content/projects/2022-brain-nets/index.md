@@ -7,17 +7,17 @@ weight : 100
 summary: 'Orchestrating behavior and cognition, human brains lie at the core of complex neurobiological systems. Understanding of the structures, functions and mechanisms inside the brains has been an intriguing pursuit throughout human history. Recent studies in neuroscience and brain imaging have reached the consensus that the interactions among brain regions are driving factors for neural development and disorders, but there has not been an understanding in what mathematical models should be used to analyze such interactions, a.k.a the brain networks. In this project, we will explore and analyze different approaches for the modeling of brain networks, especially ranging from traditional shallow graph models to modern deep graph neural networks, towards the analysis of mental disorders, such as PTSD, depression and substance misuse. We will adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and quantitatively evaluate them in the standard graph classification setting.'
 tags: ["Summer 2022"]
 ---
-## Overview
+## Overview: Comparing Shallow vs. Deep Brain Network Models
 
 We are comparing and benchmarking the performance of graph kernels and graph neural networks applied to disease classification based on neuroimaging data.
-For definitions go to [definitions](#definitions) section
+For useful backgraounds and definitions refer to the [definitions](#definitions) section.
 
 
 ## Datasets
 
-We are working with 2 datasets, one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been cleaned for us and consist of less than 100 patients each. The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions. We implemented a rounding scheme to remove edge weights in order to sparsify the adjacency matrices. While this results in a small amount of data loss, it preserves the overall structure of the adjacency matrix and is less computationally expensive than using the original unrounded matrices. We have: ...
+We are working with 2 datasets, one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been cleaned for us and consist of less than 100 patients each. The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions. We implemented a rounding scheme to remove edge weights in order to sparsify the adjacency matrices. While this results in a small amount of data loss, it preserves the overall structure of the adjacency matrix and is less computationally expensive than using the original unrounded matrices. 
 
-We further manipulate the data to obtain a list of graph objects that can be used with the Python packages [GraKel](https://ysig.github.io/GraKeL/0.1a8/) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
+We further manipulate the data using [BrainGB](https://github.com/HennyJie/BrainGB)'s code to obtain a list of graph objects that can be used with the Python packages [GraKel](https://ysig.github.io/GraKeL/0.1a8/) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
 
 ## Classification Task
 
@@ -29,15 +29,20 @@ methods
 
 ### Graph Kernels
 
-graph kernels
+<img src="img/SVC.png" alt="SVC" width="1000"/>
+<figcaption align = "center"><b>Fig.1 - Support Vector Classifiers with Kernels</b></figcaption>
+<br/>
+
+<img src="img/GKNN.png" alt="Graph Kernel GNN" width="1000"/>
+<figcaption align = "center"><b>Fig.2 - Example Architecture of Graph Kernel GNN</b></figcaption>
+<br/>
 
 ### Graph Neural Networks (GNN's)
 
 <img src="img/BrainGB_final.png" alt="BrainGB" width="1000"/>
-<figcaption align = "center"><b>Fig.1 - Message Passing Graph Neural Networks</b></figcaption>
+<figcaption align = "center"><b>Fig.3 - BrainGB Framework</b></figcaption>
 <br/>
 
-gnns
 
 ## Benchmarks
 
