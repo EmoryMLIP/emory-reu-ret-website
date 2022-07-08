@@ -75,9 +75,9 @@ gnns
 ### Kernel Performance
 
 <p float="center">
-  <img src="img/propagation-kernel-performance.png" width="300" />
-  <img src="img/WL-kernel-performance.png" width="300" /> 
-  <img src="img/WLOA-kernel-performance.png" width="300" />
+  <img src="img/propagation-kernel-performance.png" width="330" />
+  <img src="img/WL-kernel-performance.png" width="330" /> 
+  <img src="img/WLOA-kernel-performance.png" width="330" />
 </p>
 
 ## Limitations and Discussion
