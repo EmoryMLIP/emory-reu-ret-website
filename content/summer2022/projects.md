@@ -18,7 +18,7 @@ Mentor: [Talea Mayo](../author/talea-mayo/)
 
 Numerical models of coastal hydrodynamics play a vital role in understanding hurricane storm surges, particularly as the climate changes. However, uncertainties in model parameters and their representations, e.g., bottom stress and surface wind stress, limit the confidence of model results.  Data is becoming increasingly available but also contains uncertainties. In this project we will explore methods of data assimilation, which utilize information about the uncertainties in both modeled and observed data to improve estimates of the coastal system state.
 
-## Fast Training of Implicit Networks with Applications in Inverse Problems.
+## [Fast Training of Implicit Networks with Applications in Inverse Problems.](../projects/2022-implicit)
 
 Mentor: [Samy Wu Fung](../author/samy-wu-fung/)
 
