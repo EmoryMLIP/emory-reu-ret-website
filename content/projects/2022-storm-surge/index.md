@@ -39,7 +39,7 @@ A glacier can be represented with a simplified box model that has a length $L$, 
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
 </p>
 <!--- Above is the diagram of a box model -->
-The two-stage model incorporates a nested box into the system. This new box has a thickness, $H$, and an interior flux, $Q$. The change in length and height of the glacier can be described with these differential equations: $$\ \dfrac{dH}{dt}=P-\dfrac{Q_g}{L}-\dfrac{H}{h_gL}(Q-Q_g)$$ $$\ \dfrac{dL}{dt}=\dfrac{1}{h_g}(Q-Q_g)$$
+The two-stage model that our group is using incorporates a nested box into the system. This new box has a thickness, $H$, and an interior flux, $Q$. The change in length and height of the glacier can be described with these differential equations: $$\ \dfrac{dH}{dt}=P-\dfrac{Q_g}{L}-\dfrac{H}{h_gL}(Q-Q_g)$$ $$\ \dfrac{dL}{dt}=\dfrac{1}{h_g}(Q-Q_g)$$
 
 
 
