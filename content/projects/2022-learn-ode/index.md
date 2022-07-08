@@ -26,7 +26,7 @@ Imagine a spring mass system (Figure 1). We want to be able to find the location
 ![mainImage](images/Simple_harmonic_oscillator.gif "Figure 1")
 <figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
 
-Our project aims to compute both a value for the Hamiltonian and coordinates for any given time using Hamiltonian Inspired neural networks. We will then compare our results to Sparse Identification of Nonlinear Dynamics ([4], [5]) to assess efficiency and accuracy. In order to build our neural network, we will begin by talking about the background of machine learning. Then, we will discuss the mathematics behind our network, including differential equations and discretization choice. Results will then be presented and analyzed.
+Our project aims to compute both a value for the Hamiltonian and coordinates for any given time using Hamiltonian Inspired Neural Networks. We will then compare our results to Sparse Identification of Nonlinear Dynamics ([4], [5]) to assess efficiency and accuracy. In order to build our neural network, we must first understand the background of machine learning. Then, we will discuss the mathematics behind our network, including differential equations and discretization choice. Results will then be presented and analyzed.
 
 
 
@@ -79,10 +79,9 @@ Since all of us love math, we wanted to do more than just calculate the coordina
 Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two 
 coordinates, y and z, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was 
 already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both $\frac{\partial H}{\partial z} \text{ and } \frac{\partial H}{\partial y}$. The 
-property of a Hamiltonian in eqref{eq:13} was then written as a system of first order ODEs with the value calculated for the partials on the right 
+property of a Hamiltonian was then written as a system of first order ODEs with the value calculated for the partials on the right 
 side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given 
-$y \text{ and } z$ values with the loss equation, where $\theta$ is the value approximated by our network and $t$ is the true 
-value eqref{eq:14}. This system will now be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value 
+$y \text{ and } z$ values from the data set using with the mean squared error. The system is be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value 
 at the given time point.
 
 
