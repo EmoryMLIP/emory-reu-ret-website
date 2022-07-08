@@ -30,10 +30,11 @@ Research has shown that climate change will likely impact [storm surge inundatio
 Our group is collaborating with Dr. Robel, a glaciologist, climate scientist, and applied mathematician from Georgia Tech, and working with the glacier model described in his [2018 paper](https://doi.org/10.1029/2018JF004709). This ice sheet model aims to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change. 
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png"> </p>
 <!--- Above is Dr. Robel's glacier model schematic -->
+A glacier can be represented with a simplified box model that has a length L, precipitation P, and height and flux at the grounding line $$h_g$$ and $$Q_g$$. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
 </p>
-A glacier can be represented with a simplified box model that has a length L, precipitation P, and height and flux at the grounding line h_g and Q_g. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
 <!--- Above is the diagram of a box model -->
+The two-stage model incorporates a nested box into the system. This new box has a thickness, H, and an interior flux, Q. The change in length and height of the glacier can be described with the differential equations $\ \dfrac{dH}{dt}=P-\dfrac{Q_g}{L}-\dfrac{H}{h_gL}(Q-Q_g)$ and $\ \dfrac{dL}{dt}=\dfrac{1}{h_g}(Q-Q_g) $.
 
 
 
