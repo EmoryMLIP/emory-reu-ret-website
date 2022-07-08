@@ -118,9 +118,9 @@ Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in M
 <!--- Above is another glacier image -->
 
 
-<p align="center">
+<!--- <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
-</p>
+</p> -->
 <!--- Above is one big photo of a single sensitivity analysis diagram: "t vs. H(t) with the initial conditions varied" -->
 
 
