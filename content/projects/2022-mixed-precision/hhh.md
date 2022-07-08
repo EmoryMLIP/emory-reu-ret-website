@@ -113,7 +113,7 @@ Now we turn our attention to the error norm, the difference between the original
 Below is the result when we run CGLS on the test problem at different precision levels. We can see for double and single precision, the reconstruction is doing well, yet for the fp16 problem we started to get this completely blue picture from the first iteration.
 
 <p align="center">
-<img src="img/Screen Shot 2022-07-07 at 11.33.06 AM.png" alt="draw" width="800"/> 
+<img src="img/tomo_plot.png" alt="draw" width="800"/> 
 </p>
 
 After we took a closer look at the results the algorithm outputs, we noticed that they are all NaNs!
@@ -130,7 +130,7 @@ which is still blurry but at least the shape is visible :)
 And then we add noise to the right hand side b, and plotted the error norms below:
 
 <p align="center">
-<img src="img/Screen Shot 2022-07-07 at 10.42.11 AM.png" alt="draw" width="800"/> 
+<img src="img/error_tomo.png" alt="draw" width="800"/> 
 </p>
 
 As in the image deblurring problem, the error norm first decreases then increases. In the cases with noise, this is mainly because noise started to take over in later part of the iteration. We still see the same behavior in the test problem even without noise at fp16. This is because the truncation errors got accumulated as the iteration goes on.
