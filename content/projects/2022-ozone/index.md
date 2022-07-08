@@ -38,8 +38,46 @@ Ronnie Brown is a high school teacher at Bard High School Early College (BHSEC) 
 
 Tim  Gant 
 [INSERT PHOTO]
+Timothy Gant has been an educator for the past 20 years and entered as a Mathematics instructor.  Prior to entering education his educational background was in Electrical Engineering at Georgia Tech, then service to his country in the U.S. Navy and then Controls engineering. He is currently in Career Technology teaching engineering and computer science.  He is a teacher at Lithonia High School in metro Atlanta.  His goal in secondary education is to give students skills, hope and purpose in their pursuit of higher education and career exploration  that have traditionally been 
+
+Activities –?????
+
+[BREE INSERTS]
+
+Introduction
+MANUSCRIPT   BREAKDOWN ---
+INTRODUCTIONS — setting the stage — why do we care about this message.  [ABSTRACT should be written last but placed above the introduction section] (edited)
+
+[INSERTS – Ahngelique completes]
+
+Methods
+METHODS —” reproducability” — audience can evaluate whether the question presented to them was actually answered in their observation  and that the presenters answer “made sense”.  INCREASE YOUR INTEGRITY HERE with correlating your research methods choice for assessment by giving enough detail to make the connection. (edited)
+
+I have the following methods we’re exploring: Penalized Least Square (PLS) Method; Functional Linear Method; Computational Method; Brute Force (?) Method; Linear Regression Model; and Interpolation Method and am clarifying this fact
+
+[INSERTS - final determinations by Bree]
 
 
+Results/Discussion
+RESULTS/DISCUSSION — What were the results of the research — did the presenter actually answer their own questions. [FIRST STEP IS TO KNOW THIS].  Distinguish from what you found from what you think.  What came out of what you did and [the facts] and using onlly the factual data results and thena DISCUSSION SECTION states that because it came out of the model x,y,z, came oout of it based upon my interpretation is… [essential portion of this section]. MUST EXPLAIN how you interpret the facts and why. i.e. “seeing that…it’s likely that… occurs”                	ADD IN:  PICS OF RESULTS and explanations are in the subsections (edited)
 
+Results…
+
+[INSERTS – Original data presentations]
+
+
+Conclusions
+CONCLUSIONS — I say what I just told you and synthesizing everything you just presented.  wrap up everything   Finishing the points professed earlier in the manuscript. 	and all this is if for your commentary and clarification.
+
+After the intensive research, beta testing, …
+
+[INSERTS -  Proposed conclusions based upon past data outcomes]
+
+
+References
+REFERENCES — use those for scientific writing at the end of the paper [essential skill to develop].  The style format is not specific.  I enjoy and am developing APA> Style.  Purdue.edu.  Mus thave a citation manager like : Jabref (?)
+
+
+[BREE INSERTS]
 
 
