@@ -1,0 +1,9 @@
+---
+# Files in this folder represent a Widget Page
+type: blank
+weight : 25
+columns : 1
+title : Event Calender
+---
+
+<iframe src="https://calendar.google.com/calendar/embed?height=550&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=cmV1LmVtb3J5QGdtYWlsLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043" style="border:solid 1px #777" width="770" height="550" frameborder="0" scrolling="no"></iframe>
