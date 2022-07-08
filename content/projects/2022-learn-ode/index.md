@@ -32,10 +32,10 @@ Our project aims to compute both a value for the Hamiltonian and coordinates for
 
 ## Background: 
 In this project we heavily rely on machine learning, specifically deep learning. Machine Learning is the use of statistical learning and optimization methods that let computers analyze datasets and identify patterns. Deep learning is a type of machine learning and artificial intelligence (AI) that imitates the way humans gain certain types of knowledge. Neural Networks are an example of deep learning and are inspired by how the human brain works as they mimic the way neurons signal. 
-
+<p align="center">
  <img src="https://en.wikipedia.org/wiki/Effective_mass_(spring%E2%80%93mass_system)#/media/File:Simple_harmonic_oscillator.gif"  class="aligncenter"/>
  <figcaption align = "center"><b>Figure 2 - Neural Net by Carrie Vanty </b></figcaption>
-
+</p>
 
 Neural Nets create an adaptive system that computers use to learn from their mistakes and improve continuously.In a neural network you have an input layer, output layer, and a varying number of hidden layers. Through these layers a function applies weights to solve a problem.  An issue that arises in traditional Neural Networks is the vanishing or exploding gradient problem, the training and test errors increasing the deeper you go in your network. Residual Neural Networks (RNNs) use skip connections to create residual blocks which can help with this issue. This changes how the network is mapped and allowing the model to skip a layer if it hurts the performance.
 
