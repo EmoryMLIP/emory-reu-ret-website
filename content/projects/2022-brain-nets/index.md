@@ -33,7 +33,7 @@ graph kernels
 
 ### Graph Neural Networks (GNN's)
 
-<img src="img/BrainGB.png" alt="BrainGB" width="1000"/>
+<img src="img/BrainGB_final.png" alt="BrainGB" width="1000"/>
 <figcaption align = "left"><b>Fig.1 - Message Passing Graph Neural Networks</b></figcaption>
 <br/>
 
@@ -74,17 +74,11 @@ gnns
 
 ### Kernel Performance
 
-<img src="img/propagation-kernel-performance.png" alt="propagation-kernel" width="400"/>
-<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
-<br/>
-
-<img src="img/WL-kernel-performance.png" alt="WL-kernel" width="400"/>
-<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
-<br/>
-
-<img src="img/WLOA-kernel-performance.png" alt="WLOA-kernel" width="400"/>
-<figcaption align = "left"><b>Fig.1 - caption</b></figcaption>
-<br/>
+<p float="left">
+  <img src="img/propagation-kernel-performance.png" width="200" />
+  <img src="img/WL-kernel-performance.png" width="200" /> 
+  <img src="img/WLOA-kernel-performance.png" width="200" />
+</p>
 
 ## Limitations and Discussion
 
