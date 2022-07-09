@@ -65,9 +65,11 @@ To leverage the higher order structural information given by graph kernels and l
 | BP-GCN (edge concat)  | $0.63_{\pm 0.12}$ | $0.61_{\pm 0.13}$  | $0.61_{\pm 0.17}$ |
 | HIV-GAT (edge concat) | $0.69_{\pm 0.18}$ | $0.67_{\pm 0.19}$ | $0.73_{\pm 0.24}$ |
 | BP-GAT (edge concat)  | $0.52_{\pm 0.17}$  | $0.51_{\pm 0.16}$  | $0.59_{\pm 0.19}$  |
-<br/>
 
 Both HIV and BP datasets were tested using GCN and GAT as labeled in the table. "Concat" and "edge concat" denote the message passing mechanism that was used in the experiment.
+
+<br/>
+
 
 ### SVC Classification Accuracy (Test Set)
 
