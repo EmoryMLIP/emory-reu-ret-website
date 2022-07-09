@@ -10,79 +10,83 @@ tags: ["Summer 2022"]
 ## Overview: Comparing Shallow vs. Deep Brain Network Models
 
 We are comparing and benchmarking the performance of graph kernels and graph neural networks applied to disease classification based on neuroimaging data.
-For useful backgraounds and definitions refer to the [definitions](#definitions) section.
+For useful background and definitions refer to the [definitions](#definitions) section.
 
 
 ## Datasets
 
-We are working with 2 datasets, one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been cleaned for us and consist of less than 100 patients each. The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions. We implemented a rounding scheme to remove edge weights in order to sparsify the adjacency matrices. While this results in a small amount of data loss, it preserves the overall structure of the adjacency matrix and is less computationally expensive than using the original unrounded matrices. 
+We are working with 2 datasets: one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been processed for us, as detailed in [section 3](https://arxiv.org/abs/2204.07054) of the paper authored by Cui et al. 
 
-We further manipulate the data using [BrainGB](https://github.com/HennyJie/BrainGB)'s code to obtain a list of graph objects that can be used with the Python packages [GraKel](https://ysig.github.io/GraKeL/0.1a8/) and [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
+The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions.
+
+For implementation of support vector machines (SVM) with graph kernels, we utilized threshold rounding to remove edge weights and sparsify the adjacency matrices. While this results in information loss, it preserves the overall structure of the adjacency matrices and makes them usable for this particular classification method. Further manipulation creates a list of graph objects that are compatible with the Python package [GraKel](https://ysig.github.io/GraKeL/0.1a8/). 
+
+For implementation of graph convolutional networks (GCN's), we followed [BrainGB](https://github.com/HennyJie/BrainGB)'s code to create a data type that can be used with the Python package [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
 
 ## Classification Task
 
-The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$. In our specific case, we aim to accurately classify patients into categories of either diseased or healthy based on graphs constructed from their brain scan data.
+The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$. In this project, we aim to accurately classify patients into either diseased or healthy based on graphs constructed from their brain scan data.
 
 ## Methods
 
-methods
-
-### Graph Kernels
+### 1. Graph Kernels
 
 <img src="img/SVC.png" alt="SVC" width="1000"/>
-<figcaption align = "center"><b>Fig.1 - Support Vector Classifiers with Kernels</b></figcaption>
+<figcaption align = "center"><b>Fig.1 - Support Vector Machines with Kernels</b></figcaption>
 <br/>
 
-<img src="img/GKNN.png" alt="Graph Kernel GNN" width="1000"/>
-<figcaption align = "center"><b>Fig.2 - Example Architecture of Graph Kernel GNN</b></figcaption>
-<br/>
+For SVM, we computed three kernels: Weisfeiler-Lehman (WL), Weisfeiler-Lehman Optimal Assignment (WLOA), and propagation (Prop). The choice of these kernels is motivated by exploiting structural information (i.e., subgraphs) in the brain networks.
 
-### Graph Neural Networks (GNN's)
+### 2. Graph Convolutional Networks (GCN's)
 
 <img src="img/BrainGB_final.png" alt="BrainGB" width="1000"/>
-<figcaption align = "center"><b>Fig.3 - BrainGB Framework</b></figcaption>
+<figcaption align = "center"><b>Fig.2 - BrainGB Framework</b></figcaption>
 <br/>
 
+### 3. Merging Graph Kernels and GNN's
+
+<img src="img/GKNN.png" alt="Graph Kernel GNN" width="1000"/>
+<figcaption align = "center"><b>Fig.3 - Example Architecture of Graph Kernel GNN</b></figcaption>
+<br/>
+
+To leverage the higher order structural information given by graph kernels and local information given by GCN's, we implemented GNN's that incorporated various graph kernels (WL, WLOA, etc.) and benchmarked their performance on our dataset.
 
 ## Benchmarks
 
-### BrainGB Benchmark
+### BrainGB Classification Accuracy (Test Set)
 
 | Dataset   | Accuracy            | F1                  | AUC                 |
 |-----------|---------------------|---------------------|---------------------|
-| HIV - GCN | $51.43_{\pm 17.73}$ | $50.61_{\pm 12.87}$ | $49.23_{\pm 17.97}$ |
-| BP - GCN  | $61.74_{\pm 11.15}$ | $65.72_{\pm 7.84}$  | $61.06_{\pm 11.24}$ |
-| HIV - GAT | $57.14_{\pm 12.78}$ | $59.18_{\pm 21.87}$ | $51.43_{\pm 18.00}$ |
-| BP - GAT  | $55.63_{\pm 9.52}$  | $59.03_{\pm 9.54}$  | $55.49_{\pm 9.51}$  |
+| HIV-GCN (concat)      | $0.64_{\pm 0.15}$ | $0.59_{\pm 0.20}$ | $0.77_{\pm 0.20}$ |
+| BP-GCN (concat)       | $0.53_{\pm 0.13}$ | $0.51_{\pm 0.14}$  | $0.54_{\pm 0.16}$ |
+| HIV-GAT (concat)      | $0.73_{\pm 0.16}$ | $0.71_{\pm 0.17}$ | $0.81_{\pm 0.19}$ |
+| BP-GAT (concat)       | $0.53_{\pm 0.13}$  | $0.50_{\pm 0.13}$  | $0.57_{\pm 0.19}$  |
+| HIV-GCN (edge concat) | $0.71_{\pm 0.11}$ | $0.69_{\pm 0.12}$ | $0.77_{\pm 0.17}$ |
+| BP-GCN (edge concat)  | $0.63_{\pm 0.12}$ | $0.61_{\pm 0.13}$  | $0.61_{\pm 0.17}$ |
+| HIV-GAT (edge concat) | $0.69_{\pm 0.18}$ | $0.67_{\pm 0.19}$ | $0.73_{\pm 0.24}$ |
+| BP-GAT (edge concat)  | $0.52_{\pm 0.17}$  | $0.51_{\pm 0.16}$  | $0.59_{\pm 0.19}$  |
 <br/>
 
-### SVC Benchmark (Weisfeiler-Lehman)
+Both HIV and BP datasets were tested using GCN and GAT as labeled in the table. "Concat" and "edge concat" denote the message passing mechanism that was used in the experiment.
 
-| Dataset         | Threshold = 0.5     | Optimal Threshold*  |
+### SVC Classification Accuracy (Test Set)
+
+| Dataset         | Threshold = 0.5     | Optimal Threshold*  | 
 |-----------------|---------------------|---------------------|
-| HIV-dti (0.85*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
-| BP-dti (0.5*)   | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
-| HIV-fmri (0.2*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
-| BP-fmri (0.2*)  | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$ |
+| HIV-WL (0.2*)   | $0.59_{\pm 0.18}$   | $0.65_{\pm 0.17}$   |
+| BP-WL (0.4*)    | $0.53_{\pm 0.14}$   | $0.63_{\pm 0.19}$   |
+| HIV-WLOA (0.2*) | $0.59_{\pm 0.18}$   | $0.64_{\pm 0.15}$   |
+| BP-WLOA (0.4*)  | $0.54_{\pm 0.15}$   | $0.63_{\pm 0.18}$   |
+| HIV-Prop (0.2*) | $0.59_{\pm 0.18}$   | $0.65_{\pm 0.17}$   |
+| BP-Prop (0.4*)  | $0.54_{\pm 0.13}$   | $0.60_{\pm 0.17}$   |
 <br/>
 
-### SVC Benchmark (Graphlet Sampling, $k=3$)
-
-| Dataset         | Threshold = 0.5     | W-L Optimal Threshold* |
-|-----------------|---------------------|------------------------|
-| HIV-dti (0.85*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
-| BP-dti (0.5*)   | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
-| HIV-fmri (0.2*) | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
-| BP-fmri (0.2*)  | $51.43_{\pm 17.73}$ | $51.43_{\pm 17.73}$    |
-<br/>
-
-
-### Kernel Performance
+### Kernel Parameter Tests
 
 <p float="center">
-  <img src="img/propagation-kernel-performance.png" width="330" />
   <img src="img/WL-kernel-performance.png" width="330" /> 
   <img src="img/WLOA-kernel-performance.png" width="330" />
+  <img src="img/propagation-kernel-performance.png" width="330" />
 </p>
 
 ## Limitations and Discussion
@@ -93,12 +97,20 @@ Discussion: future research and improvements to study design
 
 ## Definitions
 
-defdef
+For technical details of implementing support vector classifiers (SVC) using the Python package [sklearn](https://scikit-learn.org/stable/), see this [link](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html).
+
+For the mathematical theory underlying SVC, see this [blog post](https://towardsdatascience.com/support-vector-machine-introduction-to-machine-learning-algorithms-934a444fca47).
+
+For an introduction to graph neural networks (GNN's), see this [blog post](https://distill.pub/2021/gnn-intro/).
 
 ## References
 
 [BrainGB: A Benchmark for Brain Network Analysis with Graph Neural Networks](https://arxiv.org/abs/2204.07054)
 
+[BrainNNExplainer: An Interpretable Graph Neural Network Framework for Brain Network based Disease Analysis](https://arxiv.org/abs/2107.05097)
+
 [Deep Graph Kernels](https://dl.acm.org/doi/abs/10.1145/2783258.2783417)
+
+[Graph Kernel Neural Networks](https://arxiv.org/abs/2112.07436)
 
 [KerGNNs: Interpretable Graph Neural Networks with Graph Kernels](https://www.aaai.org/AAAI22Papers/AAAI-6564.FengA.pdf)
