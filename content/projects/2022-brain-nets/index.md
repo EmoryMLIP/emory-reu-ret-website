@@ -17,15 +17,18 @@ For useful background and definitions refer to the [definitions](#definitions) s
 
 We are working with 2 datasets: one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been processed for us, as detailed in [section 3](https://arxiv.org/abs/2204.07054) of the paper authored by Cui et al. 
 
+## Problem Formulation
 The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions.
+
+### Classification Task
+
+The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$. In this project, we aim to accurately classify patients into either diseased or healthy based on graphs constructed from their brain scan data.
+
+### Implementation
 
 For implementation of support vector machines (SVM) with graph kernels, we utilized threshold rounding to remove edge weights and sparsify the adjacency matrices. While this results in information loss, it preserves the overall structure of the adjacency matrices and makes them usable for this particular classification method. Further manipulation creates a list of graph objects that are compatible with the Python package [GraKel](https://ysig.github.io/GraKeL/0.1a8/). 
 
 For implementation of graph convolutional networks (GCN's), we followed [BrainGB](https://github.com/HennyJie/BrainGB)'s code to create a data type that can be used with the Python package [PyG](https://pytorch-geometric.readthedocs.io/en/latest/).
-
-## Classification Task
-
-The standard graph classification task considers the problem of classifying graphs into two or more categories. The goal is to learn a model that maps graphs in the set of graphs $G$ to a set of labels $Y$. In this project, we aim to accurately classify patients into either diseased or healthy based on graphs constructed from their brain scan data.
 
 ## Methods
 
