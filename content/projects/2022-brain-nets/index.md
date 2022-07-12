@@ -4,7 +4,7 @@ date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
 featured: true
 weight : 100
-summary: 'Orchestrating behavior and cognition, human brains lie at the core of complex neurobiological systems. Understanding of the structures, functions and mechanisms inside the brains has been an intriguing pursuit throughout human history. Recent studies in neuroscience and brain imaging have reached the consensus that the interactions among brain regions are driving factors for neural development and disorders, but there has not been an understanding in what mathematical models should be used to analyze such interactions, a.k.a the brain networks. In this project, we will explore and analyze different approaches for the modeling of brain networks, especially ranging from traditional shallow graph models to modern deep graph neural networks, towards the analysis of mental disorders, such as PTSD, depression and substance misuse. We will adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and quantitatively evaluate them in the standard graph classification setting.'
+summary: 'Orchestrating behavior and cognition, human brains lie at the core of complex neurobiological systems. Understanding the structures, functions, and mechanisms inside the brain is the main goal of modern neuroscience research. Recent studies in neuroscience and brain imaging have reached the consensus that the interactions among brain regions are driving factors for neural development and disorders, but determining what types of mathematical models should be used to analyze such interactions is a current area of research. In this project, we explore and analyze different approaches for modeling brain networks, ranging from traditional shallow graph models to modern deep graph neural networks. The goal of these models is to aid in the analysis of mental disorders such as PTSD, depression, and substance misuse and to harness modern computational methods to improve classification accuracy of pre-existing models that aim to predict whether a brain is diseased or healthy. We will adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and quantitatively evaluate them in the standard graph classification setting.'
 tags: ["Summer 2022"]
 ---
 # Overview: Comparing Shallow vs. Deep Brain Network Models
@@ -15,7 +15,7 @@ For useful background and definitions refer to [Preliminaries](#preliminaries).
 
 # Datasets
 
-We are working with 2 datasets: one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been processed for us, as detailed in [Section 3](https://arxiv.org/abs/2204.07054) of the paper authored by Cui et al. 
+We are working with 2 datasets, one classifying human immunodeficiency virus (HIV) and one classifying bipolar disorder (BP). Each dataset consists of functional magnetic resonance imaging (fMRI) scans, diffusion tensor imaging (DTI) scans, and classification labels in the form of integers, where 1 indicates a healthy patient and -1 indicates an unhealthy patient. Both datasets have been processed for us, as detailed in [Section 3](https://arxiv.org/abs/2204.07054) of the paper authored by Cui et al.
 
 # Problem Formulation
 The DTI and FMRI brain scans of each patient $i$ are represented as weighted adjacency matrices $\mathbf{W}_i \in \mathbb{R}^{M \times M}$. FMRI scans are considered to be more robust than DTI scans, so our experiments prioritize working with them. Nodes in the brain network represent regions of interest (ROI), and edge links between nodes indicate the strength of the connection between the two regions.
@@ -57,7 +57,7 @@ To further improve the model, we also optimized the main parameter for the GraKe
 ## 3. Merging Graph Kernels and GNN's
 
 <img src="img/GKNN.png" alt="Graph Kernel GNN" width="1000"/>
-<figcaption align = "center"><b>Fig.3 - Example Architecture of Graph Kernel GNN</b></figcaption>
+<figcaption align = "center"><b>Fig.3 - GKNN Architecture</b></figcaption>
 <br/>
 
 To leverage the higher order structural information given by graph kernels and local information given by GCN's, we implemented GNN's that incorporated various graph kernels (WL, WLOA, etc.) and benchmarked their performance on our dataset.
@@ -105,7 +105,7 @@ Both HIV and BP datasets were tested using GCN and GAT as labeled in the table. 
 
 ## Limitations
 
-Due to our datasets consisting of less than 100 observations each, our trained models perform generally poorly and likely do not generalize well. Furthermore, lack of experience implementing end-to-end GNN pipelines delayed our progress in conducting experiments.
+Due to our datasets consisting of less than 100 patients each, our results may not generalize well beyond our specific dataset. If this study were to be replicated, a larger dataset would be ideal, but the expensive nature of brain imaging data and its processing requirements will pose some degree of limitation to any study that uses it. Additionally, brain imaging data is a highly protected data type due to the right to privacy of the patients whose brain scans are used in these experiments. This means that very little demographic data is available to researchers in conjunction with brain imaging data, if any is included at all.
 
 Another notable limitation is that of structure of the brain networks themselves. Specifically, it remains unclear what subgraphs and higher-order information are relevant in classifying brain scans as belonging to diseased or healthy individuals.
 
