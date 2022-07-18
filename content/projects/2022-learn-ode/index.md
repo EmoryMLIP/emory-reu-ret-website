@@ -14,9 +14,9 @@ tags: ["Summer 2022"]
 <!--Starting new section-->
 <!-- --- -->
 
-This post was written by Mathias Heider, Emma Hayes, and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
+This post was written by Emma Hayes, Mathias Heider, and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
 
-In addition to this post, the team has also created slides for a [midterm presentation]
+In addition to this post, the team has also created slides for a [midterm presentation], a poster blitz video, and a poster.
 
 
 
