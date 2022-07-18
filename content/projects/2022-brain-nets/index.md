@@ -7,7 +7,12 @@ weight : 100
 summary: 'Orchestrating behavior and cognition, human brains lie at the core of complex neurobiological systems. Understanding the structures, functions, and mechanisms inside the brain is the main goal of modern neuroscience research. Recent studies in neuroscience and brain imaging have reached the consensus that the interactions among brain regions are driving factors for neural development and disorders, but determining what types of mathematical models should be used to analyze such interactions is a current area of research. In this project, we explore and analyze different approaches for modeling brain networks, ranging from traditional shallow graph models to modern deep graph neural networks. The goal of these models is to aid in the analysis of mental disorders such as PTSD, depression, and substance misuse and to harness modern computational methods to improve classification accuracy of pre-existing models that aim to predict whether a brain is diseased or healthy. We will adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and quantitatively evaluate them in the standard graph classification setting.'
 tags: ["Summer 2022"]
 ---
-# Overview: Comparing Shallow vs. Deep Brain Network Models
+
+This post was written by Erica Choi, Sally Smith, and Ethan Young and published with minor edits. The team was advised by Professor Carl Yang.
+In addition to this post, the team has also created slides for a [midterm presentation](REU_Midterm_Presentation.pdf), a [poster blitz video](https://youtu.be/DLs1PkO8iJo), and a [poster](REU_Poster.pdf).
+
+
+# Comparing Shallow vs. Deep Brain Network Models
 
 We are comparing and benchmarking the performance of graph kernels and graph neural networks applied to disease classification based on neuroimaging data.
 For useful background and definitions refer to [Preliminaries](#preliminaries).
@@ -50,7 +55,7 @@ To further improve the model, we also optimized the main parameter for the GraKe
 
 ## 2. Graph Convolutional Networks (GCN's)
 
-<img src="img/BrainGB_final.png" alt="BrainGB" width="1000"/>
+<img src="img/BrainGB.png" alt="BrainGB" width="1000"/>
 <figcaption align = "center"><b>Fig.2 - BrainGB Framework</b></figcaption>
 <br/>
 
