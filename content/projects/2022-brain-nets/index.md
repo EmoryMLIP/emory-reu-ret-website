@@ -4,7 +4,7 @@ date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
 featured: true
 weight : 100
-summary: 'Orchestrating behavior and cognition, human brains lie at the core of complex neurobiological systems. Understanding the structures, functions, and mechanisms inside the brain is the main goal of modern neuroscience research. Recent studies in neuroscience and brain imaging have reached the consensus that the interactions among brain regions are driving factors for neural development and disorders, but determining what types of mathematical models should be used to analyze such interactions is a current area of research. In this project, we explore and analyze different approaches for modeling brain networks, ranging from traditional shallow graph models to modern deep graph neural networks. The goal of these models is to aid in the analysis of mental disorders such as PTSD, depression, and substance misuse and to harness modern computational methods to improve classification accuracy of pre-existing models that aim to predict whether a brain is diseased or healthy. We will adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and quantitatively evaluate them in the standard graph classification setting.'
+summary: 'Human brains are very complex organs, and there is lot that we don't know about them. Modern neuroscience research aims to understand more about the structures, functions, and mechanisms that make up the brain. Some recent studies have agreed that interactions among brain regions are related to neural development and mental disorders, and modeling these interactions is a way to gather further understanding of how brain regions, mental activity, and disease all affect one another. It isn't clear what kind of mathematical models will be most useful for the task of modeling neural activity, so mathematicians such as ourselves have risen to the task of building and testing mathematical models that could be useful to neuroscientists in the future. In this project, we explore and analyze different approaches for modeling brain networks, ranging from traditional shallow graph models to modern deep graph neural networks. The goal of these models is to aid in the analysis of mental disorders such as post-traumatic stress disorder (PTSD), bipolar disorder, depression, substance misuse, and other diseases that affect the brain, such as human immunodeficiency virus (HIV). We aim to harness modern computational methods to improve the accuracy of pre-existing models, specifically ones that aim to predict whether a brain is diseased or healthy based on data from brain scans. We adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and evaluate how well different models are able to accomplish the classification task. Our most successful model was able to classify brain scans as either HIV positive or HIV negative with an accuracy of 81%.'
 tags: ["Summer 2022"]
 ---
 
@@ -56,16 +56,25 @@ To further improve the model, we also optimized the main parameter for the GraKe
 ## 2. Graph Convolutional Networks (GCN's)
 
 <img src="img/BrainGB.png" alt="BrainGB" width="1000"/>
-<figcaption align = "center"><b>Fig.2 - BrainGB Framework</b></figcaption>
+<figcaption align = "center"><b>Fig.2 - BrainGB Framework </b></figcaption>
 <br/>
+
+We implement message passing GNNs (MPGNN) using the BrainGB Python package,
+which is built on the Pytorch and Pytorch Geometric libraries. Figure 2, adapted from [Cui et al.](https://arxiv.org/abs/2204.07054), visualizes the MPGNN architecture.
 
 ## 3. Merging Graph Kernels and GNN's
 
+To leverage the higher order structural information given by graph kernels and local information given by GCN's, we implemented GNN's that incorporated various graph kernels (WL, WLOA, etc.) and benchmarked their performance on our dataset. The frameworks of particular interest to us are:
+* the graph convolution layer (GKC) proposed by [Cosmo et al.](https://arxiv.org/abs/2112.07436), visualized in Figure 3, and
+* the kernel graph neural network (KerGNN) proposed by [Feng et al.](https://www.aaai.org/AAAI22Papers/AAAI-6564.FengA.pdf), visualized in Figure 5.
+
 <img src="img/GKNN.png" alt="Graph Kernel GNN" width="1000"/>
-<figcaption align = "center"><b>Fig.3 - GKNN Architecture</b></figcaption>
+<figcaption align = "center"><b>Fig.3 - GKNN Framework</b></figcaption>
 <br/>
 
-To leverage the higher order structural information given by graph kernels and local information given by GCN's, we implemented GNN's that incorporated various graph kernels (WL, WLOA, etc.) and benchmarked their performance on our dataset.
+<img src="img/KerGNN.png" alt="Graph Kernel GNN" width="1000"/>
+<figcaption align = "center"><b>Fig.5 - KerGNN Framework</b></figcaption>
+<br/>
 
 # Benchmarks
 
@@ -74,12 +83,12 @@ To leverage the higher order structural information given by graph kernels and l
 | Dataset   | Accuracy            | F1                  | AUC                 |
 |-----------|---------------------|---------------------|---------------------|
 | HIV-GCN (concat)      | $0.64_{\pm 0.15}$ | $0.59_{\pm 0.20}$ | $0.77_{\pm 0.20}$ |
-| BP-GCN (concat)       | $0.53_{\pm 0.13}$ | $0.51_{\pm 0.14}$  | $0.54_{\pm 0.16}$ |
 | HIV-GAT (concat)      | $0.73_{\pm 0.16}$ | $0.71_{\pm 0.17}$ | $0.81_{\pm 0.19}$ |
-| BP-GAT (concat)       | $0.53_{\pm 0.13}$  | $0.50_{\pm 0.13}$  | $0.57_{\pm 0.19}$  |
 | HIV-GCN (edge concat) | $0.71_{\pm 0.11}$ | $0.69_{\pm 0.12}$ | $0.77_{\pm 0.17}$ |
-| BP-GCN (edge concat)  | $0.63_{\pm 0.12}$ | $0.61_{\pm 0.13}$  | $0.61_{\pm 0.17}$ |
 | HIV-GAT (edge concat) | $0.69_{\pm 0.18}$ | $0.67_{\pm 0.19}$ | $0.73_{\pm 0.24}$ |
+| BP-GCN (concat)       | $0.53_{\pm 0.13}$ | $0.51_{\pm 0.14}$  | $0.54_{\pm 0.16}$ |
+| BP-GAT (concat)       | $0.53_{\pm 0.13}$  | $0.50_{\pm 0.13}$  | $0.57_{\pm 0.19}$  |
+| BP-GCN (edge concat)  | $0.63_{\pm 0.12}$ | $0.61_{\pm 0.13}$  | $0.61_{\pm 0.17}$ |
 | BP-GAT (edge concat)  | $0.52_{\pm 0.17}$  | $0.51_{\pm 0.16}$  | $0.59_{\pm 0.19}$  |
 
 Both HIV and BP datasets were tested using GCN and GAT as labeled in the table. "Concat" and "edge concat" denote the message passing mechanism that was used in the experiment.
@@ -91,10 +100,10 @@ Both HIV and BP datasets were tested using GCN and GAT as labeled in the table. 
 | Dataset         | Threshold = 0.5     | Optimal Threshold*  | 
 |-----------------|---------------------|---------------------|
 | HIV-WL (0.2*)   | $0.59_{\pm 0.18}$   | $0.65_{\pm 0.17}$   |
-| BP-WL (0.4*)    | $0.53_{\pm 0.14}$   | $0.63_{\pm 0.19}$   |
 | HIV-WLOA (0.2*) | $0.59_{\pm 0.18}$   | $0.64_{\pm 0.15}$   |
+| HIV-Prop (0.2*) | $0.63_{\pm 0.18}$   | $0.66_{\pm 0.15}$   |
+| BP-WL (0.4*)    | $0.53_{\pm 0.14}$   | $0.63_{\pm 0.19}$   |
 | BP-WLOA (0.4*)  | $0.54_{\pm 0.15}$   | $0.63_{\pm 0.18}$   |
-| HIV-Prop (0.2*) | $0.59_{\pm 0.18}$   | $0.65_{\pm 0.17}$   |
 | BP-Prop (0.4*)  | $0.54_{\pm 0.13}$   | $0.60_{\pm 0.17}$   |
 <br/>
 
