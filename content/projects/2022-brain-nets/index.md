@@ -8,6 +8,7 @@ summary: 'Human brains are very complex organs, and there is lot that we don't k
 tags: ["Summer 2022"]
 ---
 
+
 This post was written by Erica Choi, Sally Smith, and Ethan Young and published with minor edits. The team was advised by Professor Carl Yang.
 In addition to this post, the team has also created slides for a [midterm presentation](REU_Midterm_Presentation.pdf), a [poster blitz video](https://youtu.be/DLs1PkO8iJo), and a [poster](REU_Poster.pdf).
 
