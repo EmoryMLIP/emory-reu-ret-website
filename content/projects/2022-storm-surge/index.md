@@ -83,7 +83,7 @@ In this example we have used the ensemble Kalman filter method (ENKF) in order t
 
 The program used to model the glacier behavior and assimilate the data begins with choosing a set of initial conditions. Once the initial conditions are input to the model, which after taking a step using a Runge-Kutta 4th Order Method, is plugged into a Data Assimilation Method. Our main method is ENKF as previously mdentioned. Finally, the analyzed data from the assimilation is output and plugged back into the model. It should be noted that at sometimes the forecast output for the model is the same as the analyzed data.
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ScreenShot2022-07-07at17.21.17.png">
+  <img width="650" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ScreenShot2022-07-07at17.21.17.png">
 </p>
 <!--- Above is the Kalman Filter Diagram -->
 
