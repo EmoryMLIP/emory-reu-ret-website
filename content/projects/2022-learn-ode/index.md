@@ -26,7 +26,9 @@ Imagine a spring mass system (Figure 1). What if you wanted to find the location
 
 <p align="center">
 <img src=images/Simple_harmonic_oscillator.gif>
-<figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
+<p align = "center">
+Figure 1 - Spring Mass by Oleg Alexandrov
+</p>
 
 Our project aims to compute the value of the Hamiltonian for any given time and set of initial conditions using Hamiltonian Inspired neural networks. We will first introduce the mathematical background of our project and the novel technique we implemented for our forward propagation. Results will then be presented and analyzed. Lastly, we will compare our work to Greydanus \textit{et al} and discuss future work.
 
@@ -54,12 +56,18 @@ $$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\par
 Results:
 <p align="center">
 <img src=images/findingNemo.png width = "800">
-<figcaption align = "center"><b>Figure 2 - Spring Mass System [2] 1. Training Loss Graph 2. Learned Position Values over True Position Values 3. Relationship of Learned p and q over ground truth </b></figcaption>
+<p align = "center">
+Figure 2 - Spring Mass System 1. Training Loss Graph 2. Learned Position Values over True Position Values 3. Relationship of Learned p and q over ground truth
+</p>
+
 
 
 <p align="center">
 <img src=images/2Body.png width = "800">
-<figcaption align = "center"><b>Figure 3 - Two Body Problem [3] 1. Training Loss Graph 2. Learned Trajectories Graph over True Trajectories 3. Learned Energy over True Energy 4. Learned Position over True Position.  </b></figcaption>
+<p align = "center">
+Figure 3 - Two Body Problem 1. Training Loss Graph 2. Learned Trajectories Graph over True Trajectories 3. Learned Energy over True Energy 4. Learned Position over True Position.
+</p>
+
 
 
 
