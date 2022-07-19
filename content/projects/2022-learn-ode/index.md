@@ -45,22 +45,19 @@ When estimating coordinates of a Hamiltonian system, or the value of the Hamilto
 ##Learning Hamiltonians from Data
 
 To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from CITE. To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial \mathcal{H}_{\theta}}{\partial  \mathbf{p}}$ and $\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $\mathcal{H}_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
-\begin{equation}
-    \mathbf{p}_{\theta+1} = \mathbf{p}_{\theta} + h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}} \label{eq:6}
-\end{equation}
-\begin{equation*}
-    \mathbf{q}_{\theta+1} = \mathbf{q}_\theta - h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{p}}
-\end{equation*}
-The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs]{https://github.com/mathheider/Learn-ODEs-HINNs} for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
+$$\mathbf{p}_{\theta+1} = \mathbf{p}_{\theta} + h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}} \label{eq:6}$$
+$$\mathbf{q}_{\theta+1} = \mathbf{q}_\theta - h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{p}}$$
+
+  The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs]{https://github.com/mathheider/Learn-ODEs-HINNs} for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
 
 
 ##Results
   <p align="center">
-  <img src=findingNemo (3).png class="align center">
+  <img src=images/findingNemo (3).png class="align center">
   <figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
 
   <p align="center">
-  <img src=2 body final (1).png class="align center">
+  <img src=images/2 body final (1).png class="align center">
   <figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
 
 
