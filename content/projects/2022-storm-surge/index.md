@@ -1,5 +1,5 @@
 ---
-title: 'Data assimilation for Hurricane Storm Surge Modeling'
+title: 'Data assimilation for Glacier Modeling'
 date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
 featured: true
@@ -8,7 +8,7 @@ summary: 'Numerical models of coastal hydrodynamics play a vital role in underst
 tags: ["Summer 2022"]
 ---
 
- # Data Assimilation for Hurricane Storm Surge Modeling
+ # Data Assimilation for Glacier Modeling
 
 This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
 
