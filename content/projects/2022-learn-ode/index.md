@@ -28,7 +28,7 @@ Imagine a spring mass system (Figure 1). What if you wanted to find the location
 <img src=images/Simple_harmonic_oscillator.gif>
 <figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
 
-Our project aims to compute the value of the Hamiltonian for any given time and set of initial conditions using Hamiltonian Inspired neural networks. We will first introduce the mathematical background of our project and the novel technique we implemented for our forward propagation. Results will then be presented and analyzed. Lastly, we will compare our work to Greydanus et al and discuss future work.
+Our project aims to compute the value of the Hamiltonian for any given time and set of initial conditions using Hamiltonian Inspired neural networks. We will first introduce the mathematical background of our project and the novel technique we implemented for our forward propagation. Results will then be presented and analyzed. Lastly, we will compare our work to Greydanus \textit{et al} and discuss future work.
 
 
 
@@ -44,7 +44,7 @@ When estimating coordinates of a Hamiltonian system, or the value of the Hamilto
 
 ## Learning Hamiltonians from Data
 
-To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from [3](https://arxiv.org/abs/1705.03341). To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial H_{\theta}}{\partial \mathbf{p}}$ and $\frac{\partial H_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $H_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
+To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from [3](https://arxiv.org/abs/1705.03341). To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Ruthotto \textit{et al}’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial H_{\theta}}{\partial \mathbf{p}}$ and $\frac{\partial H_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $H_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
 $$\mathbf{p_{\theta+1}} = \mathbf{p_{\theta}} + h\frac{\partial H_{\theta}}{\partial \mathbf{q}} $$
 $$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\partial \mathbf{p}}$$
 
