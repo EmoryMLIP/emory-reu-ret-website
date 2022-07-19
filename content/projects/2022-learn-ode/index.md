@@ -42,7 +42,7 @@ When estimating coordinates of a Hamiltonian system, or the value of the Hamilto
 
 
 
-##Learning Hamiltonians from Data
+## Learning Hamiltonians from Data
 
 To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from CITE. To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial H_{\theta}}{\partial \mathbf{p}}$ and $\frac{\partial H_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $H_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
 $$\mathbf{p_{\theta+1}} = \mathbf{p_{\theta}} + h\frac{\partial H_{\theta}}{\partial \mathbf{q}} $$
@@ -51,18 +51,20 @@ $$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\par
   The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs](https://github.com/mathheider/Learn-ODEs-HINNs) for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
 
 
-##Results
-  <p align="center">
-  <img src=images/findingNemo (3).png class="align center">
-  <figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
-
-  <p align="center">
-  <img src=images/2 body final (1).png class="align center">
-  <figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
+Results:
+<p align="center">
+<img src=images/findingNemo (3).png>
+<figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
 
 
+<p align="center">
+<img src=images/2 body final (1).png>
+<figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
 
-## Comparison
+
+
+
+
 
 ## Information about Us
 Mathias Heider is a rising senior at the University of Delaware, majoring in Computer Science and Mathematics and Economics. His interest are in machine learning and data science specifically when it relates to dataset with bioinformatics applications. Outside of class, Mathias likes to ski, hangout with friends, and play video games
