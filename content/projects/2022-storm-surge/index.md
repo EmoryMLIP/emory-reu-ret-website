@@ -140,6 +140,15 @@ Using the facts we established in the previous two sections, we ran the model us
   <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/projections/L(t)projections.png">
 </p>
 
+### Sea Level Rise
+Using the formulas for $Q$ and $Q_g$ we can calculate the volume lost across the grounding line
+$$\ V_{gz} = W(Q-Q_g)t $$
+We then used the to calculate the volume out at all times and add it up to get accumulated volume loss. We then assume that the width of the glacier is 50 km(at least in the case we show here). To convert this to sea level rise, note that 394.67 km$^3$ of ice is equivalent $1$ mm of sea level and get the following projection of sea level rise. 
+
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/sea_level_rise_projections/w50.0km_sea_level_projection.png">
+</p>
+
 ## Next Steps and Other Applications
 Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
 
