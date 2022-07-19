@@ -55,63 +55,28 @@ When estimating coordinates of a Hamiltonian system or the value of the Hamilton
 
 
 
-## Materials and Methods
+##Learning Hamiltonians from Data
 
-We constructed two Residual Neural Networks and three Hamiltonian Neural Networks using three different discretization methods as forward propagation methods and utilizing the PyTorch package. Our initial ResNet was built using forward Euler as the forward propagation method, with our activation function $\sigma$ being the antiderivative of $tanh$. This method uses the current steps position to find the future step's. We used $$Y_{j+1} = Y_j + \mathbf{h}\sigma(Y_j  K_j + b_j)$$ [3] in our ResNet for this method.
-
-We then implemented the fourth order Runge-Kutta method (RK4) in a ResNet. This method
-finds four different slopes based on the current and next positions and times, then calculates
-the weighted average of those slopes and uses Euler's method to find the future position. It
-is three orders of magnitude more accurate than Euler's method. We used the following as our 
-implementation of the RK4 method in our ResNet
-$$Y_{j+1} = Y_j + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4)$$
-$$ k_1 = h * \sigma(y), k_2 = h * \sigma(y + h*\frac{k_1}{2})$$
-$$ k_2 = h * \sigma(y + h * \frac{k_2}{2}), k_3 = h * \sigma(y + h * k_3)$$
+To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from CITE. To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial \mathcal{H}_{\theta}}{\partial  \mathbf{p}}$ and $\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $\mathcal{H}_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
+\begin{equation}
+    \mathbf{p}_{\theta+1} = \mathbf{p}_{\theta} + h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}} \label{eq:6}
+\end{equation}
+\begin{equation*}
+    \mathbf{q}_{\theta+1} = \mathbf{q}_\theta - h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{p}}
+\end{equation*}
+The new values are then plugged into our MSE loss function. Using these techniques we created two HINNs for two different examples, those being the Simple Spring Mass System and the Two Body Problem. https://github.com/mathheider/Learn-ODEs-HINNs
 
 
-After implementing those methods in our ResNets, we decided to move to our first Hamiltonian Inspired Neural Network, beginning with RK4 as our forward propagation method. Once we had our HINN working, we decided to implement the Verlet method. We believed the Verlet method would work the best for our second order Hamiltonians because the Verlet method is symplectic and also second order.
-We used the following as our implementation of the Verlet method in our HINNs:
-$$z_{j + 1} = z_j - h\sigma(K_j^T y_j + b_j)$$ 
-$$y_{j+1} = y_j + h\sigma(K_j z_j + b_j)$$
+##Results
+  <p align="center">
+  <img src=findingNemo (3).png class="align center">
+  <figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
 
-In our ResNets and HINNs with their respective discretization methods, we had our network learn the y and z values for our Hamiltonian ODEs 
-from time data. To train our Neural Networks to output y and z data for our times, we input $t$, $y$, and $z$ and used one of our discretization 
-methods for our forward propagation. When testing, we need only to input $t$ and initial values for $y$ and $z$ to be able to learn the ODE and give 
-a prediction on some future time steps.
-
-
-Since all of us love math, we wanted to do more than just calculate the coordinates at any given time step, but also calculate the value of the 
-Hamiltonian. To do this, we created a new Hamiltonian Inspired Neural Network with the hess Quik package. The network inputs time and two 
-coordinates, y and z, and outputs the value of the Hamiltonian. This was built by using our Hamiltonian inspired forward propagation that was 
-already implemented, with both RK4 and Verlet methods. The back propagation used the autograd feature to calculate both $\frac{\partial H}{\partial z} \text{ and } \frac{\partial H}{\partial y}$. The 
-property of a Hamiltonian was then written as a system of first order ODEs with the value calculated for the partials on the right 
-side. Verlet method was implemented to predict the $y$ and $z$ values at different time steps to then be compared to the given 
-$y \text{ and } z$ values from the data set using with the mean squared error. The system is be able input a time and two initial coordinates, $y_0$ and $z_0$, and approximate the Hamiltonian value 
-at the given time point.
+  <p align="center">
+  <img src=2 body final (1).png class="align center">
+  <figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
 
 
-Talk about SINDy and using the PySINDy package ([4], [5]).
-
-PySINDy package
-
-->Description of what you input, what it does, how it is more interpretable 
-
-->Discuss what types of equations we used most? (whenever we get there)
-
-
-## Results
-
-<p align="center">
-<img src="images/HINN Verlet Loss.png" width="400" height="300"> 
-
-<p align="center">
-<img src="images/RK4 SHO Image.png" width="400" height="300">
-
-<p align="center">
-<img src="images/RK4 Graph Lines.png" width="400" height="300">
-
-
-Here we have results from our Hamiltonian Inspired Neural Net. This model attempts to predict the Hamiltonian value from an input of time and two initial coordinates, $y_0$ and $z_0$. Looking at the first graph in our results we see that the loss is consistency going down as the model continues to run. Our second graph show the attempted hamiltonian when compared to the true answer. The goal for this is to get a straight line as the hamiltonian values should be conserved over time. You can see that there is fluctuations as it is downward slopping. Are last graph is our predicted y and z graphed over the true y and z value. Here, you can see that our values overlap which shows our model is predicting the y and z very accurately. 
 
 ## Comparison
 
