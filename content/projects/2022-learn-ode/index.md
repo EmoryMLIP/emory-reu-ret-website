@@ -54,12 +54,12 @@ $$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\par
 Results:
 <p align="center">
 <img src=images/findingNemo.png>
-<figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
+<figcaption align = "center"><b>Figure 2 - Spring Mass System [2] 1. Training Loss Graph 2. Learned Position Values over True Position Values 3. Relationship of Learned p and q over ground truth </b></figcaption>
 
 
 <p align="center">
 <img src=images/2Body.png>
-<figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
+<figcaption align = "center"><b>Figure 3 - Two Body Problem [3] 1. Training Loss Graph 2. Learned Trajectories Graph over True Trajectories 3. Learned Energy over True Energy 4. Learned Position over True Position.  </b></figcaption>
 
 
 
