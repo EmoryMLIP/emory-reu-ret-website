@@ -69,7 +69,8 @@ Figure 3 - Two Body Problem 1. Training Loss Graph 2. Learned Trajectories Graph
 </p>
 
 
-
+## What's Next
+So our different graphs look very promising as our different learned values overlap with the true values. Moving foward we would like to attempt harder problems: instead of fixed time steps we would like to attempt variable time steps. And we would like to take on the Three Body Problem which unlike the past 2 have no analytical solution. 
 
 
 
@@ -80,6 +81,7 @@ Mathias Heider is a rising senior at the University of Delaware, majoring in Com
 Carrie Vanty is a rising senior at Middlebury College, majoring in mathematics. She loves working with ordinary differential equations in applied math. Outside of school, Carrie likes to ski, hike, and craft.
 
 Emma Hayes is a rising junior at Carnegie Mellon University, majoring in Computational and Applied Mathematics. She enjoys learning about new topics in mathematics and incorporating computer science into her work. Outside of class, Emma likes hiking, baking, and making art.
+
 
 ## References
 [1] https://en.wikipedia.org/wiki/Effective_mass_(spring%E2%80%93mass_system)#/media/File:Simple_harmonic_oscillator.gif
