@@ -58,7 +58,7 @@ Results:
 
 
 <p align="center">
-<img src=images/2body.png>
+<img src=images/2Body.png>
 <figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
 
 
