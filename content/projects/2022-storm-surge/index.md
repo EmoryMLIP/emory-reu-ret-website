@@ -10,7 +10,7 @@ tags: ["Summer 2022"]
 
  # Data Assimilation for Glacier Modeling
 
-This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), [blitz video](https://youtu.be/bGeOZ9G6IOc), poster, paper, and has written code.
+This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), [blitz video](https://www.youtube.com/watch?v=bGeOZ9G6IOc), poster, paper, and has written code.
 
 <!---What we've achieved -->
 
@@ -109,7 +109,7 @@ In the interest of lowering computational costs, we use the square difference in
 We ran the model for various observation schemes to find the best observation scheme, i.e. the times frames and frequencies which can produce a sufficiently small average square difference over the course of the model run. We applied this process to our model and found that for before 1900 the best observation frequency, while still using small number of observations, would be every 19 years for a total of 100 observations. Similarly, for the time frame of 1950-2300 we found that yearly observations for a total of 350 observations is the best frequency. 
 
 #### Mean Square Difference 0-1900
-<center>
+
 |\# Observations | H | L |
 |---|---|---|
 | 200 | 0.0044054 | 0.0125222 |
@@ -128,7 +128,7 @@ We ran the model for various observation schemes to find the best observation sc
 | 88 | 0.0314155 | 0.0172441 |
 | 44 | 0.0787454 | 0.0236401 |
 | 22 | 0.2535894 | 0.0575641 |
-</center>
+
 
 ### Model Runs 
 Using the facts we established in the previous two sections, we ran the model using EnKF for the time frame of 0-2022 in order to project $H$ and $L$ into the future up to the year 2300. The following plots show the results of this experiment, which we will use to help calculate $Q$ and $Q_g$ over time, and in turn use it to calculate sea level rise.
