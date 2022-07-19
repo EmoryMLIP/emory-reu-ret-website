@@ -17,7 +17,7 @@ tags: ["Summer 2022"]
 This post was written by Emma Hayes, [Mathias Heider](https://mathheider.github.io/), and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
 
 
-In addition to this post, the team has also created slides for a [midterm presentation](), a [poster blitz video](), and a [poster]().
+In addition to this post, the team has also created slides for a [midterm presentation](pdfs/presentation.pdf), a [poster blitz video](), and a [poster](pdfs/poster.pdf).
 
 
 
