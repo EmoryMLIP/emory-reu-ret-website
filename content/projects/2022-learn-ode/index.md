@@ -14,10 +14,10 @@ tags: ["Summer 2022"]
 <!--Starting new section-->
 <!-- --- -->
 
-This post was written by Emma Hayes, Mathias Heider, and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
-https://mathheider.github.io/
+This post was written by Emma Hayes, [Mathias Heider](https://mathheider.github.io/), and Carrie Vanty and published with minor edits. The team was advised by Dr. Deepanshu Verma.
 
-In addition to this post, the team has also created slides for a [midterm presentation], a poster blitz video, and a poster.
+
+In addition to this post, the team has also created slides for a [midterm presentation](pdfs/presentation.pdf), a [poster blitz video](), and a [poster](pdfs/poster.pdf).
 
 
 
@@ -33,7 +33,7 @@ Our project aims to compute the value of the Hamiltonian for any given time and 
 
 
 ## Background: 
-Often, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we began by looking at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$}. 
+Often, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we began by looking at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$. 
 $$Y_{j+1} = Y_j + \mathbf{h}\sigma(Y_j  K_j + b_j)$$
 In the context of our residual neural network, the ODE as forward propagation means that for each layer of the network, we will move one time step forward in the discretization of our network ODE. The weights and biases, $K$ and $b$, may change in between the layers depending on the given values in the network ODE. The output of our network is the Hamiltonian value at the given time, and from that we are able to approximate position and velocity values for the mass. 
 When estimating coordinates of a Hamiltonian system, or the value of the Hamiltonian itself, the Hamiltonian relationships are important for forward propagation. Hamiltonians intrinsically conserve energy, meaning the network is better able to learn conservation laws and predict examples with energy conservation. Without considering these relationships, it would be much more difficult for the network to learn conservation, which can cause a buildup of error. In many studies (cite), they have found that by using the Hamiltonian equations in Hamiltonian data sets, error has decreased. We plan to investigate this further and find which discretization methods and algorithms will perform the best.
@@ -44,11 +44,11 @@ When estimating coordinates of a Hamiltonian system, or the value of the Hamilto
 
 ##Learning Hamiltonians from Data
 
-To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from CITE. To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial \mathcal{H}_{\theta}}{\partial  \mathbf{p}}$ and $\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $\mathcal{H}_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
-$$\mathbf{p}_{\theta+1} = \mathbf{p}_{\theta} + h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{q}} \label{eq:6}$$
-$$\mathbf{q}_{\theta+1} = \mathbf{q}_\theta - h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{p}}$$
+To learn about Hamiltonian dynamics from data, we use neural networks. Specifically a modified version of the Residual Neural Network (RNN), which we call a Hamiltonian Inspired Neural Network (HINN) drawn from CITE. To create this HINN, we primarily used 2 packages - PyTorch and hessQuik. The difference between our HINN, and the traditional RNN and Lars’ HINN, is in our forward propagation method and how we input values into our MSE loss function. The forward propagation uses the autograd feature to calculate both $\frac{\partial H_{\theta}}{\partial \mathbf{p}}$ and $\frac{\partial H_{\theta}}{\partial \mathbf{q}}$, where $\theta$ are the network parameters we wish to optimize and $H_{\theta}$ is our network output. We then use these values in discretizing $\mathbf{p_{\theta}}$ and $\mathbf{q_{\theta}}$.
+$$\mathbf{p_{\theta+1}} = \mathbf{p_{\theta}} + h\frac{\partial H_{\theta}}{\partial \mathbf{q}} $$
+$$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\partial \mathbf{p}}$$
 
-  The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs]{https://github.com/mathheider/Learn-ODEs-HINNs} for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
+  The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs](https://github.com/mathheider/Learn-ODEs-HINNs) for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
 
 
 ##Results
