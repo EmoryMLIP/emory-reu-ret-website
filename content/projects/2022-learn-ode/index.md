@@ -53,12 +53,12 @@ $$\mathbf{q_{\theta+1}} = \mathbf{q_{\theta}} - h\frac{\partial H_{\theta}}{\par
 
 Results:
 <p align="center">
-<img src=images/findingNemo (3).png>
+<img src=images/findingNemo.png>
 <figcaption align = "center"><b>Figure 2 - Spring Mass System [2] </b></figcaption>
 
 
 <p align="center">
-<img src=images/2 body final (1).png>
+<img src=images/2body.png>
 <figcaption align = "center"><b>Figure 3 - Two Body Problem [2] </b></figcaption>
 
 
