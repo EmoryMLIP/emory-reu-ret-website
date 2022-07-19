@@ -98,11 +98,11 @@ where $x_t$ is the true state from the truth simulation at time $t$ and $x^a_t$ 
 In the interest of lowering computational costs, we use the square difference in order to minimize ensemble size while also minimizing error. To do this, we choose an ensemble size, calculate the square difference at each $t$, and then calculated the mean of all these square differences. We ran this calculation for ensembles sizes from 2 up to 75, and found that ensembles of size 7-10 were ideal as they were at the point where the average square difference hovers around the same value. 
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/Manuscript_Plots/Mean_Square_Difference_of_H.png">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/Mean_Square_Difference_of_H.png">
 </p>
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/Manuscript_Plots/Mean_Square_Difference_of_L.png">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/Mean_Square_Difference_of_L.png">
 </p>
 
 ### Observation Scheme
@@ -134,11 +134,11 @@ We ran the model for various observation schemes to find the best observation sc
 Using the facts we established in the previous two sections, we ran the model using EnKF for the time frame of 0-2022 in order to project $H$ and $L$ into the future up to the year 2300. The following plots show the results of this experiment, which we will use to help calculate $Q$ and $Q_g$ over time, and in turn use it to calculate sea level rise.
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/projections/H(t)projections.png">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)projections.png">
 </p>
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/projections/L(t)projections.png">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/L(t)projections.png">
 </p>
 
 ### Sea Level Rise
@@ -147,7 +147,7 @@ $$\ V_{gz} = W(Q-Q_g)t $$
 We then used the to calculate the volume out at all times and add it up to get accumulated volume loss. We then assume that the width of the glacier is 50 km(at least in the case we show here). To convert this to sea level rise, note that 394.67 km$^3$ of ice is equivalent $1$ mm of sea level and get the following projection of sea level rise. 
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/sea_level_rise_projections/w50.0km_sea_level_projection.png">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/w50.0km_sea_level_projection.png">
 </p>
 
 ## Next Steps and Other Applications
