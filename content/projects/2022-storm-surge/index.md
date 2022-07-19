@@ -10,7 +10,7 @@ tags: ["Summer 2022"]
 
  # Data Assimilation for Glacier Modeling
 
-This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park- Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
+This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
 
 <!---What we've achieved -->
 
@@ -102,7 +102,7 @@ Data assimilation can be used for many geophysical modeling tasks, such as weath
 ## About the Team
 
 ### Emily Corcoran
-Emily Corcoran is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
+[Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186) is a junior at New Jersey Institute of Technology, majoring in Mathematical Sciences with a concentration in Applied Statistics and Data Analysis. Before this REU, she has worked as a research assistant in her school's Visual Perception Lab. She is a student in the Albert Dorman Honors College and is an active member of NJIT's school yearbook and Knit 'n Crochet club. When she is not in class, she can be found reading, listening to music, or attending a local play.
  
 ### Logan Knudsen 
 Logan Knudsen is a senior at Texas A&amp;M University majoring in Mathematics with minors in Oceanography and Meteorology. Before the REU, he has worked doing research on Data Analysis using Benford's Law and as a Teaching Assistant. Logan is currently the President of Texas A&amp;M's Math Club and a member of student radio, KANM. When not in class, he can be found reading, playing the guitar or playing video games with his friends. Click [here](https://www.loganknudsen.com/) if you'd like to learn more about him.
