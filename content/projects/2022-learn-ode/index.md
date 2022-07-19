@@ -22,34 +22,21 @@ In addition to this post, the team has also created slides for a [midterm presen
 
 
 ## Project Overview: 
-Imagine a spring mass system (Figure 1). We want to be able to find the location of the mass at any given time point. In order to find the coordinates, we must understand the dynamics of the system. In a spring mass system, energy is conserved, so we chose to use a Hamiltonian Ordinary Differential Equation, which has the quality of energy conservation. To solve our problem, we use machine learning that uses Hamiltonians in the forward propagation to predict our coordinates.
+Imagine a spring mass system (Figure 1). What if you wanted to find the location of the mass at any given time point? In order to find this information, you must first understand the dynamics of the system. A spring mass system is an example of simple harmonic motion where total energy is conserved. This means that you can model the dynamics using a Hamiltonian Ordinary Differential Equation, which has the quality of energy conservation. To solve our problem, we use neural networks utilizing Hamiltonians in the forward propagation to predict our coordinates.
 
 <p align="center">
 <img src=images/Simple_harmonic_oscillator.gif>
 <figcaption align = "center"><b>Figure 1 - Spring Mass by Oleg Alexandrov [1]</b></figcaption>
 
-Our project aims to compute both a value for the Hamiltonian and coordinates for any given time using Hamiltonian Inspired Neural Networks. We will then compare our results to Sparse Identification of Nonlinear Dynamics ([4], [5]) to assess efficiency and accuracy. In order to build our neural network, we must first understand the background of machine learning. Then, we will discuss the mathematics behind our network, including differential equations and discretization choice. Results will then be presented and analyzed.
+Our project aims to compute the value of the Hamiltonian for any given time and set of initial conditions using Hamiltonian Inspired neural networks. We will first introduce the mathematical background of our project and the novel technique we implemented for our forward propagation. Results will then be presented and analyzed. Lastly, we will compare our work to Greydanus et al and discuss future work.
 
 
 
 ## Background: 
-In this project we heavily rely on machine learning, specifically deep learning. Machine Learning is the use of statistical learning and optimization methods that let computers analyze datasets and identify patterns. Deep learning is a type of machine learning and artificial intelligence (AI) that imitates the way humans gain certain types of knowledge. Neural Networks are an example of deep learning and are inspired by how the human brain works as they mimic the way neurons signal. 
-
-<p align="center">
-<img src=images/resnet.png width="370" height="300"  class="aligncenter"/>
-<figcaption align = "center"><b>Figure 2 - Neural Net by Carrie Vanty </b></figcaption>
-
-Neural Nets create an adaptive system that computers use to learn from their mistakes and improve continuously.In a neural network you have an input layer, output layer, and a varying number of hidden layers. Through these layers a function applies weights to solve a problem.  An issue that arises in traditional Neural Networks is the vanishing or exploding gradient problem, the training and test errors increasing the deeper you go in your network. Residual Neural Networks (RNNs) use skip connections to create residual blocks which can help with this issue. This changes how the network is mapped and allowing the model to skip a layer if it hurts the performance.
-
-<p align="center">
-<img src=images/Residual-Block.png class="align center">
-<figcaption align = "center"><b>Figure 3 - Residual Block [2] </b></figcaption>
-
-A lot of times in computer science, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we first wanted to look at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$. 
+Often, neural networks are thought of as a black box, where the actual inner-workings are not the main focus. However, since we are mathematicians, we want to understand how the network functions in order to best optimize it. For this reason, we began by looking at why and how ODEs were first used in neural networks. Ordinary differential equations were first used in Residual Neural Networks due to the similarity between the forward propagation equation and discretization of an ordinary differential equation. The only difference is multiplication of the step size, which we denote as $\mathbf{h}$}. 
 $$Y_{j+1} = Y_j + \mathbf{h}\sigma(Y_j  K_j + b_j)$$
-In the context of our residual neural network, the ODE as forward propagation means that for each layer of the network, we will move one time step forward in the discretization of our network ODE. The weights and biases, $K$ and $b$, may be changed in between the layers depending on the given values in the network ODE. The final outputs are additional coordinates that match new time data that would fit the overarching dynamics of the original system. An ODE for forward propagation has many benefits for continuous transformations and was used to develop the concept of Hamiltonian Inspired Neural Networks.
-
-When estimating coordinates of a Hamiltonian system or the value of the Hamiltonian itself, a Hamiltonian ODE should be used for forward propagation. Hamiltonians have energy conservation intrinsically built in them, which means there is less potential for error buildup when training in these examples. In many studies ([6], [3]), they have found that by using the Hamiltonian, error has decreased. We plan to investigate this further and find which discretization methods and algorithms will perform the best.
+In the context of our residual neural network, the ODE as forward propagation means that for each layer of the network, we will move one time step forward in the discretization of our network ODE. The weights and biases, $K$ and $b$, may change in between the layers depending on the given values in the network ODE. The output of our network is the Hamiltonian value at the given time, and from that we are able to approximate position and velocity values for the mass. 
+When estimating coordinates of a Hamiltonian system, or the value of the Hamiltonian itself, the Hamiltonian relationships are important for forward propagation. Hamiltonians intrinsically conserve energy, meaning the network is better able to learn conservation laws and predict examples with energy conservation. Without considering these relationships, it would be much more difficult for the network to learn conservation, which can cause a buildup of error. In many studies (cite), they have found that by using the Hamiltonian equations in Hamiltonian data sets, error has decreased. We plan to investigate this further and find which discretization methods and algorithms will perform the best.
 
 
 
@@ -64,7 +51,7 @@ To learn about Hamiltonian dynamics from data, we use neural networks. Specifica
 \begin{equation*}
     \mathbf{q}_{\theta+1} = \mathbf{q}_\theta - h\frac{\partial \mathcal{H}_{\theta}}{\partial \mathbf{p}}
 \end{equation*}
-The new values are then plugged into our MSE loss function. Using these techniques we created two HINNs for two different examples, those being the Simple Spring Mass System and the Two Body Problem. https://github.com/mathheider/Learn-ODEs-HINNs
+The new values are then plugged into our MSE loss function. Using these techniques we [created two HINNs]{https://github.com/mathheider/Learn-ODEs-HINNs} for two different examples, those being the Simple Spring Mass System and the Two Body Problem. 
 
 
 ##Results
