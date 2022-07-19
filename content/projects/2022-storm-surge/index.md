@@ -90,6 +90,21 @@ The program used to model the glacier behavior and assimilate the data begins wi
 
 <!---Results-->
 
+### Square Difference
+The error measure we use in the best ensemble size and observation scheme is the square difference, $d^2$, which we define $$\ d_t^2 = \left(x_t - x^a_t\right)^2 $$
+where $x_t$ is the true state from the truth simulation at time $t$ and $x^a_t$ is the analysis state at time $t$.
+
+### Ensemble Size
+In the interest of lowering computational costs, we use the square difference in order to minimize ensemble size while also minimizing error. To do this, we choose an ensemble size, calculate the square difference at each $t$, and then calculated the mean of all these square differences. We ran this calculation for ensembles sizes from 2 up to 75, and found that ensembles of size 7-10 were ideal as they were at the point where the average square difference hovers around the same value. 
+
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/Manuscript_Plots/Mean_Square_Difference_of_H.png">
+</p>
+
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/Manuscript_Plots/Mean_Square_Difference_of_L.png">
+</p>
+
 ## Next Steps and Other Applications
 Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
 
