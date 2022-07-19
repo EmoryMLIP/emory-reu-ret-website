@@ -70,7 +70,7 @@ Figure 3 - Two Body Problem 1. Training Loss Graph 2. Learned Trajectories Graph
 
 
 ## What's Next
-So our different graphs look very promising as our different learned values overlap with the true values. Moving foward we would like to attempt harder problems: instead of fixed time steps we would like to attempt variable time steps. And we would like to take on the Three Body Problem which unlike the past 2 have no analytical solution. 
+Currently our results look promising as our learned values closely match the ground truth values. Moving foward, we would like to add more complexity to our current examples: instead of fixed time steps, we would like to attempt variable time steps. We would also like to take on the Three Body Problem, which unlike our current examples has no analytical solution. 
 
 
 
