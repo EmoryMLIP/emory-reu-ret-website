@@ -109,6 +109,7 @@ In the interest of lowering computational costs, we use the square difference in
 We ran the model for various observation schemes to find the best observation scheme, i.e. the times frames and frequencies which can produce a sufficiently small average square difference over the course of the model run. We applied this process to our model and found that for before 1900 the best observation frequency, while still using small number of observations, would be every 19 years for a total of 100 observations. Similarly, for the time frame of 1950-2300 we found that yearly observations for a total of 350 observations is the best frequency. 
 
 #### Mean Square Difference 0-1900
+
 |\# Observations | H | L |
 |---|---|---|
 | 200 | 0.0044054 | 0.0125222 |
@@ -116,8 +117,6 @@ We ran the model for various observation schemes to find the best observation sc
 | 50 | 0.0563252 | 0.0613737 |
 | 25 | 0.0834296 | 0.0759587 |
 | 10 | 0.0952199 | 0.1685447 |
- |---|---|---|
-
 
 #### Mean Square Difference 1950-2300
 |\# Observations | H | L |
@@ -129,7 +128,17 @@ We ran the model for various observation schemes to find the best observation sc
 | 88 | 0.0314155 | 0.0172441 |
 | 44 | 0.0787454 | 0.0236401 |
 | 22 | 0.2535894 | 0.0575641 |
-|---|---|---|
+
+### Model Runs 
+Using the facts we established in the previous two sections, we ran the model using EnKF for the time frame of 0-2022 in order to project $H$ and $L$ into the future up to the year 2300. The following plots show the results of this experiment, which we will use to help calculate $Q$ and $Q_g$ over time, and in turn use it to calculate sea level rise.
+
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/projections/H(t)projections.png">
+</p>
+
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/StormSurge/blob/main/data_single_cases_analysis/projections/L(t)projections.png">
+</p>
 
 ## Next Steps and Other Applications
 Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
