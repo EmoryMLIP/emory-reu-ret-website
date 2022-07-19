@@ -10,7 +10,7 @@ tags: ["Summer 2022"]
 
  # Data Assimilation for Glacier Modeling
 
-This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), blitz video, poster, paper, and has written code.
+This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), [blitz video](https://youtu.be/bGeOZ9G6IOc), poster, paper, and has written code.
 
 <!---What we've achieved -->
 
