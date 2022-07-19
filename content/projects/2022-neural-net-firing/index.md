@@ -8,232 +8,209 @@ summary: 'The human brain sends signals using around 100 billion neurons connect
 tags: ["Summer 2022"]
 ---
 # Mathematical Modeling of Healthy and Parkinsonian Firing Patterns in the Primate Thalamocortical Motor Circuit
-Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease characterized by impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>18</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2</sup> We employ a mathematical model to investigate the interactions between motor circuit components in normal and parkinsonian states, ultimately developing a deeper understanding of how PD presents itself in the brain. 
-
-![Parkinson's disease symptoms](symptoms.jpg)
+Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease featuring impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>18</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2</sup> Specifically, PD is associated with the loss of dopaminergic neurons and altered neuronal oscillations in the beta-band (13-30 Hz).<sup>6</sup> We employ a mathematical model to investigate network connection changes within the motor circuit in order to better understand the transition from healthy to parkinsonian states in the brain. 
 # The Motor Circuit
-The basal ganglia, thalmus, and cortex are members of numerous segregated circuits and subcircuits in the brain, including the motor circuit; disruption in the flow of this circuit can lead to Parkinson's disease.<sup>3</sup> The striatum and subthalamic nucleus (STN) function as input receptors in the motor circuit, receiving signals from the supplementary motor area (SMA) and the primary motor cortex (M1). This input passes through the direct and indirect pathways in the motor circuit.<sup>2</sup> The direct pathway is composed of the connection from the striatum to the GPi to the thalamus; the indirect pathway flows from the striatum to the globus pallidus external (GPe), from the GPe to the STN, from the STN to the GPi, and from the GPi to the thalamus.<sup>4,5</sup> After the input has passed through one of these pathways, the internal segment of the globus pallidus (GPi) and the substantia nigra pars reticulata (SNr) subsequently release output signals to the thalamus and brainstem.<sup>2</sup> These relationships are demonstrated in the simplified model below.
-
-![Motor Circuit Simplified Diagram](basal.ganglia.jpg)
-
-The main cause of PD is the loss of dopaminergic neurons in the substantia nigra pars compacta (SNc), which in turn results in decreased levels of dopamine in the striatum.<sup>^6</sup> This dopamine loss results in significant changes in the basal ganglia's neuronal activity, hence disrupting the motor circuit's overall flow and inhibiting the brain's ability to regulate bodily movement.<sup>2</sup> Other projects, such as the 2019 paper by M. Caiola and M. Holmes, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>7</sup> Given the practical limitations associated with directly recording data concerning parkinsonian changes in neuronal activity in the thalamus and cortex, fitting a mathematical model to previously recorded data helps us to further investigate the effects of dopamine loss on thalamocortical neurons specifically.
-# Disadvantages of Individual Neuron Models
-Many attempts to model the activity of neuron networks are reduced models, which seek to simulate the behavior of a large population of neurons using a much smaller group of individual neurons.<sup>8</sup> The most widely known of these individual neuron mathematical models is the Hodgkin-Huxley model,<sup>9</sup> which provides the following nonlinear system that simulates an individual neuron's action potential firing dynamics with high accuracy:<sup>10,11</sup>
-
-![Hodgkin-Huxley Model](HH_model.png)
-
-In this system, <em>I</em> is the current per unit area, <em>C<sub>m</sub></em> is the cell capacitance, <em>V<sub>i</sub></em> is the equilibrium potential of the <em>i</em>-th ionic current, <em>g<sub>i</sub></em> is the maximum conductance of the <em>i</em>-th ionic current, <em>&alpha;<sub>i</sub></em> and <em>&beta;<sub>i</sub></em> are rate constants for the <em>i</em>-th ionic current (which vary with voltage instead of time), and <em>n</em>, <em>m</em> and <em>h</em> are activation probabilities such that 0 < <em>n</em>, <em>m</em>, <em>h</em> < 1.<sup>12</sup> 
-
-The FitzHugh-Nagumo model was derived from the Hodgkin-Huxley model and shares many of the same characteristics of its predecessor, such as all-or-nothing firing, as well as the lack of a saddle equilibrium and therefore the absence of a well-defined firing threshold.<sup>13</sup> However, the FitzHugh-Nagumo model is much less computationally complex than the Hodgkin-Huxley model since it can be reduced to the following two equations:
-
-![FitzHugh-Nagumo Model](FH-N_model.png)
-
-where <em>v</em> is the membrane potential, <em>w</em> is the recovery variable, <em>I</em> is the magnitude of the stimulus current, and <em>a</em>, <em>b</em>, and <em>&tau;</em> are positive constants, with the added condition that <em>&tau;</em> &Lt; 1.<sup>13</sup> 
-
-Both of the above models, as well as other existing individual neuron firing models, boast the advantage of highly accurate simulation of the firing behavior of an individual neuron, and therefore have many useful applications. However, these models tend to fall short when it comes to understanding the firing rate behavior, interactions, and interconnectedness of a large network of neurons such as the motor circuit.<sup>7</sup> The primate cortex alone contains millions of neurons and is just one component of the motor circuit.<sup>14</sup> Given that our network is on such a large scale, solving and implementing millions of systems of equations for each individual neuron is simply infeasible. Alternatively, some have proposed simulating a large network of neurons using a greatly reduced number of neurons. This approach poses the likely dilemma of over-simplifying the dynamics of a neuron network and hence losing the ability to apply any findings in a clinical setting. There is no clear solution to this issue, as it is unclear how many neurons are necessary to accurately simulate various regions of the brain (it's likely that so many neurons are necessary that even a simplified network would be too computationally expensive to solve using the individual neuron modeling approach).<sup>7</sup> Thus, in order to both accurately and efficiently model the firing rate dynamics of the motor circuit, we must utilize an approach that is not based on the use of individual neuron data.
+The basal ganglia, thalamus, and cortex are members of numerous segregated circuits and subcircuits in the brain, including the motor circuuit; disruption in the flow of this circuit can lead to Parkinson's disease.<sup>3</sup> The main cause of PD is the loss of dopaminergic neurons, which results in significant changes in the basal ganglia's neuronal activity, hence disrupting the motor circuit's overall flow and inhibiting the brain's ability to regulate bodily movement.<sup>2,6</sup> Other projects, such as the <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0129065718500211">2019 paper by M. Caiola and M. Holmes</a>, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>7</sup> Given the practical limitations associated with directly recording data concerning parkinsonian changes in neuronal activity in the thalamus and cortex, fitting a mathematical model to previously recorded data helps us to further investigate the effects of dopamine loss on thalamocortical neurons specifically.
 # Firing Rate Model
-Rather than relying on individual neuron models, an alternative approach is to use a network perspective in our model.<sup>15</sup>
+We choose to use a firing rate model to describe our system. This type of model outputs average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.This also eliminates the need to rely on individual neurons for our model.<sup>7</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
 
-In our analysis, we will expand the model developed by Caiola and Holmes<sup>7</sup> from three dimensions (three nuclei model) to five dimensions. The Caiola and Holmes model builds on the findings of Wilson and Cowan,<sup>16</sup> which were further explored by Dayan and Abbot, who hoped to develop an alternative to the preexisting accurate yet computationally complex models.<sup>17</sup> These firing rate models output average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.
-
-In a firing rate model, each unit of the model will produce an average firing rate, thus eliminating the need to rely on individual neurons for our model.<sup>7</sup> This average firing rate <em>y</em> can be found by solving: 
-
-<em>&tau;y'</em> = &minus;<em>y</em> &plus; <em>F</em>(<em>Wy</em> &plus; <em>h</em>)
-
-where <em>&tau;</em> is the vector of membrane time constants, <em>W</em> is the matrix of weights associated with the interactions between populations, <em>h</em> is the input coming from outside of the network, and <em>F</em> is the activation function.<sup>7</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
-
-A simplified circuit diagram of the thalamocortical motor circuit network is shown below, and provides the neuroscience basis for our model. The rounded squares each represent a population of neurons, which are connected by either excitatory (arrow-tipped lines) or inhibitory (circle-tipped lines) synaptic weights. The green circle represents the interneuron population of the thalamus and can be treated as a relay neuron or as a series of FitzHugh-Nagumo neurons.
+A simplified circuit diagram of the thalamocortical motor circuit network is shown below, and provides the neuroscience basis for our model. The rounded squares each represent a population of neurons, which are connected by either excitatory (arrow-tipped lines) or inhibitory (circle-tipped lines) synaptic weights. The green circle represents the interneuron population of the thalamus.
 
 ![Thalamocortical Loop Model](Thalamocortical.png)
 
 Treating the interneuron population as a "relay," <em>&gamma;</em>, we can establish the following system of equations:
 
-<em>&tau;<sub>1</sub>y'<sub>1</sub></em> = &minus;<em>y<sub>1</sub></em> &plus; <em>F<sub>1</sub></em>(<em>&beta;<sub>1</sub></em> &plus; <em>h</em>)
+<em>&tau;<sub>1</sub>y'<sub>1</sub></em> = &minus;<em>y<sub>1</sub></em> &plus; <em>f<sub>1</sub></em>(<em>&beta;<sub>1</sub></em> &plus; <em>h</em>)
 
-<em>&tau;<sub>2</sub>y'<sub>2</sub></em> = &minus;<em>y<sub>2</sub></em> &plus; <em>F<sub>2</sub></em>(<em>w<sub>12</sub>y<sub>1</sub></em> &plus; <em>w<sub>32</sub>y<sub>3</sub></em> &plus; <em>w<sub>42</sub>y<sub>4</sub></em> &minus; <em>w<sub>52</sub>y<sub>5</sub></em> &plus; <em>&gamma;</em> &plus; <em>b<sub>2</sub></em>)
+<em>&tau;<sub>2</sub>y'<sub>2</sub></em> = &minus;<em>y<sub>2</sub></em> &plus; <em>f<sub>2</sub></em>(<em>w<sub>12</sub>y<sub>1</sub></em> &plus; <em>w<sub>32</sub>y<sub>3</sub></em> &plus; <em>w<sub>42</sub>y<sub>4</sub></em> &minus; <em>w<sub>52</sub>y<sub>5</sub></em> &plus; <em>&gamma;</em> &plus; <em>b<sub>2</sub></em>)
 
-<em>&tau;<sub>3</sub>y'<sub>3</sub></em> = &minus;<em>y<sub>3</sub></em> &plus; <em>F<sub>3</sub></em>(<em>w<sub>23</sub>y<sub>2</sub></em> &plus; <em>w<sub>43</sub>y<sub>4</sub></em> &plus; <em>b<sub>3</sub></em>)
+<em>&tau;<sub>3</sub>y'<sub>3</sub></em> = &minus;<em>y<sub>3</sub></em> &plus; <em>f<sub>3</sub></em>(<em>w<sub>23</sub>y<sub>2</sub></em> &plus; <em>w<sub>43</sub>y<sub>4</sub></em> &plus; <em>b<sub>3</sub></em>)
 
-<em>&tau;<sub>4</sub>y'<sub>4</sub></em> = &minus;<em>y<sub>4</sub></em> &plus; <em>F<sub>4</sub></em>(<em>w<sub>34</sub>y<sub>3</sub></em> &plus; <em>b<sub>4</sub></em>)
+<em>&tau;<sub>4</sub>y'<sub>4</sub></em> = &minus;<em>y<sub>4</sub></em> &plus; <em>f<sub>4</sub></em>(<em>w<sub>34</sub>y<sub>3</sub></em> &plus; <em>b<sub>4</sub></em>)
 
-<em>&tau;<sub>5</sub>y'<sub>5</sub></em> = &minus;<em>y<sub>5</sub></em> &plus; <em>F<sub>5</sub></em>(<em>w<sub>45</sub>y<sub>4</sub></em> &plus; <em>b<sub>5</sub></em>)
+<em>&tau;<sub>5</sub>y'<sub>5</sub></em> = &minus;<em>y<sub>5</sub></em> &plus; <em>f<sub>5</sub></em>(<em>w<sub>45</sub>y<sub>4</sub></em> &plus; <em>b<sub>5</sub></em>)
   
 &gamma; = &minus;<em>w<sub>62</sub></em>(&minus;<em>w<sub>16</sub>y<sub>1</sub></em> &minus; <em>w<sub>56</sub>y<sub>5</sub></em> &plus; <em>w<sub>46</sub>y<sub>4</sub></em> &plus; <em>b<sub>6</sub></em>)
 
-where <em>y<sub>1</sub></em>, <em>y<sub>2</sub></em>, <em>y<sub>3</sub></em>, <em>y<sub>4</sub></em>, <em>y<sub>5</sub></em> are the firing rates for the GPi, thalamocortical loop (TC), corticothalamic layer 5 (CT5), corticothalamic layer 6 (CT6), and reticular nucleus (RTN), respectively. <em>w<sub>jk</sub></em> represents the weight of the firing rate flow from population <em>j</em> to population <em>k</em>. Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0, &tau;<sub><em>i</em></sub> > 0, and <em>F<sub>i</sub></em> represents the activation function for the <em>i</em>-th population.
+where <em>y<sub>1</sub></em>, <em>y<sub>2</sub></em>, <em>y<sub>3</sub></em>, <em>y<sub>4</sub></em>, <em>y<sub>5</sub></em> are the firing rates for the GPi, thalamocortical loop (TC), corticothalamic layer 5 (CT5), corticothalamic layer 6 (CT6), and reticular nucleus (RTN), respectively. Each <em>w<sub>jk</sub></em> represents the weight of the firing rate flow from population <em>j</em> to population <em>k</em>. Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0, &tau;<sub><em>i</em></sub> > 0, and <em>F<sub>i</sub></em> represents the activation function for the <em>i</em>-th population.
 
 This can be represented with vectors and matrices as:
 
 <em>T<strong>y'</strong></em> = &minus;<em><strong>y</strong></em> &plus; <em><strong>F</strong></em>(<em><strong>x</strong></em>) &xrArr; <em>T<strong>y'</strong></em> = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em>
-# Sigmoidal Activation Function and Its Approximations
-The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>19-21</sup> We closely modeled our sigmoidal activation function off of the model developed by Holgado <em>et al.</em>:<sup>22</sup>
-
-![Sigmoidal Activation Function](sig_act_func.png)
-
-In this model, <em>M<sub>i</sub></em> is the maximum firing rate, and <em>S<sub>i</sub></em> is the maximum slope. Following the example of Holgado <em>et al.</em>, we will assume <em>S<sub>i</sub></em> = 1. The baseline firing rate is <em>b<sub>i</sub></em>, meaning:
-
-<em>F<sub>i</sub></em>(0) = <em>b<sub>i</sub></em>
-
-Although this sigmoidal function closely approximates typical neuron discharge behavior, it creates a nonlinear system of equations for which we are unable to find steady states. In order to attain eigenvalues and be able to comment on the behavior of the model as a whole, we must establish a simpler activation function that still manages to approximate experimental neuron discharge behavior.<sup>7</sup>
-# Piecewise Linear Activation Function
-Although there are several options to approximate the sigmoidal activation function&mdash; namely a linear function, a rectification function, and a piecewise linear function&mdash; only the latter can feasbily be applied: in an experimental setting, a population of neurons will never fire at a rate below zero or above its maximum firing rate, but a linear or rectification function would allow neurons to fire at rates that are negative or that increase to infinity.<sup>7</sup> In order to approximate the sigmoidal function and satisfy the realistic constraints on the firing rate ranges of each neuron population, we choose a semi-linear piecewise function as our activation function:
+# Activation Function Selection
+The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>19-21</sup> However, this model creates a nonlinear system of equations for which it is impossible to find steady states. In order to attain eigenvalues and be able to comment on the behavior of the model as a whole, we must establish a simpler activation function that still manages to approximate experimental neuron discharge behavior.<sup>7</sup> Thus, we choose a piecewise linear (PWL) function as our activation function:
 
 ![Piecewise Linear Activation Function](pwl_act_func.png)
 
-Our model's system will therefore be composed of five piecewise linear equations. We can break down this system into 243 distinct linear regions in space. This allows us to solve for eigenvalues analytically, permitting us to investigate the system further and find a continuous solution. A piecewise linear activation function is ideal in our case, as it allows us to break down a complex system into linear pieces which can be solved and manipulated. 
+We can break down this system into 3<sup>5</sup> = 243 distinct linear regions in space, each with its own steady state (fixed point in space which the solution tends to as time increases). This allows us to solve for eigenvalues analytically, permitting us to investigate the system further and find a continuous solution. A piecewise linear activation function is ideal in our case, as it allows us to break down a complex system into linear pieces which can be solved and manipulated. 
 
 Below the approximation of the piecewise linear activation function to the sigmoidal approximation is shown, with the middle region outlined in green.
 
 ![Accuracy of Piecewise Linear Activation Function to the Sigmoidal Activation Function](color_pws.jpg)
 
 # Data Fitting and Error Functions
-This semi-linear firing rate model has a number of constant values that we must locate in experimental data and incorporate, namely the baseline firing rates, maximum firing rates, and membrane time constants for each neuron population involved in our simplified motor circuit model. We can record the maximum firing rate by gradually increasing the current we apply to a neuron until its firing rate levels out and using this level value as our maximum rate (since we have already established that a neuron's firing rate behaves sigmoidally). The baseline firing rate, according to Caiola and Holmes, is a neuron's average firing rate when "all inputs are chemically blocked."<sup>7</sup> The membrane time constant &tau; can be calculated as the product of the membrane resistance (<em>r<sub>m</sub></em>) and membrane capacitance (<em>c<sub>m</sub></em>). This constant measures the time it takes for a neuron's firing potential to decrease from its resting value to 63% of this resting value after receiving a charge.<sup>24</sup> We follow the precedent set by researchers working on previous firing rate models by noting that although the time constants in the firing rate model are not the same as membrane time constants, we will use membrane time constants in the place of the firing rate constants as this practice is the most established way of dealing with firing rate model time constants at this time.<sup>7,22,25,26</sup> We were able to find values for these parameters through literature review, although we were unable to source some of the primate firing rate baselines, maximums, and membrane time constants in previous studies. These parameters required that we make estimates informed by information from areas of the brain that behave similarly or data on these parameters from mice, rats, or cats.
+This semi-linear firing rate model has a number of constant values that we must locate in experimental data and incorporate, namely the baseline firing rates, maximum firing rates, and membrane time constants for each neuron population involved in our simplified motor circuit model. We were able to find values for these parameters through literature review, although some required that we make estimates informed by information from areas of the brain that behave similarly or data on these parameters from mice, rats, or cats. However, there does not seem to be data that documents the baseline firing rate for the thalamic interneuron population in the primate brain. Given our uncertainty about the true baseline firing rate value for the primate thalamic interneuron population, we decided to create two models, one with the low and one with the high baseline. The parameter values are shown in the table below:
 
-55 Hz is a generally accepted baseline firing rate value for GPi neurons.<sup>7,27,28,29,30</sup> These neurons have a maximum firing rate of about 200 Hz.<sup>31</sup> Due to difficulty finding recorded data on the GPi membrane time constant, we followed the example of Caiola and Holmes, who proposed using SNr's recorded time constant of 8 ms<sup>32</sup> given that SNr and GPi behave similarly.<sup>28,33</sup> 
-# Condition Search
-In order to conduct a search for each of our weights <em>w<sub>jk</sub></em>, we narrowed down the search by defining conditions for the healthy and parkinsonian solutions.
+<table>
+  <tr>
+    <td>Neuron Population</td>
+    <td><em>b<sub>i</sub></em></td>
+    <td><em>M<sub>i</sub></em></td>
+    <td><em>&tau;<sub>i</sub></em></td>
+  </tr>
+  <tr>
+    <td>GPi (<em>y</em><sub>1</sub>)</td>
+    <td>55 Hz<sup>7,27,28,29,30</sup></td>
+    <td>200 Hz<sup>31</sup></td>
+    <td>8 ms<sup>28,32,33</sup></td>
+  </tr>
+  <tr>
+    <td>TC (<em>y</em><sub>2</sub>)</td>
+    <td>18.5 Hz<sup>34</sup></td>
+    <td>300 Hz</td>
+    <td>25 ms</td>
+  </tr>
+  <tr>
+    <td>CT5 (<em>y</em><sub>3</sub>)</td>
+    <td>7.25 Hz<sup>35</sup></td>
+    <td>200 Hz</td>
+    <td>20 ms</td>
+  </tr>
+  <tr>
+    <td>CT6 (<em>y</em><sub>4</sub>)</td>
+    <td>7.25 Hz<sup>35</sup></td>
+    <td>200 Hz</td>
+    <td>15 ms</td>
+  </tr>
+  <tr>
+    <td>RTN (<em>y</em><sub>5</sub>)</td>
+    <td>25 Hz<sup>34</sup></td>
+    <td>500 Hz<sup>34</sup></td>
+    <td>16.51 ms</td>
+  </tr>
+  <tr>
+    <td>IN (<em>&gamma;</em>)</td>
+    <td>Low: 6 Hz<sup>36</sup> <br> High: 22.7 Hz<sup>37</sup></td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>
 
-If the system satisfies the following properties:
-1. The middle region is <strong>stable</strong> and contains its own steady state
-2. All the other regions are <strong>stable</strong>, ideally with their respective steady states all inside the middle region
+# Stability and Steady State Conditions
+No matter the disease state of our model, the neurons should not be at a state of maximal firing or absent firing for an extended period of time. Additionally, in Parkinsonian solutions, we should expect oscillations of firing rates. Thus the following must hold:
+1. Middle region contains its own steady state, and trajectories must not stabilize in another region.
+2. <strong>Healthy:</strong> Middle region is stable &xrarr; trajectories are thus forced to stabilize in the middle region, making the system globally asymptotically stable. <br> <strong>Parkinsonian:</strong> Middle region is unstable &xrarr; trajectories are thus forced to oscillate around the middle region, forming a globally stable limit cycle.
 
-then the system is <strong>globally asymptotically stable</strong> toward the middle.
-
-If the system satisfies the following properties:
-1. The middle region is <strong>unstable</strong> and contains its own steady state
-2. All the other regions are <strong>stable</strong>, ideally with their respective steady states all inside the middle region
-
-then the system will generate a <strong>stable limit cycle</strong> around the middle.
-
-<h3>Steady State Conditions</h3>
-
-A steady state is a fixed point for which the solution will not change as time progresses. There are two types of steady states:
-1. <strong>Stable:</strong> as t &xrarr; &infin;, the system tends toward that point.
-2. <strong>Unstable:</strong> as t &xrarr; &infin;, the system is repelled from that point.
-
-To solve for the steady states, we set the vector <em><strong>y'</strong></em> from our system equal to zero:
-
-<em>T<strong>y'</strong></em> = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em> &xrArr; 0 = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em> &xrArr; <em>A<strong>y</strong></em> = &minus;<em><strong>B</strong></em>
-
-where <em><strong>y</strong></em> = {<em>y</em><sub>1</sub>, <em>y</em><sub>2</sub>, <em>y</em><sub>3</sub>, <em>y</em><sub>4</sub>, <em>y</em><sub>5</sub>}
-
-We found conditions for each steady state to be in the middle by checking the inputs to the activation functions are above 0 and below max.
-
-<h3>Stability Conditions and Determinant Conditions</h3>
-
-We identified 3<sup>5</sup> = 243 regions, each corresponding to a matrix A. However, there were only 16 unique matrices. We found the eigenvalues for each matrix, and based on these solutions, we identifed three types of matrices:
-1. 10 matrices have all negative eigenvalues regardless of weights, so they are guaranteed to be stable. 
-2. 4 matrices have eigenvalues that are stable conditional on some weights.
-3. 2 matrices (including the middle region matrix) have complicated characteristic polynomials whose roots cannot be solved explicitly.
-
-For the two complex matrices, the Routh-Hurwitz Stability Criterion must be used to determine the stability conditions. In addition, since the eigenvalues of these two complex matrices are not all negative, we must also include a condition for the determinants to be less than zero, since this is not guaranteed. 
-# Weight Search: Healthy Solution
+To determine stability, the PWL activation function allows us to solve for the eigenvalues of each of the 243 regions explicitly. We found 3 possible cases: 
+1. The region is stable regardless of weights.
+2. The region's stability is conditional on weight values.
+3. The region (including the middle region) has eigenvalues that cannot be solved for analytically. Therefore, we used the <strong>Routh-Hurwitz Stability Criterion</strong> (RH) to derive 3 stability conditions.
+# Weight Search
 The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we tooka high estimate and a low estimate: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
 
 Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a healthy solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
 
-Low <em>b<sub>6</sub></em>: 
+Healthy Solution with Low <em>b<sub>6</sub></em>: 
 
 <table>
   <tr>
-    <td><em>w<sub>12</sub></em> = 26.277712910064</td>
-    <td><em>w<sub>16</sub></em> = 23.6946990764468</td>
-    <td><em>w<sub>23</sub></em> = 0.187338224676904</td>
-    <td><em>w<sub>32</sub></em> = 0.01</td>
+    <td><em>w<sub>12</sub></em> = 1.520384442</td>
+    <td><em>w<sub>16</sub></em> = 1.621278311</td>
+    <td><em>w<sub>23</sub></em> = 0.4962387866</td>
+    <td><em>w<sub>32</sub></em> = 1.117631687</td>
   </tr>
   <tr>
-    <td><em>w<sub>34</sub></em> = 0.296953472955362</td>
-    <td><em>w<sub>42</sub></em> = 9.08347957795368</td>
-    <td><em>w<sub>43</sub></em> = 0.73628505248342</td>
-    <td><em>w<sub>45</sub></em> = 1.14231725172093</td>
+    <td><em>w<sub>34</sub></em> = 0.1540248925</td>
+    <td><em>w<sub>42</sub></em> = 1.217895798</td>
+    <td><em>w<sub>43</sub></em> = 0.0672671083</td>
+    <td><em>w<sub>45</sub></em> = 1.542582263</td>
   </tr>
   <tr>
-    <td><em>w<sub>46</sub></em> = 27.9786220729639</td>
-    <td><em>w<sub>52</sub></em> = 48.2811002945517</td>
-    <td><em>w<sub>56</sub></em> = 9.87669703285501</td>
-    <td><em>w<sub>62</sub></em> = 0.283269372105734</td>
+    <td><em>w<sub>46</sub></em> = 9.049109867</td>
+    <td><em>w<sub>52</sub></em> = 4.5350845</td>
+    <td><em>w<sub>56</sub></em> = 0.3330689302</td>
+    <td><em>w<sub>62</sub></em> = 7.127373038</td>
   </tr>
 </table>
 
-High <em>b<sub>6</sub></em>: 
+Parkinsonian Solution with Low <em>b<sub>6</sub></em>: 
 
 <table>
   <tr>
-    <td><em>w<sub>12</sub></em> = 21.5333436192489</td>
-    <td><em>w<sub>16</sub></em> = 24.0926949820229</td>
-    <td><em>w<sub>23</sub></em> = 0.134715648975372</td>
-    <td><em>w<sub>32</sub></em> = 2.42612155214961</td>
+    <td><em>w<sub>12</sub></em> = 1.520384442</td>
+    <td><em>w<sub>16</sub></em> = 1.621278311</td>
+    <td><em>w<sub>23</sub></em> = 0.8691494663</td>
+    <td><em>w<sub>32</sub></em> = 0.5043792396</td>
   </tr>
   <tr>
-    <td><em>w<sub>34</sub></em> = 0.463360624976851</td>
-    <td><em>w<sub>42</sub></em> = 5.4900658617949</td>
-    <td><em>w<sub>43</sub></em> = 0.635370540369298</td>
-    <td><em>w<sub>45</sub></em> = 0.941692768930225</td>
+    <td><em>w<sub>34</sub></em> = 0.1540248925</td>
+    <td><em>w<sub>42</sub></em> = 1.217895798</td>
+    <td><em>w<sub>43</sub></em> = 0.0672671083</td>
+    <td><em>w<sub>45</sub></em> = 1.542582263</td>
   </tr>
   <tr>
-    <td><em>w<sub>46</sub></em> = 29.1041170955961</td>
-    <td><em>w<sub>52</sub></em> = 46.8925757833886</td>
-    <td><em>w<sub>56</sub></em> = 12.0028485256047</td>
-    <td><em>w<sub>62</sub></em> = 0.420934112622328</td>
+    <td><em>w<sub>46</sub></em> = 9.049109867</td>
+    <td><em>w<sub>52</sub></em> = 4.5350845</td>
+    <td><em>w<sub>56</sub></em> = 0.3330689302</td>
+    <td><em>w<sub>62</sub></em> = 7.127373038</td>
   </tr>
 </table>
 
-The solution for the high <em>b<sub>6</sub></em> is plotted below:
-
-![Rates of Healthy w/ High B](Rates_healthy_high.jpg)
+insert pics
 
 Each of the solutions tends toward a specific firing rate, showing that the solution is stable.
 
 Although it is impossible to graph a 5-D system, we can choose three dimensions out of the five and graph this in 3-D:
 
-![3-D of Healthy w/ High B](3D_healthy_high.jpg)
+insert pics
 
 It is clear that the line spirals inward to a point, showing that it is stable.
-# Weight Search: Parkinsonian Solution
+
 Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a parkinsonian solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
-Low <em>b<sub>6</sub></em>: 
+
+Healthy Solution with High <em>b<sub>6</sub></em>: 
 
 <table>
   <tr>
-    <td><em>w<sub>12</sub></em> = 4.4531</td>
-    <td><em>w<sub>16</sub></em> = 24.0877</td>
-    <td><em>w<sub>23</sub></em> = 0.0518</td>
-    <td><em>w<sub>32</sub></em> = 0.01</td>
+    <td><em>w<sub>12</sub></em> = 1.369676658</td>
+    <td><em>w<sub>16</sub></em> = 1.858041961</td>
+    <td><em>w<sub>23</sub></em> = 0.5298526616</td>
+    <td><em>w<sub>32</sub></em> = 1.028216437</td>
   </tr>
   <tr>
-    <td><em>w<sub>34</sub></em> = 0.7617</td>
-    <td><em>w<sub>42</sub></em> = 11.4534</td>
-    <td><em>w<sub>43</sub></em> = 0.0251</td>
-    <td><em>w<sub>45</sub></em> = 1.1806</td>
+    <td><em>w<sub>34</sub></em> = 0.1939248305</td>
+    <td><em>w<sub>42</sub></em> = 1.246656565</td>
+    <td><em>w<sub>43</sub></em> = 0.02150352807</td>
+    <td><em>w<sub>45</sub></em> = 1.431595807</td>
   </tr>
   <tr>
-    <td><em>w<sub>46</sub></em> = 34.7727</td>
-    <td><em>w<sub>52</sub></em> = 69.9986</td>
-    <td><em>w<sub>56</sub></em> = 0.01</td>
-    <td><em>w<sub>62</sub></em> = 2.8635</td>
+    <td><em>w<sub>46</sub></em> = 8.456749369</td>
+    <td><em>w<sub>52</sub></em> = 4.381617591</td>
+    <td><em>w<sub>56</sub></em> = 0.4765754294</td>
+    <td><em>w<sub>62</sub></em> = 5.843896231</td>
   </tr>
 </table>
 
-High <em>b<sub>6</sub></em>: 
+Parkinsonian Solution with High <em>b<sub>6</sub></em>: 
 
 <table>
   <tr>
-    <td><em>w<sub>12</sub></em> = 6.1004</td>
-    <td><em>w<sub>16</sub></em> = 23.99538328</td>
-    <td><em>w<sub>23</sub></em> = 0.05432368612</td>
-    <td><em>w<sub>32</sub></em> = 0.03834437045</td>
+    <td><em>w<sub>12</sub></em> = 1.369676658</td>
+    <td><em>w<sub>16</sub></em> = 1.858041961</td>
+    <td><em>w<sub>23</sub></em> = 0.9914473113</td>
+    <td><em>w<sub>32</sub></em> = 0.5548923727</td>
   </tr>
   <tr>
-    <td><em>w<sub>34</sub></em> = 0.7085133543</td>
-    <td><em>w<sub>42</sub></em> = 11.28990562</td>
-    <td><em>w<sub>43</sub></em> = 0.001</td>
-    <td><em>w<sub>45</sub></em> = 1.210166726</td>
+    <td><em>w<sub>34</sub></em> = 0.1939248305</td>
+    <td><em>w<sub>42</sub></em> = 1.246656565</td>
+    <td><em>w<sub>43</sub></em> = 0.02150352807</td>
+    <td><em>w<sub>45</sub></em> = 1.431595807</td>
   </tr>
   <tr>
-    <td><em>w<sub>46</sub></em> = 35.23780162</td>
-    <td><em>w<sub>52</sub></em> = 71.28434051</td>
-    <td><em>w<sub>56</sub></em> = 0.01051622632</td>
-    <td><em>w<sub>62</sub></em> = 2.816053182</td>
+    <td><em>w<sub>46</sub></em> = 8.456749369</td>
+    <td><em>w<sub>52</sub></em> = 4.381617591</td>
+    <td><em>w<sub>56</sub></em> = 0.4765754294</td>
+    <td><em>w<sub>62</sub></em> = 5.843896231</td>
   </tr>
 </table>
 
