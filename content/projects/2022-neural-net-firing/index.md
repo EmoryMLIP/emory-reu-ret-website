@@ -135,8 +135,9 @@ Healthy Solution with Low <em>b<sub>6</sub></em>:
 
 Below is shown the firing rate outputs using these weights.
 
-[!Healthy Low FR](healthylow_FR.jpg)
+![Healthy Low FR](healthylow_FR.jpg)
 
+Here, all firing rates tend toward a specifc value as time increases, so they are stable solutions. 
 
 Parkinsonian Solution with Low <em>b<sub>6</sub></em>: 
 
@@ -161,17 +162,11 @@ Parkinsonian Solution with Low <em>b<sub>6</sub></em>:
   </tr>
 </table>
 
-insert pics
+Below is shown the firing rate outputs using these weights.
 
-Each of the solutions tends toward a specific firing rate, showing that the solution is stable.
+![PD Low FR](PDlow_FR.jpg)
 
-Although it is impossible to graph a 5-D system, we can choose three dimensions out of the five and graph this in 3-D:
-
-insert pics
-
-It is clear that the line spirals inward to a point, showing that it is stable.
-
-Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a parkinsonian solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
+Here, several firing rates oscillate, indicating a limit cycle solution.
 
 Healthy Solution with High <em>b<sub>6</sub></em>: 
 
@@ -196,6 +191,12 @@ Healthy Solution with High <em>b<sub>6</sub></em>:
   </tr>
 </table>
 
+Below is shown the firing rate outputs using these weights.
+
+![Healthy High FR](healthyhigh_FR.jpg)
+
+Here, all firing rates tend toward a specifc value as time increases, so they are stable solutions. 
+
 Parkinsonian Solution with High <em>b<sub>6</sub></em>: 
 
 <table>
@@ -219,17 +220,27 @@ Parkinsonian Solution with High <em>b<sub>6</sub></em>:
   </tr>
 </table>
 
-The solution for the high <em>b<sub>6</sub></em> is plotted below:
+Below is shown the firing rate outputs using these weights.
 
-![Rates of PD w/ High B](Rates_PD_high.jpg)
+![PD Low FR](PDlow_FR.jpg)
 
-The TC solution oscillates around a firing rate, showing that it will produce a limit cycle solution.
+Here, several firing rates oscillate, indicating a limit cycle solution.
+# Weight Space
+We were interested in the role of the thalamus in parkinsonian dysfunction, so we explored the relationship between <em>w</em><sub>23</sub> and <em>w</em><sub>32</sub>, which represent the excitatory and inhibitory connections between TC and CT5. Forcing all correlating weights to be equal in healthy and parkinsonian solutions except <em>w</em><sub>23</sub> and <em>w</em><sub>32</sub>, we found a healthy solution that could be forced into a parkinsonian state by only altering <em>w</em><sub>23</sub> and <em>w</em><sub>32</sub>. In a parkinsonian solution, at least one of the Routh-Hurwitz stability conditions must be broken. We examined which condition or combination of conditions is broken when the system moves from a healthy to a parkinsonian state for different values of <em>w</em><sub>23</sub> and <em>w</em><sub>32</sub>. The region plot for the low <em>b</em><sub>6</sub> is shown below.
 
-Although it is impossible to graph a 5-D system, we can choose three dimensions out of the five and graph this in 3-D:
+![Region Plot Low b6](regplot_web.png)
 
-![3-D of PD w/ High B](3D_PD_high.jpg)
+# Conclusions and Future Directions
+<ul>
+  <li>Our model can represent the average firing rates of healthy and parkinsonian states in the thalamocortical motor circuit.</li>
+  <li>We established stability and steady state conditions for the system to be healthy or parkinsonian.</li>
+  <li>We have found multiple sets of weights that both satisfy the conditions and match the neuronal firing patterns in our <em>in-vivo</em> primate dataset.</li>
+  <li>We discovered that changing only the connection strength between TC and CT5 can force the system from a healthy to a parkinsonian state.</li>
+  <li><strong>Next steps:</strong></li> <ul>
+    <li>Examine the transition from both healthy to parkinsonian and parkinsonian to healthy.</li>
+    <li>Explore methods of biologically validating our model by pharmacologically manipulating the weights of motor circuit network connections.</li> </ul>
+</ul>
 
-Here, it is clear that the solution produces a limit cycle.
 # More About the Team
 1. <strong>Carly Ferrell</strong> is a rising senior at Mississippi State University majoring in mathematics and minoring in statistics and music with a concentration in voice. She is interested in utilizing her skills in applied mathematics and statistcs to research music, specifically music theory and sight singing. Outside class, she enjoys reading, dancing, singing, and composing music. 
 
