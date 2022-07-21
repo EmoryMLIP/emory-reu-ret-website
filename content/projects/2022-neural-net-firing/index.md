@@ -133,6 +133,11 @@ Healthy Solution with Low <em>b<sub>6</sub></em>:
   </tr>
 </table>
 
+Below is shown the firing rate outputs using these weights.
+
+[!Healthy Low FR](healthylow_FR.jpg)
+
+
 Parkinsonian Solution with Low <em>b<sub>6</sub></em>: 
 
 <table>
