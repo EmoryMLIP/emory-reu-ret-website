@@ -8,11 +8,11 @@ summary: 'The human brain sends signals using around 100 billion neurons connect
 tags: ["Summer 2022"]
 ---
 # Mathematical Modeling of Healthy and Parkinsonian Firing Patterns in the Primate Thalamocortical Motor Circuit
-Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease featuring impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>18</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2</sup> Specifically, PD is associated with the loss of dopaminergic neurons and altered neuronal oscillations in the beta-band (13-30 Hz).<sup>6</sup> We employ a mathematical model to investigate network connection changes within the motor circuit in order to better understand the transition from healthy to parkinsonian states in the brain. 
+Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease featuring impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>6</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2</sup> Specifically, PD is associated with the loss of dopaminergic neurons and altered neuronal oscillations in the beta-band (13-30 Hz).<sup>4</sup> We employ a mathematical model to investigate network connection changes within the motor circuit in order to better understand the transition from healthy to parkinsonian states in the brain. 
 # The Motor Circuit
-The basal ganglia, thalamus, and cortex are members of numerous segregated circuits and subcircuits in the brain, including the motor circuuit; disruption in the flow of this circuit can lead to Parkinson's disease.<sup>3</sup> The main cause of PD is the loss of dopaminergic neurons, which results in significant changes in the basal ganglia's neuronal activity, hence disrupting the motor circuit's overall flow and inhibiting the brain's ability to regulate bodily movement.<sup>2,6</sup> Other projects, such as the <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0129065718500211">2019 paper by M. Caiola and M. Holmes</a>, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>7</sup> Given the practical limitations associated with directly recording data concerning parkinsonian changes in neuronal activity in the thalamus and cortex, fitting a mathematical model to previously recorded data helps us to further investigate the effects of dopamine loss on thalamocortical neurons specifically.
+The basal ganglia, thalamus, and cortex are members of numerous segregated circuits and subcircuits in the brain, including the motor circuuit; disruption in the flow of this circuit can lead to Parkinson's disease.<sup>3</sup> The main cause of PD is the loss of dopaminergic neurons, which results in significant changes in the basal ganglia's neuronal activity, hence disrupting the motor circuit's overall flow and inhibiting the brain's ability to regulate bodily movement.<sup>2,4</sup> Other projects, such as the <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0129065718500211">2019 paper by M. Caiola and M. Holmes</a>, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>5</sup> Given the practical limitations associated with directly recording data concerning parkinsonian changes in neuronal activity in the thalamus and cortex, fitting a mathematical model to previously recorded data helps us to further investigate the effects of dopamine loss on thalamocortical neurons specifically.
 # Firing Rate Model
-We choose to use a firing rate model to describe our system. This type of model outputs average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.This also eliminates the need to rely on individual neurons for our model.<sup>7</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
+We choose to use a firing rate model to describe our system. This type of model outputs average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.This also eliminates the need to rely on individual neurons for our model.<sup>5</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
 
 A simplified circuit diagram of the thalamocortical motor circuit network is shown below, and provides the neuroscience basis for our model. The rounded squares each represent a population of neurons, which are connected by either excitatory (arrow-tipped lines) or inhibitory (circle-tipped lines) synaptic weights. The green circle represents the interneuron population of the thalamus.
 
@@ -38,7 +38,7 @@ This can be represented with vectors and matrices as:
 
 <em>T<strong>y'</strong></em> = &minus;<em><strong>y</strong></em> &plus; <em><strong>F</strong></em>(<em><strong>x</strong></em>) &xrArr; <em>T<strong>y'</strong></em> = <em>A<strong>y</strong></em> &plus; <em><strong>B</strong></em>
 # Activation Function Selection
-The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>19-21</sup> However, this model creates a nonlinear system of equations for which it is impossible to find steady states. In order to attain eigenvalues and be able to comment on the behavior of the model as a whole, we must establish a simpler activation function that still manages to approximate experimental neuron discharge behavior.<sup>7</sup> Thus, we choose a piecewise linear (PWL) function as our activation function:
+The choice of activation function for this model is significant, since it informs the behavior of the model. Although many different approaches to developing activation functions for neuronal mathematical modeling exist, previous studies have shown that a sigmoidal function is able to closely approximate the neuron discharge behavior recorded in experiments.<sup>7,8,9</sup> However, this model creates a nonlinear system of equations for which it is impossible to find steady states. In order to attain eigenvalues and be able to comment on the behavior of the model as a whole, we must establish a simpler activation function that still manages to approximate experimental neuron discharge behavior.<sup>5</sup> Thus, we choose a piecewise linear (PWL) function as our activation function:
 
 ![Piecewise Linear Activation Function](pwl_act_func.png)
 
@@ -60,37 +60,37 @@ This semi-linear firing rate model has a number of constant values that we must 
   </tr>
   <tr>
     <td>GPi (<em>y</em><sub>1</sub>)</td>
-    <td>55 Hz<sup>7,27,28,29,30</sup></td>
-    <td>200 Hz<sup>31</sup></td>
-    <td>8 ms<sup>28,32,33</sup></td>
+    <td>55 Hz<sup>5,10,11,12,13</sup></td>
+    <td>200 Hz<sup>14</sup></td>
+    <td>8 ms<sup>11,15,16</sup></td>
   </tr>
   <tr>
     <td>TC (<em>y</em><sub>2</sub>)</td>
-    <td>18.5 Hz<sup>34</sup></td>
+    <td>18.5 Hz<sup>17</sup></td>
     <td>300 Hz</td>
     <td>25 ms</td>
   </tr>
   <tr>
     <td>CT5 (<em>y</em><sub>3</sub>)</td>
-    <td>7.25 Hz<sup>35</sup></td>
+    <td>7.25 Hz<sup>18</sup></td>
     <td>200 Hz</td>
     <td>20 ms</td>
   </tr>
   <tr>
     <td>CT6 (<em>y</em><sub>4</sub>)</td>
-    <td>7.25 Hz<sup>35</sup></td>
+    <td>7.25 Hz<sup>18</sup></td>
     <td>200 Hz</td>
     <td>15 ms</td>
   </tr>
   <tr>
     <td>RTN (<em>y</em><sub>5</sub>)</td>
-    <td>25 Hz<sup>34</sup></td>
-    <td>500 Hz<sup>34</sup></td>
+    <td>25 Hz<sup>17</sup></td>
+    <td>500 Hz<sup>17</sup></td>
     <td>16.51 ms</td>
   </tr>
   <tr>
     <td>IN (<em>&gamma;</em>)</td>
-    <td>Low: 6 Hz<sup>36</sup> <br> High: 22.7 Hz<sup>37</sup></td>
+    <td>Low: 6 Hz<sup>19</sup> <br> High: 22.7 Hz<sup>20</sup></td>
     <td>N/A</td>
     <td>N/A</td>
   </tr>
@@ -264,25 +264,20 @@ We were interested in the role of the thalamus in parkinsonian dysfunction, so w
 1. Sveinbjornsdottir, S. (2016).The clinical symptoms of Parkinson's disease. <em>Journal of Neurochemistry, 139</em>(1), 318-324. https://doi.org/10.1111/jnc.13691.
 2. DeLong, M. R., & Wichmann, T. (2007). Circuits and circuit disorders of the basal ganglia. <em>Archives of Neurology, 64</em>(1), 20–24. https://doi.org/10.1001/archneur.64.1.20.
 3. Alexander, G. E., DeLong, M.R., & Strick, P.L. (1986). Parallel Organization of functionally segregated circuits linking basal ganglia and cortex. <em>Annual Review of Neuroscience, 9</em>(1), 357-381. https://doi.org/10.1146/annurev.ne.09.030186.002041
-5. Wichmann, T., & Delong, M.R. (2003). Functional neuroanatomy of the basal ganglia in Parkinson’s disease. <em>Advances in Neurology, 91</em>, 9–18.
-6. Galvan, A., Devergnas, A., & Wichmann, T. (2015). Alterations in neuronal activity in basal ganglia-thalamocortical circuits in the parkinsonian state. <em>Frontiers in Neuroanatomy, 9</em>, 5. https://doi.org/10.3389/fnana.2015.00005.
-7. Caiola, M., & Holmes, M. H. (2019). Model and analysis for the onset of parkinsonian firing patterns in a simplified basal ganglia. <em>International Journal of Neural Systems, 29</em>(1). https://doi.org/10.1142/S0129065718500211.
-8. Rubin, J. E., & Terman, D. (2004). High frequency stimulation of the subthalamic nucleus eliminates pathological thalamic rhythmicity in a computational model. <em>Journal of Computational Neuroscience, 16</em>(3), 211–235. https://doi.org/10.1023/B:JCNS.0000025686.47117.67.
-9. Hodgkin, A. L., & Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. <em>The Journal of Physiology, 117</em>(4), 500–544.
-10. Schwiening, C. J. (2012). A brief historical perspective: Hodgkin and Huxley. <em>The Journal of Physiology, 590</em>(Pt 11), 2571–2575. https://doi.org/10.1113/jphysiol.2012.230458
-11. Fang, X., Duan, S., & Wang, L. (2021). Memristive Hodgkin-Huxley Spiking Neuron Model for Reproducing Neuron Behaviors. <em>Frontiers in Neuroscience, 15</em>. \\https://www.frontiersin.org/article/10.3389/fnins.2021.730566.
-12. Rodríguez-Collado, A., & Rueda, C. (2021). A simple parametric representation of the Hodgkin-Huxley model. <em>PLoS ONE, 16</em>(7), e0254152. https://doi.org/10.1371/journal.pone.0254152
-13. Sherwood, W. E. (2014). FitzHugh-Nagumo model. <em>Encyclopedia of Computational Neuroscience</em>. https://link.springer.com/content/pdf/10.1007\%2F978-1-4614-7320-6\_147-1.pdf.
-14. Collins, C. E., Airey, D. C., Young, N. A., Leitch, D. B., & Kaas, J. H. (2010). Neuron densities vary across and within cortical areas in primates. <em>Proceedings of the National Academy of Sciences, 107</em>(36), 15927–15932. https://doi.org/10.1073
-15. McIntyre, C. C., & Hahn, P. J. (2010). Network Perspectives on the Mechanisms of Deep Brain Stimulation. <em>Neurobiology of Disease, 38</em>(3), 329–337. https://doi.org/10.1016/j.nbd.2009.09.022
-16. Wilson, H. R., & Cowan, J. D. (1972). Excitatory and Inhibitory Interactions in Localized Populations of Model Neurons. <em>Biophysical Journal, 12</em>(1), 1–24.
-17. Dayan, P., & Abbott, L. F. (2001). Theoretical neuroscience: Computational and mathematical modeling of neural systems. <em>Massachusetts Institute of Technology Press</em>.
-18. de Lau, L. M. L., & Breteler, M. M. B. (2006). Epidemiology of Parkinson's disease. <em>The Lancet Neurology, 5</em>(6), 525-535. https://doi.org/10.1016/S1474-4422(06)70471-9.
-19. Rall, W. (1955). Experimental monosynaptic input-output relations in the mammalian spinal cord. <em>Journal of Cellular and Comparative Physiology, 46</em>(3), 413–437. https://doi.org/10.1002/jcp.1030460303
-20. Wilson, C. J., & Bevan, M. D. (2011). Intrinsic dynamics and synaptic inputs control the activity patterns of subthalamic nucleus neurons in health and in Parkinson’s disease. <em>Neuroscience, 198</em>, 54–68. https://doi.org/10.1016/j.neuroscience.2011.06.049
-21. Nambu, A., & Llinaś, R. (1994). Electrophysiology of globus pallidus neurons in vitro. <em>Journal of Neurophysiology, 72</em>(3), 1127–1139. https://doi.org/10.1152/jn.1994.72.3.1127
-22. Holgado, A. J. N., Terry, J. R., & Bogacz, R. (2010). Conditions for the Generation of Beta Oscillations in the Subthalamic Nucleus–Globus Pallidus Network. <em>The Journal of Neuroscience, 30</em>(37), 12340–12352. https://doi.org/10.1523/JNEUROSCI.0817-10.2010
-23. Ermentrout, G.B., & Terman, D.H. (2010). <em>Mathematical Foundations of Neuroscience</em>. Springer New York. https://doi.org/10.1007/978-0-387-87708-2
-24. Isokawa, M. (1997). Membrane time constant as a tool to assess cell degeneration. <em>Brain Research Protocols, 1</em>(2), 114–116. https://doi.org/10.1016/S1385-299X(96)00016-5
-25. Pavlides, A., John Hogan, S., & Bogacz, R. (2012). Improved conditions for the generation of beta oscillations in the subthalamic nucleus–globus pallidus network. <em>European Journal of Neuroscience, 36</em>(2), 2229–2239. https://doi.org/10.1111/j.1460-9568.2012.08105.x
-26. Pavlides, A., Hogan, S. J., & Bogacz, R. (2015). Computational Models Describing Possible Mechanisms for Generation of Excessive Beta Oscillations in Parkinson’s Disease. <em>PLOS Computational Biology, 11</em>(12), e1004609. https://doi.org/10.1371/journal.pcbi.1004609
+4. Galvan, A., Devergnas, A., & Wichmann, T. (2015). Alterations in neuronal activity in basal ganglia-thalamocortical circuits in the parkinsonian state. <em>Frontiers in Neuroanatomy, 9</em>, 5. https://doi.org/10.3389/fnana.2015.00005.
+5. Caiola, M., & Holmes, M. H. (2019). Model and analysis for the onset of parkinsonian firing patterns in a simplified basal ganglia. <em>International Journal of Neural Systems, 29</em>(1). https://doi.org/10.1142/S0129065718500211.
+6. de Lau, L. M. L., & Breteler, M. M. B. (2006). Epidemiology of Parkinson's disease. <em>The Lancet Neurology, 5</em>(6), 525-535. https://doi.org/10.1016/S1474-4422(06)70471-9.
+7. Rall, W. (1955). Experimental monosynaptic input-output relations in the mammalian spinal cord. <em>Journal of Cellular and Comparative Physiology, 46</em>(3), 413–437. https://doi.org/10.1002/jcp.1030460303
+8. Wilson, C. J., & Bevan, M. D. (2011). Intrinsic dynamics and synaptic inputs control the activity patterns of subthalamic nucleus neurons in health and in Parkinson’s disease. <em>Neuroscience, 198</em>, 54–68. https://doi.org/10.1016/j.neuroscience.2011.06.049
+9. Nambu, A., & Llinaś, R. (1994). Electrophysiology of globus pallidus neurons in vitro. <em>Journal of Neurophysiology, 72</em>(3), 1127–1139. https://doi.org/10.1152/jn.1994.72.3.1127
+10. Kita, H., Tachibana, Y., Nambu, A., & Chiken, S. (2005). Balance of Monosynaptic Excitatory and Disynaptic Inhibitory Responses of the Globus Pallidus Induced after Stimulation of the Subthalamic Nucleus in the Monkey. <em>Journal of Neuroscience, 25</em>(38), 8611–8619. https://doi.org/10.1523/JNEUROSCI.1719-05.2005
+11. Hikosaka, O. (2007). GABAergic output of the basal ganglia. <em>Progress in Brain Research, 160</em>, 209–226. https://doi.org/10.1016/S0079-6123(06)60012-5
+12. Wichmann, T., Bergman, H., Starr, P. A., Subramanian, T., Watts, R. L., & DeLong, M. R. (1999). Comparison of MPTP-induced changes in spontaneous neuronal discharge in the internal pallidal segment and in the substantia nigra pars reticulata in primates. <em>Experimental Brain Research, 125</em>(4), 397–409. https://doi.org/10.1007/s002210050696
+13. Bergman, H., Wichmann, T., Karmon, B., & DeLong, M. R. (1994). The primate subthalamic nucleus. II. Neuronal activity in the MPTP model of parkinsonism. <em>Journal of Neurophysiology, 72</em>(2), 507–520. https://doi.org/10.1152/jn.1994.72.2.507
+14. Hashimoto, T., Elder, C. M., Okun, M. S., Patrick, S. K., & Vitek, J. L. (2003). Stimulation of the Subthalamic Nucleus Changes the Firing Pattern of Pallidal Neurons. <em>The Journal of Neuroscience, 23</em>(5), 1916–1923. https://doi.org/10.1523/JNEUROSCI.23-05-01916.2003
+15. Nakanishi, H., Tamura, A., Kawai, K., & Yamamoto, K. (1997). Electrophysiological studies of rat substantia nigra neurons in an in vitro slice preparation after middle cerebral artery occlusion. <em>Neuroscience, 77</em>(4), 1021–1028. https://doi.org/10.1016/s0306-4522(96)00555-6
+16. Nambu, A. (2007). Globus pallidus internal segment. <em>Progress in Brain Research, 160</em>, 135–150. https://doi.org/10.1016/S0079-6123(06)60008-3
+17. van Albada, S. J., & Robinson, P. A. (2009). Mean-field modeling of the basal ganglia-thalamocortical system. I Firing rates in healthy and parkinsonian states. <em>Journal of Theoretical Biology, 257</em>(4), 642–663. https://doi.org/10.1016/j.jtbi.2008.12.018
+18. Opris, I., Hampson, R. E., Stanford, T. R., Gerhardt, G. A., & Deadwyler, S. A. (2011). Neural Activity in Frontal Cortical Cell Layers: Evidence for Columnar Sensorimotor Processing. <em>Journal of Cognitive Neuroscience, 23</em>(6), 1507–1521. https://doi.org/10.1162/jocn.2010.21534
+19. Ison, M. J., Mormann, F., Cerf, M., Koch, C., Fried, I., & Quiroga, R. Q. (2011). Selectivity of pyramidal cells and interneurons in the human medial temporal lobe. <em>Journal of Neurophysiology, 106</em>(4), 1713–1721. https://doi.org/10.1152/jn.00576.2010
+20. Putrino, D. F., Chen, Z., Ghosh, S., & Brown, E. N. (2011). Motor Cortical Networks for Skilled Movements Have Dynamic Properties That Are Related to Accurate Reaching. <em>Neural Plasticity, 2011</em>, 1–15. https://doi.org/10.1155/2011/413543
