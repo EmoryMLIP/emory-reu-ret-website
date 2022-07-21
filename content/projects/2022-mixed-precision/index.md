@@ -122,7 +122,7 @@ $$\min_{x} \{||Ax-b||_2^2+\lambda^2||x||_2^2\}$$, where $\lambda$ is generated b
 
 From the graph below, it is clear that even with 10% noise, the half graph looks very similar to that in double precision, better than what we have using CGLS. 
 <p align="center">
-<img src="img/cs_reg_0.1_blur.png" alt="draw" width="300"/> 
+<img src="img/cs_reg_0.1_blur.png" alt="draw" width="500"/> 
 </p>
 For image deblurring problem, We further comfirmed by plotting the error norm. 
 <p align="center">
@@ -133,7 +133,7 @@ We can see that the error norms of three precisions overlap, proving the result 
 ### Tomography Reconstruction Using CS
 We also ran the code to solve tomography reconstruction too, and the result is showed below. 
 <p align="center">
-<img src="img/cs_reg_0.1_tomo.png" alt="draw" width="300"/> 
+<img src="img/cs_reg_0.1_tomo.png" alt="draw" width="500"/> 
 </p>
 Although there is no inner product in CS, we still have overflow in half precision, which is because the A is too large. Therefore, we rescale A and b by diving both of by 100, so that the algorithm successfully ran to the end without generating NaNs. The image in half precision is as good as double precision, possessing clear boundaries and backgrounds. 
 
