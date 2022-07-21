@@ -7,7 +7,7 @@ weight : 100
 summary: 'Since numbers in the computer are represented with a fixed number of bits, loss of accuracy during calculation is unavoidable. At high precision where more bits are allocated to each number, round-off errors are typically small. On the other hand, doing calculation at a lower precision has the advantage of being much faster. This research focuses on experimenting doing arithmetic at different precision levels. We would first simulate low-precision arithmetic with the Matlab function chop on basic operations such as inner product of vectors, norms, matrix- matrix multiplication, etc. Then, we would modify iterative methods in the IR tools package to make the arithmetic happen at lower precision and mixed precision, run experiments on the image processing tasks and compare their performance at different precision level.'
 tags: ["Summer 2022"]
 ---
-This post was written by Xiaoyun Gong, Yizhou Chen(https://github.com/RileyCYZ), and Xiang Ji and published with minor edits. The team was advised by Dr. James Nagy. In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
+This post was written by [Xiaoyun Gong](https://github.com/kristinagxy), [Yizhou Chen](https://github.com/RileyCYZ), and Xiang Ji and published with minor edits. The team was advised by Dr. [James Nagy](https://github.com/jnagy1). In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
 ), a [poster blitz]() video, [code](), and a [paper]().
 
 ## In One Sentence:
@@ -34,7 +34,7 @@ Nowadays, most computer systems operate on double precision (64-bit) arithmetic.
 ## Simulating Low Precision
 
 ### Matlab function chop
-To simulate low precision arithmetic on our 64-bit computers, we have imported a MATLAB package called chop. The toolbox allows us to explore single precision, half precision, and other customized formats. Each input needs to be transformed, but the real work comes from chopping each operation. The code below is a toy example of how to calculate $x + y \times z$ in half precision with chop.
+To simulate low precision arithmetic on our 64-bit computers, we have imported a MATLAB package called [chop](https://www.mathworks.com/matlabcentral/fileexchange/70651-chop?s_tid=mwa_osa_a). The toolbox allows us to explore single precision, half precision, and other customized formats. Each input needs to be transformed, but the real work comes from chopping each operation. The code below is a toy example of how to calculate $x + y \times z$ in half precision with chop.
 
 <p align="center">
 <img src="img/chop_overview.png" alt="drawing" width="300"/> 
@@ -43,16 +43,7 @@ To simulate low precision arithmetic on our 64-bit computers, we have imported a
 ### Blocking
 When the number is being chopped from double precision to half precision, a lot of bits are dropped (from 64 bits to 16 bits). This would certainly cause a level of inaccuracy, so in order to reduce the errors a method called blocking is used. Blocking is the same as breaking a large operation into smaller chunks, where each is computed independently and the result is summed. 
 
-For example, there are two vectors of 6 elements:
-
-x = [x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>], y = [y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, y<sub>4</sub>, y<sub>5</sub>, y<sub>6</sub>].
-
-If we want to calculate the inner product between these two, instead of calculating them directly, we could break them into different groups, 2 in this case. Then, we have: 
-
-x1 = [x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>], y1 = [y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>];
-x2 = [x<sub>4</sub>, x<sub>5</sub>, x<sub>6</sub>], y2 = [y<sub>4</sub>, y<sub>5</sub>, y<sub>6</sub>].
-
-We calculate the inner product between x1 y1, and x2 y2, and at last we sum them up. The result we get is more accurate, and we plot the error diagram of inner product of tow random vectors. We do the inner product for each precision and block size for 20 times and calculate the average. The diagrams are the following, and the error are computed as the difference between the result of using chopped version of inner product function and using the function in matlab. 
+We do the inner product for each precision and block size for 20 times and calculate the average. The diagrams are the following, and the error are computed as the difference between the result of using chopped version of inner product function and using the function in matlab. 
 <p align="center">
 <img src="img/blocksize.png" alt="draw" width="700"/> 
 </p>
@@ -61,35 +52,26 @@ In the graph on the left hand side, the errors of half precision is the lagrgest
 ## Inverse Problems and Iterative Methods
 Inverse problems are problems where our goal is to find the internal or hidden information (input) from outside measurements (result). The internal data can be approximated by iterative methods, a repeating implementation of the same system of equations, with variables getting updated each round, hoping the value generated can be closer to the ture value we want each term. 
 
-
-
 ### Conjugate Gradient Method
-The conjugate gradient algorithm aims to solve the linear system Ax = b where A is SPD (symmetric and positive definite). 
+The [conjugate gradient algorithm] (https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf)aims to solve the linear system Ax = b where A is SPD (symmetric and positive definite),transforming the problem of finding solution to an optimization problem where we want to minimize $\phi(x)=\frac{1}{2}x^{T}Ax-x^{T}b$. This can be easily seen from $\nabla \phi (x) = 0$ -> $Ax-b=0$.
 
-In a very clever way, conjugate gradient method transforms the problem of finding solution to an optimization problem where we want to minimize 
-$\phi(x)=\frac{1}{2}x^{T}Ax-x^{T}b$. This can be easily seen from $\nabla \phi (x) = 0$ -> $Ax-b=0$.
-
-How this algorithm works is that in each iteration, x is allowed to explore subspaces of increasing dimensions in addition to the previous subspaces it has already explored (the subspaces here are the Krylov Spaces!). During that iteration, x is updated to the point where the A-norm of the error is minimized. Mathematically (meaning no noise or round-off errors), CG is guaranteed to converge within a limited number of steps. Specifically if A is a nxn matrix, it will find the solution in no greater than n steps.
-
-The CGLS algorithm is the least squares version of the CG method,applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
-
-One potential problem with this method for low precision is that the calculation of inner products can easily result in overflow (i.e. the number becomes too large to represent on computer with a limited number of bits). Therefore we tried another method below that avoids the use of inner products.
+In each step length the method provides us with a search direction and a step-length so that the error of this iteration is A-orthogonal to the search direction of the last oteration. Eventually it will converge to the min point. The CGLS algorithm is the least squares version of the CG method,applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
 
 ### Chebyshev Semi-Iterative Method
 
-The Chebyshev Semi-Iterative (CS) Method requires no inner product computation, which is great. But there is always the trade-off! The CS method needs the user to have an idea of the range of eigenvalues of the matrix A. The result given by CS is a linear combination of all solutions in each iteration, and the weights are obtained from the Chebyshev polynomial, which has the favorable property of having an absolute value no greater than 1 on the interval [-1,1] and grows rapidly outside this interval. This ensures that the result obtained in each iteration of CS is smaller than an upper bound.
+The Chebyshev Semi-Iterative (CS) Method requires no inner product computation, which is great because it will cause overflow easily in CG. But there is always the trade-off! The CS method needs the user to have an idea of the range of eigenvalues of the matrix A. The result given by CS is a linear combination of all solutions in each iteration, and the weights are obtained from the Chebyshev polynomial, which has the favorable property to ensure that the result obtained in each iteration of CS is smaller than an upper bound.
 
 ## Experiment!!
 
 ### IR Tools
-
-### Image Deblurring
-First, we used our modified version of cgls without regularization to run the image deblurring problem, and we used the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
+We modified CGLS method in [IRtool](https://github.com/jnagy1/IRtools.git) package in Matlab so that it can operate in lower precisions, and we used two test problems in the same package to investigate how the method performs at lower precision, mainly half precision. 
+### Image Deblurring Using CGLS
+First, we used our modified version of CGLS without regularization to run the image deblurring problem, and we used the function called PRshowx to plot the graph generated from x value in the last iteration. At the beginning we didn’t add any noise to the b in the problem of Ax = b, and the graphs are put below. 
 <p align="center">
 <img src="img/blur no noise.png" alt="draw" width="600"/> 
 </p>
 
-For the double precision, we used the original cgls method because it’s faster and we could have a reference. We used cgls_chop for the single and half precision, and the graph in single precision is similar to the graph in double precision. However, for the half precision, the background is not the same as that in double-precision or half-precision graph. The background looks redder and there are red and black squiggly lines.
+We used cgls_chop for the single and half precision, and the graph in single precision is similar to the graph in double precision. However, for the half precision, the background is not the same as that in double-precision or half-precision graph. The background looks redder and there are red and black squiggly lines.
 
 We also plotted the error norms of the x value we get in compared to the true value of x in different precision. 
 <p align="center">
@@ -100,36 +82,26 @@ From the graph, all three lines overlap from the beginning until around 20 itera
 
 After investigating the idealized situations where there is no noise in the output image, we then apply our code to graphs that are mixed with random noise to see how it is likely to perform in real life.
 
-For single precision arithmetic, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background turns into random red ripples while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.
-
-<p align="center">
-<img src="img/1.png" alt="draw" width="700"/> 
-</p>
-
-It is the same case with half precision arithmetic as well. 0.1% noise has almost no influence on the image, while 1% random data confuses the background, and 10% noise kills the graph.
+For half precision, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background turns into random red ripples while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.![image](https://user-images.githubusercontent.com/108775835/180298123-3d39d3ae-5527-4314-bcd2-a709db8b09ef.png)
 
 <p align="center">
 <img src="img/2.png" alt="draw" width="700"/> 
 </p>
 
-Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats, which is what is expected from CGLS. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, along each iteration, the blended noise also gets inverted. Eventually, the random data accumulates and dominates the solution at some point. Please also notice that we are showing the images constructed from the last iteration rather than the best one, since we do not have information on the true image in real life situations, and thus the error norm and the best iteration are unknown.
+Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, along each iteration, the blended noise also gets inverted. Eventually, the random data accumulates and dominates the solution at some point. Please also notice that we are showing the images constructed from the last iteration rather than the best one, since we do not have information on the true image in real life situations, and thus the error norm and the best iteration are unknown.
 
 <p align="center">
 <img src="img/3.png" alt="draw" width="700"/> 
 </p>
 
-### Tomography Reconstruction
-Below is the result when we run CGLS on the test problem at different precision levels. We can see for double and single precision, the reconstruction is doing well, yet for the fp16 problem we started to get this completely blue picture from the first iteration.
+### Tomography Reconstruction Using CGLS
+Below is the result when we run CGLS on the test problem at different precision levels. We can see for double and single precision, the reconstruction is doing well, yet for the fp16 problem we started to get this completely blue picture from the first iteration caused by overflow of Inf/-Inf.
 
 <p align="center">
 <img src="img/tomo_plot.png" alt="draw" width="800"/> 
 </p>
 
-After we took a closer look at the results the algorithm outputs, we noticed that they are all NaNs!
-
-If we go back to the algorithm, we can see that it is because overflow occurs when calculating inner products. Inner products gets overflowed easily! And once we get the first Inf/-Inf, NaNs would start to appear as we have Inf devided by Inf.
-
-Our solution to this is that we recaled Both A and b by dividing both of them by 100. And we get the result below:
+Our solution to this is that we rescaled Both A and b by dividing both of them by 100. And we get the result below:
 
 <p align="center">
 <img src="img/tomo_rescale.png" alt="draw" width="300"/> 
@@ -144,10 +116,6 @@ And then we add noise to the right hand side b, and plotted the error norms belo
 
 As in the image deblurring problem, the error norm first decreases then increases. In the cases with noise, this is mainly because noise started to take over in later part of the iteration. We still see the same behavior in the test problem even without noise at fp16. This is because the truncation errors got accumulated as the iteration goes on.
 
-We show an intersting case we came across when experimenting with the test problems here, which is also the tomography reconstruction problem, and the result we get below looks nothing like what it should be at all 😹
-
-<p align="center">
-<img src="img/interesting_case.png" alt="draw" width="300"/> 
-</p>
-
-We go back to the algorithm again and print out calculation at each step. We notice that it is also getting overflow in a matrix-vector multiplication from the first iteration. However, interestingly, this overflow does not result in NaNs. Instead, it make the x in the first iteration underflows to zero! And later in the iteration, no overflow or underflow occurs and the algorithm runs until it reaches the maximum number allowed. We think this might be the reason for this wierd output picture. The algorithm does not capture any information about x in the first iteration.
+### Image Deblurring Using CS
+In order to prevent overflow from occuring, we changed to CS algorithm (so no inner products used) and used chop to enable it run in lower precision. We applied Tikhonov regularization to CS after we find out that the algorithm performs poorly due to the close-to-zero singular value of A when it's ill-conditioned. Now we are solving:
+$\min_{x} {||Ax-b||<sub>2</sub><sup>2</sup>+\lambda<sup>2</sup>||x||<sub>2</sub><sup>2</sup>}$, where $\lambda$ is generated by the function [IRhybrid_lsqr] (https://www.emis.de/journals/ETNA/vol.28.2007-2008/pp149-167.dir/pp149-167.pdf).
