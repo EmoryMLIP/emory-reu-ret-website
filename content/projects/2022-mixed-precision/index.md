@@ -7,7 +7,7 @@ weight : 100
 summary: 'Since numbers in the computer are represented with a fixed number of bits, loss of accuracy during calculation is unavoidable. At high precision where more bits are allocated to each number, round-off errors are typically small. On the other hand, doing calculation at a lower precision has the advantage of being much faster. This research focuses on experimenting doing arithmetic at different precision levels. We would first simulate low-precision arithmetic with the Matlab function chop on basic operations such as inner product of vectors, norms, matrix- matrix multiplication, etc. Then, we would modify iterative methods in the IR tools package to make the arithmetic happen at lower precision and mixed precision, run experiments on the image processing tasks and compare their performance at different precision level.'
 tags: ["Summer 2022"]
 ---
-This post was written by Xiaoyun Gong, Yizhou Chen, and Xiang Ji and published with minor edits. The team was advised by Dr. James Nagy. In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
+This post was written by Xiaoyun Gong, Yizhou Chen(https://github.com/RileyCYZ), and Xiang Ji and published with minor edits. The team was advised by Dr. James Nagy. In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
 ), a [poster blitz]() video, [code](), and a [paper]().
 
 ## In One Sentence:
