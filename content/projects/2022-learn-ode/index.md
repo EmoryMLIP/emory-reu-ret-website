@@ -4,7 +4,7 @@ date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
 featured: true
 weight : 100
-summary: 'Assume you are given observations of a dynamical system at a few time points and want to learn its underlying ODE. Problems like this are abundant in scientific applications and there are several machine learning approaches to this problem. One approach with soaring popularity is called Neural ODEs, that is, ODEs whose dynamics are trainable neural networks, which makes them very flexible. There are a few different Neural ODE methods already developed, and our main goal is to extend two specific methods, taking elements from each and adding our own approaches to develop a new method.'
+summary: 'Assume you are given observations of a dynamical system at a few time points and want to learn its underlying ODE. Problems like this are abundant in scientific applications and there are several machine learning approaches to this problem. One approach with soaring popularity is called Neural ODEs, that is, ODEs whose dynamics are trainable Neural Networks, which makes them very flexible. There are a few different Neural ODE methods already developed, and our main goal is to extend two specific methods, taking elements from each and adding our own approaches to develop a new method.'
 tags: ["Summer 2022"]
 ---
 <!--more-->
