@@ -153,7 +153,7 @@ To determine stability, the PWL activation function allows us to solve for the e
 3. The region (including the middle region) has eigenvalues that cannot be solved for analytically. Therefore, we used the <strong>Routh-Hurwitz Stability Criterion</strong> (RH) to derive 3 stability conditions.
 
 # Weight Search
-The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we tooka high estimate and a low estimate: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
+The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we took two estimates: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
 
 Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a healthy solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
 
