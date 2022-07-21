@@ -8,15 +8,40 @@ summary: 'The human brain sends signals using around 100 billion neurons connect
 tags: ["Summer 2022"]
 ---
 # Mathematical Modeling of Healthy and Parkinsonian Firing Patterns in the Primate Thalamocortical Motor Circuit
-Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease featuring impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>6</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2</sup> Specifically, PD is associated with the loss of dopaminergic neurons and altered neuronal oscillations in the beta-band (13-30 Hz).<sup>4</sup> We employ a mathematical model to investigate network connection changes within the motor circuit in order to better understand the transition from healthy to parkinsonian states in the brain. 
-# The Motor Circuit
-The basal ganglia, thalamus, and cortex are members of numerous segregated circuits and subcircuits in the brain, including the motor circuuit; disruption in the flow of this circuit can lead to Parkinson's disease.<sup>3</sup> Other projects, such as the <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0129065718500211">2019 paper by M. Caiola and M. Holmes</a>, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>5</sup> Given the practical limitations associated with directly recording data concerning parkinsonian changes in neuronal activity in the thalamus and cortex, fitting a mathematical model to previously recorded data helps us to further investigate the effects of dopamine loss on thalamocortical neurons specifically.
+Parkinson's disease (PD) is a slowly progressing neuro-degenerative disease featuring impaired motor symptoms such as bradykinesia, muscular rigidity, and resting tremors.<sup>1</sup> In industrialized countries, PD affects 0.3% of all people and 1% of people over age 60.<sup>6</sup> The basal ganglia, motor thalamus, and motor cortex are three main components of the brain's motor circuit and are responsible for movement planning and execution; movement disorders such as PD can develop when the typical activity of this circuit is disrupted.<sup>2,3</sup> Specifically, PD is associated with the loss of dopaminergic neurons and altered neuronal oscillations in the beta-band (13-30 Hz).<sup>4</sup> Other projects, such as the <a href="https://www.worldscientific.com/doi/epdf/10.1142/S0129065718500211">2019 paper by M. Caiola and M. Holmes</a>, have investigated the changes in the basal ganglia neuronal activity from a mathematical modeling perspective, but little research has been done on the parkinsonism-associated changes in the areas of the thalamus and cortex which are involved in the motor circuit.<sup>5</sup> We employ a mathematical model to investigate network connection changes within the thalamocortical motor ciruit to better understand the transition from healthy to parkinsonian states in the brain.
 # Firing Rate Model
-We choose to use a firing rate model to describe our system. This type of model outputs average firing rates for each of the unit's models rather than individual spikes, which is ideal for a network such as the motor circuit. We can allow each neuron population to be a unit of this firing rate model, examining the firing rate interactions between populations in the form of average firing rates.This also eliminates the need to rely on individual neurons for our model.<sup>5</sup> This approach to modeling can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
+We choose to use a firing rate model to describe our system. This approach can successfully represent networks, since each unit in the model can represent a population of neurons receiving input (average firing rates) from other neuron populations.
 
 A simplified circuit diagram of the thalamocortical motor circuit network is shown below, and provides the neuroscience basis for our model. The rounded squares each represent a population of neurons, which are connected by either excitatory (arrow-tipped lines) or inhibitory (circle-tipped lines) synaptic weights. The green circle represents the interneuron population of the thalamus.
 
 ![Thalamocortical Loop Model](Thalamocortical.png)
+
+  <table>
+  <tr>
+    <td>GPi (<em>y</em><sub>1</sub>)</td>
+    <td>globus pallidus internal</td>
+  </tr>
+  <tr>
+    <td>TC (<em>y</em><sub>2</sub>)</td>
+    <td>thalamocortical neurons</td>
+  </tr>
+  <tr>
+    <td>CT5 (<em>y</em><sub>3</sub>)</td>
+    <td>corticothalamic layer 5</td>
+  </tr>
+  <tr>
+    <td>CT6 (<em>y</em><sub>4</sub>)</td>
+    <td>corticothalamic layer 6</td>
+  </tr>
+  <tr>
+    <td>RTN (<em>y</em><sub>5</sub>)</td>
+    <td>thalamic reticular nucleus</td>
+  </tr>
+  <tr>
+    <td>IN (<em>&gamma;</em>)</td>
+    <td>thalamic interneuron population</td>
+  </tr>
+</table>
 
 Treating the interneuron population as a "relay," <em>&gamma;</em>, we can establish the following system of equations:
 
@@ -32,7 +57,30 @@ Treating the interneuron population as a "relay," <em>&gamma;</em>, we can estab
   
 &gamma; = &minus;<em>w<sub>62</sub></em>(&minus;<em>w<sub>16</sub>y<sub>1</sub></em> &minus; <em>w<sub>56</sub>y<sub>5</sub></em> &plus; <em>w<sub>46</sub>y<sub>4</sub></em> &plus; <em>b<sub>6</sub></em>)
 
-where <em>y<sub>1</sub></em>, <em>y<sub>2</sub></em>, <em>y<sub>3</sub></em>, <em>y<sub>4</sub></em>, <em>y<sub>5</sub></em> are the firing rates for the GPi, thalamocortical loop (TC), corticothalamic layer 5 (CT5), corticothalamic layer 6 (CT6), and reticular nucleus (RTN), respectively. Each <em>w<sub>jk</sub></em> represents the weight of the firing rate flow from population <em>j</em> to population <em>k</em>. Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0, &tau;<sub><em>i</em></sub> > 0, and <em>F<sub>i</sub></em> represents the activation function for the <em>i</em>-th population.
+<table>
+  <tr>
+    <td><em>y<sub>i</sub></em></td>
+    <td>average neuronal population firing rate</td>
+  </tr>
+  <tr>
+    <td><em>w<sub>jk</sub></em></td>
+    <td>weight of the connection between populations <em>j</em> and <em>k</em></td>
+  </tr>
+  <tr>
+    <td><em>h</em></td>
+    <td>constant basal ganglia input</td>
+  </tr>
+  <tr>
+    <td><em>&tau<sub>i</sub></em></td>
+    <td>membrane time constant</td>
+  </tr>
+  <tr>
+    <td><em>f<sub>i</sub></em></td>
+    <td>activation function</td>
+  </tr>
+</table>
+
+Note that <em>w<sub>23</sub></em> represents the difference between the excitatory and inhibitory inputs from TC to CT5. Note also that <em>w<sub>jk</sub></em> > 0 and &tau;<sub><em>i</em></sub> > 0.
 
 This can be represented with vectors and matrices as:
 
@@ -44,9 +92,9 @@ Neurons traditionally respond to inputs sigmoidally.<sup>7,8,9</sup> However, th
 
 We can break down this system into 3<sup>5</sup> = 243 distinct linear regions in space, each with its own steady state (fixed point in space which the solution tends to as time increases). Out of these 243 regions, only the region in which each activation function is between 0 spikes/sec and its maximum firing rate contains a physiologically realistic steady state, further denoted as the middle region (outlined in green in the diagram below).
 
-![Accuracy of Piecewise Linear Activation Function to the Sigmoidal Activation Function](color_pws.jpg)
+![Accuracy of Piecewise Linear Activation Function to the Sigmoidal Activation Function](pws_sig.jpg)
 
-# Data Fitting and Error Functions
+# Data Matching
 This semi-linear firing rate model has a number of constant values that we must locate in experimental data and incorporate, namely the baseline firing rates, maximum firing rates, and membrane time constants for each neuron population involved in our simplified motor circuit model. We were able to find values for these parameters through literature review, although some required that we make estimates informed by information from areas of the brain that behave similarly or data on these parameters from mice, rats, or cats. However, there does not seem to be data that documents the baseline firing rate for the thalamic interneuron population in the primate brain. Given our uncertainty about the true baseline firing rate value for the primate thalamic interneuron population, we decided to create two models, one with the low and one with the high baseline. The parameter values are shown in the table below:
 
 <table>
@@ -103,6 +151,7 @@ To determine stability, the PWL activation function allows us to solve for the e
 1. The region is stable regardless of weights.
 2. The region's stability is conditional on weight values.
 3. The region (including the middle region) has eigenvalues that cannot be solved for analytically. Therefore, we used the <strong>Routh-Hurwitz Stability Criterion</strong> (RH) to derive 3 stability conditions.
+
 # Weight Search
 The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we tooka high estimate and a low estimate: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
 
