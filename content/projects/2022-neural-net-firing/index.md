@@ -155,9 +155,9 @@ To determine stability, the PWL activation function allows us to solve for the e
 # Weight Search
 The current literature does not specify the baseline firing rate for the interneuron population, <em>b<sub>6</sub></em>, so we took two estimates: <em>b<sub>6</sub></em> = 6 for the low estimate, and <em>b<sub>6</sub></em> = 22.7 for the high estimate. 
 
-Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a healthy solution for both the low and the high estimates of <em>b<sub>6</sub></em>, and they are shown below:
+Comparing our data to the predicted values our model outputted, we were able to minimize the sum of squared error between the two and find a healthy solution for both the low and the high estimates of <em>b<sub>6</sub></em>. The outputs for the low <em>b</em><sub>6</sub> are shown below:
 
-Healthy Solution with Low <em>b<sub>6</sub></em>: 
+Healthy Solution: 
 
 <table>
   <tr>
@@ -186,7 +186,7 @@ Below is shown the firing rate outputs using these weights.
 
 Here, all firing rates tend toward a specifc value as time increases, so they are stable solutions. 
 
-Parkinsonian Solution with Low <em>b<sub>6</sub></em>: 
+Parkinsonian Solution: 
 
 <table>
   <tr>
@@ -206,64 +206,6 @@ Parkinsonian Solution with Low <em>b<sub>6</sub></em>:
     <td><em>w<sub>52</sub></em> = 4.5350845</td>
     <td><em>w<sub>56</sub></em> = 0.3330689302</td>
     <td><em>w<sub>62</sub></em> = 7.127373038</td>
-  </tr>
-</table>
-
-Below is shown the firing rate outputs using these weights.
-
-![PD Low FR](PDlow_FR.jpg)
-
-Here, several firing rates oscillate, indicating a limit cycle solution.
-
-Healthy Solution with High <em>b<sub>6</sub></em>: 
-
-<table>
-  <tr>
-    <td><em>w<sub>12</sub></em> = 1.369676658</td>
-    <td><em>w<sub>16</sub></em> = 1.858041961</td>
-    <td><em>w<sub>23</sub></em> = 0.5298526616</td>
-    <td><em>w<sub>32</sub></em> = 1.028216437</td>
-  </tr>
-  <tr>
-    <td><em>w<sub>34</sub></em> = 0.1939248305</td>
-    <td><em>w<sub>42</sub></em> = 1.246656565</td>
-    <td><em>w<sub>43</sub></em> = 0.02150352807</td>
-    <td><em>w<sub>45</sub></em> = 1.431595807</td>
-  </tr>
-  <tr>
-    <td><em>w<sub>46</sub></em> = 8.456749369</td>
-    <td><em>w<sub>52</sub></em> = 4.381617591</td>
-    <td><em>w<sub>56</sub></em> = 0.4765754294</td>
-    <td><em>w<sub>62</sub></em> = 5.843896231</td>
-  </tr>
-</table>
-
-Below is shown the firing rate outputs using these weights.
-
-![Healthy High FR](healthyhigh_FR.jpg)
-
-Here, all firing rates tend toward a specifc value as time increases, so they are stable solutions. 
-
-Parkinsonian Solution with High <em>b<sub>6</sub></em>: 
-
-<table>
-  <tr>
-    <td><em>w<sub>12</sub></em> = 1.369676658</td>
-    <td><em>w<sub>16</sub></em> = 1.858041961</td>
-    <td><em>w<sub>23</sub></em> = 0.9914473113</td>
-    <td><em>w<sub>32</sub></em> = 0.5548923727</td>
-  </tr>
-  <tr>
-    <td><em>w<sub>34</sub></em> = 0.1939248305</td>
-    <td><em>w<sub>42</sub></em> = 1.246656565</td>
-    <td><em>w<sub>43</sub></em> = 0.02150352807</td>
-    <td><em>w<sub>45</sub></em> = 1.431595807</td>
-  </tr>
-  <tr>
-    <td><em>w<sub>46</sub></em> = 8.456749369</td>
-    <td><em>w<sub>52</sub></em> = 4.381617591</td>
-    <td><em>w<sub>56</sub></em> = 0.4765754294</td>
-    <td><em>w<sub>62</sub></em> = 5.843896231</td>
   </tr>
 </table>
 
