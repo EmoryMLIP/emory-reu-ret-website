@@ -71,7 +71,7 @@ Treating the interneuron population as a "relay," <em>&gamma;</em>, we can estab
     <td>constant basal ganglia input</td>
   </tr>
   <tr>
-    <td><em>&tau<sub>i</sub></em></td>
+    <td><em>&tau;<sub>i</sub></em></td>
     <td>membrane time constant</td>
   </tr>
   <tr>
