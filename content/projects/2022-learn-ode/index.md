@@ -27,7 +27,7 @@ Imagine a spring mass system (Figure 1). What if you wanted to find the location
 <p align="center">
 <img src=images/Simple_harmonic_oscillator.gif>
 <p align = "center">
-Figure 1 - Spring Mass by Oleg Alexandrov
+Figure 1 - Spring Mass by Oleg Alexandrov (public domain)
 </p>
 
 Our project aims to compute the value of the Hamiltonian for any given time and set of initial conditions using Hamiltonian Inspired neural networks. We will first introduce the mathematical background of our project and the novel technique we implemented for our forward propagation. Results will then be presented and analyzed. Lastly, we will discuss how our project expands upon both Ruthotto [3](https://arxiv.org/abs/1705.03341) and Greydanus [6](https://arxiv.org/abs/1906.01563) papers.
