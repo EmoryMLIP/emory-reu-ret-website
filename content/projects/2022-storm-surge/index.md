@@ -20,7 +20,7 @@ This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corc
 Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as ice sheet instability leads to significant [sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
 <!--- ------Images: -------- -->
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/KiyaRivermanGlacier.png">
+  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/icebergphoto.jpeg">
 </p>
 <!--- Above is the glacier image from the government website taken by Kiya Riverman -->
 <!---<p align="center">
