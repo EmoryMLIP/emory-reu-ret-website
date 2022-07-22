@@ -111,7 +111,7 @@ We ran the model for various observation schemes to find the best observation sc
   <img width="700" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/oldDates.png">
 </p>
 <p align="center">
-  <img width="600" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
+  <img width="700" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
 </p>
 
 <!---
