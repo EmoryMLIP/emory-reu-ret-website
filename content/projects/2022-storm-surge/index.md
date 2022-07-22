@@ -35,7 +35,9 @@ Research has shown that climate change will likely impact [storm surge inundatio
 <!---More detailed background on our ice sheet modeling Methods-->
 Our group is collaborating with [Dr. Robel](https://iceclimate.eas.gatech.edu/group/), a glaciologist, climate scientist, and applied mathematician from Georgia Tech, and working with the glacier model described in his [2018 paper](https://doi.org/10.1029/2018JF004709). This ice sheet model aims to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change. 
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png"></p>
-Image used with permission from [Robel et al., 2018](https://doi.org/10.1029/2018JF004709). <br>
+<p align="center">
+Image used with permission from [Robel et al., 2018](https://doi.org/10.1029/2018JF004709).
+</p>
 <!--- Above is Dr. Robel's glacier model schematic -->
 A glacier can be represented with a simplified box model that has a length $L$, precipitation $P$, and height and flux at the grounding line $h_g$ and $Q_g$. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
 <p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
@@ -80,6 +82,9 @@ Data assimilation is a method to move models closer to reality using real world 
 In this example we have used the ensemble Kalman filter method (ENKF) in order to perform our data assimilation. In basic terms, we initialize an ensemble( or a series of model runs with perturbed initial conditions) and performed data assimilation on each of the ensemble members, then to get our final analysis we took the mean of the ensemble.
 <p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/kalmanExample.png">
+</p>
+<p align="center">
+Image used with permission from Dr. Talea Mayo.
 </p>
 <!--- Above is the Kalman Filter Example -->
 
