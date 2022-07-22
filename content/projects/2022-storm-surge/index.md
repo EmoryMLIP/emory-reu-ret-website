@@ -26,7 +26,7 @@ Research has shown that climate change will likely impact [storm surge inundatio
 <!---<p align="center">
   <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png"> -->
 <p align="center">
-Image by W. Bulach, used under [Creative Commons Attribution-Share Alike 4.0 International License] (https://creativecommons.org/licenses/by-sa/4.0/legalcode)
+Image by W. Bulach, used under <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>
 </p>
 </p> <!--- Above is a simple schematic figure of a grounding line -->
 
