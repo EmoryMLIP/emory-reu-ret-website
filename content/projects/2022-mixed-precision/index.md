@@ -141,7 +141,7 @@ Although there is no inner product in CS, we still have overflow in half precisi
 To fully compare CGLS and CS, we added Tikhonov regularization to CGLS and ran the two test problems. The diagrams are listed below.
 We also ran the code to solve tomography reconstruction too, and the result is showed below. 
 <p align="center">
-<img src="img/cs_reg_0.1_tomo.png" alt="draw" width="500"/> 
+<img src="img/cg_reg_blur_64_0.1_m.png" alt="draw" width="500"/> 
 </p>
 <p align="center">
 <img src="img/cg_reg_m_0.1_blur_Enrm.png" alt="draw" width="300"/> 
@@ -150,5 +150,5 @@ The diagram for half precision looks much better than that produced by CGLS with
 <p align="center">
 <img src="img/Zoom in of Enrm for cs and cg.png" alt="draw" width="500"/> 
 </p>
-We can see that the error norm for half precision converges for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice. However, for double precision, the CGLS with regularization is clearly more stable. Therefore, CGLS with regularizatin is more suitable for double precision. For tomography reconstruction, the result is similar to this, so it not shown here. There is detailed information in our [paper](), and we welcome you to check it out.
+We can see that the error norm for half precision converges for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice. However, for double precision, the CGLS with regularization is clearly more stable. Therefore, CGLS with regularizatin is more suitable for double precision. For tomography reconstruction, the result is similar to this, so it not shown here. There is detailed information in our [paper](https://github.com/kristinagxy/emory-reu-ret-website/tree/main/content/projects/2022-mixed-precision), and we welcome you to check it out.
 
