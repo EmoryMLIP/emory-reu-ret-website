@@ -108,10 +108,10 @@ In the interest of lowering computational costs, we use the square difference in
 ### Observation Scheme
 We ran the model for various observation schemes to find the best observation scheme, i.e. the times frames and frequencies which can produce a sufficiently small average square difference over the course of the model run. We applied this process to our model and found that for before 1900 the best observation frequency, while still using small number of observations, would be every 19 years for a total of 100 observations. Similarly, for the time frame of 1950-2300 we found that yearly observations for a total of 350 observations is the best frequency. 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/oldDates.png">
+  <img width="700" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/oldDates.png">
 </p>
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
+  <img width="600" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
 </p>
 
 <!---
@@ -156,8 +156,8 @@ We then used the to calculate the volume out at all times and add it up to get a
   <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/w50.0km_sea_level_projection.png">
 </p>
 
-## Next Steps and Other Applications
-Data assimilation can be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, some of our team's goals are to find the minimum frequency at which you can assimilate data, the essential time period of the data, and the smallest amount of data needed to recover the truth in the model. We also plan to determine an acceptable error bound for the parameters and a realistic range of values to use. Overall, we aim to improve the data assimilation process of the glacier model. In the end, we will also integrate the output of the glacier model into the ADCIRC hurricane storm surge model.
+## Next Steps
+Using data assimilation can help to inform the glacier modelers and glaciologists who collect data about how to collect data in an efficient way. This can help researchers to more efficiently utilize funding and avoid unnecessarily expensive data collection that does not significantly improve glacier models. Data assimilation should be explored within more complicated glacier models, as the model used here is quite simplified. If more research is performed on this technique, it could greatly improve the practice of glacier modeling. Data assimilation can also be used for many geophysical modeling tasks, such as weather forcasting and hurricane storm surge modeling. Going forward, we plan to integrate the output of the glacier model into the ADCIRC hurricane storm surge model to predict the impact of glacier model on storm surge inundation.
 
 ## References
 [The long future of Antarctic melting](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) <br>
