@@ -107,6 +107,12 @@ In the interest of lowering computational costs, we use the square difference in
 
 ### Observation Scheme
 We ran the model for various observation schemes to find the best observation scheme, i.e. the times frames and frequencies which can produce a sufficiently small average square difference over the course of the model run. We applied this process to our model and found that for before 1900 the best observation frequency, while still using small number of observations, would be every 19 years for a total of 100 observations. Similarly, for the time frame of 1950-2300 we found that yearly observations for a total of 350 observations is the best frequency. 
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/oldDates.png">
+</p>
+<p align="center">
+  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
+</p>
 
 <!---
 #### Mean Square Difference 0-1900
