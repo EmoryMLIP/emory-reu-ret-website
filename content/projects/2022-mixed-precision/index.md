@@ -8,7 +8,7 @@ summary: 'Since numbers in the computer are represented with a fixed number of b
 tags: ["Summer 2022"]
 ---
 This post was written by [Xiaoyun Gong](https://github.com/kristinagxy), [Yizhou Chen](https://github.com/RileyCYZ), and [Xiang Ji](https://github.com/zoejix) and published with minor edits. The team was advised by Dr. [James Nagy](https://github.com/jnagy1). In addition to this post, the team has also created slides for a [midterm presentation](REUmidterm_presentation.pdf
-), a [poster blitz]() video, [code](), and a [paper]().
+), a [poster blitz]() video, [code](https://github.com/kristinagxy/REU_code), and a [paper]().
 
 ## In One Sentence:
 Our group works on experimenting with iterative methods for solving inverse problems at different precision levels. 
