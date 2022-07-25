@@ -24,7 +24,7 @@ The word around town is that reinforcement learning is the top dog and has the a
 
 
 
-You may be asking yourself what is an optimal control problem? An optimal control problem is a dynamical system with an ODE that involves some controllable function $u$. In our case the continuous mountain can be modeled as a PDE where $u$ is some controllable function. In the continuous mountain car problem our control,$u$, is whether the car accelerates left or right. In an optimal control problem, we seek to optimize some objective function, in our case we will minimize the objective function. Our two objective functions are the running cost, which penalizes the car for acceleration. While our other objective function is the terminal cost which penalizes the car for not reaching the goal, the top of the hill, in time. 
+You may be asking yourself what is an optimal control problem? An optimal control problem is problem that consists of controlling a dynamical system to minimize (or maximize) a given objective function. In our case the continuous mountain can be modeled as a ODE where $u$ is some controllable function. In the continuous mountain car problem our control,$u$, is whether the car accelerates left or right. In an optimal control problem, we seek to optimize some objective function, in our case we will minimize the objective function. Our two objective functions are the running cost, which penalizes the car for acceleration. While our other objective function is the terminal cost which penalizes the car for not reaching the goal, the top of the hill, in time. 
 
 ### Why This Problem?
 
