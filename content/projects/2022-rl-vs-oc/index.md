@@ -28,7 +28,7 @@ You may be asking yourself what is an optimal control problem? An optimal contro
 
 ### Why This Problem?
 
-You may be wondering what our reason was for picking the mountain car problem, there are a couple of reasons why we picked this example. One of the reasons was that the continuous mountain car problem is a well establish benchmark for reinforcement learning models. Another thing that makes the mountain car problem great is that the mountain car problem is in a 2-D state-space which allows for good plotting and visualization. One other reason that we picked the mountain car problem is that it is both a reinforcement learning and optimal control problem. In our case it has a finite horizon and is in a continuous state. The whole reason we are doing this is because we want to compare three different ways of solving the continuous mountain car problem and see which one really is the best. The three methods that we will be testing can be broken down as one local method and two global methods, we will be discussing each in-detail below.
+What our reason was for picking the mountain car problem, there are a couple of reasons why we picked this example. One of the reasons was that the continuous mountain car problem is a well establish benchmark for reinforcement learning models. Another thing that makes the mountain car problem great is that the mountain car problem is in a 2-D state-space which allows for good plotting and visualization. One other reason that we picked the mountain car problem is that it is both a reinforcement learning and optimal control problem. In our case it has a finite horizon and is in a continuous state. The whole reason we are doing this is because we want to compare three different ways of solving the continuous mountain car problem and see which one really is the best. The three methods that we will be testing can be broken down as one local method and two global methods, we will be discussing each in-detail below.
 
 ## Our Three Approaches
 
@@ -68,7 +68,7 @@ Our next goal was how do we create a nice visualization of what the actual solut
 <img src="img/Localmethod.gif" >
 </p>
 
-We see in this video what our optimal local solution looks like. A couple of things that should be noted is, if we move the car to a new position then this local solution may no longer work. The same can be said if we slowed down/speed up a bit then this solution may not even let the car get to the top of the mountain. Another downside of the local is that it is a Non-linear and non-convex problem which makes this method slow. This local solution will serve as a baseline so we can compare other methods to something to see which one is really the best.
+We see in this video what our optimal local solution looks like. A couple of things that should be noted is, if we move the car to a new position then this local solution may no longer work. The same can be said if we slowed down/speed up a bit then this solution may not even let the car get to the top of the mountain. Another downside of the local is that it is a non-linear and non-convex problem which makes this method slow. This local solution will serve as a baseline so we can compare other methods to something to see which one is really the best.
 
 ## Global Methods
 
