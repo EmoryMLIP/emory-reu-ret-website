@@ -58,7 +58,7 @@ $$\frac{d x^\ast}{d \Theta} = \left( I - \frac{d T_\Theta (x^\ast)}{d x^\ast}\ri
 
 However, solving this is very expensive because of the inverse term.
 
-To circumvent this issue, we use a recently proposed method called Jacobian-Free Backpropagation.
+To circumvent this issue, we use a recently proposed method called [Jacobian-Free Backpropagation](JFB.pdf).
 
 ## Jacobian-Free Backpropagation (JFB)
 The goal of JFB is to alleviate memory requirement and avoid high computational cost in implicit networks. 
