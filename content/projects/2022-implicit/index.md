@@ -6,29 +6,32 @@ featured: true
 weight : 100
 summary: 'Implicit networks are a special type of architecture whose outputs are defined by a fixed point (or optimality) condition. To evaluate these networks, one performs an iterative process, where each iteration is considered a layer of the network. The depth of these networks often vary depending on the complexity of the input data; for instance, in natural language processing, it might take 3 iterations (or layers) to output the sentiment of a simple sentence, but it might take 100 layers for the network to output the sentiment of a complicated sentence. Unfortunately, training implicit networks efficiently typically comes at additional computational cost. This project explores fast and efficient algorithms for training implicit networks, with emphasis on their applications to inverse problems.'
 tags: ["Summer 2022"]
+header-includes: 
+    - \usepackage{bm}
 ---
-This post was written by Linghai Liu, Shuaicheng Tong, and Lisa Zhao and published with minor edits. The team was advised by Dr. Samy Wu Fung. In addition to this post, the team has also given a [midterm presentation](Midterm_Presentation_TeamJFB.pdf), filmed a [poster blitz video](https://youtu.be/oIwL3E2yULg), created a [poster](REURET_Poster_Team_JFB.pdf), published [code](https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks), and written a paper. 
+This post was written by Linghai Liu, Shuaicheng Tong, and Lisa Zhao and published with minor edits. The team was advised by Dr. Samy Wu Fung. In addition to this post, the team has also given a [midterm presentation](Midterm_Presentation_TeamJFB.pdf), filmed a [poster blitz video](https://youtu.be/oIwL3E2yULg), created a [poster](REURET_Poster_Team_JFB.pdf), published [code](https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks), and written a [paper](Manuscript_JFB.pdf). 
 
 ## What are Inverse Problems?
 Inverse problems consist of recovering a signal $x^\ast$ (e.g. an image, a parameter of a PDE, etc.) from indirect, noisy measurements $d$. These problems arise in many applications such as medical imaging, computer vision, geophysical imaging, etc. 
 
 This measurement process is usually modeled as an operator $\mathcal{A}$, satisfying the following equation: 
-$$ d = \mathcal{A} x^\ast + \varepsilon, $$
+$$ d = \mathcal{A} x^\ast + \boldsymbol{\varepsilon}$$
+where $\mathcal{A}$ is a mapping from signal space $\mathbb{R}^n$ of original images to measurement space $\mathbb{R}^m$.
 Since our project deals with image deblurring, we have the following variables:
-- $d \in \mathbb{R}^{n \times n}$: blurred image with noise
-- $x^\ast \in \mathbb{R}^{n \times n}$: original image
-- $\varepsilon \in \mathbb{R}^{n \times n}$: random **unknown** noise 
+- $d \in \mathbb{R}^{n}$: blurred image with noise
+- $x^\ast \in \mathbb{R}^{n}$: original image
+- $\boldsymbol{\varepsilon} \in \mathbb{R}^{m}$: random **unknown** noise
 
 ## Solving Inverse Problems from a Classical Approach
 Using direct inverse we have:
-$$ d = \mathcal{A} x^\ast + \varepsilon \Longrightarrow x^\ast =  \mathcal{A}^{-1} d - \mathcal{A}^{-1} \varepsilon $$
-However, since $\varepsilon$ is unknown, directly inverting may end up amplifying this noise factor⁠. Because of this noise corruption, the reconstructed image ends up being unrecognizable. 
+$$ d = \mathcal{A} x^\ast + \boldsymbol{\varepsilon} \Longrightarrow x^\ast =  \mathcal{A}^{-1} d - \mathcal{A}^{-1} \boldsymbol{\varepsilon} $$
+However, since $\boldsymbol{\varepsilon}$ is unknown, directly inverting may end up amplifying this noise factor⁠. Because of this noise corruption, the reconstructed image ends up being unrecognizable. 
 
 To better visulaize this, we have the following set of pictures: 
 
 ![Original Image](imgs/inverse1.png "Original Image") ![Blurred Noisy Image](imgs/inverse2.png "Blurred Noisy Image") ![Direct Inverse](imgs/inverse3.png "Direct Inverse")
 
-In order to minimize the noise factor, we want to formulate an optimization problem.
+In order to minimize the noise factor, we want to formulate a regularized optimization problem.
 
 We essentially want to find the minimium distance between the reconstructed image and the observed blurred image, plus a regularizer $R(x)$. 
 
@@ -93,11 +96,11 @@ From the graph we see that the loss is decreasing as the number of epochs increa
 Note: Two metrics are commonly used for assessing the quality of reconstructed images: the peak-signal-to-noise ratio (PSNR, a positive number, best at $+\infty$) and the structural similarity index measure (SSIM, also positive, best at $1$).
 
 ## Acknowledgements
-We sincerely thank the guidance of our mentor, Dr. Samy Wu Fung, and other mentors at Emory University for the opportunity. This work is supported in part by the US National Science Foundation awards DMS-2051019 and DMS-1751636.
+We sincerely thank the guidance of our mentor, Dr. Samy Wu Fung, and other mentors at Emory University for the opportunity.
 
 ## More About the Team
 **Linghai Liu** is a rising senior at Brown University, double concentrating in applied mathematics - computer science and mathematics. His main interests lie at the intersection of statistical theory, machine learning, and optimization. Outside of work, he enjoys reading novels and watching animes. 
 
 **Shuaicheng Tong** is a rising junior at the University of California, Los Angeles, majoring in applied mathematics and minoring in statistics. He is interested in optimization and machine learning. He volunteers at the UCLA Statistics Club where he tutors mathematics and statistics. Outside of school, he enjoys working out, hiking, and watching Star Wars shows.
 
-**Lisa Zhao** is a rising sophomore at the University of California, Berkeley, double majoring in statistics and economics with a concentration in business administration. She is interested in learning  about how statistics is used as a powerful tool in finance. Outside of work, she enjoys swimming, drawing, and watching TV shows.
+**Lisa Zhao** is a rising sophomore at the University of California, Berkeley, double majoring in statistics and economics. She is interested in learning  about how statistics is used as a powerful tool in finance. Outside of work, she enjoys swimming, drawing, and watching TV shows.
