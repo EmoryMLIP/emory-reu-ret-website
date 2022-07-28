@@ -143,7 +143,7 @@ To fairly compare CGLS and CS, we add Tikhonov regularization to CGLS and run th
 <p align="center">
 <img src="img/cg_reg_m_0.1_blur_Enrm.png" alt="draw" width="300"/> 
 </p>
-The diagram for half precision looks much better than that produced by CGLS without regularization. However, difference still presents between half and double precision in the background. At the end of the iteration for half precision, the error norms still increase again. If we zoom in the graph of the error norms for CS and CGLS with regularization, we can see that the error norms at half precision converge for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice. However, for double precision, the CGLS method with regularization is clearly more stable. Therefore, CGLS with regularizatin is more suitable for double precision. 
+The diagram for half precision looks much better than that produced by CGLS without regularization. However, difference still presents between half and double precision in the background. At the end of the iteration for half precision, the error norms still increase again. If we zoom in the graph of the error norms for CS and CGLS with regularization, we can see that the error norms at half precision converge for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice. However, for double precision, the CGLS method with regularization is clearly more stable. Therefore, CGLS with regularization is more suitable for double precision. 
 <p align="center">
 <img src="img/Zoom in of Enrm for cs and cg.png" alt="draw" width="500"/> 
 </p>
