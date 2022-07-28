@@ -67,12 +67,12 @@ First, we use our modified version of CGLS without regularization to solve the i
 
 We use our modified version of CGLS for single and half precision, and the graph in single precision is similar to the graph in double precision. However, for half precision, the background is not the same as that in the double-precision or single-precision graph; it contains more artifacts.
 
-We also plot the error norms of the we get in comparison to the true value of x in different precision. 
+We also plot the error norms of the solution at each iteration using different precision levels. 
 <p align="center">
 <img src="img/enrm blur no noise.png" alt="draw" width="600"/> 
 </p>
 
-From the graph, all three lines overlap from the beginning until around the 20th iteration, where the half-precision line diverges and goes up. The difference is due to the round-up errors of half precision, which add up and take over. Besides, the line of half precision stops at around the 30th iteration because at the 28th iteration, we get infinity, so the next few iterations generate nothing but NaNs.
+From the graph, all three error norms overlap from the beginning until around the 20th iteration, where the half-precision  diverges and goes up. The difference is due to the round-up errors of half precision, which add up and take over. Besides, the line of half precision stops at around the 30th iteration because at the 28th iteration, we get infinity, so the next few iterations generate nothing but NaNs.
 
 After investigating the idealized situations where there is no noise in the output image, we then apply our code to graphs that are mixed with random noise to see how it is likely to perform in real life.
 
