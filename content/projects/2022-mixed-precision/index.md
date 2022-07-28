@@ -88,7 +88,7 @@ Now we turn our attention to the error norm, the difference between the original
 <img src="img/3.png" alt="draw" width="700"/> 
 </p>
 
-<!––
+<!--
 ### Tomography Reconstruction Using CGLS
 Below is the result of CGLS on the tomography reconstruction test problem at different precision levels. For double and single precision, the reconstruction is doing well, yet for fp16, we start to get this completely blue picture from the first iteration caused by overflow of Inf/-Inf.
 
@@ -110,7 +110,7 @@ Then we add noise to the right-hand side b, and plot the error norms below:
 </p>
 
 As in the image deblurring problem, the error norms first decrease and then increase. In the cases with noise, this is mainly because noise starts to take over in the later part of the iteration. However, we still see the same behavior in the noise-free test problems at half precision, which is because the truncation errors accumulate as the iteration goes on.
-––>
+-->
 
 ### Image Deblurring Using CS
 In order to prevent the occurrence of overflow, we experiment with the CS algorithm (where no inner products are needed) and use chop for lower precision. Tikhonov regularization is applied to CS after we find out that the algorithm performs poorly due to the close-to-zero singular values of A when it's ill-conditioned. Now we are solving:
