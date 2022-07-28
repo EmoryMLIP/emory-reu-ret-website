@@ -60,14 +60,14 @@ The Chebyshev Semi-Iterative (CS) Method requires no inner product computation, 
 ### IR Tools
 We modify the CGLS method in the [IRtool](https://github.com/jnagy1/IRtools.git) package in Matlab so that it can operate in lower precision, and we use two test problems in the same package to investigate how the method performs at lower precision, mainly half precision. 
 ### Image Deblurring Using CGLS
-First, we use our modified version of CGLS without regularization to run the image deblurring problem, and we use the function called PRshowx to plot the graph generated from the x value in the last iteration. We didn’t add any noise to b in the problem of Ax = b at the beginning, and the graphs are demonstrated below. 
+First, we use our modified version of CGLS without regularization to solve the image deblurring problem. In this application, we solve Ax = b, where b is an observed blurred image, A is a matrix that models the blurring operation, and x is the desired clean image. We didn’t add any noise to b in the problem of Ax = b at the beginning, and the graphs are demonstrated below. 
 <p align="center">
 <img src="img/blur no noise.png" alt="draw" width="600"/> 
 </p>
 
 We use our modified version of CGLS for single and half precision, and the graph in single precision is similar to the graph in double precision. However, for half precision, the background is not the same as that in the double-precision or single-precision graph; it contains more artifacts.
 
-We also plot the error norms of the x value we get in comparison to the true value of x in different precision. 
+We also plot the error norms of the we get in comparison to the true value of x in different precision. 
 <p align="center">
 <img src="img/enrm blur no noise.png" alt="draw" width="600"/> 
 </p>
