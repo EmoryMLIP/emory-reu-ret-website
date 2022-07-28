@@ -13,12 +13,6 @@ This post was written by [Xiaoyun Gong](https://github.com/kristinagxy), [Yizhou
 ## In One Sentence:
 Our group works on experimenting with iterative methods for solving inverse problems at different precision levels. 
 
-<p align="center">
-<img src="img/zelda.jpeg" alt="drawing" width="500"/> 
-</p>
-<p align = "center">
-Figure 1: screenshot from <em>the Legend of Zelda - Breath of the Wild</em>
-</p>
 
 ## Background: Why Low Precision?
 What is the most important aspect for an excellent gaming experience? A lot of people would answer real-time! Everyone wants their games to be fast, and it is always a bummer that the screen freezes during a critical combat. This is why we are investigating low precision arithmetic: to decrease the computation time and speed things up.
