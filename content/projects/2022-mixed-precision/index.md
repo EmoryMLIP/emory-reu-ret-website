@@ -126,12 +126,14 @@ For the image deblurring problem, we further comfirm the similarity by plotting 
 </p>
 We can see that the error norms of the three precision levels overlap, proving the result in half precision is close to that in double precision. 
 
+<!--
 ### Tomography Reconstruction Using CS
 The result for the tomography reconstruction problem using CS is showed below. 
 <p align="center">
 <img src="img/cs_reg_0.1_tomo.png" alt="draw" width="500"/> 
 </p>
 Although there is no inner product in CS, we still have overflow in half precision, which is because the matrix A is too large. Therefore, we rescale A and b by diving both of by 100 again, and the algorithm successfully runs to the end without generating NaNs. The image in half precision is as good as its counterpart in double precision, displaying clear boundaries and backgrounds. The error norms also overlap among the three precision levels.
+-->
 
 ### Image Deblurring Using CGLS with regularizationand 
 To fairly compare CGLS and CS, we add Tikhonov regularization to CGLS and run the two test problems again. The diagrams are listed below.
@@ -145,5 +147,5 @@ The diagram for half precision looks much better than that produced by CGLS with
 <p align="center">
 <img src="img/Zoom in of Enrm for cs and cg.png" alt="draw" width="500"/> 
 </p>
-The result is similar for tomography reconstruction as well, so it is not shown here. More detailed information can be found in our [paper](), and we welcome you to check it out.
+We performed similar experiments with an image reconstruction problem from tomography; see our paper for further details!
 
