@@ -72,9 +72,9 @@ We also plot the error norms of the solution at each iteration using different p
 <img src="img/enrm blur no noise.png" alt="draw" width="600"/> 
 </p>
 
-From the graph, all three error norms overlap from the beginning until around the 20th iteration, where the half-precision  diverges and goes up. The difference is due to the round-up errors of half precision, which add up and take over. Besides, the line of half precision stops at around the 30th iteration because at the 28th iteration, we get infinity, so the next few iterations generate nothing but NaNs.
+From the graph, all three error norms overlap from the beginning until around the 20th iteration, where the half-precision errors begin to deviate from those in single and double precision. The difference is due to the round-off errors of half precision, which add up and take over. Besides, the error norms for half precision terminates at the 28th iteration because overflow of inner products causes NaNs (Not a Number) to be computed during the iteration.
 
-After investigating the idealized situations where there is no noise in the output image, we then apply our code to graphs that are mixed with random noise to see how it is likely to perform in real life.
+After investigating the idealized situations where there is no noise in the observed image, we then apply our code to problems that contains additive random noise to see how it is likely to perform in real life. That is, 
 
 For half precision, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background turns into random red ripples, while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.
 
