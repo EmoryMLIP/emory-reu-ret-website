@@ -65,7 +65,7 @@ First, we use our modified version of CGLS without regularization to run the ima
 <img src="img/blur no noise.png" alt="draw" width="600"/> 
 </p>
 
-We use cgls_chop for single and half precision, and the graph in single precision is similar to the graph in double precision. However, for half precision, the background is not the same as that in the double-precision or single-precision graph. The background looks redder and there are red and black squiggly lines.
+We use our modified version of CGLS for single and half precision, and the graph in single precision is similar to the graph in double precision. However, for half precision, the background is not the same as that in the double-precision or single-precision graph; it contains more artifacts.
 
 We also plot the error norms of the x value we get in comparison to the true value of x in different precision. 
 <p align="center">
