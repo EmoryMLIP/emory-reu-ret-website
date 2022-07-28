@@ -49,7 +49,7 @@ Inverse problems are problems where our goal is to find the internal or hidden i
 ### Conjugate Gradient Method
 The [Conjugate Gradient algorithm](https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf) (CG) aims to solve the linear system Ax = b where A is SPD (symmetric and positive definite),transforming the problem of finding solution to an optimization problem where we want to minimize $\phi(x)=\frac{1}{2}x^{T}Ax-x^{T}b$. This can be easily seen from $\nabla \phi (x) = 0$ -> $Ax-b=0$.
 
-In each step, the method provides us with a search direction and a step-length so that the error of this iteration is A-orthogonal to the search direction of the last oteration. Eventually, it will converge to the minimal point. The CGLS algorithm is the least-squares version of the CG method, applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
+In each step, the method provides us with a search direction and a step-length so that the error of this iteration is A-orthogonal to the search direction of the previous iteration. Eventually, it will converge to the minimal point. The CGLS algorithm is the least-squares version of the CG method, applied to the normal equation A<sup>T</sup>Ax = A<sup>T</sup>b.
 
 ### Chebyshev Semi-Iterative Method
 
