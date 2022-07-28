@@ -136,7 +136,7 @@ Although there is no inner product in CS, we still have overflow in half precisi
 -->
 
 ### Image Deblurring Using CGLS with regularization
-To fairly compare CGLS and CS, we add Tikhonov regularization to CGLS and run the two test problems again. The diagrams are listed below.
+To fairly compare CGLS and CS, we add Tikhonov regularization to CGLS and run the test problem again. The diagrams are listed below.
 <p align="center">
 <img src="img/cg_reg_blur_64_0.1_m.png" alt="draw" width="500"/> 
 </p>
