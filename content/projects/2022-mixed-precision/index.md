@@ -88,7 +88,7 @@ Now we turn our attention to the error norm, the difference between the original
 <img src="img/3.png" alt="draw" width="700"/> 
 </p>
 
-<! ––
+<!––
 ### Tomography Reconstruction Using CGLS
 Below is the result of CGLS on the tomography reconstruction test problem at different precision levels. For double and single precision, the reconstruction is doing well, yet for fp16, we start to get this completely blue picture from the first iteration caused by overflow of Inf/-Inf.
 
