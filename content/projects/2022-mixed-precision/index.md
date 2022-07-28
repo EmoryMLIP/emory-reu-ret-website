@@ -114,7 +114,7 @@ As in the image deblurring problem, the error norms first decrease and then incr
 
 ### Image Deblurring Using CS
 In order to prevent the occurrence of overflow, we experiment with the CS algorithm (where no inner products are needed) and use chop for lower precision. Tikhonov regularization is applied to CS after we find out that the algorithm performs poorly due to the close-to-zero singular values of A when it's ill-conditioned. Now we are solving:
-$$\min_{x} \{||Ax-b||_2^2+\lambda^2||x||_2^2\}$$ where $\lambda$ is a parameter that needs to be chosen.
+$$\min_{x} \{||Ax-b||_2^2+\lambda^2||x||_2^2\}$$ where $\lambda$ is a parameter that needs to be chosen. Here we show experiments for the case with 10% noise, and we use \lambda = 0.199.
 
 From the graph below, it is clear that even with 10% noise, the half-precision image looks very similar to that in double precision, better than what we have using CGLS. 
 <p align="center">
