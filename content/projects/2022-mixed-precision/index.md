@@ -84,7 +84,7 @@ After investigating the idealized situations where there is no noise in the obse
 For half precision, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background has substantially more artifacts, while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.
 
 <p align="center">
-<img src="Best cgls fp16 64 m noise.png" alt="draw" width="700"/> 
+<img src="img/Best cgls fp16 64 m noise.png" alt="draw" width="700"/> 
 </p>
 
 Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates at each iteration. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, the blended noise also gets inverted along each iteration. Eventually, the random data accumulate and dominate the solution at some point. We are showing the results where the error norm is the smallest to see what is the best possible solution we can compute.
