@@ -24,6 +24,11 @@ Nowadays, most computer systems operate on double precision (64-bit) arithmetic.
 <p align="center">
 <img src="img/IEEE.png" alt="drawing" width="500"/> 
 </p>
+<p>
+<em>Using tensor cores for mixed-precision scientific computing.
+Oct-2021. url: https://developer.nvidia.com/blog/tensor-cores-mixed-precision-scientific-computing/
+</em>
+</p >
 
 ## Simulating Low Precision
 
