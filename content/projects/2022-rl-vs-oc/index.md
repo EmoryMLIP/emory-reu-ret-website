@@ -28,13 +28,38 @@ You may be asking yourself what is an optimal control problem? An optimal contro
 
 ### Why This Problem?
 
-What our reason was for picking the mountain car problem, there are a couple of reasons why we picked this example. One of the reasons was that the continuous mountain car problem is a well establish benchmark for reinforcement learning models. Another thing that makes the mountain car problem great is that the mountain car problem is in a 2-D state-space which allows for good plotting and visualization. One other reason that we picked the mountain car problem is that it is both a reinforcement learning and optimal control problem. In our case it has a finite horizon and is in a continuous state. The whole reason we are doing this is because we want to compare three different ways of solving the continuous mountain car problem and see which one really is the best. The three methods that we will be testing can be broken down as one local method and two global methods, we will be discussing each in-detail below.
+You may be wondering why choose the Continuous Mountain Car Problem? Here are a couple of reasons why we picked this example,
+
+-   Established benchmark for RL models
+
+-   2-D state-space allows for good plots and visualizations
+
+-   Both RL and optimal control problem
+
+-   Finite horizon (time)
+
+-   Continuous state and motion
+
+The whole reason we are doing this is because we want to compare three different ways of solving the continuous mountain car problem and see which one really is the best. Our three approaches are
+
+-   Local solution using numerical ODE solvers and nonlinear optimization (baseline)
+
+-   Reinforcement learning with actor-critic algorithm (data-based approach)
+
+-   Optimal control using both model and data
+
 
 ## Our Three Approaches
 
 ### A Local Method
 
-Our first method that we looked at during this REU was the local method. In this approach we found the local solution using numerical ODE solvers and Nonlinear Optimization.
+Our first method that we looked at during this REU was the local method. We tried to find the optimal control $u_h$ by formulating an optimization problem.
+
+We first discretize the control, state and the Lagrangian.
+
+Setting  $z_h^{(0)}=z_t$ and $\ell_h^{(0)}=0$, allows us to use a forward Euler scheme for some control $u$.
+
+We then approximate our objective function which yields the optimization problem 
 
 To solve our optimization problem, we used gradient descent. By taking an initial guess for $u_h$ and repeatedly updating $u_h$ using the gradient of the objective function and step size $\alpha$
 
