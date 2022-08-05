@@ -155,4 +155,11 @@ We wrapped up any unfinished work including our paper, OC method and this websit
 -   **[Dewan Chowdhury](https://dewanchowdhury.github.io/)**
 -   **[Arjun Sethi-Olowin](https://www.linkedin.com/in/arjunso/)**
 
+## Reference
+
+U. M. Ascher and C. Greif. "Chapter 9 (Optimization)." A First Course on Numerical Methods. SIAM. SIAM,2011
+
+U. M. Ascher and C. Greif. "Chapter 14 (Numerical time integrators)." A First Course on Numerical Methods. SIAM. SIAM,2011
+
+
 
