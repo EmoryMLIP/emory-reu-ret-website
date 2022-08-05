@@ -60,7 +60,7 @@ In each step, the method provides us with a search direction and a step-length s
 
 The Chebyshev Semi-Iterative (CS) Method requires no inner product computation, which is great because inner products can cause overflow easily in low precision. But there is always the trade-off! The CS method requires the user to have an idea of the range of the matrix A's eigenvalues. The result given by CS is a linear combination of all solutions in each iteration, and the weights are obtained from the Chebyshev polynomial, which has the favorable property to ensure that the result obtained in each iteration of CS is smaller than an upper bound.
 
-## Experiment!!
+## Experiment
 
 ### IR Tools
 We modify the CGLS method in the [IRtool](https://github.com/jnagy1/IRtools.git) package in Matlab so that it can operate in lower precision, and we use two test problems in the same package to investigate how the method performs at lower precision, mainly half precision. 
@@ -81,13 +81,13 @@ From the graph, all three error norms overlap from the beginning until around th
 
 After investigating the idealized situations where there is no noise in the observed image, we then apply our code to problems that contains additive random noise to see how it is likely to perform in real life. That is, we try to compute x from the observed image b = Ax + noise.
 
-For half precision, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background has substantially more artifacts, while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy ripples with 10% noise; the picture no longer contains any meaningful information.
+For half precision, with 0.1% noise, the picture looks almost the same as the one that contains no noise. However, if the noise level is increased to 1%, the background has substantially more artifacts, while the middle object is still identifiable. Noise has taken over the black background but not the satellite yet. Eventually, the whole image is flushed with the noisy artifacts with 10% noise; the picture no longer contains any meaningful information. Notice that the results below are generated using x from the best iteration, that is the iteration with the smallest error norms, not from the last iteration. 
 
 <p align="center">
 <img src="img/Best cgls fp16 64 m noise.png" alt="draw" width="700"/> 
 </p>
 
-Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates at each iteration. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, the blended noise also gets inverted along each iteration. Eventually, the random data accumulate and dominate the solution at some point. We are showing the results where the error norm is the smallest to see what is the best possible solution we can compute.
+Now we turn our attention to the error norm, the difference between the original image and the one our algorithm generates at each iteration. When 0.1% noise is added, as the number of iterations goes up, the error norm reduces significantly across all three formats. Intriguingly, for images with 1% or 10% noise, the best reconstruction is not the last iteration but somewhere along the middle (it’s around the 50th iteration for 1% and 10th for 10%). The reason behind the phenomenon is that while we are transforming the output image, b, the blended noise also gets inverted along each iteration. Eventually, the random data accumulate and dominate the solution at some point. We are showing the results where the error norm is the smallest to see what is the best possible solution we can compute. However, in reality the true x is not known, meaning we don't know the error norms, so we can only show results from the last iteration, not from the best iteration.
 
 <p align="center">
 <img src="img/3.png" alt="draw" width="700"/> 
@@ -121,7 +121,7 @@ As in the image deblurring problem, the error norms first decrease and then incr
 In order to prevent the occurrence of overflow, we experiment with the CS algorithm (where no inner products are needed) and use chop for lower precision. Tikhonov regularization is applied to CS after we find out that the algorithm performs poorly due to the close-to-zero singular values of A when it's ill-conditioned. Now we are solving:
 $$\min_{x} \{||Ax-b||_2^2+\lambda^2||x||_2^2\}$$ where $\lambda$ is a parameter that needs to be chosen. Here we show experiments for the case with 10% noise, and we use $\lambda$ = 0.199.
 
-From the graph below, it is clear that even with 10% noise, the half-precision image looks very similar to that in double precision, better than what we have using CGLS. 
+From the graph below, it is clear that even with 10% noise, the half-precision image looks very similar to that in double precision, better than what we have using CGLS (results from the last iteration). 
 <p align="center">
 <img src="img/cs_reg_0.1_blur.png" alt="draw" width="500"/> 
 </p>
@@ -148,7 +148,7 @@ To fairly compare CGLS and CS, we add Tikhonov regularization to CGLS and run th
 <p align="center">
 <img src="img/cg_reg_m_0.1_blur_Enrm.png" alt="draw" width="300"/> 
 </p>
-The diagram for half precision looks much better than that produced by CGLS without regularization. However, difference still presents between half and double precision in the background. At the end of the iteration for half precision, the error norms still increase again. If we zoom in the graph of the error norms for CS and CGLS with regularization, we can see that the error norms at half precision converge for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice. However, for double precision, the CGLS method with regularization is clearly more stable. Therefore, CGLS with regularization is more suitable for double precision. 
+The diagram for half precision looks much better than that produced by CGLS without regularization. However, difference still presents between half and double precision in the background. At the end of the iteration for half precision, the error norms still increase again. If we zoom in the graph of the error norms for CS and CGLS with regularization, we can see that the error norms at half precision converge for CS but increases rapidly for CGLS, suggesting that for half precision, CS is a better choice, especially when the noise level is high. When the noise level is close to zero, CS becomes susceptible because of the accumulation of round-off errors. However, for double precision, the CGLS method with regularization is clearly more stable. Therefore, CGLS with regularization is more suitable for double precision. 
 <p align="center">
 <img src="img/Zoom in of Enrm for cs and cg.png" alt="draw" width="500"/> 
 </p>
