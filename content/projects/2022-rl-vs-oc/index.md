@@ -73,7 +73,8 @@ $(u_h)_6 = (u_h)_5 - \alpha( \nabla J((u_h)_5))$
 
 $\vdots$
 
-$(u_h)_* = (u_h)_{19} - \alpha( \nabla J((u_h)_1{19}))$
+$(u_h)_* = (u_h)_19 - \alpha( \nabla J((u_h)_19))$
+  
 </div>
 
 Below is a nice visual example of what all this math means. When the tail reaches the dotted line, it means our car has reached the top of the hill. 
@@ -101,7 +102,8 @@ Now that we have established a baseline, we will discuss our other two methods. 
 
 # Reinforcement Learning
 
-Our first stop in exploring global methods is reinforcement learning.  We will be using reinforcement learning with actor-critic algorithm. This approach is completely data-based approach. In reinforcement learning it has no knowledge of the model, it only considers the objective function. In reinforcement learning we would like to maximize a reward, so in our case we will maximize negative cost. Reinforcement learning is stochastic in two ways with initial position and action space which allows for exploration. In Reinforcement learning we are trying to estimate an optimal control policy. One of the big things that we have yet to discuss is, what is actor-critic algorithm? In the actor-critic algorithm the critic must learn about and critique whatever policy is currently being followed by the actor. We worked in the OpenAI gym mountain car environment, so we were able to find preexisting code for our project. The thing is our preexisting code was not the same as our problem, so we had to modify it some. After some modification to the code, the following video is the results that we were able to get after many training cycles.
+Our first stop in exploring global methods is reinforcement learning.  We will be using reinforcement learning with actor-critic algorithm. This approach is completely data-based approach. In reinforcement learning it has no knowledge of the model, it only considers the objective function. In reinforcement learning we would like to maximize a reward, so in our case we will maximize negative cost. Reinforcement learning is stochastic in two ways with initial position and action space which allows for exploration. In Reinforcement learning we are trying to estimate an optimal control policy. One of the big things that we have yet to discuss is, what is actor-critic algorithm ? The actor-critic (AC) architecture for RL is well-suited for a continuous action-space as in the continuous mountain car problem  **[1](https://arxiv.org/abs/1509.02971)** . In the actor-critic algorithm the critic must learn about and critique whatever policy is currently being followed by the actor. We worked in the OpenAI gym mountain car environment, so we were able to find preexisting code for our project. We also were able to adapted the TD advantage actor-critic algorithm adapted from **[here](https://medium.com/@asteinbach/actor-critic-using-deep-rl-continuous-mountain-car-in-tensorflow-4c1fb2110f7c)**.
+The thing is our preexisting code was not the same as our problem, so we had to modify it some. After some modification to the code, the following video is the results that we were able to get after many training cycles.
 
 <p align="center">
 <img src="img/RLmethod.gif" >
@@ -118,7 +120,7 @@ as you can see compared to the local solution, we see that the RL solution is ve
 
 # Optimal control method
 
-Our last two methods were vastly different with reinforcement learning using a data driven approach and the local method using a model-based approach. We will now be looking at the optimal control method which combines both model and data driven approaches. In this approach, we aim to estimate the corresponding value function with neural network approximators utilizing feedback from the Hamilton-Jacobi-Bellman equation and Hamiltonian.
+Our last two methods were vastly different with reinforcement learning using a data driven approach and the local method using a model-based approach. We will now be looking at the optimal control method which combines both model and data driven approaches. In this approach, we aim to  adhere to the method discussed **[here](https://arxiv.org/abs/2104.03270)**. We will estimate the corresponding value function with neural network approximators utilizing feedback from the Hamilton-Jacobi-Bellman equation and Hamiltonian.
 
 Using OC method we were able to produce the following 
 
@@ -153,24 +155,4 @@ We wrapped up any unfinished work including our paper, OC method and this websit
 -   **[Dewan Chowdhury](https://dewanchowdhury.github.io/)**
 -   **[Arjun Sethi-Olowin](https://www.linkedin.com/in/arjunso/)**
 
-# References
-U. M. Ascher and C. Greif. A First Course on Numerical Methods. SIAM. SIAM, 2011.
 
-A. Beck. Introduction to Nonlinear Optimization. SIAM. SIAM, 10 2014.
-
-T. P. Lillicrap, J. J. Hunt, A. Pritzel, N. Heess, T. Erez, Y. Tassa, D. Silver, and D. Wierstra. Continuous control with deep reinforcement learning, 2015.
-
-A. W. Moore. Efficient memory-based learning for robot control. Technical report, University of Cambridge, 1990.
-
-D. Onken, L. Nurbekyan, X. Li, S. W. Fung, S. Osher, and L. Ruthotto. A Neural Network
-Approach for High-Dimensional Optimal Control. arXiv, 2021.
-
-A. Steinbach. Actor-critic using deep-RL: continuous mountain car in TensorFlow. Medium,2018.
-
-S. Strogatz. One Giant Step for a Chess-Playing Machine. New York Times, 2018.
-
-R. S. Sutton and A. Barto. Reinforcement learning. The MIT Press. The MIT Press, 2nd
-edition edition, 2018.
-
-A. Zaslavski. Optimal Control Problems Arising in Forest Management. SpringerBriefs in
-Optimization. Springer International Publishing, 2019.
