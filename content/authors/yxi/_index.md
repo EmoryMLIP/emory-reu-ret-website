@@ -66,6 +66,6 @@ user_groups:
 - Mentors
 ---
 
-Yuanzhe Xi is an Assistant Professor in the [Department of Mathematics](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.mathcs.emory.edu/Research/Area/ScientificComputing/).
+Yuanzhe Xi is an Assistant Professor in the [Department of Mathematics](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).
 Prior to joining Emory, he was a postdoc at the University of Minnesota and held PhD positions at the [Purdue University](https://www.purdue.edu) and the [Dalian University of Technology](https://en.dlut.edu.cn).
 

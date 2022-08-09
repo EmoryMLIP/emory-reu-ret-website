@@ -72,4 +72,4 @@ user_groups:
 - Mentors
 ---
 
-Samy Wu Fung is a mentor of this REU/RET site. He is an Assistant Professor in the [Department of Applied Mathematics and Statistics](https://ams.mines.edu/) at Colorado School of Mines. Prior to joining Mines, he was an Assistant Adjunct Professor in the Department of Mathematics at UCLA. He received my PhD  in applied mathematics from Emory University in 2019, where he worked under the guidance of [Lars Ruthotto](https://www.mathcs.emory.edu/~lruthot/).
+Samy Wu Fung is a mentor of this REU/RET site. He is an Assistant Professor in the [Department of Applied Mathematics and Statistics](https://ams.mines.edu/) at Colorado School of Mines. Prior to joining Mines, he was an Assistant Adjunct Professor in the Department of Mathematics at UCLA. He received my PhD  in applied mathematics from Emory University in 2019, where he worked under the guidance of [Lars Ruthotto](https://www.math.emory.edu/~lruthot/).

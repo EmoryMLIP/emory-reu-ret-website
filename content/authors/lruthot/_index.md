@@ -22,7 +22,7 @@ organizations:
   url: "https://www.emory.edu"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include efficient training of deep neural networks and optimal representations of high-dimensional data.
+bio: I am interested in developing efficient training algorithms for deep neural networks and their applications and data science and scientific computing (e.g., high-dimensional optimal control and PDEs).
 
 interests:
 - Scientific Computing
@@ -65,7 +65,7 @@ social:
   link: https://www.researchgate.net/profile/Lars_Ruthotto
 - icon: cv
   icon_pack: ai
-  link: https://www.mathcs.emory.edu/~lruthot/files/LarsRuthotto-CV.pdf
+  link: https://www.math.emory.edu/~lruthot/files/LarsRuthotto-CV.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "lruthotto@emory.edu"
@@ -76,5 +76,5 @@ user_groups:
 - Mentors
 ---
 
-Lars Ruthotto is the Principal Investigator of this REU/RET site. He is an Associate Professor in the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.mathcs.emory.edu/Research/Area/ScientificComputing/).
+Lars Ruthotto is the Principal Investigator of this REU/RET site. He is an Associate Professor in the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).
 Prior to joining Emory, he was a postdoc at the University of British Columbia and  held PhD positions at the [University of Lübeck](https://www.mic.uni-luebeck.de/about-us.html) and the [University of Münster](https://www.uni-muenster.de/de/).

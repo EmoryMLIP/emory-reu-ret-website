@@ -67,4 +67,4 @@ user_groups:
 - Mentors
 ---
 
-Alessandro Veneziani is a Professor in the [Department of Mathematics](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.mathcs.emory.edu/Research/Area/ScientificComputing/).
+Alessandro Veneziani is a Professor in the [Department of Mathematics](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).
