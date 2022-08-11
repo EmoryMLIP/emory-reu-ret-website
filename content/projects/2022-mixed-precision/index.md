@@ -157,6 +157,6 @@ We performed similar experiments with an image reconstruction problem from tomog
 ##More about us
 ##Yizhou Chen##
 <p align="center">
-<img src="bioRiley.jpeg" alt="draw" width="500"/> 
+<img src="bioRiley.png" alt="draw" width="300"/> 
 </p>
 Hi! My name is Yizhou, but I go by Riley as well. I'm a rising junior at Emory University, double majoring in Applied Math and Physics. My interest is in computational Math & computational Physics. Outside work I enjoy watching sitcoms and my favourite one is Frasier! I am an animal person and I have a toy poodle who's nine years old. I also love cycling and hiking. 
