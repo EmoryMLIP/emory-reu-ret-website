@@ -155,14 +155,14 @@ The diagram for half precision looks much better than that produced by CGLS with
 We performed similar experiments with an image reconstruction problem from tomography; see our paper for further details!
 
 ## More about us
-## Yizhou Chen ##
+### Yizhou Chen ##
 <p align="center">
 <img src="img/bioRiley.png" alt="draw" width="300"/> 
 </p>
 Hi! My name is Yizhou, but I go by Riley as well. I'm a rising junior at Emory University, double majoring in Applied Math and Physics. My interest is in computational Math & computational Physics. Outside work I enjoy watching sitcoms and my favourite one is Frasier! I am an animal person and I have a toy poodle who's nine years old. I also love cycling and hiking. 
 
-## Xiaoyun Gong ##
+### Xiaoyun Gong ##
 <p align="center">
-<img src="img/gxy.png" alt="drawing" width="300"/> 
+<img src="img/gxy.jpeg" alt="drawing" width="300"/> 
 </p>
 Hello I am Xiaoyun Gong. I am a rising senior majoring in Applied Mathematics and Statistics. I am interested in math and I also enjoy coding!! In my free time I like watching anime (most recent favorite is Made in Abyss) and drawing. I like sweet food and I am a cat person. 🐱
