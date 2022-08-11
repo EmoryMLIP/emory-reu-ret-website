@@ -154,3 +154,9 @@ The diagram for half precision looks much better than that produced by CGLS with
 </p>
 We performed similar experiments with an image reconstruction problem from tomography; see our paper for further details!
 
+##More about us
+##Yizhou Chen##
+<p align="center">
+<img src="bioRiley.jpeg" alt="draw" width="500"/> 
+</p>
+Hi! My name is Yizhou, but I go by Riley as well. I'm a rising junior at Emory University, double majoring in Applied Math and Physics. My interest is in computational Math & computational Physics. Outside work I enjoy watching sitcoms and my favourite one is Frasier! I am an animal person and I have a toy poodle who's nine years old. I also love cycling and hiking. 
