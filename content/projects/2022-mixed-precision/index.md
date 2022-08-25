@@ -166,3 +166,9 @@ Hi! My name is Yizhou, but I go by Riley as well. I'm a rising junior at Emory U
 <img src="img/gxy.jpeg" alt="drawing" width="300"/> 
 </p>
 Hello I am Xiaoyun Gong. I am a rising senior majoring in Applied Mathematics and Statistics. I am interested in math and I also enjoy coding!! In my free time I like watching anime (most recent favorite is Made in Abyss) and drawing. I like sweet food and I am a cat person. 🐱
+
+### Xiang Ji ##
+<p align="center">
+<img src="img/Zoe_bio.png" alt="drawing" width="300"/> 
+</p>
+Hi, I am Xiang Ji, but you can also call me Zoe. I am a rising junior at Emory University who is double majoring in applied mathematics and statistics and art history. My research interest is in computational mathematics and image processing. I enjoy going to art museums and watching movies. It's quite fun doing research this summer!
