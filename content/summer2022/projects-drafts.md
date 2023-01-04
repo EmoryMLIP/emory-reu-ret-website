@@ -3,7 +3,6 @@
 widget: pages
 headless: true
 weight: 25
-draft : true
 
 title: Projects
 subtitle: Models Meet Data

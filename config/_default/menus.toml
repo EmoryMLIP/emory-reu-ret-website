@@ -21,9 +21,13 @@
   weight = 30
   
   [[main]]
+    name = "2023"
+    url = "summer2023/"
+    weight = 40
+  [[main]]
     name = "2022"
     url = "summer2022/"
-    weight = 40
+    weight = 45
 
 [[main]]
   name = "2021"
