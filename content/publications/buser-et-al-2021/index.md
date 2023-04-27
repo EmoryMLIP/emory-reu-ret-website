@@ -34,8 +34,8 @@ publication_types:
 - 3
 abstract: 'Two segmentation methods, one atlas-based and one neural-network-based, were compared to see how well they can each automatically segment the brain stem and cerebellum in Displacement Encoding with Stimulated Echoes Magnetic Resonance Imaging (DENSE-MRI) data. The segmentation is a pre-requisite for estimating the average displacements in these regions, which have recently been proposed as biomarkers in the diagnosis of Chiari Malformation type I (CMI). In numerical experiments, the segmentations of both methods were similar to manual segmentations provided by trained experts. It was found that, overall, the neural-network-based method alone produced more accurate segmentations than the atlas-based method did alone, but that a combination of the two methods -- in which the atlas-based method is used for the segmentation of the brain stem and the neural-network is used for the segmentation of the cerebellum -- may be the most successful. '
 pages : 23 pages
-publication: '*arXiv preprint 2109.14116*'
-url_pdf : 'https://arxiv.org/pdf/2109.14116'
+publication: 'SIAM Undergraduate Research Online (SIURO), volume 15'
+url_pdf : 'https://dx.doi.org/10.1137/21S1448392'
 url_video : 'https://www.youtube.com/watch?v=tdjXj3JdpQU&t=2s'
 ---
 

@@ -34,8 +34,8 @@ publication_types:
 - 3
 abstract: 'To analyze the abundance of multidimensional data, tensor-based frameworks have been developed. Traditionally, the matrix singular value decomposition (SVD) is used to extract the most dominant features from a matrix containing the vectorized data. While the SVD is highly useful for data that can be appropriately represented as a matrix, this step of vectorization causes us to lose the high-dimensional relationships intrinsic to the data. To facilitate efficient multidimensional feature extraction, we utilize a projection-based classification algorithm using the t-SVDM, a tensor analog of the matrix SVD. Our work extends the t-SVDM framework and the classification algorithm, both initially proposed for tensors of order 3, to any number of dimensions. We then apply this algorithm to a classification task using the StarPlus fMRI dataset. Our numerical experiments demonstrate that there exists a superior tensor-based approach to fMRI classification than the best possible equivalent matrix-based approach. Our results illustrate the advantages of our chosen tensor framework, provide insight into beneficial choices of parameters, and could be further developed for classification of more complex imaging data. We provide our Python implementation at this https URL.'
 pages : 23 pages
-publication: '*arXiv preprint 2109.01481*'
-url_pdf : 'https://arxiv.org/pdf/2109.01481'
+publication: 'SIAM Undergraduate Research Online (SIURO), volume 15'
+url_pdf : 'https://dx.doi.org/10.1137/21S1456522'
 url_code : 'https://github.com/elizabethnewman/tensor-fmri'
 ---
 

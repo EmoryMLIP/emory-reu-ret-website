@@ -6,7 +6,7 @@ widget: blank
 # Information for Applicants
 
 Our site provides several funded summer research opportunities for undergraduate students and in-service high-school teachers.
-For summer 2022, applications can be submitted via our submission pages for [REU applicants](https://www.mathprograms.org/db/programs/1215) (that is, undergraduate students) and [RET applicants](https://www.mathprograms.org/db/programs/1214) (that is, in-service teachers).
+For summer 2022, applications can be submitted via our submission pages for [REU applicants](https://www.mathprograms.org/db/programs/1407) (that is, undergraduate students) and [RET applicants](https://www.mathprograms.org/db/programs/1408) (that is, in-service teachers).
 The application deadline is March 1 and we seek to finalize the roster by late March / early April.
 
 We particularly encourage women, students from underrepresented groups, first-generation college students, and institutions where research programs in STEM are limited to apply.

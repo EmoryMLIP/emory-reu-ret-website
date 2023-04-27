@@ -34,8 +34,8 @@ publication_types:
 - 3
 abstract: 'Due to the COVID-19 pandemic, there is an increasing demand for portable CT machines worldwide in order to diagnose patients in a variety of settings [16]. This has lead to a need for CT image reconstruction algorithms that can produce high-quality images in the case when multiple types of geometry parameters have been perturbed. In this paper, we present an alternating descent algorithm to address this issue, where one step minimizes a regularized linear least squares problem, and the other minimizes a bounded non-linear least-square problem. Additionally, we survey existing methods to accelerate the convergence algorithm and discuss implementation details through the use of MATLAB packages such as IRtools and imfil. Finally, numerical experiments are conducted to show the effectiveness of our algorithm. '
 pages : 21 pages
-publication: '*arXiv preprint 2109.01481*'
-url_pdf : 'https://arxiv.org/pdf/2109.01481'
+publication: 'SIAM Undergraduate Research Online (SIURO), volume 15'
+url_pdf : 'https://dx.doi.org/10.1137/21S1441638'
 url_video : 'https://www.youtube.com/watch?v=qdcGe9MKCoI'
 ---
 
