@@ -2,7 +2,7 @@
 title: 'Low-Precision Algorithms for Image Processing'
 date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
-featured: true
+featured: false
 weight : 100
 summary: 'Since numbers in the computer are represented with a fixed number of bits, loss of accuracy during calculation is unavoidable. At high precision where more bits (e.g. 64) are allocated to each number, round-off errors are typically small. On the other hand, calculating at lower precision, such as half (16 bits), has the advantage of being much faster. This research focuses on experimenting with arithmetic at different precision levels for large-scale inverse problems, which are represented by linear systems with ill-conditioned matrices. We modified the Conjugate Gradient Method for Least Squares (CGLS) and the Chebyshev Semi-Iterative Method (CS) with Tikhonov regularization to do arithmetic at lower precision using the MATLAB \textbf{chop} function, and we ran experiments on applications from image processing and compared their performance at different precision levels. We concluded that CGLS is a more stable algorithm, but overflows easily due to the computation of inner products, while CS is less likely to overflow but it has more erratic convergence behavior. When the noise level is high, CS outperforms CGLS by being able to run more iterations before overflow occurs; when the noise level is close to zero, CS appears to be more susceptible to accumulation of round-off errors.'
 tags: ["Summer 2022"]

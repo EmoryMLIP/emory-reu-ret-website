@@ -2,25 +2,21 @@
 title: 'Data assimilation for Glacier Modeling'
 date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
-featured: true
-weight : 100
+featured: false
+weight: 100
 summary: 'Numerical models of coastal hydrodynamics play a vital role in understanding hurricane storm surges, particularly as the climate changes. However, uncertainties in model parameters and their representations, e.g., bottom stress and surface wind stress, limit the confidence of model results. Data is becoming increasingly available but also contains uncertainties. In this project we will explore methods of data assimilation, which utilize information about the uncertainties in both modeled and observed data to improve estimates of the coastal system state.'
 tags: ["Summer 2022"]
 ---
 
- # Data Assimilation for Glacier Modeling
 
-This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and Logan Knudsen. The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/data_assimilation_for_glacier_modeling.pdf), [blitz video](https://www.youtube.com/watch?v=bGeOZ9G6IOc), [poster](https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/REU_Poster.pdf), paper, and has written code.
+This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corcoran-816278186), Hannah Park-Kaufmann, and [Logan Knudsen](https://www.loganknudsen.com/). The project was advised by Dr. Talea Mayo.  Our team has also created a [midterm presentation](img/data_assimilation_for_glacier_modeling.pdf), [blitz video](https://www.youtube.com/watch?v=bGeOZ9G6IOc), [poster](img/REU_Poster.pdf), [paper](https://arxiv.org/pdf/2210.02647.pdf), and has [published their code](https://github.com/hakuupi/StormSurge).
 
-<!---What we've achieved -->
-
-<!---What the importance of it is -->
 
 ## Glaciers
 Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as ice sheet instability leads to significant [sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
 <!--- ------Images: -------- -->
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/icebergphoto.jpeg">
+  <img width="500" height="300" src="img/icebergphoto.jpeg">
 </p>
 <!--- Above is the glacier image from the government website taken by Kiya Riverman -->
 <!---<p align="center">
@@ -36,13 +32,13 @@ Image by W. Bulach, used under <a href="https://creativecommons.org/licenses/by-
 
 <!---More detailed background on our ice sheet modeling Methods-->
 Our group is collaborating with [Dr. Robel](https://iceclimate.eas.gatech.edu/group/), a glaciologist, climate scientist, and applied mathematician from Georgia Tech, and working with the glacier model described in his [2018 paper](https://doi.org/10.1029/2018JF004709). This ice sheet model aims to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change. 
-<p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacierdiagram%20(1).png"></p>
+<p align="center"> <img width="500" height="300" src="img/glacierdiagram%20(1).png"></p>
 <p align="center">
 Image used with permission from <a href="https://doi.org/10.1029/2018JF004709">Dr. Alexander Robel</a>
 </p>
 <!--- Above is Dr. Robel's glacier model schematic -->
 A glacier can be represented with a simplified box model that has a length $L$, precipitation $P$, and height and flux at the grounding line $h_g$ and $Q_g$. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
-<p align="center"> <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/boxmodel.png">
+<p align="center"> <img width="500" height="300" src="img/boxmodel.png">
 </p>
 <!--- Above is the diagram of a box model -->
 The two-stage model that our group is using incorporates a nested box into the system. This new box has a thickness, $H$, and an interior flux, $Q$. The change in length and height of the glacier can be described with these differential equations: $$\ \dfrac{dH}{dt}=P-\dfrac{Q_g}{L}-\dfrac{H}{h_gL}(Q-Q_g)$$ $$\ \dfrac{dL}{dt}=\dfrac{1}{h_g}(Q-Q_g)$$
@@ -60,12 +56,12 @@ The basic idea is this: We check sensitivity by using different distributions fo
 The uncertain model parameters we considered are: initial conditions, sill parameters, and SMB values. For consistency's sake, we vary each parameter by +-10 percent of the nominal values originally given in our model code. Below you can see three graphs, one for each group of parameters varied, for each "time vs H(t)" (Height of the glacier at time) and "time vs L(t)" (Length of the glacier at time).
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_H(t).png">
+  <img width="500" height="300" src="img/t_vs_H(t).png">
 </p>
 <!--- Above are 3 sensitivity analysis graphs side by side for t vs H(t) -->
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/t_vs_L(t).png">
+  <img width="500" height="300" src="img/t_vs_L(t).png">
 </p>
 <!--- Above are 3 sensitivity analysis graphs side by side for t vs L(t) -->
 
@@ -78,7 +74,7 @@ Looking at the distributions, we see that varying initial conditions (Leftmost) 
 <!---Data Assimilation-->
 Data assimilation is a method to move models closer to reality using real world observations by readjusting the model state at specified times.
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/SEFig.png">
+  <img width="500" height="300" src="img/SEFig.png">
 </p>
 <p align="center">
 Image used with permission from Dr. Talea Mayo.
@@ -86,13 +82,13 @@ Image used with permission from Dr. Talea Mayo.
 
 In this example we have used the ensemble Kalman filter method (ENKF) in order to perform our data assimilation. In basic terms, we initialize an ensemble( or a series of model runs with perturbed initial conditions) and performed data assimilation on each of the ensemble members, then to get our final analysis we took the mean of the ensemble.
 <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/kalmanExample.png">
+  <img width="500" height="300" src="img/kalmanExample.png">
 </p>
 <!--- Above is the Kalman Filter Example -->
 
 The program used to model the glacier behavior and assimilate the data begins with choosing a set of initial conditions. Once the initial conditions are input to the model, which after taking a step using a Runge-Kutta 4th Order Method, is plugged into a Data Assimilation Method. Our main method is ENKF as previously mdentioned. Finally, the analyzed data from the assimilation is output and plugged back into the model. It should be noted that at sometimes the forecast output for the model is the same as the analyzed data.
 <p align="center">
-  <img width="650" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/ScreenShot2022-07-07at17.21.17.png">
+  <img width="650" height="300" src="img/ScreenShot2022-07-07at17.21.17.png">
 </p>
 <!--- Above is the Kalman Filter Diagram -->
 
@@ -107,20 +103,20 @@ where $x_t$ is the true state from the truth simulation at time $t$ and $x^a_t$ 
 In the interest of lowering computational costs, we use the square difference in order to minimize ensemble size while also minimizing error. To do this, we choose an ensemble size, calculate the square difference at each $t$, and then calculated the mean of all these square differences. We ran this calculation for ensembles sizes from 2 up to 75, and found that ensembles of size 7-10 were ideal as they were at the point where the average square difference hovers around the same value. 
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/Mean_Square_Difference_of_H.png">
+  <img width="500" height="400" src="img/Mean_Square_Difference_of_H.png">
 </p>
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/Mean_Square_Difference_of_L.png">
+  <img width="500" height="400" src="img/Mean_Square_Difference_of_L.png">
 </p>
 
 ### Observation Scheme
 We ran the model for various observation schemes to find the best observation scheme, i.e. the times frames and frequencies which can produce a sufficiently small average square difference over the course of the model run. We applied this process to our model and found that for before 1900 the best observation frequency, while still using small number of observations, would be every 19 years for a total of 100 observations. Similarly, for the time frame of 1950-2300 we found that yearly observations for a total of 350 observations is the best frequency. 
 <p align="center">
-  <img width="700" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/oldDates.png">
+  <img width="700" height="400" src="img/oldDates.png">
 </p>
 <p align="center">
-  <img width="700" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/newDates.png">
+  <img width="700" height="400" src="img/newDates.png">
 </p>
 
 <!---
@@ -149,11 +145,11 @@ We ran the model for various observation schemes to find the best observation sc
 Using the facts we established in the previous two sections, we ran the model using EnKF for the time frame of 0-2022 in order to project $H$ and $L$ into the future up to the year 2300. The following plots show the results of this experiment, which we will use to help calculate $Q$ and $Q_g$ over time, and in turn use it to calculate sea level rise.
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)projections.png">
+  <img width="500" height="400" src="img/H(t)projections.png">
 </p>
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/L(t)projections.png">
+  <img width="500" height="400" src="img/L(t)projections.png">
 </p>
 
 ### Sea Level Rise
@@ -162,7 +158,7 @@ $$\ V_{gz} = W(Q-Q_g)t $$
 We then used the to calculate the volume out at all times and add it up to get accumulated volume loss. We then assume that the width of the glacier is 50 km(at least in the case we show here). To convert this to sea level rise, note that 394.67 km$^3$ of ice is equivalent $1$ mm of sea level and get the following projection of sea level rise. 
 
 <p align="center">
-  <img width="500" height="400" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/w50.0km_sea_level_projection.png">
+  <img width="500" height="400" src="img/w50.0km_sea_level_projection.png">
 </p>
 
 ## Next Steps
@@ -184,18 +180,6 @@ Using data assimilation can help to inform the glacier modelers and glaciologist
  
 ### Hannah Park-Kaufmann
 Hannah Park-Kaufmann is a junior at Bard College and Conservatory, majoring in Mathematics and Piano Performance. Before this REU, she conducted research on Numerical Semigroups and Polyhedra, and on Identifying Universal Traits in Healthy Pianistic Posture using Depth Data. She tutors math in the Bard Prison Initiative (BPI). When not doing math, she can be found playing piano, reading scores, reading literature and/or eating.
-
-
-<!--- <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/glacier.jpeg">
-</p> -->
-<!--- Above is another glacier image -->
-
-
-<!--- <p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/H(t)hndlndbx10.png">
-</p> -->
-<!--- Above is one big photo of a single sensitivity analysis diagram: "t vs. H(t) with the initial conditions varied" -->
 
 
 

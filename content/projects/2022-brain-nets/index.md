@@ -2,7 +2,7 @@
 title: 'Shallow vs. Deep Brain Network Models for Mental Disorder Analysis'
 date: 2022-06-27T11:36:49-04:00
 lastmod: 2022-06-27T11:36:49-04:00
-featured: true
+featured: false
 weight : 100
 summary: 'Human brains are complex organs with structures, functions, and mechanisms that are still largely unknown to us. Modern neuroscience research aims to help us better understand them. Some recent studies have agreed that interactions among brain regions are related to neural development and mental disorders, and modeling these interactions is a way to gain further insight into how brain regions, neural activity, and disease interact with each other. It is unclear what kind of mathematical models will be most useful for the task of modeling neural activity, so mathematicians with interests in this field are building and testing mathematical models that could progress neuroscience research further. In this project, we explore and analyze different approaches for modeling brain networks, ranging from traditional shallow graph models to modern deep graph neural networks. The goal of these models is to aid in the analysis of mental disorders and diseases such as post-traumatic stress disorder (PTSD), bipolar disorder, depression, and human immunodeficiency virus (HIV). We aim to harness modern computational methods to improve the accuracy of pre-existing models, especially ones that aim to predict whether a patient is diseased or healthy based on brain scan data. We adapt different graph mining techniques for brain networks, statistically and visually analyze the results, and evaluate each model''s classification performance.'
 tags: ["Summer 2022"]
@@ -10,7 +10,7 @@ tags: ["Summer 2022"]
 
 
 This post was written by Erica Choi, Sally Smith, and Ethan Young and published with minor edits. The team was advised by Professor Carl Yang.
-In addition to this post and the [paper](Comparing_Shallow_and_Deep_Graph_Models_for_Brain_Network_Analysis.pdf), the team has also created slides for a [midterm presentation](REU_Midterm_Presentation.pdf), a [poster blitz video](https://youtu.be/DLs1PkO8iJo), and a [poster](REU_Poster.pdf).
+In addition to this post and the [paper](https://www.cs.emory.edu/~jyang71/files/reu2022.pdf), the team has also created slides for a [midterm presentation](REU_Midterm_Presentation.pdf), a [poster blitz video](https://youtu.be/DLs1PkO8iJo), and a [poster](REU_Poster.pdf). This work was accepted at the BrainNN workshop at [IEEE BigData 2022](Choi-Smith-Young-IEEEBrainNN.pdf)  and slides are available here. 
 
 
 # Comparing Shallow vs. Deep Brain Network Models

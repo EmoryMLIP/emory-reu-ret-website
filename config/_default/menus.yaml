@@ -1,0 +1,35 @@
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  - name: Home
+    url: 
+    weight: 10
+  - name: Overview
+    url: overview/
+    weight: 20
+  - name: People
+    url: people/
+    weight: 30
+  - name: 2024
+    url: summer2024/
+    weight: 35
+  - name: 2023
+    url: summer2023/
+    weight: 40
+  - name: 2022
+    url: summer2022/
+    weight: 50  
+  - name: 2021
+    url: summer2021/
+    weight: 60	
+  - name: Publications
+    url: publications/
+    weight: 70
+  - name: Apply
+    url: apply/
+    weight: 90
+  
