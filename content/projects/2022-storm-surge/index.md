@@ -14,29 +14,22 @@ This post was written by [Emily Corcoran](https://www.linkedin.com/in/emily-corc
 
 ## Glaciers
 Research has shown that climate change will likely impact [storm surge inundation](https://doi.org/10.3389/fbuil.2020.588049) and make modeling this process more difficult. Sea-level rise caused by climate change plays a part in this impact. To better model sea-level rise, glaciers can be modeled. Marine-Terminating Glaciers have a natural flow towards the ocean, which contributes to sea level rise. By the year 2300, the Antarctic ice sheet is projected to cause up to [3 meters of sea level rise](https://go.gale.com/ps/i.do?id=GALE%7CA431965879&sid=googleScholar&v=2.1&it=r&linkaccess=abs&issn=00280836&p=HRCA&sw=w&userGroupName=anon%7Eed4bce0c) globally. Due to the severe impacts of glacial melting, modeling changes in ice sheets is an important task. There are challenges to modeling sea level rise, as ice sheet instability leads to significant [sea-level rise uncertainty](https://doi.org/10.1073/pnas.1904822116).
-<!--- ------Images: -------- -->
+
 <p align="center">
   <img width="500" height="300" src="img/icebergphoto.jpeg">
 </p>
-<!--- Above is the glacier image from the government website taken by Kiya Riverman -->
-<!---<p align="center">
-  <img width="500" height="300" src="https://github.com/hakuupi/emory-reu-ret-website/blob/main/content/projects/2022-storm-surge/img/groundingline2da.png"> -->
 <p align="center">
 Image by W. Bulach, used under <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons Attribution-Share Alike 4.0 International License</a>
 </p>
-</p> <!--- Above is a simple schematic figure of a grounding line -->
+</p> 
 
 
 ## Modeling Glaciers
-<!---Broad background on Methods in modeling--> 
-
-<!---More detailed background on our ice sheet modeling Methods-->
 Our group is collaborating with [Dr. Robel](https://iceclimate.eas.gatech.edu/group/), a glaciologist, climate scientist, and applied mathematician from Georgia Tech, and working with the glacier model described in his [2018 paper](https://doi.org/10.1029/2018JF004709). This ice sheet model aims to describe the changes in ice mass of marine-terminating glaciers, which may be impacted over time by climate change. 
 <p align="center"> <img width="500" height="300" src="img/glacierdiagram%20(1).png"></p>
 <p align="center">
 Image used with permission from <a href="https://doi.org/10.1029/2018JF004709">Dr. Alexander Robel</a>
 </p>
-<!--- Above is Dr. Robel's glacier model schematic -->
 A glacier can be represented with a simplified box model that has a length $L$, precipitation $P$, and height and flux at the grounding line $h_g$ and $Q_g$. This model is the best approximation for one variable and describes the dominant mode of the glacial system.
 <p align="center"> <img width="500" height="300" src="img/boxmodel.png">
 </p>

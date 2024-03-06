@@ -7,7 +7,7 @@ weight : 100
 summary: 'Implicit networks are a special type of architecture whose outputs are defined by a fixed point (or optimality) condition. To evaluate these networks, one performs an iterative process, where each iteration is considered a layer of the network. The depth of these networks often vary depending on the complexity of the input data; for instance, in natural language processing, it might take 3 iterations (or layers) to output the sentiment of a simple sentence, but it might take 100 layers for the network to output the sentiment of a complicated sentence. Unfortunately, training implicit networks efficiently typically comes at additional computational cost. This project explores fast and efficient algorithms for training implicit networks, with emphasis on their applications to inverse problems.'
 tags: ["Summer 2022"]
 ---
-This post was written by Linghai Liu, Shuaicheng Tong, and Lisa Zhao and published with minor edits. The team was advised by Dr. Samy Wu Fung. In addition to this post, the team has also given a [midterm presentation](Midterm_Presentation_TeamJFB.pdf), filmed a [poster blitz video](https://youtu.be/oIwL3E2yULg), created a [poster](REURET_Poster_Team_JFB.pdf), published [code](https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks), and written a [paper](Manuscript_JFB.pdf). 
+This post was written by Linghai Liu, Shuaicheng Tong, and Lisa Zhao and published with minor edits. The team was advised by Dr. Samy Wu Fung. In addition to this post, the team has also given a [midterm presentation](Midterm_Presentation_TeamJFB.pdf), filmed a [poster blitz video](https://youtu.be/oIwL3E2yULg), created a [poster](REURET_Poster_Team_JFB.pdf), published [code](https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks), and written a [paper](../../publications/liu-et-al-2022/). 
 
 ## What are Inverse Problems?
 Inverse problems consist of recovering a signal $x^\ast$ (e.g. an image, a parameter of a PDE, etc.) from indirect, noisy measurements $d$. These problems arise in many applications such as medical imaging, computer vision, geophysical imaging, etc. 
@@ -58,7 +58,7 @@ $$\frac{d x^\ast}{d \Theta} = \left( I - \frac{d T_\Theta (x^\ast)}{d x^\ast}\ri
 
 However, solving this is very expensive because of the inverse term.
 
-To circumvent this issue, we use a recently proposed method called [Jacobian-Free Backpropagation](JFB.pdf).
+To circumvent this issue, we use a recently proposed method called [Jacobian-Free Backpropagation](https://arxiv.org/abs/2103.12803).
 
 ## Jacobian-Free Backpropagation (JFB)
 The goal of JFB is to alleviate memory requirement and avoid high computational cost in implicit networks. 

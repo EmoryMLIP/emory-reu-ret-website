@@ -3,11 +3,10 @@
 widget: pages
 headless: true
 weight: 18
-
 title: News
 
 content:
-  count: 0
+  count: 2
   filters:
     author: ""
     category: ""

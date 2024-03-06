@@ -1,18 +1,17 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: Solving Inverse Problems Using Implicit Networks and Jacobian-free Backpropagation
+title: Training Implicit Networks for Image Deblurring using Jacobian-Free Backpropagation
 subtitle: ''
 summary: ''
 authors:
 - Linghai Liu
 - Shuaicheng Tong
 - Lisa Zhao
-- Samy Wu Fung
 tags: []
 categories: []
-date: '2022-07-26'
-lastmod: 2022-07-26T16:45:31-04:00
+date: '2024-02-01'
+lastmod: 2024-02-09
 featured: true
 draft: false
 
@@ -30,12 +29,12 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2022-07-26'
+publishDate: '2024-02-01'
 publication_types: 1
-abstract: 'Recent efforts in applying implicit networks to solve inverse problems in imaging have achieved competitive or even better results when compared with feedforward networks. Moreover, they require less memory and can theoretically be of infinite depth. However, implicit networks are not necessarily easy to train with their fixed point due to the presence and computation of a large linear system. This paper introduces Jacobian-free Backpropagation (JFB), a fast and easy-to-implement scheme for backpropagation that circumvents such calculation and is applicable to image deblurring tasks. Our results show that JFB is effective and gives competitive results against fine-tuned optimization schemes, state-of-the-art (SOTA) feedforward methods, and existing implicit networks.'
-pages : '15 pages'
-url_preprint : 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiEsrzd-uX-AhWrk2oFHbvlAEkQFnoECAwQAQ&url=http%3A%2F%2Fwww.math.emory.edu%2Fsite%2Fcmds-reuret%2Fprojects%2F2022-implicit%2FManuscript_JFB.pdf&usg=AOvVaw3e9QN82Bo8qHdkE4Wq0qPO'
+abstract: 'Recent efforts in applying implicit networks to solve inverse problems in imaging have achieved competitive or even superior results when compared to feedforward networks. These implicit networks only require constant memory during backpropagation, regardless of the number of layers. However, they are not necessarily easy to train. Gradient calculations are computationally expensive because they require backpropagating through a fixed point. In particular, this process requires solving a large linear system whose size is determined by the number of features in the fixed point iteration. This paper explores a recently proposed method, Jacobian-free Backpropagation (JFB), a backpropagation scheme that circumvents such calculation, in the context of image deblurring problems. Our results show that JFB is comparable against fine-tuned optimization schemes, state-of-the-art (SOTA) feedforward networks, and existing implicit networks at a reduced computational cost.'
+pages : '10 pages'
+url_preprint : 'https://arxiv.org/abs/2402.02065'
 url_code : ' https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks'
 ---
 
-Recent efforts in applying implicit networks to solve inverse problems in imaging have achieved competitive or even better results when compared with feedforward networks. Moreover, they require less memory and can theoretically be of infinite depth. However, implicit networks are not necessarily easy to train with their fixed point due to the presence and computation of a large linear system. This paper introduces Jacobian-free Backpropagation (JFB), a fast and easy-to-implement scheme for backpropagation that circumvents such calculation and is applicable to image deblurring tasks. Our results show that JFB is effective and gives competitive results against fine-tuned optimization schemes, state-of-the-art (SOTA) feedforward methods, and existing implicit networks.
+Recent efforts in applying implicit networks to solve inverse problems in imaging have achieved competitive or even superior results when compared to feedforward networks. These implicit networks only require constant memory during backpropagation, regardless of the number of layers. However, they are not necessarily easy to train. Gradient calculations are computationally expensive because they require backpropagating through a fixed point. In particular, this process requires solving a large linear system whose size is determined by the number of features in the fixed point iteration. This paper explores a recently proposed method, Jacobian-free Backpropagation (JFB), a backpropagation scheme that circumvents such calculation, in the context of image deblurring problems. Our results show that JFB is comparable against fine-tuned optimization schemes, state-of-the-art (SOTA) feedforward networks, and existing implicit networks at a reduced computational cost.

@@ -4,7 +4,7 @@ widget: pages
 headless: true
 weight: 25
 
-title: Featured Projects
+title: Recent Projects
 <!-- subtitle: Learing from Images -->
 
 content:
@@ -15,11 +15,11 @@ content:
     exclude_featured: false
     exclude_future: false
     publication_type: ""
-    tag: "Summer 2021"
+    tag: "Summer 2023"
   offset: 0
   order: desc
   page_type: projects
 design:
-  view: 3
+  view: 2
   columns: "2"
 ---

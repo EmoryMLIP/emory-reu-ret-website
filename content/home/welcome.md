@@ -19,6 +19,6 @@ advanced:
 
 <br>
 
-The Research Experience for Undergraduates and Teachers Site on Computational Mathematics and Data Science provides exciting opportunities for summer research at Emory University in Atlanta, GA, USA. 
+The Research Experience for Undergraduates Site on Computational Mathematics and Data Science provides exciting opportunities for summer research at Emory University in Atlanta, GA, USA. 
 Under a common theme that changes every summer, the site hosts several teams who develop innovative mathematical solutions that help process, analyze, and generate data sets. 
 The participants are mentored by leading experts within the [Department of Mathematics](http://math.emory.edu/home/).

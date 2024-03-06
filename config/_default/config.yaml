@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Emory REU/RET Computational Mathematics for Data Science # Website name
+title: Emory REU Computational Mathematics for Data Science # Website name
 baseURL: 'http://www.math.emory.edu/site/cmds-reuret/' # Website URL
 
 ############################
