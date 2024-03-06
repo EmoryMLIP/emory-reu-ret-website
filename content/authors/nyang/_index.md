@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Deepanshu Verma
+title: Nicole Yang
 
 # Username (this should match the folder name)
 authors:
-- dverma
+- nyang
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Postdoctoral Fellow, Mentor
+role: Distinguished Visiting Assistant Professor
 
 # Organizations/Affiliations
 organizations:
@@ -18,52 +18,44 @@ organizations:
   url: "https://www.math.emory.edu/home/"
 - name: Emory University
   url: "https://www.emory.edu"
-
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
 interests:
-- Optimization
-- Machine Learning
-- Partial Differential Equations
-- Inverse Problems
+- Deep Learning
+- Stochastic Control and Optimization
+- Mean Field Games
 - Scientific Computing
 
 education:
   courses:
-  - course: PhD in Mathematics
-    institution: George Mason University
+  - course: PhD in Statistics and Financial Mathematics
+    institution: University of California, Santa Barbara (UCSB)
     year: 2021
-  - course: MSc in Mathematics
-    institution: Indian Institute of Technology Bombay
-    year: 2018
-  - course: BSc (Hons.) in Mathematics
-    institution: SGTB Khalsa College, Delhi University
-    year: 2015
+  - course: Bachelor of Science in Mathematics
+    institution: Wuhan University
+    year: 2016
 
 # Social/Academic Networking
-
-social:
-- icon: envelope
-  icon_pack: fas
-  link: "mailto:dverma@emory.edu"
-  
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
 - icon: envelope
   icon_pack: fas
-  link: "mailto:deepanshu.verma@emory.edu"
+  link: 'mailto:tianjiao.yang@emory.edu'
+# - icon: twitter
+#   icon_pack: fab
+#   link: 
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com.au/citations?hl=en&user=JfG-UJYAAAAJ
-- icon: cv
-  icon_pack: ai
-  link: https://dpnshvrm.github.io/verma_deepanshu_cv.pdf
+  link: https://scholar.google.com/citations?user=3zxBZjkAAAAJ&hl=en&oi=sra
+- icon: github
+  icon_pack: fab
+  link: https://nicoletyang.github.io
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "dverma4@emory.edu"
+email: "tianjiao.yang@emory.edu"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -71,4 +63,4 @@ user_groups:
 - Mentors
 ---
 
-Deepanshu Verma is a Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentor, Dr. Lars Ruthotto, his research focuses on developing efficient deep learning algorithms using control theory for scientific applications.
+Nicole Yang is a Postdoctoral Fellow in the Department of Mathematics at Emory University.  With her advisor, Dr. Lars Ruthotto, her research focuses on stochastic control, mathematics of generative modeling, and deep learning algorithms for scientific applications. Prior to joining Emory, she was a Strategist at Morgan Stanley, NYC global headquarter.
