@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Postdoctoral Fellow, Mentor
+role: Postdoctoral Fellow
 
 # Organizations/Affiliations
 organizations:
@@ -65,7 +65,7 @@ email: "lonisk@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Mentors
+- CurrentMentors
 ---
 
 Lucas Onisk is a NSF RTG Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentors, Dr. James Nagy and Dr. Julianne Chung, his research focuses on developing efficient algorithms for solving large-scale inverse problems.

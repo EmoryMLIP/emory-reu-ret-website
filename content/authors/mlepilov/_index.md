@@ -68,7 +68,7 @@ email: "dverma4@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Mentors
+- CurrentMentors
 ---
 
 Deepanshu Verma is a Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentor, Dr. Lars Ruthotto, his research focuses on developing efficient deep learning algorithms using control theory for scientific applications.

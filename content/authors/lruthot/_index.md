@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Associate Professor, Principal Investigator
+role: Winship Distinguished Research Associate Professor
 
 # Organizations/Affiliations
 organizations:
@@ -26,8 +26,8 @@ bio: I am interested in developing efficient training algorithms for deep neural
 
 interests:
 - Scientific Computing
-- Optimization
 - Machine Learning
+- Optimization
 - Inverse Problems
 - Image Registration
 
@@ -73,8 +73,8 @@ email: "lruthotto@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Mentors
+- CurrentMentors
 ---
 
-Lars Ruthotto is the Principal Investigator of this REU/RET site. He is an Associate Professor in the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).
+Lars Ruthotto is the Principal Investigator of this REU/RET site. He is an Winship Distinguished Research Associate Professor in the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).
 Prior to joining Emory, he was a postdoc at the University of British Columbia and  held PhD positions at the [University of Lübeck](https://www.mic.uni-luebeck.de/about-us.html) and the [University of Münster](https://www.uni-muenster.de/de/).
