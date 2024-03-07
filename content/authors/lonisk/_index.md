@@ -54,10 +54,10 @@ social:
   link: "mailto:lonisk@emory.edu"
 - icon: google-scholar
   icon_pack: ai
-  link: [https://scholar.google.com/citations?user=I5DtuoYAAAAJ&hl=en]
+  link: "https://scholar.google.com/citations?user=I5DtuoYAAAAJ&hl=en"
 - icon: cv
   icon_pack: ai
-  link: [https://sites.google.com/view/lucas-onisk/home]
+  link: "https://sites.google.com/view/lucas-onisk/home"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "lonisk@emory.edu"
