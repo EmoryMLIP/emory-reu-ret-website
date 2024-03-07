@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Deepanshu Verma
+title: Lucas Onisk
 
 # Username (this should match the folder name)
 authors:
