@@ -14,20 +14,20 @@ role: Postdoctoral Fellow, Mentor
 
 # Organizations/Affiliations
 organizations:
-- name: Department of Mathematics
+- name: Personal Site
+  url: "https://sites.google.com/view/lucas-onisk/home"
+- name: Emory Mathematics
   url: "https://www.math.emory.edu/home/"
-- name: Emory University
-  url: "https://www.emory.edu"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
 
 interests:
-- Optimization
-- Machine Learning
-- Partial Differential Equations
 - Inverse Problems
 - Scientific Computing
+- Ill-posed Problems
+- Preconditioning
+- Subspace Methods
 
 education:
   courses:
@@ -54,10 +54,10 @@ social:
   link: "mailto:lonisk@emory.edu"
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com.au/citations?hl=en&user=JfG-UJYAAAAJ
+  link: [https://scholar.google.com/citations?user=I5DtuoYAAAAJ&hl=en]
 - icon: cv
   icon_pack: ai
-  link: https://dpnshvrm.github.io/verma_deepanshu_cv.pdf
+  link: [https://sites.google.com/view/lucas-onisk/home]
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "lonisk@emory.edu"
