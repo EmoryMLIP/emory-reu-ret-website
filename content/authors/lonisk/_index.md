@@ -4,7 +4,7 @@ title: Deepanshu Verma
 
 # Username (this should match the folder name)
 authors:
-- dverma
+- lonisk1
 
 # Is this the primary user of the site?
 superuser: false
@@ -32,14 +32,11 @@ interests:
 education:
   courses:
   - course: PhD in Mathematics
-    institution: George Mason University
-    year: 2021
-  - course: MSc in Mathematics
-    institution: Indian Institute of Technology Bombay
+    institution: Kent State University
+    year: 2022
+  - course: BS/BA in Chemistry/Mathematics
+    institution: University of Delaware
     year: 2018
-  - course: BSc (Hons.) in Mathematics
-    institution: SGTB Khalsa College, Delhi University
-    year: 2015
 
 # Social/Academic Networking
 
@@ -54,7 +51,7 @@ social:
 social:
 - icon: envelope
   icon_pack: fas
-  link: "mailto:deepanshu.verma@emory.edu"
+  link: "mailto:lonisk@emory.edu"
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com.au/citations?hl=en&user=JfG-UJYAAAAJ
@@ -63,7 +60,7 @@ social:
   link: https://dpnshvrm.github.io/verma_deepanshu_cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "dverma4@emory.edu"
+email: "lonisk@emory.edu"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -71,4 +68,4 @@ user_groups:
 - Mentors
 ---
 
-Deepanshu Verma is a Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentor, Dr. Lars Ruthotto, his research focuses on developing efficient deep learning algorithms using control theory for scientific applications.
+Lucas Onisk is an NSF RTG Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentors, Dr. James Nagy and Dr. Julianne Chung, his research focuses on developing efficient algorithms for solving large-scale inverse problems.
