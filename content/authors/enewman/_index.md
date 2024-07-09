@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Distinguished Visiting Assistant Professor
+role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
@@ -71,4 +71,4 @@ user_groups:
 - Mentors
 ---
 
-Elizabeth Newman is a Postdoctoral Fellow in the Department of Mathematics at Emory University.  With her advisor, Dr. Lars Ruthotto, her research focuses on developing efficient deep learning algorithms for scientific applications.
+Elizabeth Newman is an Assistant Professor in the Department of Mathematics at Emory University.  Her research focuses on multilinear algebra and deep learning algorithms for scientific applications.

@@ -5,6 +5,7 @@ featured: false
 weight : 20
 summary: 'In recent years, reinforcement learning (RL) methods have shown success in solving optimal control problems involving ordinary differential equations. RL approaches differ drastically from traditional optimal control methods. Where prior methods have relied on the ODE models, RL tries to learn the optimal control simply by observing actions and rewards. There is tremendous activity in the sciences and engineering utilizing both methods. However, RL and optimal control theory is rarely compared on the same problem. This REU project fills that gap and tries to investigate the trade-off between data-driven RL methods and model-driven optimal control methods on the continuous mountain car problem. We found that RL is not always the best, in our case we found that the OC method gave us a better result on the Continuous Mountain Car Problem.'
 tags: ["Summer 2022"]
+authors: [lruthot]
 ---
 
 ## What is the best way to get a car out of the bottom of a hill?

@@ -5,6 +5,7 @@ featured: true
 weight : 20
 summary: 'This project explores adversarial training techniques to develop fairer Deep Neural Networks (DNNs) to mitigate the inherent bias they are known to exhibit. DNNs are susceptible to inheriting bias with respect to sensitive attributes such as race and gender, which can lead to life-altering outcomes (e.g., demographic bias in facial recognition software used to arrest a suspect). We propose a robust optimization problem to improve fairness in DNNs, and leveraging second-order information, we can efficiently find a solution.'
 tags: ["Summer 2023"]
+authors: [enewman]
 ---
 <!-- https://docs.google.com/document/d/1aIJEDrfuTmHEsgWYf9xfC-uX9ub8IPgOiKTmKlBMgck/edit#heading=h.dou3952sp91t -->
 

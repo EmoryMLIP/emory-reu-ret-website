@@ -6,6 +6,7 @@ featured: false
 weight : 100
 summary: 'Implicit networks are a special type of architecture whose outputs are defined by a fixed point (or optimality) condition. To evaluate these networks, one performs an iterative process, where each iteration is considered a layer of the network. The depth of these networks often vary depending on the complexity of the input data; for instance, in natural language processing, it might take 3 iterations (or layers) to output the sentiment of a simple sentence, but it might take 100 layers for the network to output the sentiment of a complicated sentence. Unfortunately, training implicit networks efficiently typically comes at additional computational cost. This project explores fast and efficient algorithms for training implicit networks, with emphasis on their applications to inverse problems.'
 tags: ["Summer 2022"]
+authors: [swufung]
 ---
 This post was written by Linghai Liu, Shuaicheng Tong, and Lisa Zhao and published with minor edits. The team was advised by Dr. Samy Wu Fung. In addition to this post, the team has also given a [midterm presentation](Midterm_Presentation_TeamJFB.pdf), filmed a [poster blitz video](https://youtu.be/oIwL3E2yULg), created a [poster](REURET_Poster_Team_JFB.pdf), published [code](https://github.com/lliu58b/Jacobian-free-Backprop-Implicit-Networks), and written a [paper](../../publications/liu-et-al-2022/). 
 

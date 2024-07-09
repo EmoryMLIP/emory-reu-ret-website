@@ -5,6 +5,7 @@ featured: true
 weight : 20
 summary: "Our group explored two methods - a machine learning method and an atlas-based image registration method - to automatically identify the cerebellum and brain stem in magnetic resonance image (MRI) data. Identifying these two brain regions is needed to analyze DENSE MRI data and quantify the brain movement caused by the subject's heart beat. This in turn can help determine whether or not a subject has a Chiari Malformation.  We compared the strengths and weaknesses of both methods, and how they might work in the future to improve Chiari diagnosis."
 tags: ["Summer 2021","Machine Learning","Image Registration","Convolutional Neural Networks", "Atlas-Based Image Registration"]
+authors: [lruthot]
 ---
 
 

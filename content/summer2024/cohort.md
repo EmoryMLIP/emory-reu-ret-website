@@ -11,7 +11,6 @@ To facilitate interactions across the teams and interactions between participant
 - a weekly project meeting with breakfast
 - a weekly seminar with lunch
 - ad-hoc seminars on background material (e.g., optimization, machine learning, PDEs, ...)
-- office hours
 - social events (about one event per week)
 - mid-term presentations 
 - final poster session with poster awards

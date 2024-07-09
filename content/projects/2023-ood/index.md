@@ -5,6 +5,7 @@ featured: true
 weight : 20
 summary: 'Standard classification theory assumes that the input distributions of the test and the training sets are identical. In reality, classifiers are often applied to unseen data (out-of-distribution data) that is different from the training data distribution (in-distribution data). Therefore, building a trust-worthy machine learning system is important, for example, in criminal justice applications, where facial recognition for decision-making is highly consequential.  Our project focuses on developing a neural network that differentiates data from different distributions. We are interested in the following question: Can we improve the performance of the neural network on out-of-distribution data by using multiple in-distribution datasets during training? We approach this problem using the Outlier Exposure Model and investigate how the performance of the model changes when other datasets of facial images are used.'
 tags: ["Summer 2023"]
+authors: [nyang]
 ---
 <!-- https://docs.google.com/document/d/1u7_vNpwToqwOdBlpbuRNXYDAMrgsaymMO8iSxA8UqNw/edit -->
 

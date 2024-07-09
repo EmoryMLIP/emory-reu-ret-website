@@ -3,6 +3,7 @@
 title: REU Participants Receive National Fellowships
 date: 2022-05-20
 summary: "We are excited to congratulate  Katie Keegan and Manuel Santana, who participated in our program in the summer of 2021, on winning nationally-competitive scholarships that will accelerate enhance their graduate school career. "
+authors: [lruthot]
 ---
 
 We are excited to congratulate Manuel Santana and Katie Keegan, who participated in our program in the summer of 2021, on winning nationally-competitive scholarships that will accelerate enhance their graduate school career. 

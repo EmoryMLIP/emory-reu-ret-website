@@ -5,6 +5,7 @@ featured: true
 weight : 20
 summary: 'Low-level ozone is a harmful air pollutant that can cause adverse health effects like coughing and chest pain and can worsen preexisting conditions like asthma. Many low-income communities are near sources of air pollution, causing these communities to be disproportionately impacted.  Low-level ozone is difficult to model since it is not emitted directly into the air but is created by chemical reactions between oxides of nitrogen (NOx) and volatile organic compounds (VOC) in the presence of sunlight. Rising temperatures due to climate change are also increasing low-level ozone levels. Predicting low-level ozone can inform air quality forecasts and help determine which communities are most at risk. Functional linear regression models can be used to predict low levels of ozone. In this project, we will study functional models based on bivariate splines over triangulation to approximate the spatially distributed ozone measurements on a surface. We will explore methods to compute forecasts, quantify the uncertainty associated with our predictions, and identify the spatial distribution of low-level ozone.'
 tags: ["Summer 2023"]
+authors: [bettinger]
 ---
 <!-- https://docs.google.com/document/d/15wNWsSkCo8XK4YvwSOmb3OCASHk8JbV1BKHrsnoi93M/edit -->
 
