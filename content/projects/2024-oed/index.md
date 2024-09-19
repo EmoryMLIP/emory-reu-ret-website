@@ -5,8 +5,12 @@ featured: true
 weight : 20
 summary: ''
 tags: ["Summer 2024"]
-authors: [nyang]
+# authors: [nyang]
 ---
+
+This blog post was written by Spiros Manolas, Anish Mitagar, and Nela Riddle  and published with minor edits. The team was advised by [Dr. Nicole Yang](../author/nicole-yang).In addition to this post, the team has also given a [midterm presentation](), filmed a [poster blitz video](), created a [poster]() and written a [manuscript](). 
+
+
 
 
 <div style="text-align: center;">

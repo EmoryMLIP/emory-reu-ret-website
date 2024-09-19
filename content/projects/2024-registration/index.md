@@ -5,24 +5,10 @@ featured: true
 weight : 20
 summary: ''
 tags: ["Summer 2024"]
-authors: [lruthotto]
+# authors: [lruthotto]
 ---
 
-**Authors:**
-
-- **Cash Cherry**
-  *Department of Applied Mathematics and Statistics, Colorado School of Mines*
-
-- **Rachelle Lang**
-  *Department of Mathematics, University of Wisconsin-Madison*
-
-- **Warin Watson**
-  *Department of Mathematics, Colorado Mesa University*
-
-**Advisor:**
-
-- **Lars Ruthotto**
-  *Associate Professor of Mathematics and Computer Science, Emory University*
+This blog post was written by Cash Cherry, Rachelle Lang, and Warin Watson and published with minor edits. The team was advised by [Lars Ruthotto](../author/lars-ruthotto).In addition to this post, the team has also given a [midterm presentation](), filmed a [poster blitz video](), created a [poster]() and written a [manuscript](). 
 
 
 ## What is image registration?

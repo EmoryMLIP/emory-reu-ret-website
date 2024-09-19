@@ -5,18 +5,22 @@ featured: true
 weight : 20
 summary: ''
 tags: ["Summer 2024"]
-authors: [lonisk]
+# authors: [lonisk]
 ---
 
-This blog post was written by Clara Armstrong, Olivia Kallay, and Srijon Sarkar and published with minor edits. Our work was advised by Dr. Lucas Onisk. In addition to this post, the team has also given a midterm presentation.
+This blog post was written by Clara Armstrong, Olivia Kallay, and Srijon Sarkar and published with minor edits. The team was advised by [Lucas Onisk](../author/lucas-onisk).In addition to this post, the team has also given a [midterm presentation](), filmed a [poster blitz video](), created a [poster]() and written a [manuscript](). 
 
 ## Background
 
 We are interested in solving sequences of linear discrete ill-posed problems for the purpose of deblurring images. We let $A$ be our blurring matrix, the convolution between a _point-spread function (PSF)_ and a boundary condition. A PSF models the smearing of a pixel to its neighboring pixels for image blurring. The true image is represented by the matrix $X$ and the blurred image by the matrix $B$, both of which we vectorize to get $x$ and $b$ respectively. This forms our linear system, $Ax=b$. Subsequent images will have identical or slowly changing matrices, and the right-hand sides (e.g. subsequent blurred images) will be close. We work with the sequence of these linear problems to deblur the sequence of images.
 
-<p align="center"><img width="234" alt="captioned_blurred" src="https://github.com/lonisk1/2024Emory_REU_KrylovRecycling/assets/171604235/7621d6e8-27da-4e4a-8f6a-4a5e5bbcb091">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="234" alt="captioned_psf2" src="https://github.com/lonisk1/2024Emory_REU_KrylovRecycling/assets/171604235/2848c430-bd74-4239-91f9-5472b4ea7ca5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="234" alt="captioned_deblurred" src="https://github.com/lonisk1/2024Emory_REU_KrylovRecycling/assets/171604235/812e2f22-7a9a-4244-bd3d-c4f0132f6fd1"></p>
+<div style="display:flex; flex-direction:row;">
+  <img src="captioned_blurred.png" alt="captioned_blurred" style="width:33%;">
+  <img src="captioned_psf2.png" alt="captioned_psf2" style="width:33%;">
+  <img src="captioned_deblurred.png" alt="captioned_deblurred" style="width:33%;">
+</div>
 
-When deblurring an image, we want to solve for $x$. For exposition, we assume $A$ is invertible, giving us the linear inverse problem $A^{-1}b=x$. Since our blurred image contains error such that $Ax=b=\hat{b}+e$, solving this directly does not yield our true solution &x$. The singular values of $A$ decay towards and cluster near numerical zero, thereby making $A$ _ill-conditioned_. Thus, when we take the Singular Value Decomposition (SVD), $A=U\Sigma V^T$, and attempt to solve $A^{-1}b=x$, we end up with 
+When deblurring an image, we want to solve for $x$. For exposition, we assume $A$ is invertible, giving us the linear inverse problem $A^{-1}b=x$. Since our blurred image contains error such that $Ax=b=\hat{b}+e$, solving this directly does not yield our true solution $x$. The singular values of $A$ decay towards and cluster near numerical zero, thereby making $A$ _ill-conditioned_. Thus, when we take the Singular Value Decomposition (SVD), $A=U\Sigma V^T$, and attempt to solve $A^{-1}b=x$, we end up with 
 
 $$
 \begin{aligned}
