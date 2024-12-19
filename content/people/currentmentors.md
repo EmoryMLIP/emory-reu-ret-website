@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 60
 
-title: 2024 Mentors
+title: 2025 Mentors
 subtitle:
 
 content:

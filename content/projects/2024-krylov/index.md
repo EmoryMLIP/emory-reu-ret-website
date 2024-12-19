@@ -8,11 +8,11 @@ tags: ["Summer 2024"]
 # authors: [lonisk]
 ---
 
-This blog post was written by Clara Armstrong, Olivia Kallay, and Srijon Sarkar and published with minor edits. The team was advised by [Lucas Onisk](../author/lucas-onisk).In addition to this post, the team has also given a [midterm presentation](), filmed a [poster blitz video](), created a [poster]() and written a [manuscript](). 
+This blog post was written by Clara Armstrong, Olivia Kallay, and Srijon Sarkar and published with minor edits. The team was advised by [Lucas Onisk](../author/lucas-onisk). In addition to this post, the team has also given a [midterm presentation](), filmed a [poster blitz video](), created a [poster]() and written a [manuscript](). 
 
 ## Background
 
-We are interested in solving sequences of linear discrete ill-posed problems for the purpose of deblurring images. We let $A$ be our blurring matrix, the convolution between a _point-spread function (PSF)_ and a boundary condition. A PSF models the smearing of a pixel to its neighboring pixels for image blurring. The true image is represented by the matrix $X$ and the blurred image by the matrix $B$, both of which we vectorize to get $x$ and $b$ respectively. This forms our linear system, $Ax=b$. Subsequent images will have identical or slowly changing matrices, and the right-hand sides (e.g. subsequent blurred images) will be close. We work with the sequence of these linear problems to deblur the sequence of images.
+The image deblurring problem can be framed as a least-squares problem. We let $A$ be our blurring matrix, the convolution of a _Point-Spread Function (PSF)_ and a boundary condition. The true image is represented by $X$, and the blurred by $B$; we vectorize both to get our linear system, $Ax=b$. For example, we see below an image blurred using PSF Gauss with 2% noise:
 
 <div style="display:flex; flex-direction:row;">
   <img src="captioned_blurred.png" alt="captioned_blurred" style="width:33%;">
@@ -20,40 +20,30 @@ We are interested in solving sequences of linear discrete ill-posed problems for
   <img src="captioned_deblurred.png" alt="captioned_deblurred" style="width:33%;">
 </div>
 
-When deblurring an image, we want to solve for $x$. For exposition, we assume $A$ is invertible, giving us the linear inverse problem $A^{-1}b=x$. Since our blurred image contains error such that $Ax=b=\hat{b}+e$, solving this directly does not yield our true solution $x$. The singular values of $A$ decay towards and cluster near numerical zero, thereby making $A$ _ill-conditioned_. Thus, when we take the Singular Value Decomposition (SVD), $A=U\Sigma V^T$, and attempt to solve $A^{-1}b=x$, we end up with 
+
+Consider the solution $x$ written with respect to the singular value decomposition (SVD) assuming $A$ is invertible. The blurred imagine contains error such that $b=\hat{b}+e$; we observe that 
 
 $$
-\begin{aligned}
-x &= V\Sigma^{-1}U^Tb \\
-  &= \sum_{i=1}^{n}\frac{u_i^Tb}{\sigma_i}v_i \\
-  &= \sum_{i=1}^{n}\frac{u_i^T\hat{b}}{\sigma_i}v_i+ \sum_{i=1}^{n}\frac{u_i^Te}{\sigma_i}v_i
-\end{aligned}
+x = V\Sigma^{-1}U^Tb
+  = \sum_{i=1}^{n}\frac{u_i^Tb}{\sigma_i}v_i
+  = \sum_{i=1}^{n}\frac{u_i^T\hat{b}}{\sigma_i}v_i+ \sum_{i=1}^{n}\frac{u_i^Te}{\sigma_i}v_i
 $$
 
-Where the first sum is our _true solution_ and the second is our _inverted noise_. For image deblurring problems, the $u_i^Te$ terms are constant in magnitude. Therefore, the solution is dominated by the inverted noise, which becomes very big as the singular values $\sigma_i$ decay to numerical zero.
-
-By _Hadamard's criteria_, a problem is ill-posed when it meets at least one of the following conditions:
-
-1. The problem has no exact solution.
-2. The problem has multiple solutions.
-3. Solutions do not depend continuously on the data.
-
-Since our solution becomes dominated by error, it meets the third condition. As we are unable to accurately solve for $x$ using the SVD, we will employ methods that utilize regularization to help quell the error propagation in our computed solution. We will use strategies such as working in a Krylov subspace.
-
+where the first sum is our _true solution_ and the second is our _inverted noise_. For image deblurring problems, the $u_i^Te$ terms are constant in magnitude. $A$ is an ill-conditioned matrix, causing the solution to be dominated by the inverted noise, which becomes very big as the singular values $\sigma_i$ decay to numerical zero.
 
 ## Our Approach
 
-We aim to build a small subspace that captures enough information about the system in $\mathbb{R}^n$ to compute an approximate solution to the current problem. We will focus on two different Krylov techniques: _Arnoldi_ and _Golub-Kahan bidiagonalization (GKB)_. Using Krylov methods allows us to working in a smaller subspace with a smaller operator, making our problem easier to solve than trying to solve directly. 
+We will focus on two Krylov techniques: _Arnoldi_ and _Golub-Kahan bidiagonalization_. Using Krylov methods allows us to work in a smaller subspace that captures enough information about the system to compute an approximate solution, making our problem easier to solve than solving directly. 
 
 A Krylov subspace is the span of repeated applications of a matrix $A$ to a vector $b$, or
 <p align="center">$K_p(A, b) = \text{span}\{b, Ab, A^2b, ... , A^{p-1}b\}$</p>
 
-The Arnoldi relation is at the core of the _Generalized Minimal Residual (GMRES)_ method for solving **square nonsymmetric** linear problems. After $p$ steps of the Arnoldi iteration, which gives the Krylov subspace shown above, we develop the relation
+The Arnoldi relation is at the core of the _Generalized Minimal Residual (GMRES)_ method for solving **square nonsymmetric** linear problems. After $p$ steps of the Arnoldi iteration, we develop the relation
 <p align="center">$AV_p = V_{p+1}H_{p+1}$</p>
 
-Where $A$ is the square operator from the linear system, $V_{p+1}$ has orthonormal columns that span the subspace $K_p(A, b)$, $V_p$ contains the first $p$ orthonormal columns of $V_{p+1}$, and $H_{p+1}$ is an upper Hessenberg matrix (an upper triangular matrix that contains an additional subdiagonal band) with its columns representing scalar coefficients from the orthonormalization process of Gram Schmidt, used in Arnoldi.
+where $A$ is the square operator from the linear system, $V_{p+1}$ has orthonormal columns that span the subspace $K_p(A, b)$, $V_p$ contains the first $p$ orthonormal columns of $V_{p+1}$, and $H_{p+1}$ is an upper Hessenberg matrix (an upper triangular matrix that contains an additional subdiagonal band) of the scalar coefficients from the orthonormalization process of Gram-Schmidt, used in Arnoldi.
 
-Similar to the relationship between the Arnoldi relation and GMRES method, GKB is associated with the LSQR method where $A$ could be **non-square**. GKB generates orthonormal vectors that span the following spaces
+_Golub-Kahan bidiagonalization (GKB)_ is associated with the LSQR method, where $A$ could be **non-square**. GKB generates orthonormal vectors that span the following spaces:
 
 $$K_p(A^TA, A^Tb) \text{ and } K_p(AA^T, b)$$
 
@@ -61,22 +51,29 @@ After $p$ steps of GKB, we have the following relationships
 
 $$AV_p = U_{p+1}B_{p+1} \text{ and } A^TU_{p+1} = V_{p+1}\tilde B_{p+1}$$
 
-Where $V_{p+1}$, spanning $K_p (A^TA, A^Tb)$, and $U_{p+1}$, spanning $K_p(AA^T, b)$, contain orthonormal columns, and $B_{p+1}$ represents a lower bidiagonal matrix (a diagonal matrix with an additional subdiagonal band) that makes $\tilde B_{p+1}$ square due to the inclusion of an additional column.
+where $V_{p+1}$ and $U_{p+1}$ contain orthonormal columns spanning $K_p (A^TA, A^Tb)$ and $K_p(AA^T, b)$, $B_{p+1}$ is the lower-bidiagonal, projected variant of $A$, and $\tilde B_{p+1}$ is square due to the inclusion of an additional column.
 
 ## Our Observations
 
-Since GMRES necessitates a lot of matrix-vector products, we desire to gain efficiency through recycling strategies to circumvent such repetitive computation. We observed that $r^{(2)}=Ax_{approx}^{(1)}-b^{(2)}$, the residual of the second problem using our solution to the first problem, which we call the seed problem, is higher than the breakout level but remains significantly lower than it would if we started from the zero vector (which would produce a relative residual of one). Thus, by recycling basis vectors from previous solutions to solve subsequent problems, we drastically reduce the Reconstructive Residual Norm (RRN).
+Since GMRES and LSQR require many matrix-vector products, we desire to gain efficiency through recycling strategies to circumvent such repetitive computation while solving sequences of closely related problems. 
 
-$$DP \leq r^{(2)} < 1,$$
+We observed for that $r^{(2)}=Ax_{approx}^{(1)}-b^{(2)}$, the residual of the second problem using our solution to the first (seed) problem, the Reconstructive Residual Norm (RRN) satisfies
 
-where DP represents a breakout parameter from the _Discrepancy Principle_. We note that with these types of methods, residuals decrease, but errors diverge. Thus, we adapt regularization methods such as truncated SVD (TSVD) to prevent capturing information around low singular values, as the subspace grows with each iteration, which could corrupt the solution we desire. To avoid the high propensity of error propagation, we rather undersolve by claiming breakout bounds on noise on the right-hand sides.
+$$DP \leq \frac{||r^{(2)}||}{||b||} < 1,$$
 
-As the basis from the seed problem contains useful information for non-arbitrarily chosen right-hand sides (frames here), we incorporate this information by calculating
+where DP represents a breakout parameter from the _Discrepancy Principle_, $\tau\delta$, in which $\tau$ is a safety parameter close to one and $\delta$ is an upper-bound on the erroneous right-hand sides. 
 
-$$\text{res} = \frac{\textbf{r}^{(2)} - V_pV_p^T\textbf{r}^{(2)}}{\|\|\textbf{r}^{(2)} - V_pV_p^T\textbf{r}^{(2)}\|\|}$$
+<p align="center"><img width="334" alt="captioned_blurred" src="recycling.jpg" </p>
+
+Although the residual is above the breakout level given by the DP, it remains significantly lower than if we started from the zero vector (which would produce a relative residual of one). Thus, by recycling basis vectors from previous solutions to solve subsequent problems, we drastically reduce the RRN.
+
+We note that with these types of methods, residuals decrease, but errors demonstrate semiconvergent behavior; we see the error decrease until a certain point at which it will begin growing exponentially.
+
+As the basis from the seed problem contains useful information for non-arbitrarily chosen right-hand sides (image frames for our purposes), we incorporate this information by calculating
+
+$$\text{res} = \frac{r^{(2)} - V_pV_p^Tr^{(2)}}{\||r^{(2)} - V_pV_p^Tr^{(2)}\||}$$
 
 and appending it in $[V_p \quad res] = \tilde V_{\ell}$ thereby forming the _flexible Arnoldi_ method as $A[\tilde V_{\ell}] = \tilde U_{\ell+1}J_{\ell+1}$ at step $\ell$. $U$ and $J$ come from completing the back half of Arnoldi, respectively representing a new basis and a projected variant of $A$.
-
 
 ## Future Directions
 
@@ -84,13 +81,12 @@ Eventually, we will run out of memory as we continue iterating flexible Arnoldi 
 1. Truncated Singular Value Decomposition
 2. Reduced Basis Decomposition
 3. Solution-Oriented Compression
-4. Sparsity-Enforcing Regularization
 
 We aim to combine compression techniques with flexible algorithms, including extending our work to non-square operators to replicate _flexible GKB_ for LSQR.
 
 Further, as these iterative processes continue and our subspace grows, it might capture information from small singular values. So, we discern the need for penalized least squares using _Tikhonov regularization_ for our projected problems as
 
-$${\min_\textbf{x}} ||A\textbf{x}-\textbf{b}||_2^2 + \lambda^2||\textbf{x}||_2^2.$$
+$${\min_\textbf{x}} ||A\textbf{x}-\textbf{b}||_2^2 + \lambda||\textbf{x}||_2^2.$$
 
 So far, we have only focused on sequences of images, such as those that may arise from a video. However, these techniques can also be useful for other sequences of linear inverse problems, such as those arising from medical imaging. 
 

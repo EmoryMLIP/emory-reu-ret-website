@@ -1,0 +1,144 @@
+% SIAM Shared Information Template
+% This is information that is shared between the main document and any
+% supplement. If no supplement is required, then this information can
+% be included directly in the main document.
+
+
+% Packages and macros go here
+\usepackage{lipsum}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\ifpdf
+  \DeclareGraphicsExtensions{.eps,.pdf,.png,.jpg}
+\else
+  \DeclareGraphicsExtensions{.eps}
+\fi
+
+% Add a serial/Oxford comma by default.
+\newcommand{\creflastconjunction}{, and~}
+
+% Used for creating new theorem and remark environments
+\newtheorem{remark}{Remark}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{claim}{Claim}
+\newtheorem{example}{Example}
+
+
+
+% Title. If the supplement option is on, then "Supplementary Material"
+% is automatically inserted before the title.
+\title{Enhancing Variational Autoencoders with Flexible Conditional Normalizing Flows}
+
+% Authors: full names plus addresses..
+\author{Deepanshu Verma}
+
+\date{}
+
+\usepackage{amsopn}
+\DeclareMathOperator{\diag}{diag}
+
+
+
+\newcommand{\nullspace}{\ensuremath{\mathop{\mathrm{null}}}}
+\newcommand{\hf}{{\frac 12}}
+
+\newcommand{\CL}{{\cal L}}
+\newcommand{\calD}{{\cal D}}
+\newcommand{\calT}{{\cal T}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CH}{{\mathscr H}}
+
+\newcommand{\Fc}{{\cal F}}
+\newcommand{\bfphi}{{\boldsymbol \Phi}}
+\newcommand{\bfpsi}{{\boldsymbol \psi}}
+\newcommand{\bfepsilon}{{\boldsymbol \epsilon}}
+
+\newcommand{\Ex}{{\rm E}}
+\newcommand{\Var}{{\rm Var}}
+
+\newcommand{\kk}{\vec{k}}
+\newcommand{\bo}{d^{\rm obs}}
+\newcommand{\what}{\widehat}
+
+\newcommand{\trace}{\mathsf{trace}}
+\newcommand{\st}{\mathrm{s.t.}}
+
+
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}}
+\newcommand{\norm}[1]{\ensuremath{\left\|#1\right\|}}
+\newcommand{\iprod}[1]{\ensuremath{\left\langle#1\right\rangle}}
+
+\newcommand{\dwu}{\delta \widehat u}
+\newcommand{\dwx}{\delta \widehat x}
+\newcommand{\Mu}{M_{\mu}}
+\newcommand{\hv}{\hat v}
+
+\newcommand{\wq}{{\widehat q}}
+
+\newcommand{\e}{{\cal E }}
+\newcommand{\h}{{\cal H }}
+\renewcommand{\j}{{\cal J }}
+\renewcommand{\b}{{\cal B }}
+
+\newcommand{\du}{{\delta u}}
+\newcommand{\E}{{\mathbb{E}}}
+
+
+
+\renewcommand{\t} {^{\top}}         
+
+% math symbols for vectors and matrices
+\def\mydefb#1{\expandafter\def\csname bf#1\endcsname{\mathbf{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+\def\mydefb#1{\expandafter\def\csname #1bf\endcsname{\mathbf{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+% mathbb symbols for real numbers, integers, etc.
+\def\mydefb#1{\expandafter\def\csname #1bb\endcsname{\mathbb{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+\def\mydefb#1{\expandafter\def\csname bb#1\endcsname{\mathbb{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+% mathcal symbols for script letters 
+\def\mydefb#1{\expandafter\def\csname #1cal\endcsname{\mathcal{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+\def\mydefb#1{\expandafter\def\csname cal#1\endcsname{\mathcal{#1}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+% mathbold symbols for tensors letters 
+\def\mydefb#1{\expandafter\def\csname T#1\endcsname{\boldsymbol{\mathcal{#1}}}}
+\def\mydefallb#1{\ifx#1\mydefallb\else\mydefb#1\expandafter\mydefallb\fi}
+\mydefallb aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\mydefallb
+
+% math bold font for greek letters
+\def\mydefgreek#1{\expandafter\def\csname bf#1\endcsname{\text{\boldmath$\mathbf{\csname #1\endcsname}$}}}
+\def\mydefallgreek#1{\ifx\mydefallgreek#1\else\mydefgreek{#1}%
+   \lowercase{\mydefgreek{#1}}\expandafter\mydefallgreek\fi}
+\mydefallgreek {alpha}{Alpha}{beta}{Beta}{gamma}{Gamma}{delta}{Delta}{epsilon}{Epsilon}{zeta}{Zeta}{eta}{Eta}{theta}{Theta}{iota}{Iota}{kappa}{Kappa}{lambda}{Lambda}{mu}{Mu}{nu}{Nu}{omicron}{Omicron}{pi}{Pi}{rho}{Rho}{sigma}{Sigma}{tau}{Tau}{upsilon}{Upsilon}{phi}{Phi}{xi}{Xi}{chi}{Chi}{psi}{Psi}{omega}{Omega}\mydefallgreek
+
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+% packages
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{minted}
+
+% notes
+\newcommand{\DVnote}[1]{{\textcolor{cyan}{DV: #1}}}

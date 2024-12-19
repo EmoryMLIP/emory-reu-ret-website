@@ -14,6 +14,9 @@ main:
   - name: People
     url: people/
     weight: 30
+  - name: 2025
+    url: summer2025/
+    weight: 34
   - name: 2024
     url: summer2024/
     weight: 35

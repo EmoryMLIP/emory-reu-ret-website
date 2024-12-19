@@ -61,7 +61,7 @@ email: "mlepilo@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- CurrentMentors
+- Mentors
 ---
 
 Mikhail Lepilov is a Postdoctoral Fellow in the Department of Mathematics at Emory University. With his mentor, Dr. Yuanzhe Xi, his research focuses on developing efficient eigenvalue sketching algorithms for kernel matrices.

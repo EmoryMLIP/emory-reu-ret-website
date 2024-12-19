@@ -60,7 +60,7 @@ email: "tianjiao.yang@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- CurrentMentors
+- Mentors
 ---
 
 Nicole Yang is a Postdoctoral Fellow in the Department of Mathematics at Emory University.  With her advisor, Dr. Lars Ruthotto, her research focuses on stochastic control, mathematics of generative modeling, and deep learning algorithms for scientific applications. Prior to joining Emory, she was a Strategist at Morgan Stanley, NYC global headquarter.

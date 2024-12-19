@@ -73,7 +73,7 @@ email: "lruthotto@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- CurrentMentors
+- Mentors
 ---
 
 Lars Ruthotto is the Principal Investigator of this REU/RET site. He is an Winship Distinguished Research Associate Professor in the [Department of Mathematics](http://math.emory.edu/home/) and the [Department of Computer Science](http://math.emory.edu/home/) at Emory University and a member of the [Scientific Computing Group](http://www.math.emory.edu/Research/Area/ScientificComputing/).

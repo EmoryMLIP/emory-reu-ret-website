@@ -5,8 +5,8 @@ widget: blank
 
 # Information for Applicants
 
-Our site provides several funded summer research opportunities for undergraduate students and in-service high-school teachers.
-For summer 2024, applications can be submitted via [ETAP](https://etap.nsf.gov/award/5215/opportunity/6964).
+Our site provides several funded summer research opportunities for undergraduate students.
+For summer 2025, applications can be submitted via [ETAP](https://etap.nsf.gov/award/7517/opportunity/10142).
 We will begin reviewing applications on February 1 and all applications received by March 1 will receive full consideration. Until we finalize the roster (usually by early April) we will not decline qualified applicants.
 
 We particularly encourage women, students from underrepresented groups, first-generation college students, and institutions where research programs in STEM are limited to apply.
@@ -17,7 +17,7 @@ Students must be enrolled in an undergraduate program at a US institution during
 
 To be supported from our main grant, participants must be US citizens or permanent residents. We have some (albeit limited) additional funds to support international students. All participants must currently be enrolled at a US institution. 
 
-We expect participants to be fully available in-person during our  REU phase and on campus for eight weeks during the summer. This year's program will be held from June 3 until July 26.
+We expect participants to be fully available in-person during our  REU phase and on campus for eight weeks during the summer. This year's program will be held from June 16 until August 8.
 
 ## Expectations and Pre-Requisites
 
