@@ -63,7 +63,7 @@ email: "jnchung@emory.edu"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- CurrentMentors
+- Mentors
 ---
 Julianne Chung is an Associate Professor in the Department of Mathematics at Emory University. Her research interests include numerical methods and software for computing solutions to large-scale inverse problems, such as those that arise in imaging applications.
 
