@@ -1,0 +1,12 @@
+{{- if and (isset .Site.Params "analytics") (isset .Site.Params.analytics "baidu_tongji") (ne .Site.Params.analytics.baidu_tongji "") -}}
+<!-- Baidu Tongji Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?{{ .Site.Params.analytics.baidu_tongji }}";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+{{- end -}}

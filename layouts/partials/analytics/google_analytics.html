@@ -1,0 +1,10 @@
+{{- if and (isset .Site.Params "analytics") (isset .Site.Params.analytics "google_analytics") (ne .Site.Params.analytics.google_analytics "") -}}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.analytics.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.analytics.google_analytics }}');
+</script>
+{{- end -}}

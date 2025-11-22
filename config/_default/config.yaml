@@ -5,6 +5,7 @@
 
 title: Emory REU Computational Mathematics for Data Science # Website name
 baseURL: 'http://www.math.emory.edu/site/cmds-reuret/' # Website URL
+googleAnalytics: '' # Google Analytics ID
 
 ############################
 ## LANGUAGE
@@ -32,7 +33,8 @@ module:
 
 enableGitInfo: false
 summaryLength: 30
-paginate: 10
+pagination:
+  pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
@@ -43,6 +45,7 @@ permalinks:
   categories: '/category/:slug/'
   publication_types: '/publication-type/:slug/'
 disableAliases: true
+disableKinds: [taxonomyTerm]
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
