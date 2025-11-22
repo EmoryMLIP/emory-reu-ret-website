@@ -12,7 +12,7 @@ This is the source repository for the Emory REU/RET Computational Mathematics fo
 ```bash
 # Install Hugo (required for development)
 # On macOS: brew install hugo
-# Version used in production: 0.80.0 (see netlify.toml)
+# Version used in production: 0.84.4 Extended (see netlify.toml)
 
 # Serve site locally with live reload
 hugo server

@@ -5,7 +5,7 @@ headless: true
 weight: 25
 
 title: Recent Projects
-<!-- subtitle: Learing from Images -->
+# subtitle: Learning from Images
 
 content:
   count: 0
