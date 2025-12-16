@@ -8,7 +8,7 @@ tags: ["Summer 2025"]
 # authors: [aarnold, mchung]
 ---
 
-This blog post was written by [Alexander DeLise](https://www.linkedin.com/in/alexanderdelise/), [Kyle Loh](https://www.linkedin.com/in/kyle-loh-a2a3272a9/), [Krish Patel](https://www.linkedin.com/in/krish-patel-1a8804224/), and [Meredith Teague](https://www.linkedin.com/in/meredithcteague/) and published with minor edits. The team was advised by Andrea Arnold and Matthias Chung. In addition to this post, the team has also created a [poster](https://drive.google.com/file/d/1kZ1RPy-E8zGCxs_8ntEbNDc42YKNFbQ0/view?usp=sharing) and filmed a [poster blitz video](https://youtu.be/sEYCTWnZ3pM?si=L2fmIEY2AUwPl54Z).
+This blog post was written by [Alexander DeLise](https://www.linkedin.com/in/alexanderdelise/), [Kyle Loh](https://www.linkedin.com/in/kyle-loh-a2a3272a9/), [Krish Patel](https://www.linkedin.com/in/krish-patel-1a8804224/), and [Meredith Teague](https://www.linkedin.com/in/meredithcteague/) and published with minor edits. The team was advised by Andrea Arnold and Matthias Chung. In addition to this post, the team has also created a [poster](MADDI-Poster.pdf) and filmed a [poster blitz video](https://youtu.be/sEYCTWnZ3pM?si=L2fmIEY2AUwPl54Z).
 
 ## Introduction
 
@@ -113,10 +113,10 @@ To do this, we compute the second-moment matrices:
 These are decomposed symmetrically, for instance via [Cholesky decomposition](https://en.wikipedia.org/wiki/Matrix_decomposition#Cholesky_decomposition) or [eigendecomposition](https://en.wikipedia.org/wiki/Matrix_decomposition#Eigendecomposition), into:
 
 $$
-\mathbf{\Gamma}_X = \mathbf{L}_X \mathbf{L}_X^\top, \quad \mathbf{\Gamma}_{Y} = \mathbf{L}_{Y} \mathbf{L}_{Y}^\top,
+\mathbf{\Gamma}\_{X} = \mathbf{L}\_{X} \mathbf{L}\_{X}^\top, \quad \mathbf{\Gamma}\_{Y} = \mathbf{L}\_{Y} \mathbf{L}\_{Y}^\top,
 $$
 
-where $\mathbf{L}_X$ and $\mathbf{L}_{Y}$ need not be full rank. The solution to the linear denoising optimization problem is given by
+where $\mathbf{L}\_{X}$ and $\mathbf{L}\_{Y}$ need not be full rank. The solution to the linear denoising optimization problem is given by
 
 $$
 \mathbf{A}_{\text{opt}}^r = \left( \mathbf{\Gamma}_X \mathbf{L}_Y^{\dagger \, \top} \right)_r \mathbf{L}_Y^{\dagger},
@@ -139,7 +139,7 @@ We then concatenate these entries into the matrices $\mathbf{X}, \mathbf{Y}$ for
 
 #### The Results
 
-We compare our **Bayes-optimal mappings** $\mathbf{A}_{\text{opt}}^r$ against **learned linear encoder-decoder mappings** $\mathbf{A}_{\text{learn}}^r$ trained using gradient descent to minimize empirical reconstruction error. As expected, the theoretical mappings consistently outperform the learned ones, particularly at **low ranks**, where the model must compress the data most aggressively.
+We compare our **Bayes-optimal mappings** $\mathbf{A}\_{\text{opt}}^r$ against **learned linear encoder-decoder mappings** $\mathbf{A}\_{\text{learn}}^r$ trained using gradient descent to minimize empirical reconstruction error. As expected, the theoretical mappings consistently outperform the learned ones, particularly at **low ranks**, where the model must compress the data most aggressively.
 
 <div style="text-align: center;">
 <img src="img5.gif" alt="Linear Denoising Results Animation" width="75%">
@@ -175,7 +175,7 @@ $$
 \mathbf{A}_{\text{opt}}^r = \left( \mathbf{\Gamma}_X \mathbf{F}^\top \mathbf{L}_Y^{\dagger \, \top} \right)_r \mathbf{L}_Y^{\dagger},
 $$
 
-where $\mathbf{\Gamma}_X$ is the second-moment matrix of the random variable $X$, $\mathbf{L}_Y$ comes from a symmetric decomposition of the second-moment matrix of the random variable $Y$ (i.e. $\mathbf{\Gamma}_Y = \mathbf{L}_Y \mathbf{L}_Y^\top$), and $(\cdot)_r$ denotes the rank-$r$ truncated SVD of a matrix, as mentioned before.
+where $\mathbf{\Gamma}\_X$ is the second-moment matrix of the random variable $X$, $\mathbf{L}\_Y$ comes from a symmetric decomposition of the second-moment matrix of the random variable $Y$ (i.e. $\mathbf{\Gamma}\_Y = \mathbf{L}\_Y \mathbf{L}\_Y^\top$), and $(\cdot)\_r$ denotes the rank-$r$ truncated SVD of a matrix, as mentioned before.
 
 #### The Experiment
 
@@ -194,7 +194,7 @@ Again, we then concatenate these entries into the matrices $\mathbf{X}, \mathbf{
 
 #### The Results
 
-The animation below provides a clear demonstration of how the optimal rank-$r$ mapping $\mathbf{A}_{\text{opt}}^r$ consistently outperforms the learned $\mathbf{A}_{\text{learn}}^r$, especially at very low ranks.
+The animation below provides a clear demonstration of how the optimal rank-$r$ mapping $\mathbf{A}\_{\text{opt}}^r$ consistently outperforms the learned $\mathbf{A}\_{\text{learn}}^r$, especially at very low ranks.
 
 <div style="text-align: center;">
 <img src="img6.gif" alt="Inverse End-to-End Results Animation" width="75%">

@@ -146,7 +146,7 @@ Edit markdown files in `content/home/`:
 - **Draft Content**: Set `draft: false` in frontmatter to make content visible
 - **Taxonomies**: Use `tags`, `authors`, and `categories` to connect content
 - **Permalinks**: Authors, tags, categories have custom URL structures (see `config.yaml`)
-- **Math Support**: Enabled via Wowchemy features (can use LaTeX in markdown)
+- **Math Support**: Enabled via Wowchemy features (can use LaTeX in markdown). **IMPORTANT**: Escape underscores as `\_` in LaTeX to prevent markdown from interpreting them as italics. This is critical when multiple math expressions with subscripts appear on the same line or in display equations with many subscripts. For example, use `$\mathbf{A}\_{\text{opt}}^r$` instead of `$\mathbf{A}_{\text{opt}}^r$`
 - **Deployment**: Final publishing to production requires SSH access as lruthot
 - **Theme**: Based on Wowchemy Research Group template - avoid modifying theme files directly
 
